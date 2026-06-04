@@ -28,7 +28,7 @@ AIツール活用ナレッジ循環 (`/ai-scout` → `/ai-review`) のデザイ�
 
 - [x] [DAIICHI DIVE](https://daiichi-dive.ca-event.workers.dev/) — 深海テーマのダークUI。1アクセント・ガラスカード・環境アニメ(光線/泡)・グラデ見出し。→ この台帳と tokens.css の出発点 (2026-06-03)
 - [ ] [Awwwards — Sites of the Day](https://www.awwwards.com/websites/sites_of_the_day/) — 良質ダーク/グラス事例の定常ソース。定期的に巡回して配色・ヒーロー構成・モーションの間を観察する巡回元として (2026-06-04)
-- [ ] [Glassmorphism 2.0 (weblogtrips)](https://weblogtrips.com/technology/glassmorphism-2-0-css-techniques-2026/) — 2026のガラス進化。単純 blur ではなく「光の相互作用」を出す**エッジライト/内側ハイライト**が要点。→ 抽出候補: `--glass-*` に上端ハイライト (inset 0 1px highlight) と縁の光を足して立体感を上げる (2026-06-04)
+- [x] [Glassmorphism 2.0 (weblogtrips)](https://weblogtrips.com/technology/glassmorphism-2-0-css-techniques-2026/) — 2026のガラス進化。単純 blur ではなく「光の相互作用」を出す**エッジライト/内側ハイライト**が要点。→ 採用済みへ (2026-06-04)
 
 ---
 
@@ -39,3 +39,4 @@ AIツール活用ナレッジ循環 (`/ai-scout` → `/ai-review`) のデザイ�
 - [DAIICHI DIVE] glassmorphism / 1アクセント / 環境アニメ / 極太見出し×字間広ラベルの対比 / prefers-reduced-motion 配慮 → tokens.css 全体・スタイルガイド (2026-06-03)
 - [slack-emoji-agent 移行で発覚] グラデ上の文字が AA を割る問題 → `--accent-fg-shadow` (fg輝度に応じた逆方向シャドウ) を tokens.css に追加し `.ds-btn-accent` に適用 (2026-06-04)
 - [スタイルガイド拡充] 余白とリズム/モーションが未掲載だった → Spacing・Radius・Motion(3イージング)のショーケースを Style Guide に追加。トークンから動的描画 (2026-06-04)
+- [Glassmorphism 2.0 / Apple Liquid Glass] エッジライト → `--glass-highlight` (上端スペキュラ + 内側縁光、light/dark別) を追加し `.ds-glass` と topbar に合成。blur/saturate も微増。今後の Apple 寄せの第一歩 (2026-06-04)

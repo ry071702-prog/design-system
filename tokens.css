@@ -107,10 +107,13 @@
   --shadow-lg: 0 24px 48px -12px rgba(15, 23, 42, 0.22);
   --shadow-glow: 0 0 0 1px var(--ring), 0 8px 30px -6px var(--accent-soft);
 
-  /* --- ガラス (glassmorphism) ---------------------------------------- */
+  /* --- ガラス (glassmorphism / Apple "Liquid Glass" 寄り) ------------- */
   --glass-bg: rgba(255, 255, 255, 0.62);
   --glass-border: rgba(255, 255, 255, 0.7);
-  --glass-blur: blur(14px) saturate(130%);
+  --glass-blur: blur(16px) saturate(150%);
+  /* 上端のスペキュラ・ハイライト + 内側の縁光。単純 blur に立体感を足す。 */
+  --glass-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.25);
 
   /* --- アクセント (theme クラス未指定時のフォールバック = focus) ----- */
   --accent: #4f46e5;
@@ -150,6 +153,9 @@
 
   --glass-bg: rgba(19, 28, 46, 0.55);
   --glass-border: rgba(148, 163, 184, 0.18);
+  /* ダークでは縁光を抑えめに (白飛びさせない) */
+  --glass-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
 }
 
 /* =============================================================================
@@ -247,7 +253,7 @@
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-lg), var(--glass-highlight);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   padding: var(--space-6);
