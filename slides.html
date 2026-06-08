@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>作成済みスライド — 共通デザインシステム</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@500;700;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./tokens.css" />
+<link rel="stylesheet" href="./app.css" />
+<style>
+  /* 作成済みスライド一覧 固有 (生値は使わず var(--*) のみ) */
+  .toolbar { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center;
+    margin-bottom: var(--space-5); }
+  .search { flex: 1; min-width: 200px; }
+  .folder-filter { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+  .folder-filter button {
+    font: inherit; font-size: var(--text-xs); font-weight: 600; cursor: pointer;
+    color: var(--fg-muted); background: var(--bg-sunken);
+    border: 1px solid var(--border); border-radius: var(--radius-pill);
+    padding: 0.25rem 0.7rem; transition: background var(--dur-fast), color var(--dur-fast); }
+  .folder-filter button[aria-pressed="true"] { background: var(--accent); color: var(--accent-fg); border-color: transparent; }
+
+  .deck-grid { display: grid; gap: var(--space-4);
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+  .deck-card { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
+  .deck-thumb { aspect-ratio: 16 / 9; background: var(--bg-sunken); position: relative;
+    cursor: zoom-in; border-bottom: 1px solid var(--border); }
+  .deck-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .deck-thumb .noimg { position: absolute; inset: 0; display: grid; place-items: center;
+    color: var(--fg-subtle); font-family: var(--font-mono); font-size: var(--text-sm); }
+  .deck-thumb .ext { position: absolute; top: var(--space-2); left: var(--space-2);
+    font-family: var(--font-mono); font-size: 10px; font-weight: 700; text-transform: uppercase;
+    background: var(--glass-bg); color: var(--fg); border: 1px solid var(--glass-border);
+    border-radius: var(--radius-sm); padding: 0.1rem 0.4rem;
+    backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur); }
+  .deck-body { padding: var(--space-4); display: flex; flex-direction: column; gap: var(--space-2); flex: 1; }
+  .deck-title { font-weight: 700; font-size: var(--text-sm); color: var(--fg);
+    line-height: var(--leading-snug); }
+  .deck-meta { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center;
+    font-size: var(--text-xs); color: var(--fg-subtle); font-family: var(--font-mono); margin-top: auto; }
+  .deck-actions { display: flex; gap: var(--space-2); padding-top: var(--space-2); }
+  .deck-actions .ds-btn { font-size: var(--text-xs); padding: 0.4rem 0.8rem; }
+
+  .count { color: var(--fg-subtle); font-size: var(--text-xs); margin-bottom: var(--space-3); }
+  .empty { color: var(--fg-subtle); font-size: var(--text-sm); padding: var(--space-6);
+    text-align: center; border: 1px dashed var(--border); border-radius: var(--radius-lg); }
+
+  /* ライトボックス (サムネ拡大) */
+  .lightbox { position: fixed; inset: 0; z-index: 100; display: none;
+    place-items: center; padding: var(--space-6);
+    background: rgba(0,0,0,0.6); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+  .lightbox[open] { display: grid; }
+  .lightbox img { max-width: 92vw; max-height: 80vh; border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg); }
+  .lightbox .cap { position: absolute; bottom: var(--space-5); left: 0; right: 0; text-align: center;
+    color: #fff; font-size: var(--text-sm); padding: 0 var(--space-5); }
+  .lightbox .cap .hint { color: rgba(255,255,255,0.7); font-size: var(--text-xs);
+    font-family: var(--font-mono); }
+</style>
+</head>
+<body class="theme-studio" data-theme="light">
+  <div class="wrap">
+    <!-- topbar は app.js が注入 -->
+
+    <section class="page-intro ds-animate-in">
+      <p class="ds-kicker">My Slides</p>
+      <h1 class="ds-title">これまで作ってきた<br>スライドを、ひと目で。</h1>
+      <p class="lead">ローカルにある提案書・企画書 (pptx / key) を1枚目プレビュー付きで一覧します。
+        索引は <code style="font-family:var(--font-mono)">python3 tools/index_slides.py</code> で更新。
+        カードをクリックで拡大、「開く」でアプリ起動コマンドをコピーします。</p>
+    </section>
+
+    <section>
+      <div class="toolbar">
+        <input class="ds-input search" id="search" type="search" placeholder="タイトル・フォルダで検索…" />
+        <div class="seg" id="sort-seg" role="group" aria-label="並び替え">
+          <button data-sort="mtime" aria-pressed="true">新しい順</button>
+          <button data-sort="slides" aria-pressed="false">枚数順</button>
+          <button data-sort="name" aria-pressed="false">名前順</button>
+        </div>
+      </div>
+      <div class="folder-filter" id="folder-filter"></div>
+      <p class="count" id="count"></p>
+      <div class="deck-grid" id="deck-grid"></div>
+      <div class="empty" id="empty" hidden>該当するスライドがありません。</div>
+    </section>
+  </div>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-label="プレビュー拡大">
+    <img id="lb-img" alt="" />
+    <div class="cap"><span id="lb-cap"></span><br><span class="hint">クリックで閉じる</span></div>
+  </div>
+
+  <script src="./app.js"></script>
+  <script>
+    const grid = document.getElementById('deck-grid');
+    const emptyEl = document.getElementById('empty');
+    const countEl = document.getElementById('count');
+    const folderFilter = document.getElementById('folder-filter');
+    const searchEl = document.getElementById('search');
+    const sortSeg = document.getElementById('sort-seg');
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lb-img');
+    const lbCap = document.getElementById('lb-cap');
+    let DATA = [];
+    let activeFolder = null, sortKey = 'mtime', query = '';
+
+    function esc(s) { return String(s == null ? '' : s)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+    function cardHTML(s) {
+      const thumb = s.thumb
+        ? `<img src="${esc(s.thumb)}?v=${esc(s.mtime)}" alt="${esc(s.title)} の1枚目" loading="lazy" data-full="${esc(s.thumb)}" data-cap="${esc(s.title)}" />`
+        : `<div class="noimg">no preview</div>`;
+      const slides = s.slides != null ? `${s.slides}p` : '';
+      return `<article class="ds-card deck-card">
+        <div class="deck-thumb">${thumb}<span class="ext">${esc(s.ext)}</span></div>
+        <div class="deck-body">
+          <div class="deck-title">${esc(s.title)}</div>
+          <div class="deck-meta">
+            <span class="ds-badge">${esc(s.folder)}</span>
+            ${slides ? `<span>${slides}</span>` : ''}<span>${s.sizeMB}MB</span><span>${esc(s.mtime)}</span>
+          </div>
+          <div class="deck-actions">
+            <button class="ds-btn" data-open="${esc(s.path)}">開く</button>
+            <button class="ds-btn" data-copy="${esc(s.path)}">パスをコピー</button>
+          </div>
+        </div>
+      </article>`;
+    }
+
+    function render() {
+      let list = DATA.filter(s =>
+        (!activeFolder || s.folder === activeFolder) &&
+        (!query || (s.title + ' ' + s.folder + ' ' + s.name).toLowerCase().includes(query)));
+      list = list.slice().sort((a, b) => {
+        if (sortKey === 'slides') return (b.slides || 0) - (a.slides || 0);
+        if (sortKey === 'name') return a.name.localeCompare(b.name, 'ja');
+        return (a.mtime < b.mtime ? 1 : -1);
+      });
+      grid.innerHTML = list.map(cardHTML).join('');
+      emptyEl.hidden = list.length > 0;
+      countEl.textContent = `${list.length} / ${DATA.length} 件`;
+    }
+
+    function buildFolderFilter() {
+      const folders = [...new Set(DATA.map(s => s.folder))].sort((a, b) => a.localeCompare(b, 'ja'));
+      folderFilter.innerHTML = folders.map(f =>
+        `<button data-folder="${esc(f)}" aria-pressed="false">${esc(f)}</button>`).join('');
+      folderFilter.addEventListener('click', e => {
+        const btn = e.target.closest('button'); if (!btn) return;
+        const f = btn.dataset.folder;
+        activeFolder = (activeFolder === f) ? null : f;
+        [...folderFilter.children].forEach(b => b.setAttribute('aria-pressed', b.dataset.folder === activeFolder));
+        render();
+      });
+    }
+
+    sortSeg.addEventListener('click', e => {
+      const btn = e.target.closest('button'); if (!btn) return;
+      sortKey = btn.dataset.sort;
+      [...sortSeg.children].forEach(b => b.setAttribute('aria-pressed', b === btn));
+      render();
+    });
+    searchEl.addEventListener('input', () => { query = searchEl.value.trim().toLowerCase(); render(); });
+
+    // カード操作: 拡大 / 開くコマンド / パスコピー
+    grid.addEventListener('click', e => {
+      const img = e.target.closest('img[data-full]');
+      if (img) { lbImg.src = img.dataset.full; lbCap.textContent = img.dataset.cap; lb.setAttribute('open',''); return; }
+      const openBtn = e.target.closest('button[data-open]');
+      if (openBtn) {
+        navigator.clipboard.writeText('open "' + openBtn.dataset.open + '"').catch(()=>{});
+        openBtn.textContent = 'コマンドをコピー✓'; setTimeout(()=>openBtn.textContent='開く', 1600); return;
+      }
+      const copyBtn = e.target.closest('button[data-copy]');
+      if (copyBtn) {
+        navigator.clipboard.writeText(copyBtn.dataset.copy).catch(()=>{});
+        copyBtn.textContent = 'コピー✓'; setTimeout(()=>copyBtn.textContent='パスをコピー', 1600);
+      }
+    });
+    lb.addEventListener('click', () => { lb.removeAttribute('open'); lbImg.src = ''; });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') { lb.removeAttribute('open'); lbImg.src=''; } });
+
+    fetch('./data/slides.json', { cache: 'no-store' })
+      .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(d => { DATA = d.slides || []; buildFolderFilter(); render(); })
+      .catch(err => {
+        emptyEl.hidden = false;
+        emptyEl.textContent = 'slides.json を読み込めませんでした (' + err.message +
+          ')。先に python3 tools/index_slides.py を実行してください。';
+      });
+  </script>
+</body>
+</html>

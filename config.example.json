@@ -1,0 +1,12 @@
+{
+  "_note": "このファイルを config.local.json にコピーして値を入れる。config.local.json は gitignore 済み (キーを commit しない)。proposals.html / tools/build_pptx.py / tools/scout_designs.py が読み込む。",
+  "difyBaseUrl": "http://localhost/v1",
+  "difyAppKey": "app-xxxxxxxxxxxxxxxxxxxxxxxx (スライド構成ジェネレーター workflow のキー)",
+  "difyScoutAppKey": "app-xxxxxxxxxxxxxxxxxxxxxxxx (デザイン収集スカウト workflow のキー)",
+  "difyPromoteAppKey": "app-xxxxxxxxxxxxxxxxxxxxxxxx (デザイン還元キュレーター workflow のキー)",
+  "pptxTemplate": "/Users/あなた/Downloads/.../テンプレート.pptx (build_pptx.py のベース。空なら Downloads の公式テンプレ)",
+  "scoutSources": [
+    { "name": "minimal.gallery", "feed": "https://minimal.gallery/feed/" },
+    { "name": "Codrops", "feed": "https://tympanus.net/codrops/feed/" }
+  ]
+}

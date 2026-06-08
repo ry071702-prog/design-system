@@ -1,0 +1,240 @@
+app:
+  description: スライドの「中身」は利用者が書く前提で、資料全体のスライド構成、または1枚のスライド案(レイアウト/配置の枠)を設計する。
+  icon: "\U0001F5C2"
+  icon_background: '#EFF1F5'
+  mode: workflow
+  name: スライド構成ジェネレーター
+  use_icon_as_answer_icon: false
+dependencies: []
+kind: app
+version: 0.1.5
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      allowed_file_extensions: []
+      allowed_file_types: []
+      allowed_file_upload_methods: []
+      enabled: false
+      fileUploadConfig: {}
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods: []
+      number_limits: 3
+    opening_statement: ''
+    retriever_resource:
+      enabled: false
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+  graph:
+    edges:
+    - id: start-llm
+      source: start
+      sourceHandle: source
+      target: llm
+      targetHandle: target
+      type: custom
+      zIndex: 0
+      data:
+        sourceType: start
+        targetType: llm
+        isInIteration: false
+    - id: llm-end
+      source: llm
+      sourceHandle: source
+      target: end
+      targetHandle: target
+      type: custom
+      zIndex: 0
+      data:
+        sourceType: llm
+        targetType: end
+        isInIteration: false
+    nodes:
+    - id: start
+      type: custom
+      position:
+        x: 80
+        y: 282
+      positionAbsolute:
+        x: 80
+        y: 282
+      width: 244
+      height: 220
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      data:
+        type: start
+        title: 開始
+        desc: ''
+        variables:
+        - variable: mode
+          label: モード (deck=資料全体の構成 / slide=1枚のスライド案)
+          type: text-input
+          required: true
+          max_length: 16
+          options: []
+        - variable: theme
+          label: 基調テーマ (studio / editorial / focus)
+          type: text-input
+          required: true
+          max_length: 48
+          options: []
+        - variable: tone
+          label: トーン&マナー (自由記述)
+          type: paragraph
+          required: false
+          options: []
+        - variable: topic
+          label: 提案テーマ (deck 用)
+          type: text-input
+          required: false
+          max_length: 256
+          options: []
+        - variable: audience
+          label: 対象読者 (deck 用)
+          type: text-input
+          required: false
+          max_length: 128
+          options: []
+        - variable: goal
+          label: 目的 (deck 用)
+          type: text-input
+          required: false
+          max_length: 128
+          options: []
+        - variable: constraints
+          label: 制約・補足 (deck 用)
+          type: paragraph
+          required: false
+          options: []
+        - variable: idea
+          label: 作りたいスライドのイメージ (slide 用)
+          type: paragraph
+          required: false
+          options: []
+        - variable: count
+          label: スライド枚数 (deck 用・任意)
+          type: text-input
+          required: false
+          max_length: 8
+          options: []
+        - variable: outline
+          label: 各スライドの大まかな内容 / 全体イメージ (deck 用・任意)
+          type: paragraph
+          required: false
+          options: []
+    - id: llm
+      type: custom
+      position:
+        x: 384
+        y: 282
+      positionAbsolute:
+        x: 384
+        y: 282
+      width: 244
+      height: 98
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      data:
+        type: llm
+        title: 構成設計 (Claude Sonnet)
+        desc: ''
+        model:
+          provider: langgenius/anthropic/anthropic
+          name: claude-sonnet-4-6
+          mode: chat
+          completion_params:
+            temperature: 0.6
+        prompt_template:
+        - id: system-prompt
+          role: system
+          text: |
+            あなたはプレゼン資料のスライド設計者です。利用者がスライドの「中身(本文コピー)」を自分で書き込む前提なので、あなたは本文を作文せず、スライドの「構成・レイアウト・配置の枠」だけを設計します。
+
+            入力の mode によって動作を切り替えます。
+
+            ## mode = deck (資料全体の構成)
+            提案テーマ・目的・対象読者・トーンに合わせて、スライドを1枚ずつ設計する。各スライドを次の形式で出力:
+            ### スライドN: 役割名 (例 表紙 / 目次 / サマリ / 課題 / 提案 / 比較 / KPI / スケジュール / まとめ)
+            - レイアウト: 構図の型を1つ (例 タイトル中央 / 箇条書き / 2カラム比較 / 図解中心 / 数値KPI / タイムライン / 引用)
+            - 載せる要素: このスライドに置く"枠"を列挙する (例: 見出し / 箇条書き×3 / 図 / 数値2つ)。実際の文章は書かない
+            - 記入ヒント: 利用者が中身を埋めるときの短い指針 (1行)
+
+            ### deck モードの厳守事項
+            - **枚数(count)が指定されたら、その枚数ちょうどのスライドを出力する** (多くも少なくもしない)。1枚目は必ず「表紙」にする。
+            - **「各スライドの大まかな内容/全体イメージ(outline)」が与えられたら、それに忠実に従う**。利用者が各スライドに載せたいと書いた内容を、そのスライドの役割名・レイアウト・載せる要素・記入ヒントへ落とし込む。利用者の意図より勝手な構成を優先しない。
+            - outline が箇条書きや「1枚目は〜、2枚目は〜」のような順序で書かれていたら、その順序・区切りをスライドの順序として尊重する。
+            - count も outline も無いときだけ、目的に合わせて標準 8〜12枚で最適化する (制約があれば従う)。
+
+            ## mode = slide (1枚のスライド案)
+            「作りたいスライドのイメージ」から、その1枚の構成案を2〜3パターン提示する。各案を次の形式で:
+            ### 案A: 一言コンセプト
+            - レイアウト: 全体の構図
+            - 配置: 上部 / 中央 / 下部 などに何を置くか
+            - ビジュアル・図解: 図/アイコン/アクセント色の使い方の提案
+            - 向いている場面: この案が活きる状況
+
+            # 共通ルール
+            - 中身(本文コピー)は書かない。あくまで「枠」と「設計」だけを出す。
+            - 指定トーン&マナーと基調テーマ(studio=創造的で鮮やか / editorial=上質で落ち着いた / focus=ミニマルで端正)を、構成の粒度・言葉選び・レイアウト選択に反映する。
+            - 出力は Markdown のみ。前置き・後書き・コードフェンスは不要。冒頭は `# ` の見出しから始める。
+        - id: user-prompt
+          role: user
+          text: |
+            mode: {{#start.mode#}}
+            基調テーマ: {{#start.theme#}}
+            トーン&マナー: {{#start.tone#}}
+
+            --- deck モード用の条件 ---
+            提案テーマ: {{#start.topic#}}
+            対象読者: {{#start.audience#}}
+            目的: {{#start.goal#}}
+            制約・補足: {{#start.constraints#}}
+            スライド枚数(count): {{#start.count#}}
+            各スライドの大まかな内容/全体イメージ(outline): {{#start.outline#}}
+
+            --- slide モード用の条件 ---
+            作りたいスライドのイメージ: {{#start.idea#}}
+        context:
+          enabled: false
+          variable_selector: []
+        vision:
+          enabled: false
+    - id: end
+      type: custom
+      position:
+        x: 688
+        y: 282
+      positionAbsolute:
+        x: 688
+        y: 282
+      width: 244
+      height: 90
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      data:
+        type: end
+        title: 終了
+        desc: ''
+        outputs:
+        - variable: skeleton
+          value_selector:
+          - llm
+          - text
+    viewport:
+      x: 0
+      y: 0
+      zoom: 1

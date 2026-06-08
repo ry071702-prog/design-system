@@ -3,6 +3,10 @@
 世の中の優秀なデザインを継続的に取り込み、`tokens.css` / スタイルガイドへ還元するための台帳。
 AIツール活用ナレッジ循環 (`/ai-scout` → `/ai-review`) のデザイン版。
 
+> **描画ソースは `data/references.json`** — ライブラリ画面 (`library.html`) はこの JSON を読んで表示する。
+> 新規エントリは `library.html` の追加フォームで JSON 雛形を生成 → `data/references.json` に貼る。
+> このファイルは「循環フロー/抽出観点/物語メモ」を残す台帳として併用する。
+
 ## 循環フロー
 
 1. **収集 (inbox)** — 良いデザインを見つけたら下の「収集候補」に1行追記
@@ -40,3 +44,5 @@ AIツール活用ナレッジ循環 (`/ai-scout` → `/ai-review`) のデザイ�
 - [slack-emoji-agent 移行で発覚] グラデ上の文字が AA を割る問題 → `--accent-fg-shadow` (fg輝度に応じた逆方向シャドウ) を tokens.css に追加し `.ds-btn-accent` に適用 (2026-06-04)
 - [スタイルガイド拡充] 余白とリズム/モーションが未掲載だった → Spacing・Radius・Motion(3イージング)のショーケースを Style Guide に追加。トークンから動的描画 (2026-06-04)
 - [Glassmorphism 2.0 / Apple Liquid Glass] エッジライト → `--glass-highlight` (上端スペキュラ + 内側縁光、light/dark別) を追加し `.ds-glass` と topbar に合成。blur/saturate も微増。今後の Apple 寄せの第一歩 (2026-06-04)
+
+- [Creating a Thumbnail Flow Animation with GSAP MotionPath] GSAPモーションパス参考 → --ease-path / --stack-offset-x・y / --stack-scale-active・rest / --z-stack-step・base / --dur-stagger / --transition-overlap を :root に追記（tokens.css モーションセクション末尾） (2026-06-08)

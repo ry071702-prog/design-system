@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 日次: デザイン自動収集 (毎日 9:30)。
+     有効化: cp このファイル ~/Library/LaunchAgents/ && launchctl load ~/Library/LaunchAgents/com.designsystem.scout.daily.plist
+     無効化: launchctl unload ~/Library/LaunchAgents/com.designsystem.scout.daily.plist -->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.designsystem.scout.daily</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/python3</string>
+    <string>/Users/s32549/design-system/tools/scout_designs.py</string>
+    <string>--limit</string>
+    <string>6</string>
+  </array>
+  <key>WorkingDirectory</key><string>/Users/s32549/design-system</string>
+  <key>StartCalendarInterval</key>
+  <dict><key>Hour</key><integer>9</integer><key>Minute</key><integer>30</integer></dict>
+  <key>StandardOutPath</key><string>/tmp/ds-scout.log</string>
+  <key>StandardErrorPath</key><string>/tmp/ds-scout.err</string>
+</dict>
+</plist>

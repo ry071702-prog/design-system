@@ -1,0 +1,268 @@
+{
+  "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
+  "references": [
+    {
+      "id": "creating-a-thumbnail-flow-animation--c2864b",
+      "title": "Creating a Thumbnail Flow Animation with GSAP MotionPath",
+      "url": "https://tympanus.net/codrops/2026/06/04/creating-a-thumbnail-flow-animation-with-gsap-motionpath/",
+      "shot": "https://iad.microlink.io/znddNynfxYTXitQcXYIocVX3oJKg77R1nWN3A-DDuH5DlAeoOi8lfVETgMUQM7V25n_WDh0xfxmPJ9Mecbql_w.png",
+      "whatsGood": "GSAPのMotionPathを使ったサムネイル流動アニメーションの実装例として、パス沿いの動きとスタック状の重なり表現に注目すると参考になる。イージング・タイミング・z-index変化のリズムがどう設計されているか確認したい。",
+      "extract": "--motion-path-easing, --thumb-stack-offset, --animation-duration-base, --z-index-stack-step, --thumb-scale-active, --transition-overlap-timing",
+      "tags": [
+        "motion",
+        "gsap",
+        "stack",
+        "animation",
+        "interactive",
+        "tutorials"
+      ],
+      "status": "promoted",
+      "date": "2026-06-04",
+      "added": "2026-06-08",
+      "source": "Codrops",
+      "auto": true,
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-06-08"
+    },
+    {
+      "id": "project-simply-994ef0",
+      "title": "Project Simply",
+      "url": "https://minimal.gallery/project-simply/",
+      "shot": "https://iad.microlink.io/VyeKa1-_iTJkshohvAzWBKd15g9Sw_uLq9Rog2Bpmjfu408n1AeEv7mA70JXG36t-ZxUCJyI_iu6dDHqUBZH6A.png",
+      "whatsGood": "minimal.galleryに掲載されるAI×ブランディング系エージェンシーサイトは、余白の取り方と書体の階層設計が洗練されている傾向があるため、ヒーローセクションのタイポスケールと行間リズムを中心に確認したい。配色はモノクロまたは抑制されたアクセントカラー1色構成の可能性が高く、トークン化しやすい。",
+      "extract": "font-size scale (hero〜body), line-height tokens, letter-spacing (display用), color-surface-neutral, color-accent-single, spacing-section-vertical",
+      "tags": [
+        "minimal",
+        "typography",
+        "editorial",
+        "ai",
+        "branding"
+      ],
+      "status": "inbox",
+      "date": "2026-06-03",
+      "added": "2026-06-08",
+      "source": "minimal.gallery",
+      "auto": true,
+      "proposed": true
+    },
+    {
+      "id": "forging-her-own-path-houmahani-kanes-2f072c",
+      "title": "Forging Her Own Path: Houmahani Kane’s Journey in Creative Development",
+      "url": "https://tympanus.net/codrops/2026/06/03/forging-her-own-path-houmahani-kanes-journey-in-creative-development/",
+      "shot": "https://iad.microlink.io/9tBQZMIg5hJLpevSbWzLhpi5UKbUx3HozqKTBh1DCCt1O1nhdUV_KbC1lMw_WzsAg_ldJ_1MtUuccaD_7a04qA.png",
+      "whatsGood": "開発者スポットライト記事として、長文コンテンツの読みやすさを支えるタイポグラフィスケールと余白のリズムに注目。見出し階層と本文のコントラスト比がどう設計されているか確認する価値がある。",
+      "extract": "editorial-type-scale, article-line-height, section-spacing-rhythm, pull-quote-style, byline-meta-layout, readable-column-width",
+      "tags": [
+        "editorial",
+        "typography",
+        "minimal",
+        "longform",
+        "articles",
+        "developer spotlight"
+      ],
+      "status": "inbox",
+      "date": "2026-06-03",
+      "added": "2026-06-08",
+      "source": "Codrops",
+      "auto": true,
+      "proposed": true
+    },
+    {
+      "id": "108-supply-9abe21",
+      "title": "108™ Supply",
+      "url": "https://minimal.gallery/108-supply/",
+      "shot": "https://iad.microlink.io/P14Qen3Xjm2baIzEa4OdokO8QfuUPBlvGG9rirNDPaJqtLAzRgs5tLrvRoimAQnWlC_k22aeUtjuEcH-FWcWfA.png",
+      "whatsGood": "ミニマルギャラリー掲載のeコマースサイトのため、余白の取り方とタイポグラフィの階層設計が洗練されている可能性が高い。アニメーションカテゴリが付いているため、商品ホバーやページ遷移のモーション演出も注目したい。",
+      "extract": "product-card hover transition, page-transition timing, heading font-size scale, neutral color palette tokens, spacing rhythm (section padding), subtle animation easing curve",
+      "tags": [
+        "minimal",
+        "ecommerce",
+        "motion",
+        "typography",
+        "editorial",
+        "e-commerce"
+      ],
+      "status": "inbox",
+      "date": "2026-06-02",
+      "added": "2026-06-08",
+      "source": "minimal.gallery",
+      "auto": true,
+      "proposed": true
+    },
+    {
+      "id": "kosbiotic-dd966d",
+      "title": "Kosbiotic",
+      "url": "https://minimal.gallery/kosbiotic/",
+      "shot": "https://iad.microlink.io/xFQFi5mniAKw_zrHlx52Fn92YqZBlRp_9Yeb4AGE7ridEmcx7xC7BZ3MqElPm63ilCdJw64z_sEaIgULdCekBw.png",
+      "whatsGood": "minimal.galleryに掲載されたeコマースサイトとして、余白の取り方と商品を引き立てるタイポグラフィの組み合わせに注目すると参考になりそう。配色はニュートラルベースで商品写真を主役にする構成である可能性が高い。",
+      "extract": "product-card spacing, neutral background token, serif/sans混在見出し, CTA button radius, image-first grid layout, muted accent color",
+      "tags": [
+        "minimal",
+        "ecommerce",
+        "typography",
+        "neutral",
+        "clean",
+        "e-commerce"
+      ],
+      "status": "inbox",
+      "date": "2026-06-01",
+      "added": "2026-06-08",
+      "source": "minimal.gallery",
+      "auto": true,
+      "proposed": true
+    },
+    {
+      "id": "beaucoup-and-the-pursuit-of-memorabl-c81e36",
+      "title": "Beaucoup and the Pursuit of Memorable Experiences",
+      "url": "https://tympanus.net/codrops/2026/06/01/beaucoup-and-the-pursuit-of-memorable-experiences/",
+      "shot": "https://iad.microlink.io/IikraFYZK7Wbj7xYRhgRoGXLb-7P_pezCWOuYLyu3a25V3KC778OXHmP5nY8FAdNbiCTBUx-6tgA2VGPJGS9Tw.png",
+      "whatsGood": "スタジオ/エージェンシー系の記事特集として、ブランドストーリーを伝えるエディトリアルなタイポグラフィ階層と余白のリズムに注目すると良い。見出しと本文のコントラスト比や、セクション間の呼吸感が参考になる可能性が高い。",
+      "extract": "editorial heading scale, section spacing rhythm, brand accent color token, pull-quote typography style, article body line-height, hero text-image balance",
+      "tags": [
+        "editorial",
+        "typography",
+        "agency",
+        "minimal",
+        "articles",
+        "studio/agency spotlight"
+      ],
+      "status": "inbox",
+      "date": "2026-06-01",
+      "added": "2026-06-08",
+      "source": "Codrops",
+      "auto": true,
+      "proposed": true
+    },
+    {
+      "id": "convicts-4b5b6b",
+      "title": "Convicts",
+      "url": "https://minimal.gallery/convicts-2/",
+      "shot": "https://iad.microlink.io/UeO-f7MVTe9tD5F9FFA_h7RGqRC64ofR3hYTOahZ9kHsGBytWvTFS_mqy2_ydkV9wgRAXwaKvK5O3xUXjzt-tA.png",
+      "whatsGood": "エージェンシー／ブランディング系スタジオとして、強いタイポグラフィと抑制された配色による緊張感のある余白設計が見どころと推測。ロゴまわりのグリッドとヒエラルキーの付け方を確認したい。",
+      "extract": "high-contrast color pair, editorial heading font-size scale, tight letter-spacing token, generous section padding, monochrome accent system, bold weight hierarchy",
+      "tags": [
+        "minimal",
+        "editorial",
+        "branding",
+        "typography",
+        "dark",
+        "agency"
+      ],
+      "status": "inbox",
+      "date": "2026-06-07",
+      "source": "minimal.gallery",
+      "auto": true,
+      "added": "2026-06-07",
+      "proposed": true
+    },
+    {
+      "id": "twoo-98527f",
+      "title": "Twoo",
+      "url": "https://minimal.gallery/twoo/",
+      "shot": "https://iad.microlink.io/IVQa2hiNo1PiqTEtE-ek_7_pT0O0mau-_k9Jo1rOPma-OqcJvUxkuB26S3_DzEVirTUODobeGkZ0yF3q4cdD-w.png",
+      "whatsGood": "エージェンシー系ブランディングサイトとして、タイポグラフィの大胆なスケール感とグリッドの使い方に注目すると参考になりそう。余白のリズムとブランドカラーの絞り込み方も確認する価値がある。",
+      "extract": "ヒーロー見出しのフォントサイズスケール, ブランドアクセントカラートークン, セクション間の余白リズム, グリッドカラム定義, CTAボタンのシェイプ・パディング, ロゴ周辺のホワイトスペース比率",
+      "tags": [
+        "minimal",
+        "branding",
+        "typography",
+        "agency"
+      ],
+      "status": "inbox",
+      "date": "2026-06-05",
+      "source": "minimal.gallery",
+      "auto": true,
+      "added": "2026-06-05",
+      "proposed": true
+    },
+    {
+      "id": "the-making-of-the-new-lesse-studio-w-687d9a",
+      "title": "The Making of the New Lesse Studio Website: Clarity, Performance, and Intentionality",
+      "url": "https://tympanus.net/codrops/2026/06/05/the-making-of-the-new-lesse-studio-website-clarity-performance-and-intentionality/",
+      "shot": "https://iad.microlink.io/S5nzSgJ68zqt-IRoxjiau78ROVspoxqRAHAPAWV96Zwc6XA0ZsWuGmexQBZrrXqlwNoaWQ2n0UoqViTkb0EGXw.png",
+      "whatsGood": "Svelteベースのスタジオサイトリビルドのケーススタディなので、パフォーマンスを意識したアニメーション実装とミニマルなタイポグラフィ階層の設計思想が参考になる可能性が高い。「Intentionality（意図性）」という言葉からは、余白とリズムの使い方に強いこだわりがある設計が見て取れる。",
+      "extract": "fluid-typography-scale, intentional-whitespace-rhythm, performance-aware-transition-duration, minimal-color-palette-tokens, editorial-heading-weight-contrast, subtle-entrance-animation-easing",
+      "tags": [
+        "minimal",
+        "editorial",
+        "typography",
+        "motion",
+        "performance",
+        "articles"
+      ],
+      "status": "inbox",
+      "date": "2026-06-05",
+      "source": "Codrops",
+      "auto": true,
+      "added": "2026-06-05",
+      "proposed": true
+    },
+    {
+      "id": "pp-neue-montreal-fd743c",
+      "title": "PP Neue Montreal",
+      "url": "https://minimal.gallery/pp-neue-montreal/",
+      "shot": "https://iad.microlink.io/ksXoZukOn9NVDQMmoE6q9p8YiIQeeMT2kS9kmkOoaxFAOW4Wd8GZJc4iuT1HzIOjghklnC3zNLQbg4Fh1OdXTA.png",
+      "whatsGood": "タイプファウンドリーのサイトとして、フォント自体の見せ方（サイズ階層・ウェイト展開・カーニング）と、テキストを主役にした余白設計が参考になる可能性が高い。配色はミニマルなモノクロ系かニュートラルトーンと推測され、タイポグラフィトークンの整理に直結する観点が多いはず。",
+      "extract": "font-size scale, font-weight tokens, letter-spacing variants, line-height scale, neutral color palette, generous whitespace rhythm",
+      "tags": [
+        "typography",
+        "minimal",
+        "editorial",
+        "neutral",
+        "type foundry"
+      ],
+      "status": "inbox",
+      "date": "2026-06-04",
+      "source": "minimal.gallery",
+      "auto": true,
+      "added": "2026-06-04",
+      "proposed": true
+    },
+    {
+      "id": "daiichi-dive",
+      "title": "DAIICHI DIVE",
+      "url": "https://daiichi-dive.ca-event.workers.dev/",
+      "shot": "",
+      "whatsGood": "深海テーマのダークUI。1アクセント・ガラスカード・環境アニメ(光線/泡)・グラデ見出し。この台帳と tokens.css の出発点。",
+      "extract": "glassmorphism, 1アクセント, 環境アニメ, 極太見出し×字間広ラベルの対比, prefers-reduced-motion",
+      "tags": [
+        "dark",
+        "glass",
+        "motion",
+        "hero"
+      ],
+      "status": "promoted",
+      "date": "2026-06-03"
+    },
+    {
+      "id": "glassmorphism-2-0",
+      "title": "Glassmorphism 2.0 (weblogtrips)",
+      "url": "https://weblogtrips.com/technology/glassmorphism-2-0-css-techniques-2026/",
+      "shot": "",
+      "whatsGood": "2026のガラス進化。単純 blur ではなく「光の相互作用」を出すエッジライト/内側ハイライトが要点。",
+      "extract": "--glass-highlight (上端スペキュラ + 内側縁光, light/dark別), blur/saturate 微増",
+      "tags": [
+        "glass",
+        "apple",
+        "depth"
+      ],
+      "status": "promoted",
+      "date": "2026-06-04"
+    },
+    {
+      "id": "awwwards-sotd",
+      "title": "Awwwards — Sites of the Day",
+      "url": "https://www.awwwards.com/websites/sites_of_the_day/",
+      "shot": "",
+      "whatsGood": "良質なダーク/グラス事例の定常ソース。配色・ヒーロー構成・モーションの「間」を観察する巡回元。",
+      "extract": "(巡回して都度抽出)",
+      "tags": [
+        "source",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-06-04"
+    }
+  ]
+}

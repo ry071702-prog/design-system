@@ -1,3 +1,13 @@
 .DS_Store
 out/
 *.log
+
+# ローカル専用の設定 (Dify base URL + app key)。絶対に commit しない
+config.local.json
+
+# 作成済みスライドの索引・サムネ (社内ファイルのパス/プレビュー。commit しない)
+data/slides.json
+data/slide-thumbs/
+
+# 還元レビューキュー (AI生成の提案。レビュー用の一時成果物)
+data/promotions/

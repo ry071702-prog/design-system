@@ -373,3 +373,35 @@
     transition-duration: 0.001ms !important;
   }
 }
+
+
+/* =============================================================================
+   還元 (promoted): Creating a Thumbnail Flow Animation with GSAP MotionPath — 2026-06-08
+   GSAPモーションパス参考例からスタックアニメーション向けトークンを抽出し、既存モーション定義を拡張する。--dur-slow(600ms)や--ease-spring等と整合しつつ、スタック重なり・スケール・z-index刻みの不足トークンのみを追記する。
+   出典: https://tympanus.net/codrops/2026/06/04/creating-a-thumbnail-flow-animation-with-gsap-motionpath/
+   ========================================================================== */
+/* --- スタック・モーションパス拡張 (GSAP MotionPath 参考) ----------- */
+:root {
+  /* パス沿いアニメーションに適した減速イージング(既存 ease-out より緩やかな立ち上がり) */
+  --ease-path: cubic-bezier(0.45, 0.05, 0.55, 0.95);
+
+  /* スタック表示時の奥行きオフセット(カードが重なるズレ量) */
+  --stack-offset-x: 6px;
+  --stack-offset-y: 8px;
+
+  /* スタック内アクティブ要素のスケール倍率 */
+  --stack-scale-active: 1.04;
+  /* スタック内非アクティブ要素の縮小倍率 */
+  --stack-scale-rest: 0.96;
+
+  /* z-index の刻み幅(スタック内の前後順を一定間隔で管理) */
+  --z-stack-step: 10;
+  /* スタックの基底 z-index */
+  --z-stack-base: 0;
+
+  /* 複数要素が時間差で動く際の1ステップあたりの遅延 */
+  --dur-stagger: 60ms;
+
+  /* アニメーション同士が重なり合う区間の割合(0〜1、JSから参照用) */
+  --transition-overlap: 0.3;
+}

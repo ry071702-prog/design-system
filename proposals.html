@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>骨子ジェネレーター — 共通デザインシステム</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@500;700;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./tokens.css" />
+<link rel="stylesheet" href="./app.css" />
+<style>
+  /* 骨子ジェネレーター固有 (生値は使わず var(--*) のみ) */
+  .field { display: block; margin-bottom: var(--space-4); }
+  .field > span { display: block; font-size: var(--text-xs); font-weight: 600;
+    letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--fg-subtle);
+    margin-bottom: 0.4rem; }
+  textarea.ds-input { resize: vertical; min-height: 3.4rem; font-family: inherit; }
+  select.ds-input { appearance: none; cursor: pointer; }
+
+  .gen-layout { display: grid; gap: var(--space-5);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; }
+  @media (max-width: 820px) { .gen-layout { grid-template-columns: 1fr; } }
+
+  .result { min-height: 8rem; }
+  .result-toolbar { display: flex; gap: var(--space-2); align-items: center;
+    justify-content: space-between; margin-bottom: var(--space-3); }
+  .skeleton-out { line-height: var(--leading-relaxed); color: var(--fg); }
+  .skeleton-out h1, .skeleton-out h2, .skeleton-out h3 {
+    font-family: var(--font-display); letter-spacing: var(--tracking-tight);
+    line-height: var(--leading-snug); margin: var(--space-5) 0 var(--space-2); }
+  .skeleton-out h1 { font-size: var(--text-2xl); }
+  .skeleton-out h2 { font-size: var(--text-xl); }
+  .skeleton-out h3 { font-size: var(--text-lg); }
+  .skeleton-out p { margin: var(--space-2) 0; color: var(--fg-muted); }
+  .skeleton-out ul { margin: var(--space-2) 0; padding-left: var(--space-5); color: var(--fg-muted); }
+  .skeleton-out li { margin: 0.2rem 0; }
+  .skeleton-out strong { color: var(--fg); font-weight: 700; }
+
+  .placeholder { color: var(--fg-subtle); font-size: var(--text-sm);
+    display: grid; place-items: center; min-height: 8rem; text-align: center; }
+  .spinner { width: 26px; height: 26px; border-radius: 50%;
+    border: 3px solid var(--accent-soft); border-top-color: var(--accent);
+    animation: spin 0.8s linear infinite; margin: 0 auto var(--space-3); }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { .spinner { animation-duration: 2s; } }
+
+  .setup code, .err code { font-family: var(--font-mono); color: var(--fg);
+    background: var(--bg-sunken); padding: 0.1rem 0.35rem; border-radius: var(--radius-sm); }
+  .setup ol { margin: var(--space-3) 0 0; padding-left: var(--space-5);
+    color: var(--fg-muted); line-height: var(--leading-relaxed); }
+  .setup li { margin: var(--space-2) 0; }
+  .err { color: var(--danger); font-size: var(--text-sm); margin-top: var(--space-3); }
+</style>
+</head>
+<body class="theme-studio" data-theme="light">
+  <div class="wrap">
+    <!-- topbar は app.js が注入 -->
+
+    <section class="page-intro ds-animate-in">
+      <p class="ds-kicker">Slide Structure</p>
+      <h1 class="ds-title">中身は自分で。<br>スライドの構成は自動で。</h1>
+      <p class="lead">中身(本文)はあなたが書く前提で、ローカルの Dify ワークフロー (Claude Sonnet) が
+        スライドの<b>構成・レイアウトの枠</b>だけを設計します。資料全体の構成、または「こんなスライドを作りたい」
+        から1枚の構成案を。生成は手元の Dify 経由なので、キーは外に出ません。</p>
+    </section>
+
+    <!-- config 未設定時のセットアップ案内 (degrade) -->
+    <section id="setup" hidden>
+      <div class="ds-card setup">
+        <p class="ds-kicker" style="color:var(--warning)">セットアップが必要です</p>
+        <h3 class="ds-title" style="font-size:var(--text-lg);margin-top:var(--space-2)">Dify 接続設定が見つかりません</h3>
+        <ol>
+          <li>Dify を起動: <code>cd ~/dify/docker &amp;&amp; docker compose up -d</code></li>
+          <li>Anthropic キーを Dify に登録: <code>python3 ~/dify/automation/dify.py add-provider langgenius/anthropic/anthropic '{"anthropic_api_key":"sk-ant-…"}'</code></li>
+          <li>ワークフローを取り込み: <code>python3 ~/dify/automation/dify.py import flows/proposal-skeleton.yml</code> → 表示された <code>app_id</code> で <code>… key &lt;app_id&gt;</code> を実行し app キーを取得</li>
+          <li><code>config.example.json</code> を <code>config.local.json</code> にコピーし、<code>difyAppKey</code> を貼る</li>
+          <li>このページを再読み込み</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="gen-layout" id="generator" hidden>
+      <!-- 入力 -->
+      <form class="ds-card" id="gen-form">
+        <div class="seg" id="mode-toggle" role="group" aria-label="生成モード" style="margin-bottom:var(--space-4)">
+          <button type="button" data-mode="deck" aria-pressed="true">資料の構成</button>
+          <button type="button" data-mode="slide" aria-pressed="false">1枚のスライド案</button>
+        </div>
+
+        <label class="field"><span>基調テーマ</span>
+          <select class="ds-input" id="g-theme">
+            <option value="studio">Studio — クリエイティブで鮮やか</option>
+            <option value="editorial">Editorial — 信頼感のある上質・落ち着き</option>
+            <option value="focus">Focus — ミニマルで端正</option>
+          </select>
+        </label>
+        <label class="field"><span>トーン&マナー (自由記述)</span>
+          <textarea class="ds-input" id="g-tone" placeholder="例: 信頼感があり落ち着いた語り口。専門用語は控えめに、結論先出し。"></textarea></label>
+
+        <!-- deck モード専用 -->
+        <div class="mode-fields" data-for="deck">
+          <label class="field"><span>提案テーマ</span>
+            <input class="ds-input" id="g-topic" placeholder="例: 社内ナレッジ検索への RAG 導入" /></label>
+          <div class="grid grid-2">
+            <label class="field"><span>対象読者</span>
+              <input class="ds-input" id="g-audience" placeholder="例: 経営層" /></label>
+            <label class="field"><span>目的</span>
+              <input class="ds-input" id="g-goal" placeholder="例: 予算承認を得る" /></label>
+          </div>
+          <label class="field"><span>スライド枚数 (任意)</span>
+            <input class="ds-input" id="g-count" type="number" min="1" max="40" placeholder="例: 8　空なら自動で最適化" /></label>
+          <label class="field"><span>各スライドの大まかな内容 / 全体イメージ (任意)</span>
+            <textarea class="ds-input" id="g-outline" style="min-height:5.5rem" placeholder="例: 1枚目は表紙。2枚目で自己紹介。3枚目は事業概要。4枚目は代表事例。5枚目で働き方。6枚目はまとめと応募導線。&#10;書いた内容・順序にできるだけ沿って構成します。"></textarea></label>
+          <label class="field"><span>制約・補足 (任意)</span>
+            <textarea class="ds-input" id="g-constraints" placeholder="例: 図は控えめ、専門用語は避ける"></textarea></label>
+        </div>
+
+        <!-- slide モード専用 -->
+        <div class="mode-fields" data-for="slide" hidden>
+          <label class="field"><span>作りたいスライドのイメージ</span>
+            <textarea class="ds-input" id="g-idea" placeholder="例: 自社サービスの成長グラフを一目でインパクト強く見せたい。数字は3つ。"></textarea></label>
+        </div>
+
+        <div class="row">
+          <button type="submit" class="ds-btn ds-btn-accent ds-btn-pill" id="g-submit">構成を生成 →</button>
+        </div>
+        <p class="err" id="g-err" hidden></p>
+      </form>
+
+      <!-- 出力 -->
+      <div class="ds-card result">
+        <div class="result-toolbar">
+          <p class="sec-label" style="margin:0">構成</p>
+          <div class="row" style="gap:var(--space-2)">
+            <button class="ds-btn" id="g-copy" hidden>コピー</button>
+            <button class="ds-btn" id="g-dl" hidden>.md</button>
+            <button class="ds-btn ds-btn-accent" id="g-pptx" hidden>PPTX (CAテンプレ)</button>
+          </div>
+        </div>
+        <div id="g-result">
+          <div class="placeholder">左のフォームを入力して「構成を生成」を押してください。</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="./app.js"></script>
+  <script>
+    const setupSec = document.getElementById('setup');
+    const genSec = document.getElementById('generator');
+    const form = document.getElementById('gen-form');
+    const resultEl = document.getElementById('g-result');
+    const errEl = document.getElementById('g-err');
+    const submitBtn = document.getElementById('g-submit');
+    const copyBtn = document.getElementById('g-copy');
+    const dlBtn = document.getElementById('g-dl');
+    const pptxBtn = document.getElementById('g-pptx');
+    let CONFIG = null;
+    let lastMarkdown = '';
+
+    function esc(s) { return String(s == null ? '' : s)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+    // 最小 Markdown レンダラ (見出し / 箇条書き / 太字 / 段落)。先にエスケープして安全に。
+    function renderMarkdown(md) {
+      const lines = esc(md).split('\n');
+      let html = '', inList = false;
+      const closeList = () => { if (inList) { html += '</ul>'; inList = false; } };
+      for (let raw of lines) {
+        const line = raw.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+        let m;
+        if ((m = line.match(/^###\s+(.*)/))) { closeList(); html += `<h3>${m[1]}</h3>`; }
+        else if ((m = line.match(/^##\s+(.*)/))) { closeList(); html += `<h2>${m[1]}</h2>`; }
+        else if ((m = line.match(/^#\s+(.*)/))) { closeList(); html += `<h1>${m[1]}</h1>`; }
+        else if ((m = line.match(/^\s*[-*]\s+(.*)/))) {
+          if (!inList) { html += '<ul>'; inList = true; }
+          html += `<li>${m[1]}</li>`;
+        }
+        else if (line.trim() === '') { closeList(); }
+        else { closeList(); html += `<p>${line}</p>`; }
+      }
+      closeList();
+      return html;
+    }
+
+    function showResult(md) {
+      lastMarkdown = md;
+      resultEl.innerHTML = `<div class="skeleton-out">${renderMarkdown(md)}</div>`;
+      copyBtn.hidden = false; dlBtn.hidden = false;
+      pptxBtn.hidden = (mode !== 'deck');   // PPTX 化は資料の構成(deck)のみ
+    }
+    function showLoading() {
+      resultEl.innerHTML = '<div class="placeholder"><div><div class="spinner"></div>Claude Sonnet が構成を設計中…</div></div>';
+      copyBtn.hidden = true; dlBtn.hidden = true; pptxBtn.hidden = true;
+    }
+
+    // --- モード切替 (deck / slide) -------------------------------------
+    let mode = 'deck';
+    const modeToggle = document.getElementById('mode-toggle');
+    function applyMode() {
+      document.querySelectorAll('.mode-fields').forEach(el => { el.hidden = el.dataset.for !== mode; });
+      submitBtn.textContent = (mode === 'slide' ? 'スライド案を生成 →' : '構成を生成 →');
+    }
+    modeToggle.addEventListener('click', e => {
+      const btn = e.target.closest('button'); if (!btn) return;
+      mode = btn.dataset.mode;
+      [...modeToggle.children].forEach(b => b.setAttribute('aria-pressed', b === btn));
+      applyMode();
+    });
+    applyMode();
+
+    // Dify ワークフロー出力から骨子テキストを取り出す (End ノード変数名に依存しない)
+    function extractText(outputs) {
+      if (!outputs || typeof outputs !== 'object') return '';
+      for (const key of ['skeleton', 'text', 'result', 'output', 'answer']) {
+        if (typeof outputs[key] === 'string' && outputs[key].trim()) return outputs[key];
+      }
+      const firstStr = Object.values(outputs).find(v => typeof v === 'string' && v.trim());
+      return firstStr || '';
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      errEl.hidden = true;
+      const inputs = {
+        mode: mode,
+        theme: document.getElementById('g-theme').value,
+        tone: document.getElementById('g-tone').value.trim(),
+        topic: document.getElementById('g-topic').value.trim(),
+        audience: document.getElementById('g-audience').value.trim(),
+        goal: document.getElementById('g-goal').value.trim(),
+        constraints: document.getElementById('g-constraints').value.trim(),
+        count: document.getElementById('g-count').value.trim(),
+        outline: document.getElementById('g-outline').value.trim(),
+        idea: document.getElementById('g-idea').value.trim()
+      };
+      if (mode === 'deck' && !inputs.topic) {
+        errEl.textContent = '提案テーマを入力してください。'; errEl.hidden = false; return; }
+      if (mode === 'slide' && !inputs.idea) {
+        errEl.textContent = '作りたいスライドのイメージを入力してください。'; errEl.hidden = false; return; }
+
+      submitBtn.disabled = true; showLoading();
+      try {
+        const res = await fetch(CONFIG.difyBaseUrl.replace(/\/$/, '') + '/workflows/run', {
+          method: 'POST',
+          headers: { 'Authorization': 'Bearer ' + CONFIG.difyAppKey, 'Content-Type': 'application/json' },
+          body: JSON.stringify({ inputs, response_mode: 'blocking', user: 'design-system-local' })
+        });
+        if (!res.ok) {
+          const t = await res.text();
+          throw new Error('Dify ' + res.status + ': ' + t.slice(0, 200));
+        }
+        const data = await res.json();
+        const md = extractText(data && data.data && data.data.outputs);
+        if (!md) throw new Error('出力が空でした。Dify ワークフローの End ノード出力を確認してください。');
+        showResult(md);
+      } catch (err) {
+        resultEl.innerHTML = '<div class="placeholder">生成に失敗しました。</div>';
+        errEl.textContent = err.message + ' — Dify 起動 / キー登録 / config.local.json を確認してください。';
+        errEl.hidden = false;
+      } finally {
+        submitBtn.disabled = false;
+      }
+    });
+
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(lastMarkdown).then(() => {
+        copyBtn.textContent = 'コピーしました ✓';
+        setTimeout(() => copyBtn.textContent = 'コピー', 1500);
+      });
+    });
+    dlBtn.addEventListener('click', () => {
+      const blob = new Blob([lastMarkdown], { type: 'text/markdown' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = (mode === 'slide' ? 'slide-idea.md' : 'slide-structure.md');
+      a.click();
+      URL.revokeObjectURL(a.href);
+    });
+
+    // PPTX (CAテンプレ): いま表示中の構成を .md で保存し、生成コマンドをコピー
+    // ブラウザは pptx を直接作れないため、ローカルの build_pptx.py を1コマンドで実行する
+    pptxBtn.addEventListener('click', () => {
+      const blob = new Blob([lastMarkdown], { type: 'text/markdown' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'slide-structure.md';   // 既定で ~/Downloads に保存される
+      a.click();
+      URL.revokeObjectURL(a.href);
+      const cmd = 'cd ~/design-system && python3 tools/build_pptx.py --from ~/Downloads/slide-structure.md --open';
+      navigator.clipboard.writeText(cmd).catch(() => {});
+      let note = document.getElementById('pptx-note');
+      if (!note) {
+        note = document.createElement('p');
+        note.id = 'pptx-note';
+        note.style.cssText = 'margin-top:var(--space-3);font-size:var(--text-xs);color:var(--fg-muted);font-family:var(--font-mono);word-break:break-all';
+        resultEl.parentNode.appendChild(note);
+      }
+      note.innerHTML = 'slide-structure.md を保存しました。下のコマンド(コピー済み)をターミナルで実行 → CAテンプレの pptx が開きます:<br>' +
+        '<span style="color:var(--fg)">' + cmd + '</span>';
+    });
+
+    // 基調テーマの初期値を現在のページテーマに合わせる
+    document.addEventListener('ds:themechange', (e) => {
+      const map = { 'theme-studio': 'studio', 'theme-editorial': 'editorial', 'theme-focus': 'focus' };
+      const v = map[e.detail.themeClass];
+      const sel = document.getElementById('g-theme');
+      if (v && !sel.dataset.touched) sel.value = v;
+    }, { once: true });
+    document.getElementById('g-theme').addEventListener('change', e => e.target.dataset.touched = '1');
+
+    // config 読み込み → セットアップ案内 or ジェネレーター表示
+    fetch('./config.local.json', { cache: 'no-store' })
+      .then(r => { if (!r.ok) throw new Error('not found'); return r.json(); })
+      .then(cfg => {
+        const valid = cfg && cfg.difyBaseUrl && cfg.difyAppKey &&
+          !/^app-x+$/i.test(cfg.difyAppKey);
+        if (!valid) throw new Error('incomplete');
+        CONFIG = cfg;
+        genSec.hidden = false;
+      })
+      .catch(() => { setupSec.hidden = false; });
+  </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 常時起動: design-system をローカルで配信 (ログイン時自動起動・落ちたら再起動)。
+     127.0.0.1 限定バインドで LAN には公開しない。URL: http://127.0.0.1:4173
+     有効化: cp このファイル ~/Library/LaunchAgents/ && launchctl load ~/Library/LaunchAgents/com.designsystem.server.plist -->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.designsystem.server</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/python3</string>
+    <string>-m</string>
+    <string>http.server</string>
+    <string>4173</string>
+    <string>--bind</string>
+    <string>127.0.0.1</string>
+  </array>
+  <key>WorkingDirectory</key><string>/Users/s32549/design-system</string>
+  <key>RunAtLoad</key><true/>
+  <key>KeepAlive</key><true/>
+  <key>StandardOutPath</key><string>/tmp/ds-server.log</string>
+  <key>StandardErrorPath</key><string>/tmp/ds-server.err</string>
+</dict>
+</plist>

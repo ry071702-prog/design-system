@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 週次レビュー: 直近7日の自動収集を Obsidian Inbox に要約 (毎週月曜 9:40)。
+     有効化: cp このファイル ~/Library/LaunchAgents/ && launchctl load ~/Library/LaunchAgents/com.designsystem.scout.weekly.plist -->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.designsystem.scout.weekly</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/python3</string>
+    <string>/Users/s32549/design-system/tools/scout_designs.py</string>
+    <string>--digest</string>
+  </array>
+  <key>WorkingDirectory</key><string>/Users/s32549/design-system</string>
+  <key>StartCalendarInterval</key>
+  <dict><key>Weekday</key><integer>1</integer><key>Hour</key><integer>9</integer><key>Minute</key><integer>40</integer></dict>
+  <key>StandardOutPath</key><string>/tmp/ds-scout.log</string>
+  <key>StandardErrorPath</key><string>/tmp/ds-scout.err</string>
+</dict>
+</plist>

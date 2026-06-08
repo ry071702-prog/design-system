@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 週次還元: 直近7日のinboxから tokens.css 還元案を一括生成 (毎週火曜 9:45)。
+     提案は data/promotions/ に出力。適用(tokens.cssへ追記)は人が --apply で実行。
+     有効化: cp このファイル ~/Library/LaunchAgents/ && launchctl load ~/Library/LaunchAgents/com.designsystem.promote.weekly.plist -->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.designsystem.promote.weekly</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/python3</string>
+    <string>/Users/s32549/design-system/tools/promote_design.py</string>
+    <string>--weekly</string>
+  </array>
+  <key>WorkingDirectory</key><string>/Users/s32549/design-system</string>
+  <key>StartCalendarInterval</key>
+  <dict><key>Weekday</key><integer>2</integer><key>Hour</key><integer>9</integer><key>Minute</key><integer>45</integer></dict>
+  <key>StandardOutPath</key><string>/tmp/ds-promote.log</string>
+  <key>StandardErrorPath</key><string>/tmp/ds-promote.err</string>
+</dict>
+</plist>
