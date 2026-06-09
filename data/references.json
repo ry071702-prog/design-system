@@ -63,12 +63,14 @@
         "articles",
         "developer spotlight"
       ],
-      "status": "inbox",
+      "status": "promoted",
       "date": "2026-06-03",
       "added": "2026-06-08",
       "source": "Codrops",
       "auto": true,
-      "proposed": true
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-06-09"
     },
     {
       "id": "108-supply-9abe21",
@@ -85,12 +87,14 @@
         "editorial",
         "e-commerce"
       ],
-      "status": "inbox",
+      "status": "promoted",
       "date": "2026-06-02",
       "added": "2026-06-08",
       "source": "minimal.gallery",
       "auto": true,
-      "proposed": true
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-06-09"
     },
     {
       "id": "kosbiotic-dd966d",
@@ -107,12 +111,14 @@
         "clean",
         "e-commerce"
       ],
-      "status": "inbox",
+      "status": "promoted",
       "date": "2026-06-01",
       "added": "2026-06-08",
       "source": "minimal.gallery",
       "auto": true,
-      "proposed": true
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-06-09"
     },
     {
       "id": "beaucoup-and-the-pursuit-of-memorabl-c81e36",
@@ -129,12 +135,14 @@
         "articles",
         "studio/agency spotlight"
       ],
-      "status": "inbox",
+      "status": "promoted",
       "date": "2026-06-01",
       "added": "2026-06-08",
       "source": "Codrops",
       "auto": true,
-      "proposed": true
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-06-09"
     },
     {
       "id": "convicts-4b5b6b",
@@ -197,12 +205,14 @@
         "performance",
         "articles"
       ],
-      "status": "inbox",
+      "status": "promoted",
       "date": "2026-06-05",
       "source": "Codrops",
       "auto": true,
       "added": "2026-06-05",
-      "proposed": true
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-06-09"
     },
     {
       "id": "pp-neue-montreal-fd743c",

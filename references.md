@@ -48,3 +48,5 @@ AIツール活用ナレッジ循環 (`/ai-scout` → `/ai-review`) のデザイ�
 - [Creating a Thumbnail Flow Animation with GSAP MotionPath] GSAPモーションパス参考 → --ease-path / --stack-offset-x・y / --stack-scale-active・rest / --z-stack-step・base / --dur-stagger / --transition-overlap を :root に追記（tokens.css モーションセクション末尾） (2026-06-08)
 
 - [自動収集の選別統合] PP Neue Montreal/Convicts/Twoo/Project Simply → フォントウェイトscale(--weight-*) / 特大型(--text-6xl・7xl) / 大型余白(--space-10・11) / --tracking-tighter を :root に追記。重複・競合・既存再定義の提案は不採用 (2026-06-09)
+
+- [自動収集レシピ統合] Twoo/108 Supply/Kosbiotic/Beaucoup/Forging → .ds-hero(-title)/.ds-product-card(+grid)/.ds-article-body/.ds-lead/.ds-pull-quote と --ease-lift/--measure/--card-lift-y を追記。重複は1本化 (2026-06-09)

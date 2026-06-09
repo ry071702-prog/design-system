@@ -433,3 +433,64 @@
   /* --- ディスプレイ用のさらに詰めた字間 (Convicts / Project Simply) ----- */
   --tracking-tighter: -0.035em;
 }
+
+
+/* =============================================================================
+   還元 (promoted): 共通レシピ拡張 (Hero / Product / Editorial) — 2026-06-09
+   自動収集 Twoo / 108(TM) Supply / Kosbiotic / Beaucoup / Forging の提案を精査・統合。
+   重複(.ds-product-card x2 / .ds-pull-quote x2)は1本化し、追記専用で既存と衝突なし。
+   ========================================================================== */
+:root {
+  --ease-lift: cubic-bezier(0.16, 1, 0.3, 1);   /* 要素が浮き上がる演出向けの緩やか減速 */
+  --measure: 68ch;                               /* 長文の最適読字幅(和欧混植で約65〜75字) */
+  --card-lift-y: -6px;                           /* カードホバーの浮き上がり量 */
+}
+
+/* --- ヒーロー (Twoo: 極大見出し x たっぷり余白) ---------------------- */
+.ds-hero {
+  max-width: 1440px; margin-inline: auto;
+  padding: var(--space-11) var(--space-6) var(--space-10);
+}
+.ds-hero-title {
+  font-family: var(--font-display);
+  font-size: var(--text-7xl);
+  font-weight: var(--weight-black);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tighter);
+  color: var(--fg); margin: 0;
+}
+
+/* --- プロダクトカード (108 Supply / Kosbiotic: 画像先行 EC カード) ---- */
+.ds-product-grid {
+  display: grid; gap: var(--space-4);
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+.ds-product-card {
+  background: var(--bg-elev); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);
+  overflow: hidden; display: flex; flex-direction: column;
+  transition: transform var(--dur) var(--ease-lift), box-shadow var(--dur) var(--ease-lift);
+}
+.ds-product-card:hover { transform: translateY(var(--card-lift-y)); box-shadow: var(--shadow-md); }
+.ds-product-card__media { aspect-ratio: 4 / 5; overflow: hidden; background: var(--bg-sunken); }
+.ds-product-card__media img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform var(--dur-slow) var(--ease-lift);
+}
+.ds-product-card:hover .ds-product-card__media img { transform: scale(1.04); }
+.ds-product-card__body { padding: var(--space-3) var(--space-4) var(--space-4); display: grid; gap: 4px; }
+.ds-product-card__name { font-weight: var(--weight-semibold); color: var(--fg); }
+.ds-product-card__price { font-family: var(--font-mono); color: var(--fg-muted); font-size: var(--text-sm); }
+
+/* --- エディトリアル長文 (Beaucoup / Forging: 可読幅 + リード + プルクォート) -- */
+.ds-article-body { max-width: var(--measure); line-height: var(--leading-relaxed); color: var(--fg); }
+.ds-lead {
+  font-size: var(--text-lg); line-height: var(--leading-relaxed);
+  color: var(--fg-muted); max-width: var(--measure);
+}
+.ds-pull-quote {
+  font-family: var(--font-display); font-style: italic; font-weight: var(--weight-medium);
+  font-size: clamp(1.25rem, 1rem + 1.5vw, 1.75rem); line-height: var(--leading-snug);
+  color: var(--fg); border-left: 3px solid var(--accent);
+  padding: var(--space-3) 0 var(--space-3) var(--space-5); margin: var(--space-5) 0;
+}

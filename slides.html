@@ -124,7 +124,8 @@
             ${slides ? `<span>${slides}</span>` : ''}<span>${s.sizeMB}MB</span><span>${esc(s.mtime)}</span>
           </div>
           <div class="deck-actions">
-            <button class="ds-btn" data-open="${esc(s.path)}">開く（全ページ）</button>
+            <button class="ds-btn" data-open="${esc(s.path)}">開く</button>
+            ${s.ext === 'pptx' ? `<button class="ds-btn" data-pdf="${esc(s.id)}" data-pdfpath="${esc(s.pdf || '')}">全ページ</button>` : ''}
             <button class="ds-btn" data-copy="${esc(s.path)}">パスをコピー</button>
           </div>
         </div>
@@ -179,6 +180,18 @@
       if (copyBtn) {
         navigator.clipboard.writeText(copyBtn.dataset.copy).catch(()=>{});
         copyBtn.textContent = 'コピー✓'; setTimeout(()=>copyBtn.textContent='パスをコピー', 1600);
+        return;
+      }
+      const pdfBtn = e.target.closest('button[data-pdf]');
+      if (pdfBtn) {
+        const p = pdfBtn.dataset.pdfpath;
+        if (p) {
+          window.open(p, '_blank');   // 生成済み PDF をブラウザ内で全ページ表示
+        } else {
+          // 未生成 (or 大きすぎ) → ローカルで変換するコマンドをコピー
+          navigator.clipboard.writeText(`cd ~/design-system && python3 tools/deck_to_pdf.py ${pdfBtn.dataset.pdf} --open`).catch(()=>{});
+          pdfBtn.textContent = '生成コマンドをコピー✓'; setTimeout(()=>pdfBtn.textContent='全ページ', 2000);
+        }
       }
     });
     lb.addEventListener('click', () => { lb.removeAttribute('open'); lbImg.src = ''; });

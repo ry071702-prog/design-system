@@ -8,6 +8,7 @@ config.local.json
 # 作成済みスライドの索引・サムネ (社内ファイルのパス/プレビュー。commit しない)
 data/slides.json
 data/slide-thumbs/
+data/slide-pdfs/
 
 # 還元レビューキュー (AI生成の提案。レビュー用の一時成果物)
 data/promotions/

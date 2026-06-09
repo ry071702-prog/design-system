@@ -88,11 +88,31 @@ def thumbnail(path, key):
     return rel
 
 
+PDF_CAP_MB = 60  # これより大きい pptx は PDF 一括生成をスキップ (必要時 deck_to_pdf.py で個別変換)
+
+
+def make_pdf(path, key):
+    """--pdfs 時: soffice で全ページ PDF を生成し相対パスを返す。"""
+    import deck_to_pdf  # 同ディレクトリ
+    dst = os.path.join(ROOT, "data", "slide-pdfs", key + ".pdf")
+    if os.path.exists(dst) and os.path.getmtime(dst) >= os.path.getmtime(path):
+        return os.path.relpath(dst, ROOT)
+    try:
+        deck_to_pdf.convert(path, dst)
+        return os.path.relpath(dst, ROOT)
+    except Exception:
+        return ""
+
+
 def main():
-    roots = load_roots(sys.argv[1:])
+    argv = sys.argv[1:]
+    do_pdfs = "--pdfs" in argv
+    roots = load_roots([a for a in argv if a != "--pdfs"])
     os.makedirs(THUMB_DIR, exist_ok=True)
+    if do_pdfs:
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     files = find_files(roots)
-    print(f"走査: {roots} → {len(files)} 件", file=sys.stderr)
+    print(f"走査: {roots} → {len(files)} 件" + (" (PDF生成あり)" if do_pdfs else ""), file=sys.stderr)
 
     items = []
     for i, path in enumerate(sorted(files), 1):
@@ -101,17 +121,23 @@ def main():
         count, title = pptx_meta(path)
         thumb = thumbnail(path, key)
         folder = os.path.basename(os.path.dirname(path))
+        ext = os.path.splitext(path)[1].lstrip(".").lower()
+        size_mb = round(st.st_size / 1024 / 1024, 1)
+        pdf = ""
+        if do_pdfs and ext == "pptx" and size_mb <= PDF_CAP_MB:
+            pdf = make_pdf(path, key)
         items.append({
             "id": key,
             "name": os.path.splitext(os.path.basename(path))[0],
             "title": title or os.path.splitext(os.path.basename(path))[0],
             "folder": folder,
             "path": path,
-            "ext": os.path.splitext(path)[1].lstrip(".").lower(),
+            "ext": ext,
             "slides": count,
-            "sizeMB": round(st.st_size / 1024 / 1024, 1),
+            "sizeMB": size_mb,
             "mtime": datetime.date.fromtimestamp(st.st_mtime).isoformat(),
             "thumb": thumb,
+            "pdf": pdf,
         })
         if i % 10 == 0:
             print(f"  {i}/{len(files)}", file=sys.stderr)
