@@ -39,12 +39,14 @@
         "ai",
         "branding"
       ],
-      "status": "inbox",
+      "status": "promoted",
       "date": "2026-06-03",
       "added": "2026-06-08",
       "source": "minimal.gallery",
       "auto": true,
-      "proposed": true
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-06-09"
     },
     {
       "id": "forging-her-own-path-houmahani-kanes-2f072c",
@@ -149,12 +151,14 @@
         "dark",
         "agency"
       ],
-      "status": "inbox",
+      "status": "promoted",
       "date": "2026-06-07",
       "source": "minimal.gallery",
       "auto": true,
       "added": "2026-06-07",
-      "proposed": true
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-06-09"
     },
     {
       "id": "twoo-98527f",
@@ -169,12 +173,14 @@
         "typography",
         "agency"
       ],
-      "status": "inbox",
+      "status": "promoted",
       "date": "2026-06-05",
       "source": "minimal.gallery",
       "auto": true,
       "added": "2026-06-05",
-      "proposed": true
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-06-09"
     },
     {
       "id": "the-making-of-the-new-lesse-studio-w-687d9a",
@@ -212,12 +218,14 @@
         "neutral",
         "type foundry"
       ],
-      "status": "inbox",
+      "status": "promoted",
       "date": "2026-06-04",
       "source": "minimal.gallery",
       "auto": true,
       "added": "2026-06-04",
-      "proposed": true
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-06-09"
     },
     {
       "id": "daiichi-dive",

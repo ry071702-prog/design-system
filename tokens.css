@@ -405,3 +405,31 @@
   /* アニメーション同士が重なり合う区間の割合(0〜1、JSから参照用) */
   --transition-overlap: 0.3;
 }
+
+
+/* =============================================================================
+   還元 (promoted): 自動収集デザインの選別・統合 — 2026-06-09
+   PP Neue Montreal / Convicts / Twoo / Project Simply の観察から、既存スケールを
+   壊さず拡張する分だけを厳選統合 (重複・競合・既存値再定義の提案は不採用)。
+   ========================================================================== */
+:root {
+  /* --- フォントウェイト・スケール (PP Neue Montreal) --------------------- */
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+  --weight-black: 900;
+
+  /* --- 特大ディスプレイ型 (Twoo: ヒーロー見出し用に 5xl の上を拡張) ----- */
+  --text-6xl: clamp(3.75rem, 2rem + 7vw, 5.5rem);
+  --text-7xl: clamp(4.5rem, 2.5rem + 8vw, 7rem);
+
+  /* --- 大型セクション余白 (Convicts / Twoo: 6rem=space-9 の上を拡張) ---- */
+  --space-10: 8rem;
+  --space-11: 12rem;
+
+  /* --- ディスプレイ用のさらに詰めた字間 (Convicts / Project Simply) ----- */
+  --tracking-tighter: -0.035em;
+}

@@ -46,3 +46,5 @@ AIツール活用ナレッジ循環 (`/ai-scout` → `/ai-review`) のデザイ�
 - [Glassmorphism 2.0 / Apple Liquid Glass] エッジライト → `--glass-highlight` (上端スペキュラ + 内側縁光、light/dark別) を追加し `.ds-glass` と topbar に合成。blur/saturate も微増。今後の Apple 寄せの第一歩 (2026-06-04)
 
 - [Creating a Thumbnail Flow Animation with GSAP MotionPath] GSAPモーションパス参考 → --ease-path / --stack-offset-x・y / --stack-scale-active・rest / --z-stack-step・base / --dur-stagger / --transition-overlap を :root に追記（tokens.css モーションセクション末尾） (2026-06-08)
+
+- [自動収集の選別統合] PP Neue Montreal/Convicts/Twoo/Project Simply → フォントウェイトscale(--weight-*) / 特大型(--text-6xl・7xl) / 大型余白(--space-10・11) / --tracking-tighter を :root に追記。重複・競合・既存再定義の提案は不採用 (2026-06-09)

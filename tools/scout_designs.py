@@ -25,6 +25,7 @@ UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
 DEFAULT_SOURCES = [
     {"name": "minimal.gallery", "feed": "https://minimal.gallery/feed/"},
     {"name": "Codrops", "feed": "https://tympanus.net/codrops/feed/"},
+    {"name": "One Page Love", "feed": "https://onepagelove.com/feed"},
 ]
 
 
