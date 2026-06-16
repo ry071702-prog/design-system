@@ -5,6 +5,7 @@
   "difyScoutAppKey": "app-xxxxxxxxxxxxxxxxxxxxxxxx (デザイン収集スカウト workflow のキー)",
   "difyPromoteAppKey": "app-xxxxxxxxxxxxxxxxxxxxxxxx (デザイン還元キュレーター workflow のキー)",
   "pptxTemplate": "/Users/あなた/Downloads/.../テンプレート.pptx (build_pptx.py のベース。空なら Downloads の公式テンプレ)",
+  "html2pptxApiKey": "sk_live_xxxx (tools/export_pptx.py 用。https://html2pptx.app で無料登録して取得)",
   "scoutSources": [
     { "name": "minimal.gallery", "feed": "https://minimal.gallery/feed/" },
     { "name": "Codrops", "feed": "https://tympanus.net/codrops/feed/" }
