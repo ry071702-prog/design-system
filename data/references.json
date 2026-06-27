@@ -2,6 +2,256 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "anatoly-ivanov-473dca",
+      "title": "Anatoly Ivanov",
+      "url": "https://minimal.gallery/anatoly-ivanov/",
+      "shot": "https://iad.microlink.io/heyucZ105POPCjubSjRIkYgEsxKSJlrsZad2rVLOKrHQt7Mrc7ToIU7qwhdNNvpjhH7kTwfAKj3C1fVJJkvI4A.png",
+      "whatsGood": "ミニマルギャラリー掲載のポートフォリオらしく、余白のリズムとタイポグラフィの扱い方が洗練されている可能性が高い。名前をそのままタイトルにした個人サイトとして、ヒーローセクションの文字組みと背景の関係性に注目したい。",
+      "extract": "hero-font-size-scale, letter-spacing-loose, section-padding-vertical, minimal-color-palette, name-as-logotype-style, grid-asymmetry",
+      "tags": [
+        "minimal",
+        "typography",
+        "portfolio",
+        "editorial"
+      ],
+      "status": "inbox",
+      "date": "2026-06-24",
+      "added": "2026-06-25",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "testing-what-users-actually-see-with-a3a175",
+      "title": "Testing What Users Actually See with Vitest and Chromatic",
+      "url": "https://tympanus.net/codrops/2026/06/24/testing-what-users-actually-see-with-vitest-and-chromatic/",
+      "shot": "https://iad.microlink.io/bNQ1RmHOOP8l6zC8BVWaTj5pRcvt1QCTfqjOTdnUtfj0rJs7KFu_d_qpPot_SSg05-rBB6SU0QrAEh-ocPxWww.png",
+      "whatsGood": "VisualテストツールのUI（ダッシュボード・差分表示）に使われる配色やタイポグラフィを観察すると、データ比較系UIのトークン設計の参考になる可能性がある。コードとビジュアルを並置するレイアウトのリズムにも注目。",
+      "extract": "diff-highlight color pair, code-block background token, status badge color set, monospace font stack, side-by-side comparison layout spacing, muted overlay for unchanged regions",
+      "tags": [
+        "developer-tool",
+        "typography",
+        "minimal",
+        "editorial",
+        "data-ui",
+        "articles"
+      ],
+      "status": "inbox",
+      "date": "2026-06-24",
+      "added": "2026-06-25",
+      "source": "Codrops",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-neuropelvic-surg-84a2d7",
+      "title": "Website Inspiration: Neuropelvic Surgery",
+      "url": "https://onepagelove.com/neuropelvic-surgery",
+      "shot": "https://iad.microlink.io/BZozNAg2rU8heLOTtW8qw6_FSinfoTPs0PkZbn-8tTS49moHNRI_vZS-api_tEjvL9f4kfi11K0wvaj-9r1xiw.png",
+      "whatsGood": "医療系サイトでありながらロングスクロール構成を採用している点に注目。信頼感を保ちつつ読み進めさせるセクション分割の余白リズムと、専門性を伝えるタイポグラフィ階層の使い方を確認したい。",
+      "extract": "section-spacing-scale, medical-neutral-palette, heading-weight-contrast, trust-badge-layout, scroll-anchor-nav, body-text-line-height",
+      "tags": [
+        "medical",
+        "longscroll",
+        "minimal",
+        "typography",
+        "editorial",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-06-24",
+      "added": "2026-06-25",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-monolog-d346d0",
+      "title": "Website Inspiration: Monolog",
+      "url": "https://onepagelove.com/monolog",
+      "shot": "https://iad.microlink.io/za_WOYjObsIjxrzvlL8iw6lxMlrZjGL5mFMsRE4RfwMkC9QNkSb8gwqLp4dR3XH_Qf5aqO9HcOoEXBSLsZH80g.png",
+      "whatsGood": "「Texture」と「Personality」が同居するスクロール体験に注目。紙・素材感を想起させる背景テクスチャと、個性的なタイポグラフィの組み合わせが参考になりそう。",
+      "extract": "texture-overlay-opacity, personality-font-pairing, scroll-section-spacing, earthy-color-palette, long-scroll-rhythm, section-divider-style",
+      "tags": [
+        "texture",
+        "editorial",
+        "scrolling",
+        "personality",
+        "minimal",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-06-24",
+      "added": "2026-06-25",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "blank-inside-f65b23",
+      "title": "Blank Inside",
+      "url": "https://minimal.gallery/blank-inside/",
+      "shot": "https://iad.microlink.io/dfO-Vstj9GW7dAzyU7vFzzHImsC8PoLR0U2YG_3IVWUpDCiQJO79vRGv_LEg8V8YnFrH_1vqrAxKboqagvZetA.png",
+      "whatsGood": "minimal.galleryのeコマース事例として、余白の取り方と商品を引き立てるタイポグラフィの組み合わせに注目すると参考になりそう。配色はおそらく低彩度〜モノクロ系で、商品写真を主役にするレイアウト設計が見どころと推測される。",
+      "extract": "large-whitespace-section-padding, neutral-color-palette-tokens, product-focused-grid-layout, minimal-serif-or-sans-heading-scale, subtle-border-or-divider-style, restrained-cta-button-style",
+      "tags": [
+        "minimal",
+        "ecommerce",
+        "editorial",
+        "monochrome",
+        "e-commerce"
+      ],
+      "status": "inbox",
+      "date": "2026-06-23",
+      "added": "2026-06-25",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "podium-building-a-website-where-runn-942f94",
+      "title": "Podium: Building a Website Where Running Becomes Storytelling",
+      "url": "https://tympanus.net/codrops/2026/06/23/podium-building-a-website-where-running-becomes-storytelling/",
+      "shot": "https://iad.microlink.io/lDGozJsKTgISULyQC9wh9tZI4koXwgklYFAGuafQJA5-uXqb7G3NmqUK_Dk3P1PvOcs-epxYW7BbxwP2At0Jdw.png",
+      "whatsGood": "GSAPとThree.js/WebGLを組み合わせたランニング×ストーリーテリングのサイトなので、スクロール連動の3Dシーン遷移やタイポグラフィアニメーションの実装手法に注目すると良い。余白のリズムとモーションがどう連携して「物語の流れ」を演出しているかを確認したい。",
+      "extract": "scroll-driven animation timing tokens, 3D scene transition easing curves, hero typography scale ratio, section spacing rhythm (narrative pacing), WebGL overlay blend-mode variables, motion duration scale",
+      "tags": [
+        "motion",
+        "webgl",
+        "editorial",
+        "dark",
+        "typography",
+        "articles"
+      ],
+      "status": "inbox",
+      "date": "2026-06-23",
+      "added": "2026-06-25",
+      "source": "Codrops",
+      "auto": true
+    },
+    {
+      "id": "fabra-comunicación-fca6a8",
+      "title": "Fabra Comunicación",
+      "url": "https://minimal.gallery/fabra-comunicacion/",
+      "shot": "https://iad.microlink.io/OTPj8lRDBz7UByVVAr3PztzsubDj6seal2l9KNOeztZthXtAq1Y6dQwsuOAbbhyKY-UkUD0MR4LlpaB6ECp8ug.png",
+      "whatsGood": "ミニマルギャラリー掲載のファッション×エージェンシー系サイトとして、余白の取り方とタイポグラフィの階層設計が洗練されている可能性が高い。配色はモノクロまたは限定パレットで、ブランドロゴや見出しの扱いに注目すると参考になりそう。",
+      "extract": "モノクロームカラーパレット, 大型セリフ or サンセリフ見出しのフォントサイズスケール, 広めのセクション余白トークン, グリッドベースの非対称レイアウト, ホバー時のテキスト切り替えアニメーション, ミニマルなナビゲーションスタイル",
+      "tags": [
+        "minimal",
+        "editorial",
+        "typography",
+        "fashion",
+        "monochrome"
+      ],
+      "status": "inbox",
+      "date": "2026-06-19",
+      "added": "2026-06-20",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "creative-entrepreneurship-designing--982a42",
+      "title": "Creative Entrepreneurship: Designing the Machine",
+      "url": "https://tympanus.net/codrops/2026/06/19/creative-entrepreneurship-designing-the-machine/",
+      "shot": "https://iad.microlink.io/waA1v9yUWfbPB3aDUaXl5zRzz7d54QL7AdWmIdb8v1xXHBaGCjH59812C0XOJHsbICoRZGdb_aJXvIYZs8jiFQ.png",
+      "whatsGood": "Codropsのアーティクル系レイアウトは読みやすいタイポグラフィ階層と余白設計が参考になる可能性が高い。見出し・本文・引用ブロックのサイズ比率とリズムに注目すると良い。",
+      "extract": "article-heading-scale, blockquote-style, body-line-height, section-spacing-rhythm, reading-width-max, lead-paragraph-style",
+      "tags": [
+        "editorial",
+        "typography",
+        "minimal",
+        "article",
+        "articles",
+        "entrepreneurship"
+      ],
+      "status": "inbox",
+      "date": "2026-06-19",
+      "added": "2026-06-20",
+      "source": "Codrops",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-lovably-cdd130",
+      "title": "Website Inspiration: Lovably",
+      "url": "https://onepagelove.com/lovably",
+      "shot": "https://iad.microlink.io/xJluo_7MQ6shV44wJ7R9jE80an83d7dt2w7PWMWpOcC1xl_wCa9AirkBtHNPEFJuG5kGTWhq1m5No7q5RCFMdQ.png",
+      "whatsGood": "NYCブランドらしいクリーンな余白設計と縦スクロールのリズム感に注目。ホワイトスペースを大胆に使ったレイアウト構造がトークン化しやすい可能性がある。",
+      "extract": "large-whitespace-section-padding, editorial-heading-scale, minimal-divider-style, single-column-content-rhythm, neutral-background-token, generous-line-height",
+      "tags": [
+        "minimal",
+        "whitespace",
+        "editorial",
+        "clean",
+        "inspiration",
+        "long screenshot"
+      ],
+      "status": "inbox",
+      "date": "2026-06-19",
+      "added": "2026-06-20",
+      "source": "One Page Love",
+      "auto": true,
+      "proposed": true
+    },
+    {
+      "id": "dreamhouse-productions-aa49d7",
+      "title": "DreamHouse Productions",
+      "url": "https://minimal.gallery/dreamhouse-productions/",
+      "shot": "https://iad.microlink.io/DJtW566ZxgxT8-EIZEC0RM60OYxmgcckVokVp714mLqh71PqZB3Dx_sIrMqjDlk1MWLhLw1ZHG7CfIG4h9pdDA.png",
+      "whatsGood": "プロダクションスタジオ系エージェンシーとして、ブランディングの強さを支えるタイポグラフィの選択と余白のリズムに注目したい。minimal.gallery掲載であることからミニマルな配色体系と大胆なレイアウト構成が期待できる。",
+      "extract": "display-font-pairing, large-scale-heading-size-scale, monochrome-or-limited-color-palette, generous-section-padding-token, grid-based-asymmetric-layout, subtle-brand-accent-color",
+      "tags": [
+        "minimal",
+        "editorial",
+        "branding",
+        "typography",
+        "agency"
+      ],
+      "status": "inbox",
+      "date": "2026-06-18",
+      "added": "2026-06-20",
+      "source": "minimal.gallery",
+      "auto": true,
+      "proposed": true
+    },
+    {
+      "id": "exploring-3d-image-rotations-on-scro-0d345f",
+      "title": "Exploring 3D Image Rotations on Scroll",
+      "url": "https://tympanus.net/codrops/2026/06/18/exploring-3d-image-rotations-on-scroll/",
+      "shot": "https://iad.microlink.io/ewBVrviol5CbYJz3XUmw6YjKk2wp3672NVuS6SiH_XOpjRUSdzprJzB3EbfjbyEUH5t8XHksj2N97EReqlWgQQ.png",
+      "whatsGood": "スクロール連動で画像が3D回転するインタラクションの実装手法に注目。perspective・rotateX/Y の変化量とスクロール進捗のマッピング比率が参考になりそう。",
+      "extract": "--perspective値, --rotation-max角度トークン, scroll-timeline連動のtransition-timing, transform-origin設定, スクロール進捗に対するeasing曲線",
+      "tags": [
+        "motion",
+        "3d",
+        "scroll",
+        "interaction",
+        "articles"
+      ],
+      "status": "inbox",
+      "date": "2026-06-18",
+      "added": "2026-06-20",
+      "source": "Codrops",
+      "auto": true,
+      "proposed": true
+    },
+    {
+      "id": "website-inspiration-billow-9872ca",
+      "title": "Website Inspiration: Billow",
+      "url": "https://onepagelove.com/billow",
+      "shot": "https://iad.microlink.io/TacS3OQ4qWaP04D7DnXBr3NCQu_43IPIn5tP2c5YEOWFcdVrLNjpKjHIr45kfzLawMtWWLg7Pe7M1c_J07xycA.png",
+      "whatsGood": "「Clouds」「Whitespace」というキーワードから、広大な余白と柔らかい曲線・グラデーションを活かした軽やかなレイアウトが期待できる。請求・プロジェクト管理系SaaSとして、信頼感を損なわずに親しみやすさを出す配色とタイポの組み合わせを確認したい。",
+      "extract": "large-whitespace-section-padding, soft-cloud-gradient-background, rounded-card-radius, muted-pastel-color-palette, fluid-long-scroll-section-rhythm, clean-sans-serif-type-scale",
+      "tags": [
+        "minimal",
+        "whitespace",
+        "pastel",
+        "saas",
+        "editorial",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-06-18",
+      "added": "2026-06-20",
+      "source": "One Page Love",
+      "auto": true,
+      "proposed": true
+    },
+    {
       "id": "creating-a-thumbnail-flow-animation--c2864b",
       "title": "Creating a Thumbnail Flow Animation with GSAP MotionPath",
       "url": "https://tympanus.net/codrops/2026/06/04/creating-a-thumbnail-flow-animation-with-gsap-motionpath/",
