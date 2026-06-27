@@ -12,7 +12,6 @@ tokens.css を単一の真実とする 127.0.0.1 ローカル専用デザイン�
 - [ ] `tools/export_pptx.py` を実スライドで一度通し検証し、本番デッキで動作確認
 - [ ] launchd ジョブ (scout.daily / scout.weekly / promote.weekly) が意図通りスケジュール実行されているか `launchctl list` で確認 (要確認)
 - [ ] README が未作成。起動方法・ツール群 (scout / promote / build_pptx / export_pptx / build_marp / deck_to_pdf) の入口を最低限ドキュメント化するか検討 (要確認)
-- [ ] 未 push の `feat: html2pptx PPTX エクスポートツール追加` (f111b70) を push するか判断 (ローカル専用のため push 不要なら据え置き)
 
 ## 完了 (直近)
 - [x] scout が自動収集した inbox 参照デザインを data/references.json に追記・コミット (2026-06-28)
