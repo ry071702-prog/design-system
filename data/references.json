@@ -282,12 +282,14 @@
         "editorial",
         "agency"
       ],
-      "status": "inbox",
+      "status": "promoted",
       "date": "2026-07-02",
       "added": "2026-07-04",
       "source": "minimal.gallery",
       "auto": true,
-      "proposed": true
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-07-12"
     },
     {
       "id": "from-years-of-client-work-to-a-nextj-efc058",
@@ -326,12 +328,14 @@
         "longscroll",
         "inspiration"
       ],
-      "status": "inbox",
+      "status": "promoted",
       "date": "2026-07-02",
       "added": "2026-07-04",
       "source": "One Page Love",
       "auto": true,
-      "proposed": true
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-07-12"
     },
     {
       "id": "the-print-loft-4660ee",
@@ -348,12 +352,14 @@
         "monochrome",
         "e-commerce"
       ],
-      "status": "inbox",
+      "status": "promoted",
       "date": "2026-07-01",
       "added": "2026-07-04",
       "source": "minimal.gallery",
       "auto": true,
-      "proposed": true
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-07-12"
     },
     {
       "id": "sculpting-a-digital-athlete-capturin-09b64e",
@@ -370,12 +376,14 @@
         "dark",
         "articles"
       ],
-      "status": "inbox",
+      "status": "promoted",
       "date": "2026-07-01",
       "added": "2026-07-04",
       "source": "Codrops",
       "auto": true,
-      "proposed": true
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-07-12"
     },
     {
       "id": "belen-jones-3ee99d",
@@ -412,12 +420,14 @@
         "longscroll",
         "inspiration"
       ],
-      "status": "inbox",
+      "status": "promoted",
       "date": "2026-06-23",
       "added": "2026-06-29",
       "source": "One Page Love",
       "auto": true,
-      "proposed": true
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-07-12"
     },
     {
       "id": "website-inspiration-right-click-logo-f01ab5",
@@ -434,12 +444,14 @@
         "inspiration",
         "code snippets"
       ],
-      "status": "inbox",
+      "status": "promoted",
       "date": "2026-06-23",
       "added": "2026-06-29",
       "source": "One Page Love",
       "auto": true,
-      "proposed": true
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-07-12"
     },
     {
       "id": "cantor8-88d94d",
@@ -456,12 +468,14 @@
         "saas",
         "crypto & web3"
       ],
-      "status": "inbox",
+      "status": "promoted",
       "date": "2026-06-22",
       "added": "2026-06-29",
       "source": "minimal.gallery",
       "auto": true,
-      "proposed": true
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-07-12"
     },
     {
       "id": "designing-beyond-the-surface-how-das-fe51b3",
@@ -478,12 +492,14 @@
         "layout",
         "articles"
       ],
-      "status": "inbox",
+      "status": "promoted",
       "date": "2026-06-22",
       "added": "2026-06-29",
       "source": "Codrops",
       "auto": true,
-      "proposed": true
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-07-12"
     },
     {
       "id": "website-inspiration-rectanglesfm-6f81b3",
@@ -500,12 +516,14 @@
         "grid",
         "inspiration"
       ],
-      "status": "inbox",
+      "status": "promoted",
       "date": "2026-06-22",
       "added": "2026-06-29",
       "source": "One Page Love",
       "auto": true,
-      "proposed": true
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-07-12"
     },
     {
       "id": "longbow-7f492a",
@@ -521,12 +539,14 @@
         "automotive",
         "editorial"
       ],
-      "status": "inbox",
+      "status": "promoted",
       "date": "2026-06-26",
       "added": "2026-06-28",
       "source": "minimal.gallery",
       "auto": true,
-      "proposed": true
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-07-12"
     },
     {
       "id": "engineering-the-web-experience-behin-cd8dbd",
@@ -543,12 +563,14 @@
         "immersive",
         "articles"
       ],
-      "status": "inbox",
+      "status": "promoted",
       "date": "2026-06-26",
       "added": "2026-06-28",
       "source": "Codrops",
       "auto": true,
-      "proposed": true
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-07-12"
     },
     {
       "id": "website-inspiration-kevin-a8356f",
@@ -565,12 +587,14 @@
         "ai",
         "inspiration"
       ],
-      "status": "inbox",
+      "status": "promoted",
       "date": "2026-06-26",
       "added": "2026-06-28",
       "source": "One Page Love",
       "auto": true,
-      "proposed": true
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-07-12"
     },
     {
       "id": "off-mute-b3e8d8",
@@ -585,12 +609,14 @@
         "editorial",
         "podcast"
       ],
-      "status": "inbox",
+      "status": "promoted",
       "date": "2026-06-25",
       "added": "2026-06-28",
       "source": "minimal.gallery",
       "auto": true,
-      "proposed": true
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-07-12"
     },
     {
       "id": "shaping-stories-into-experience-the--6a30b9",
@@ -607,12 +633,14 @@
         "storytelling",
         "articles"
       ],
-      "status": "inbox",
+      "status": "promoted",
       "date": "2026-06-25",
       "added": "2026-06-28",
       "source": "Codrops",
       "auto": true,
-      "proposed": true
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-07-12"
     },
     {
       "id": "website-inspiration-101-genai-b1934d",
@@ -629,12 +657,14 @@
         "minimal",
         "inspiration"
       ],
-      "status": "inbox",
+      "status": "promoted",
       "date": "2026-06-25",
       "added": "2026-06-28",
       "source": "One Page Love",
       "auto": true,
-      "proposed": true
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-07-12"
     },
     {
       "id": "anatoly-ivanov-473dca",
@@ -649,12 +679,14 @@
         "portfolio",
         "editorial"
       ],
-      "status": "inbox",
+      "status": "promoted",
       "date": "2026-06-24",
       "added": "2026-06-25",
       "source": "minimal.gallery",
       "auto": true,
-      "proposed": true
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-07-12"
     },
     {
       "id": "testing-what-users-actually-see-with-a3a175",
@@ -671,12 +703,14 @@
         "data-ui",
         "articles"
       ],
-      "status": "inbox",
+      "status": "promoted",
       "date": "2026-06-24",
       "added": "2026-06-25",
       "source": "Codrops",
       "auto": true,
-      "proposed": true
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-07-12"
     },
     {
       "id": "website-inspiration-neuropelvic-surg-84a2d7",
@@ -693,12 +727,14 @@
         "editorial",
         "inspiration"
       ],
-      "status": "inbox",
+      "status": "promoted",
       "date": "2026-06-24",
       "added": "2026-06-25",
       "source": "One Page Love",
       "auto": true,
-      "proposed": true
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-07-12"
     },
     {
       "id": "website-inspiration-monolog-d346d0",
@@ -715,12 +751,14 @@
         "minimal",
         "inspiration"
       ],
-      "status": "inbox",
+      "status": "promoted",
       "date": "2026-06-24",
       "added": "2026-06-25",
       "source": "One Page Love",
       "auto": true,
-      "proposed": true
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-07-12"
     },
     {
       "id": "blank-inside-f65b23",
@@ -736,12 +774,14 @@
         "monochrome",
         "e-commerce"
       ],
-      "status": "inbox",
+      "status": "promoted",
       "date": "2026-06-23",
       "added": "2026-06-25",
       "source": "minimal.gallery",
       "auto": true,
-      "proposed": true
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-07-12"
     },
     {
       "id": "podium-building-a-website-where-runn-942f94",
@@ -758,12 +798,14 @@
         "typography",
         "articles"
       ],
-      "status": "inbox",
+      "status": "promoted",
       "date": "2026-06-23",
       "added": "2026-06-25",
       "source": "Codrops",
       "auto": true,
-      "proposed": true
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-07-12"
     },
     {
       "id": "fabra-comunicación-fca6a8",
@@ -821,12 +863,14 @@
         "inspiration",
         "long screenshot"
       ],
-      "status": "inbox",
+      "status": "promoted",
       "date": "2026-06-19",
       "added": "2026-06-20",
       "source": "One Page Love",
       "auto": true,
-      "proposed": true
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-07-12"
     },
     {
       "id": "dreamhouse-productions-aa49d7",
@@ -842,12 +886,14 @@
         "typography",
         "agency"
       ],
-      "status": "inbox",
+      "status": "promoted",
       "date": "2026-06-18",
       "added": "2026-06-20",
       "source": "minimal.gallery",
       "auto": true,
-      "proposed": true
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-07-12"
     },
     {
       "id": "exploring-3d-image-rotations-on-scro-0d345f",
@@ -863,12 +909,14 @@
         "interaction",
         "articles"
       ],
-      "status": "inbox",
+      "status": "promoted",
       "date": "2026-06-18",
       "added": "2026-06-20",
       "source": "Codrops",
       "auto": true,
-      "proposed": true
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-07-12"
     },
     {
       "id": "website-inspiration-billow-9872ca",
@@ -885,12 +933,14 @@
         "editorial",
         "inspiration"
       ],
-      "status": "inbox",
+      "status": "promoted",
       "date": "2026-06-18",
       "added": "2026-06-20",
       "source": "One Page Love",
       "auto": true,
-      "proposed": true
+      "proposed": true,
+      "reflected": true,
+      "reflected_date": "2026-07-12"
     },
     {
       "id": "creating-a-thumbnail-flow-animation--c2864b",

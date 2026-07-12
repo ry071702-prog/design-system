@@ -494,3 +494,2025 @@
   color: var(--fg); border-left: 3px solid var(--accent);
   padding: var(--space-3) 0 var(--space-3) var(--space-5); margin: var(--space-5) 0;
 }
+
+
+/* =============================================================================
+   還元 (promoted): Anatoly Ivanov — 2026-07-12
+   Anatoly Ivanov のポートフォリオから、ヒーローセクション向けの『名前をロゴタイプとして扱うスタイル』と、ミニマルギャラリー文脈の『非対称グリッドレイアウト用トークン』を還元する。既存の --text-7xl / --tracking-tighter / .ds-hero-title との重複を避け、本当に不足している概念のみを追記する。
+   出典: https://minimal.gallery/anatoly-ivanov/
+   ========================================================================== */
+/* --- ポートフォリオ: 名前をロゴタイプとして扱う字間トークン (Anatoly Ivanov 参考) --- */
+:root {
+  /* 名前・ブランド名を1行で大きく置く際の、ほぼゼロに近い字間(既存 tracking-tight より微妙に広く自然に見える値) */
+  --tracking-display: -0.015em;
+
+  /* ヒーロー背景とテキストの間に薄いスクリム(グラデーション)を敷く際の不透明度上限 */
+  --scrim-opacity: 0.45;
+
+  /* 非対称グリッドの主カラム比率(広い側) */
+  --grid-asym-wide: 3fr;
+  /* 非対称グリッドの副カラム比率(狭い側) */
+  --grid-asym-narrow: 2fr;
+
+  /* ミニマルポートフォリオ向けの控えめなホバー浮き量(既存 --card-lift-y: -6px より小さく) */
+  --lift-subtle: -3px;
+}
+
+/* --- ネームプレート: 名前をそのままロゴタイプとして扱うレシピ (Anatoly Ivanov 参考) --- */
+/* 個人名・ブランド名を極大サイズで1行表示し、余白で呼吸させるヒーロー向けコンポーネント */
+.ds-nameplate {
+  font-family: var(--font-display);
+  font-size: var(--text-6xl);
+  font-weight: var(--weight-black);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-display);
+  color: var(--fg);
+  margin: 0;
+  /* 文字が背景に溶け込まないよう最小限のテキストシャドウ */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* ダーク時はシャドウを強めて可読性を保つ */
+[data-theme="dark"] .ds-nameplate,
+.dark .ds-nameplate {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+/* --- 非対称2カラムグリッド: ミニマルギャラリー向け (Anatoly Ivanov 参考) --- */
+/* 左広・右狭の非対称レイアウト。ヒーローや作品一覧で視線の重心を左に置く構成 */
+.ds-asymmetric-grid {
+  display: grid;
+  grid-template-columns: var(--grid-asym-wide) var(--grid-asym-narrow);
+  gap: var(--space-6);
+  align-items: start;
+}
+
+/* タブレット以下では1カラムに折り返す */
+@media (max-width: 768px) {
+  .ds-asymmetric-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- ミニマルギャラリーカード: 控えめなホバー演出 (Anatoly Ivanov 参考) --- */
+/* 作品サムネイルを並べる際、過剰な浮き上がりを抑えてミニマルな印象を保つ */
+.ds-gallery-card {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition:
+    transform var(--dur) var(--ease-out),
+    box-shadow var(--dur) var(--ease-out);
+}
+.ds-gallery-card:hover {
+  transform: translateY(var(--lift-subtle));
+  box-shadow: var(--shadow-md);
+}
+.ds-gallery-card__media {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--bg-sunken);
+}
+.ds-gallery-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* ミニマル文脈では画像ズームを抑えてコンテンツに集中させる */
+  transition: transform var(--dur-slow) var(--ease-out);
+}
+.ds-gallery-card:hover .ds-gallery-card__media img {
+  transform: scale(1.02);
+}
+.ds-gallery-card__caption {
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--fg-muted);
+  line-height: var(--leading-snug);
+}
+
+
+/* =============================================================================
+   還元 (promoted): Blank Inside — 2026-07-12
+   Blank Inside（モノクロ系ECミニマル）の観察から、既存トークンで未カバーの「商品写真主役レイアウト向け大余白セクション」と「抑制されたCTAボタン」のレシピを追記する。配色・タイポ・余白スケール自体はすでに十分カバーされているため、レシピ（.ds-クラス）の追加のみとする。
+   出典: https://minimal.gallery/blank-inside/
+   ========================================================================== */
+/* =============================================================================
+   還元 (promoted): Blank Inside — EC ミニマル余白・抑制 CTA — 2026-06-09
+   minimal.gallery 掲載の Blank Inside より、商品写真を主役にする大余白セクションと
+   モノクロ系の抑制された CTA スタイルを抽出。既存スケール・命名規則に整合させ追記。
+   ========================================================================== */
+
+/* --- 大余白セクション (商品写真を主役にする広大な呼吸) -------------- */
+/* Blank Inside 的な「たっぷり余白で商品を際立たせる」セクション基盤 */
+.ds-section-spacious {
+  padding-block: var(--space-10, 8rem);
+  padding-inline: var(--space-6);
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+/* --- モノクロ商品グリッド (低彩度・写真主役の2〜3カラム) ----------- */
+/* 余白を広く取り、画像比率を縦長にして商品を引き立てる EC 向けグリッド */
+.ds-product-grid-editorial {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+/* --- ゴーストボタン (抑制された CTA / Blank Inside 的な控えめ誘導) -- */
+/* アクセントを使わず、ボーダーのみで存在感を示す最小限の CTA */
+.ds-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-family: inherit;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  line-height: 1;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--fg);
+  background: transparent;
+  color: var(--fg);
+  cursor: pointer;
+  transition:
+    background var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out);
+}
+.ds-btn-ghost:hover {
+  background: var(--fg);
+  color: var(--bg);
+}
+.ds-btn-ghost:active {
+  opacity: 0.8;
+}
+
+/* --- ラベル付き区切り線 (セクション間の繊細な仕切り) --------------- */
+/* モノクロ EC でよく見られる「カテゴリ名 + ヘアライン」の複合区切り */
+.ds-divider-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-block: var(--space-7);
+  color: var(--fg-subtle);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+.ds-divider-label::before,
+.ds-divider-label::after {
+  content: "";
+  flex: 1;
+  border-top: 1px solid var(--border);
+}
+
+
+/* =============================================================================
+   還元 (promoted): Cantor8 — 2026-07-12
+   Cantor8（Web3/暗号資産UI）の観察から、ダークサーフェス専用トークン・グロー効果・データラベル用タイポグラフィ・タイトグリッド間隔の4点を厳選追加する。既存ダークモード定義（[data-theme="dark"]）は一切変更しない。
+   出典: https://minimal.gallery/cantor8/
+   ========================================================================== */
+:root {
+  /* --- ダークサーフェス専用トークン (Web3/暗号資産UI 参考: Cantor8) ---------- */
+  /* 既存 --bg-elev より一段深い、データ密度の高いダッシュボード向け沈み込み面 */
+  --bg-surface-deep: #0d1117;
+  /* データ行・テーブルの交互背景に使うゼブラ色 (ダーク環境での視認性確保) */
+  --bg-zebra: rgba(148, 163, 184, 0.04);
+
+  /* --- グロー効果トークン (Web3 アクセントカラーの発光演出向け) ------------- */
+  /* アクセント色の外側グロー。--shadow-glow と組み合わせて使う */
+  --glow-accent: 0 0 18px -2px var(--accent-soft);
+  /* ステータス系グロー (成功・警告・危険の発光バリアント) */
+  --glow-success: 0 0 16px -2px rgba(5, 150, 105, 0.30);
+  --glow-warning: 0 0 16px -2px rgba(217, 119, 6, 0.30);
+  --glow-danger:  0 0 16px -2px rgba(220, 38, 38, 0.30);
+
+  /* --- データラベル用タイポグラフィ (モノスペース数値表示向け) -------------- */
+  /* 数値・ハッシュ・アドレス等のデータ表示に特化したフォントサイズ */
+  --text-data-sm: 0.6875rem;   /* 補助的な数値ラベル (11px 相当) */
+  --text-data-base: 0.8125rem; /* 標準データセル値 (13px 相当) */
+  --text-data-lg: 1.0625rem;   /* 強調数値・KPI (17px 相当) */
+  /* データ数値の字間: モノスペースでも桁が揃いやすい微調整値 */
+  --tracking-data: 0.01em;
+  /* データ行の行高: 密度を保ちつつ視線移動しやすい値 */
+  --leading-data: 1.45;
+
+  /* --- タイトグリッド間隔 (SaaS ダッシュボード向け密度感) ----------------- */
+  /* カラム間・行間を詰めたデータグリッド専用の gap 値 */
+  --gap-data-col: 0.5rem;   /* 列間 (--space-2 と同値だが意味を明示) */
+  --gap-data-row: 0.25rem;  /* 行間 (--space-1 と同値だが意味を明示) */
+  /* データテーブルのセル内パディング */
+  --pad-data-cell: 0.375rem 0.625rem;
+  /* ダッシュボードグリッドの最小カラム幅 */
+  --grid-data-min: 160px;
+
+  /* --- 繊細なボーダー (ダーク環境でのデータ区切り線) --------------------- */
+  /* ダーク背景上でデータ行を区切る極細ライン。既存 --border より薄い */
+  --border-data: rgba(148, 163, 184, 0.10);
+}
+
+/* --- データラベル (モノスペース数値・ハッシュ表示向けレシピ) -------------- */
+.ds-data-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-data-base);
+  font-weight: 500;
+  letter-spacing: var(--tracking-data);
+  line-height: var(--leading-data);
+  color: var(--fg-muted);
+}
+.ds-data-label--value {
+  font-size: var(--text-data-lg);
+  font-weight: 700;
+  color: var(--fg);
+}
+.ds-data-label--sub {
+  font-size: var(--text-data-sm);
+  color: var(--fg-subtle);
+}
+
+/* --- データグリッド (SaaS ダッシュボード向けタイトレイアウト) ------------- */
+.ds-data-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--grid-data-min), 1fr));
+  gap: var(--gap-data-col);
+}
+
+/* --- データセル (グリッド内の1ユニット) ---------------------------------- */
+.ds-data-cell {
+  background: var(--bg-elev);
+  border: 1px solid var(--border-data);
+  border-radius: var(--radius-sm);
+  padding: var(--pad-data-cell);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-data-row);
+}
+
+/* --- データテーブル行のゼブラストライプ ----------------------------------- */
+.ds-data-row:nth-child(even) {
+  background: var(--bg-zebra);
+}
+.ds-data-row {
+  border-bottom: 1px solid var(--border-data);
+  padding: var(--pad-data-cell);
+  display: grid;
+  align-items: center;
+  line-height: var(--leading-data);
+}
+
+/* --- グロー付きバッジ (Web3 ステータス表示向け) --------------------------- */
+.ds-badge-glow-accent  { box-shadow: var(--glow-accent); }
+.ds-badge-glow-success { box-shadow: var(--glow-success); }
+.ds-badge-glow-warning { box-shadow: var(--glow-warning); }
+.ds-badge-glow-danger  { box-shadow: var(--glow-danger); }
+
+
+/* =============================================================================
+   還元 (promoted): Designing Beyond the Surface: How DashDigital Turns Complexity into Clarity — 2026-07-12
+   DashDigital エディトリアル記事レイアウトの観察から、既存 .theme-editorial / .ds-article-body 周辺に不足しているセクション区切り余白トークンとコンテンツ最大幅トークンを追記する。プルクォート・本文行高・タイポグラフィは既存定義でカバー済みのため追加なし。
+   出典: https://tympanus.net/codrops/2026/06/22/designing-beyond-the-surface-how-dashdigital-turns-complexity-into-clarity/
+   ========================================================================== */
+/* --- エディトリアル記事レイアウト補完 (DashDigital 参考) ----------- */
+:root {
+  /* 記事コンテンツの最大幅(本文 measure より広い、ページ全体の記事カラム幅) */
+  --content-max-width: 780px;
+
+  /* セクション間の大きな区切り余白(見出し〜本文ブロック間のリズム) */
+  --section-gap: var(--space-9);
+
+  /* セクション内の小見出し〜本文間の余白(階層を明示する中間スペース) */
+  --section-inner-gap: var(--space-6);
+}
+
+/* --- エディトリアル記事コンテナ (DashDigital: 情報階層整理・余白リズム) --- */
+.ds-article-container {
+  width: min(var(--content-max-width), 100% - var(--space-6) * 2);
+  margin-inline: auto;
+  padding-block: var(--section-gap);
+}
+
+/* --- セクション区切り(余白リズムを持つ水平線) ----------------------- */
+.ds-section-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin-block: var(--section-gap);
+}
+
+/* --- エディトリアル見出し階層(h2 相当: セクション冒頭の大見出し) ----- */
+.ds-article-heading {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg);
+  margin: 0 0 var(--section-inner-gap);
+}
+
+/* --- エディトリアル小見出し(h3 相当: 本文内の中間見出し) ------------ */
+.ds-article-subheading {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-snug);
+  color: var(--fg);
+  margin: var(--section-inner-gap) 0 var(--space-4);
+}
+
+
+/* =============================================================================
+   還元 (promoted): DreamHouse Productions — 2026-07-12
+   DreamHouse Productionsの観察から、既存トークンに不足しているエディトリアル向けセクション余白トークンと、theme-editorialに整合するディスプレイ見出しレシピ(.ds-display-title)を追記する。フォントペアリング・モノクロ配色・グリッドレイアウトは既存の仕組みで十分カバーされているため追加しない。
+   出典: https://minimal.gallery/dreamhouse-productions/
+   ========================================================================== */
+/* --- エージェンシー系ディスプレイ見出し (DreamHouse Productions 参考) ----------- */
+/* .ds-display-title: ブランディング強度の高いヒーロー見出し。font-display × weight-black × tracking-tighter で
+   プロダクションスタジオ系の力強い印象を演出。既存 .ds-title / .ds-hero-title と役割を分け、
+   セクション冒頭の単語数の少ない大見出しに特化する。 */
+.ds-display-title {
+  font-family: var(--font-display);
+  font-size: var(--text-6xl);
+  font-weight: var(--weight-black);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tighter);
+  color: var(--fg);
+  margin: 0;
+}
+
+/* --- エージェンシー系セクション余白レシピ (DreamHouse Productions 参考) ---------- */
+/* .ds-section: たっぷりした縦余白でセクション間の呼吸を確保するラッパー。
+   space-9(6rem)〜space-10(8rem)を上下に取り、ミニマル・エディトリアル系の
+   大胆なホワイトスペース演出を支援する。 */
+.ds-section {
+  padding-block: var(--space-10);
+  padding-inline: var(--space-6);
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+/* --- エージェンシー系セクション余白の広域バリアント ----------------------- */
+/* .ds-section--wide: ランディングページ最上部など、さらに大きな呼吸が必要な場面向け。
+   space-11(12rem)を上下に取り、スクロール前の印象を支配するヒーロー区画に使う。 */
+.ds-section--wide {
+  padding-block: var(--space-11);
+}
+
+/* --- モノクローム・アクセント抑制バリアント (theme-editorial 専用) ----------- */
+/* .ds-kicker--mono: エージェンシー系のモノクローム配色に合わせ、kickerをアクセント色ではなく
+   fg-muted で表示するバリアント。theme-editorial の紙×紺インク世界観と整合する。 */
+.theme-editorial .ds-kicker--mono {
+  color: var(--fg-muted);
+  letter-spacing: var(--tracking-label);
+}
+
+
+/* =============================================================================
+   還元 (promoted): Engineering the Web Experience Behind Shopify’s Spring ’26 Edition: Everywhere — 2026-07-12
+   Shopify Edition WebGL事例から、3D canvasオーバーレイ用z-indexスタック・スクロール駆動アニメーション向けイージング・ローディングプログレス用トークンの3点を追記する。既存モーション定義と整合させつつ、immersiveレイヤー構造に必要な不足トークンのみを厳選。
+   出典: https://tympanus.net/codrops/2026/06/26/engineering-the-web-experience-behind-shopifys-spring-26-edition-everywhere/
+   ========================================================================== */
+:root {
+  /* --- レイヤー z-index スタック (3D canvas overlay 共存構造) ----------- */
+  /* ページコンテンツの基底レイヤー */
+  --z-base: 0;
+  /* スクロール連動の背景 canvas / WebGL レイヤー */
+  --z-canvas: 10;
+  /* canvas の前面に重なる通常コンテンツ */
+  --z-content: 20;
+  /* セクション遷移オーバーレイ (canvas と UI の間) */
+  --z-overlay: 30;
+  /* ナビゲーション・固定ヘッダー */
+  --z-nav: 40;
+  /* モーダル・ドロワー */
+  --z-modal: 50;
+  /* ツールチップ・ポップオーバー */
+  --z-tooltip: 60;
+
+  /* --- スクロール駆動アニメーション向けイージング ----------------------- */
+  /* スクロール進捗に連動する要素の入場: 緩やかに加速して一定速で抜ける */
+  --ease-scroll-in: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  /* セクション間トランジションの退場: 素早く加速して消える */
+  --ease-scroll-out: cubic-bezier(0.55, 0.0, 1.0, 0.45);
+  /* GPU 負荷を抑えた線形補間 (WebGL シーン切り替えの進捗バー等に) */
+  --ease-linear: linear;
+
+  /* --- ローディング / プログレスインジケーター -------------------------- */
+  /* プログレスバーのトラック高さ */
+  --progress-track-h: 3px;
+  /* プログレスバーの角丸 */
+  --progress-radius: var(--radius-pill);
+  /* 不確定ローディングのアニメーション周期 */
+  --dur-loading: 1400ms;
+  /* ローディング完了後のフェードアウト時間 */
+  --dur-progress-out: 400ms;
+}
+
+
+/* =============================================================================
+   還元 (promoted): Exploring 3D Image Rotations on Scroll — 2026-07-12
+   スクロール連動3D回転インタラクションから、perspective・最大回転角・transform-origin・スクロール進捗イージングの4トークンと、.ds-scroll-3dレシピを追記する。既存モーション定義（--ease-out / --dur-slow等）と整合させ、追記専用で既存を壊さない。
+   出典: https://tympanus.net/codrops/2026/06/18/exploring-3d-image-rotations-on-scroll/
+   ========================================================================== */
+/* =============================================================================
+   還元 (promoted): Exploring 3D Image Rotations on Scroll — 2026-06-09
+   スクロール連動3D回転インタラクションから perspective・回転角・transform-origin・
+   イージングのトークンを抽出し、既存モーション定義を拡張する。
+   出典: Exploring 3D Image Rotations on Scroll (Codrops)
+   ========================================================================== */
+:root {
+  /* スクロール連動3D演出の消失点距離(小さいほど遠近感が強くなる) */
+  --perspective-near: 600px;
+  --perspective-mid: 1000px;
+  --perspective-far: 1800px;
+
+  /* スクロール進捗に対する最大回転角(rotateX / rotateY の上限値) */
+  --rotation-max-x: 18deg;
+  --rotation-max-y: 12deg;
+
+  /* 3D回転の基点(画像中央を軸にするのが基本、必要に応じて上書き) */
+  --transform-origin-3d: center center;
+
+  /* スクロール進捗→回転量のマッピングに使う緩やか減速イージング */
+  /* 進捗0付近でゆっくり始まり、中盤で最大変化量に達する曲線 */
+  --ease-scroll-3d: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* --- スクロール連動3D回転ラッパー ----------------------------------- */
+/* perspective を親に持たせ、子要素に transform を適用するパターン */
+.ds-scroll-3d-stage {
+  perspective: var(--perspective-mid);
+  perspective-origin: center center;
+}
+
+/* 3D回転対象要素。JS側で --rx / --ry をスクロール進捗から計算して注入する */
+/* 例: el.style.setProperty('--rx', `${progress * 18}deg`) */
+.ds-scroll-3d {
+  transform:
+    rotateX(var(--rx, 0deg))
+    rotateY(var(--ry, 0deg));
+  transform-origin: var(--transform-origin-3d);
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform var(--dur) var(--ease-scroll-3d);
+}
+
+/* スクロール停止後に元の姿勢へ滑らかに戻す(JS でクラス付け外し) */
+.ds-scroll-3d.is-resting {
+  transform: rotateX(0deg) rotateY(0deg);
+  transition: transform var(--dur-slow) var(--ease-out);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ds-scroll-3d,
+  .ds-scroll-3d.is-resting {
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+
+/* =============================================================================
+   還元 (promoted): Gusta — 2026-07-12
+   Gustaのミニマル・ブランディングサイトから、エディトリアル系に有用なセクション間余白トークンとシンプルなホバーカラートランジション用レシピを抽出。既存スケールに不足している要素のみを厳選追記する。
+   出典: https://minimal.gallery/gusta/
+   ========================================================================== */
+:root {
+  /* ギャラリー・ブランディングサイト向けの広いセクション間区切り余白 (Gusta 参考) */
+  --space-section: clamp(5rem, 4rem + 5vw, 10rem);
+
+  /* モノクロ寄りホバー時の背景色 (ニュートラルベース2〜3色パレット / Gusta 参考) */
+  --bg-hover: rgba(15, 23, 42, 0.04);
+
+  /* グリッドカード間の標準ガター (ブランディングサイトのグリッドベースカード余白 / Gusta 参考) */
+  --grid-gutter: clamp(1.5rem, 1rem + 2vw, 2.5rem);
+}
+
+[data-theme="dark"],
+.dark {
+  /* ダークモードでのホバー背景 (ニュートラル系を反転) */
+  --bg-hover: rgba(241, 245, 249, 0.06);
+}
+
+/* --- ミニマルギャラリーグリッド (Gusta: ブランディングサイトのカード配置) --- */
+.ds-gallery-grid {
+  display: grid;
+  gap: var(--grid-gutter);
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+/* --- ミニマルホバートランジション (Gusta: シンプルなカラー変化のみ、動きを抑制) --- */
+.ds-hover-minimal {
+  transition:
+    background var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out);
+}
+.ds-hover-minimal:hover {
+  background: var(--bg-hover);
+}
+
+/* --- ブランドセクション区切り (Gusta: 広いセクション間マージン) ----------- */
+.ds-section {
+  padding-block: var(--space-section);
+}
+
+/* --- ロゴ・ブランド表現向けモノクロテキスト (Gusta: モノクロ寄りテキストカラー) --- */
+.ds-brand-label {
+  font-family: var(--font-display);
+  font-weight: var(--weight-black);
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--fg);
+  opacity: 0.55;
+}
+
+
+/* =============================================================================
+   還元 (promoted): Longbow — 2026-07-12
+   Longbow（自動車系ミニマルギャラリー）の観察から、ダーク背景専用のセクション余白トークンとエディトリアル用アクセントライン（水平罫線）レシピを追記する。既存トークンと重複しない範囲のみを厳選し、theme-editorialのダークモードとも整合させる。
+   出典: https://minimal.gallery/longbow/
+   ========================================================================== */
+:root {
+  /* ダーク背景上で白テキストとのコントラスト比 WCAG AA を確保するための暗色ペア */
+  /* --contrast-dark-bg: 自動車系ダークサイトの背景基準色（n-950 より僅かに明るい深みのある黒） */
+  --contrast-dark-bg: #0d1117;
+  /* --contrast-dark-fg: 上記背景に対して AA 以上（≥4.5:1）を満たすオフホワイト */
+  --contrast-dark-fg: #e8ecf0;
+
+  /* 見出し字間: wide より広く、label より狭い中間値（自動車系大見出しの開放感に対応） */
+  --tracking-wider: 0.08em;
+
+  /* セクション間の縦余白: space-9(6rem)・space-10(8rem) の間を埋める中間スケール */
+  --space-9-5: 7rem;
+}
+
+/* --- アクセントライン / 水平罫線レシピ (自動車系エディトリアルの区切り演出) --- */
+/* 細い accent カラーの罫線で、セクション冒頭や見出し直下に視線の起点を作る */
+.ds-accent-rule {
+  display: block;
+  width: 2.5rem;
+  height: 2px;
+  background: var(--accent);
+  border: none;
+  border-radius: var(--radius-pill);
+  margin-block-end: var(--space-4);
+}
+
+/* 幅を広げたバリアント（ヒーロー直下など大きなセクション用） */
+.ds-accent-rule--wide {
+  width: 5rem;
+}
+
+/* ダーク背景セクション用コンテナ（自動車系の subtle-dark-background パターン） */
+/* contrast-dark-bg / contrast-dark-fg を使い、セクション単位で暗転させる */
+.ds-dark-section {
+  background: var(--contrast-dark-bg);
+  color: var(--contrast-dark-fg);
+  padding-block: var(--space-9-5);
+  padding-inline: var(--space-6);
+}
+
+/* ダークセクション内の補足テキストは既存 n-400 で統一 */
+.ds-dark-section .ds-kicker {
+  color: var(--n-400);
+}
+
+
+/* =============================================================================
+   還元 (promoted): Off Mute — 2026-07-12
+   Off Mute（ポッドキャスト×教育系）の観察から、エピソードリスト向けの余白リズムトークンとセクション区切りレシピを追記する。既存のタイポ・余白・色定義と完全に整合し、真に不足している概念のみを厳選する。
+   出典: https://minimal.gallery/off-mute/
+   ========================================================================== */
+/* =============================================================================
+   還元 (promoted): Off Mute — ポッドキャスト/教育系エピソードリスト — 2026-06-09
+   音声コンテンツ一覧に特有の「番号+タイトル+メタ情報」行リズムと
+   セクション区切りのリズム感を、既存スケールを壊さず追記する。
+   ========================================================================== */
+:root {
+  /* エピソード行の最小高さ(タップ/クリック領域を十分に確保) */
+  --episode-row-min-height: 4rem;
+
+  /* エピソード番号表示用の等幅幅(2〜3桁の番号が揃う) */
+  --episode-num-width: 2.5rem;
+
+  /* リスト内行間の余白(space-4=1rem と space-5=1.5rem の中間) */
+  --episode-row-gap: 1.25rem;
+
+  /* セクション区切りの上下マージン(読み物のリズムを刻む) */
+  --section-divider-margin: var(--space-7);
+
+  /* 再生時間・日付などのメタ情報色(fg-subtle より少し濃く、fg-muted より薄い中間値) */
+  --fg-meta: #7a8fa8;
+
+  /* 音声プレーヤー進捗バーの高さ */
+  --player-track-height: 3px;
+
+  /* 音声プレーヤー進捗バーの角丸 */
+  --player-track-radius: var(--radius-pill);
+}
+
+/* --- エピソードリスト ------------------------------------------------ */
+/* ポッドキャスト/教育系の番号付きエピソード一覧行レイアウト */
+.ds-episode-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--episode-row-gap);
+}
+
+.ds-episode-item {
+  display: grid;
+  grid-template-columns: var(--episode-num-width) 1fr auto;
+  align-items: center;
+  gap: var(--space-4);
+  min-height: var(--episode-row-min-height);
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: background var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-fast) var(--ease-out);
+}
+.ds-episode-item:hover {
+  background: var(--bg-sunken);
+  box-shadow: var(--shadow-sm);
+}
+
+/* エピソード番号(等幅・右揃え・控えめ色) */
+.ds-episode-num {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--fg-subtle);
+  text-align: right;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* エピソード本体(タイトル + メタ情報を縦積み) */
+.ds-episode-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.ds-episode-title {
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+  color: var(--fg);
+  line-height: var(--leading-snug);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 再生時間・日付などのメタ情報 */
+.ds-episode-meta {
+  font-size: var(--text-xs);
+  color: var(--fg-meta);
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+/* --- セクション区切りリズム ----------------------------------------- */
+/* 音声コンテンツサイト特有の「章立て」区切り(ヘアラインより存在感あり) */
+.ds-section-divider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin: var(--section-divider-margin) 0;
+  color: var(--fg-subtle);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+.ds-section-divider::before,
+.ds-section-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* --- ミニマル音声プレーヤー進捗バー --------------------------------- */
+/* エピソード行に埋め込む薄型プログレストラック */
+.ds-player-track {
+  width: 100%;
+  height: var(--player-track-height);
+  border-radius: var(--player-track-radius);
+  background: var(--border);
+  overflow: hidden;
+}
+.ds-player-track__fill {
+  height: 100%;
+  border-radius: var(--player-track-radius);
+  background: var(--accent);
+  transition: width var(--dur-fast) var(--ease-out);
+}
+
+
+/* =============================================================================
+   還元 (promoted): Podium: Building a Website Where Running Becomes Storytelling — 2026-07-12
+   Podiumサイトのスクロール連動ナラティブ演出から、エディトリアル向けのスクロール駆動モーショントークンとセクション間の「物語ペーシング」余白トークンを抽出して追記する。既存のモーション・余白スケールと整合させ、WebGLオーバーレイ用のブレンドモード変数も補完する。
+   出典: https://tympanus.net/codrops/2026/06/23/podium-building-a-website-where-running-becomes-storytelling/
+   ========================================================================== */
+/* =============================================================================
+   還元 (promoted): Podium — Scroll-Driven Narrative Motion Tokens — 2026-06-09
+   GSAPスクロール連動×Three.js/WebGLを用いたランニング×ストーリーテリングサイトから、
+   ナラティブペーシング・スクロール駆動アニメーション・WebGLオーバーレイ向けトークンを抽出。
+   既存 --dur-slow / --ease-out / --space-9〜11 と整合させ、不足分のみ追記する。
+   出典: Podium: Building a Website Where Running Becomes Storytelling (Codrops)
+   ========================================================================== */
+:root {
+  /* スクロール連動アニメーションの「入場」に適した超緩やか減速イージング */
+  --ease-narrative: cubic-bezier(0.16, 0.84, 0.44, 1);
+
+  /* 3Dシーン遷移(フェード+スケール)に使う重厚な減速イージング */
+  --ease-scene: cubic-bezier(0.77, 0, 0.175, 1);
+
+  /* スクロール連動アニメーションの基準デュレーション(長尺コンテンツ向け) */
+  --dur-cinematic: 1200ms;
+
+  /* ナラティブセクション間の「章送り」余白(物語のブレス) */
+  --space-narrative: clamp(6rem, 4rem + 8vw, 14rem);
+
+  /* ヒーロー内の縦積み要素間の呼吸余白(タイポ×サブコピー間) */
+  --space-breath: clamp(1.5rem, 1rem + 2vw, 3rem);
+
+  /* WebGLオーバーレイのブレンドモード(スクロール連動テクスチャ合成用) */
+  --webgl-blend: screen;
+
+  /* WebGLキャンバスの基底不透明度(コンテンツ文字の可読性を保つ上限) */
+  --webgl-opacity: 0.72;
+
+  /* スクロール進捗に応じたパララックス係数(JS側から参照する設計値) */
+  --parallax-factor: 0.35;
+
+  /* タイポグラフィアニメーションの行ごとスタガー遅延(見出し分割演出) */
+  --dur-line-stagger: 80ms;
+
+  /* 3Dシーン遷移時のスケール開始値(ズームイン演出の起点) */
+  --scene-scale-from: 1.08;
+
+  /* ダーク背景上のオーバーレイグラデーション(WebGL+テキスト共存用) */
+  --overlay-grad-dark: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.55) 60%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+}
+
+/* --- ナラティブセクション (スクロール連動・章ごとの大余白) ----------- */
+/* 物語の「章」単位のセクション。上下に --space-narrative の余白を持ち、
+   スクロール入場アニメーションの起点として機能する。 */
+.ds-narrative-section {
+  padding-block: var(--space-narrative);
+  position: relative;
+  overflow: hidden;
+}
+
+/* --- WebGLオーバーレイ (Three.js キャンバスをテキスト背面に重ねる) --- */
+/* position:absolute で親要素全面を覆い、mix-blend-mode で合成する。 */
+.ds-webgl-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: var(--webgl-opacity);
+  mix-blend-mode: var(--webgl-blend);
+  z-index: 0;
+}
+
+/* --- ナラティブオーバーレイグラデーション (テキスト可読性確保) -------- */
+/* WebGLキャンバス上のテキストが読めるよう、下部を暗くするグラデーション。 */
+.ds-narrative-overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--overlay-grad-dark);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* --- ナラティブ本文コンテナ (WebGLの前面に配置) ---------------------- */
+/* z-index:2 でWebGLとオーバーレイの前面に出し、物語テキストを表示する。 */
+.ds-narrative-content {
+  position: relative;
+  z-index: 2;
+  max-width: var(--measure);
+  margin-inline: auto;
+  padding-inline: var(--space-6);
+}
+
+/* --- スクロール入場アニメーション (ナラティブ向け長尺版) -------------- */
+/* .ds-animate-in の長尺版。章の見出し・段落に使う。 */
+.ds-animate-narrative {
+  animation: ds-narrative-in var(--dur-cinematic) var(--ease-narrative) backwards;
+}
+@keyframes ds-narrative-in {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* --- theme-editorial との統合: ダーク時のWebGL合成モード調整 --------- */
+/* ダーク背景では screen より multiply の方が馴染む場合があるため上書き可能にする。 */
+[data-theme="dark"] .ds-webgl-overlay,
+.dark .ds-webgl-overlay {
+  mix-blend-mode: screen;
+  opacity: calc(var(--webgl-opacity) * 0.85);
+}
+
+
+/* =============================================================================
+   還元 (promoted): Sculpting a Digital Athlete: Capturing Stefanos Tsitsipas Beyond the Court — 2026-07-12
+   Blender×WebGLアスリート像ケーススタディから、3D奥行き表現に必要なライティング・シェーダー風トークンとWebGLキャンバス共存レイアウトレシピを抽出。既存の「やわらかい奥行き」原則を3D文脈へ拡張する。
+   出典: https://tympanus.net/codrops/2026/07/01/sculpting-a-digital-athlete-capturing-stefanos-tsitsipas-beyond-the-court/
+   ========================================================================== */
+/* =============================================================================
+   還元 (promoted): Sculpting a Digital Athlete (Tsitsipas / Blender×WebGL) — 2026-06-09
+   3Dアスリート像ケーススタディから、WebGLキャンバスとHTMLの共存・ライティング風
+   奥行きトークン・アニメーションイージングを抽出。既存の奥行き原則を3D文脈へ拡張。
+   出典: Sculpting a Digital Athlete: Capturing Stefanos Tsitsipas Beyond the Court
+   ========================================================================== */
+:root {
+  /* --- 3Dライティング風グラデーション (キーライト・フィルライト・リムライト) --- */
+  /* キーライト方向のハイライト色 (明るい面に重ねる白抜け) */
+  --light-key: rgba(255, 255, 255, 0.18);
+  /* フィルライト方向の補色反射 (暗い面に微かに色を乗せる) */
+  --light-fill: rgba(148, 163, 184, 0.08);
+  /* リムライト (輪郭を浮かせるエッジグロー) */
+  --light-rim: rgba(255, 255, 255, 0.55);
+
+  /* --- シェーダー風シャドウ (3Dオブジェクト落ち影・接地感) -------------- */
+  /* 接地影: オブジェクト直下の濃い楕円影 */
+  --shadow-contact: 0 8px 24px -4px rgba(15, 23, 42, 0.45), 0 2px 6px -2px rgba(15, 23, 42, 0.30);
+  /* 環境遮蔽風: 広がりのある柔らかい暗部 */
+  --shadow-ambient: 0 40px 80px -20px rgba(15, 23, 42, 0.18);
+
+  /* --- 奥行きレイヤー z-index 体系 (WebGLキャンバス〜UIオーバーレイ) --- */
+  /* 重複解消: --z-canvas / --z-content / --z-overlay は Shopify Edition 還元ブロックの
+     統一 z スタック (base 0 / canvas 10 / content 20 / overlay 30 / nav 40 / modal 50 /
+     tooltip 60) を正とする　ここではシーン固有の2層だけを、その順序に収まる値で足す */
+  /* 3Dシーン上に重ねる背景装飾層 (canvas 10 とコンテンツ 20 の間) */
+  --z-scene-bg: 15;
+  /* HUD・オーバーレイUI (コンテンツ 20 とオーバーレイ 30 の間) */
+  --z-hud: 25;
+
+  /* --- 3Dシーン向けモーションイージング --------------------------------- */
+  /* カメラ引き・オービット演出向け: ゆっくり始まり滑らかに止まる */
+  --ease-orbit: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  /* オブジェクト出現 (下から浮き上がる重量感) */
+  --ease-emerge: cubic-bezier(0.16, 0.84, 0.44, 1);
+
+  /* --- 長尺アニメーション時間 (3Dシーン遷移・ローディング演出) ---------- */
+  /* シーン切り替え・カメラ移動など重厚な演出向け */
+  --dur-scene: 1200ms;
+  /* ローディング完了後のリビール演出向け */
+  --dur-reveal: 900ms;
+
+  /* --- テクスチャ品質スケール (解像度倍率・JS側から参照) ---------------- */
+  /* 低品質: モバイル・低帯域向けテクスチャ解像度倍率 */
+  --tex-quality-low: 0.5;
+  /* 標準品質: デスクトップ標準 */
+  --tex-quality-mid: 1.0;
+  /* 高品質: Retina・高帯域向け */
+  --tex-quality-high: 2.0;
+}
+
+/* ダークモードでのライティングトークン上書き (暗背景では光を強調) */
+[data-theme="dark"],
+.dark {
+  /* ダーク背景ではキーライトをやや強め、リムライトを際立たせる */
+  --light-key: rgba(255, 255, 255, 0.24);
+  --light-fill: rgba(148, 163, 184, 0.06);
+  --light-rim: rgba(255, 255, 255, 0.72);
+  /* 接地影はダークでより深く */
+  --shadow-contact: 0 8px 28px -4px rgba(0, 0, 0, 0.65), 0 2px 8px -2px rgba(0, 0, 0, 0.45);
+  --shadow-ambient: 0 48px 96px -24px rgba(0, 0, 0, 0.35);
+}
+
+/* --- WebGLヒーローセクション (キャンバスとHTMLの共存レイアウト) ------- */
+/* WebGLキャンバスを背面に固定し、HTMLコンテンツを前面に重ねる基本構造 */
+.ds-webgl-hero {
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--bg);
+}
+
+/* WebGLキャンバス要素 (position:absolute で全面に敷く) */
+.ds-webgl-hero__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: var(--z-canvas);
+  /* キャンバス自体はポインタイベントを透過させ、HTML UIを操作可能に保つ */
+  pointer-events: none;
+  display: block;
+}
+
+/* キャンバス前面のHTMLコンテンツ層 */
+.ds-webgl-hero__content {
+  position: relative;
+  z-index: var(--z-content);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 100svh;
+  padding: var(--space-9) var(--space-6) var(--space-8);
+  pointer-events: none; /* 子要素で個別に pointer-events: auto を付与 */
+}
+.ds-webgl-hero__content > * {
+  pointer-events: auto;
+}
+
+/* --- 奥行きレイヤー (パララックス・3Dシーン背景装飾) ------------------ */
+/* 複数の装飾レイヤーを z-index で積み重ねる汎用コンテナ */
+.ds-depth-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.ds-depth-layer--bg  { z-index: var(--z-scene-bg); }
+.ds-depth-layer--hud { z-index: var(--z-hud); }
+
+/* --- リムライト風エッジグロー (3Dオブジェクトの輪郭強調) -------------- */
+/* カードや要素の縁にリムライト風の光彩を付与するユーティリティ */
+.ds-rim-light {
+  box-shadow:
+    var(--shadow-md),
+    inset 0 1px 0 var(--light-key),
+    0 0 0 1px var(--light-rim);
+}
+
+/* --- 接地影ユーティリティ (3Dオブジェクトの重量感・接地感) ------------ */
+.ds-shadow-contact {
+  box-shadow: var(--shadow-contact), var(--shadow-ambient);
+}
+
+/* --- 3Dシーン出現アニメーション --------------------------------------- */
+/* WebGLシーンのロード完了後、コンテンツをリビールする */
+.ds-scene-reveal {
+  animation: ds-scene-reveal var(--dur-reveal) var(--ease-emerge) backwards;
+}
+@keyframes ds-scene-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+
+/* =============================================================================
+   還元 (promoted): Shaping Stories into Experience: The Work of Kevin Lam — 2026-07-12
+   Kevin Lam ポートフォリオ記事から、エディトリアル記事レイアウト向けのレシピ（バイライン・メタ情報行、セクション区切り、スポットライトヒーロー）を .theme-editorial 専用クラスとして追記する。既存の .ds-article-body / .ds-pull-quote / .ds-lead と重複しない不足パターンのみを厳選する。
+   出典: https://tympanus.net/codrops/2026/06/25/shaping-stories-into-experience-the-work-of-kevin-lam/
+   ========================================================================== */
+/* =============================================================================
+   還元 (promoted): Shaping Stories into Experience — Kevin Lam ポートフォリオ — 2026-06-09
+   エディトリアル記事レイアウトのお手本から、バイライン・メタ行 / セクション区切り /
+   スポットライトヒーローの 3 パターンを .theme-editorial 専用レシピとして追記。
+   既存 .ds-article-body / .ds-pull-quote / .ds-lead とは重複しない。
+   ========================================================================== */
+
+/* --- バイライン・メタ情報行 (著者名・日付・読了時間などを横並びで整列) --- */
+.ds-byline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--fg-muted);
+  line-height: var(--leading-tight);
+  margin-block: var(--space-4);
+}
+.ds-byline__author {
+  font-weight: var(--weight-semibold);
+  color: var(--fg);
+}
+/* バイライン内の区切りドット */
+.ds-byline__sep {
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  border-radius: var(--radius-pill);
+  background: var(--fg-subtle);
+  flex-shrink: 0;
+}
+
+/* --- セクション区切り (タイトル付き水平線。単純 hr より情報密度を持たせる) --- */
+.ds-section-divider {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: var(--space-4);
+  margin-block: var(--space-7);
+  color: var(--fg-subtle);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+.ds-section-divider::before,
+.ds-section-divider::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background: var(--border);
+}
+/* テキストなし（装飾のみ）の場合は span を省略し ::before / ::after だけで使う */
+.ds-section-divider--plain {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+.ds-section-divider--plain::before { display: none; }
+.ds-section-divider--plain::after {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--border-strong) 20%,
+    var(--border-strong) 80%,
+    transparent
+  );
+}
+
+/* --- スポットライトヒーロー (記事冒頭の大型ビジュアル + キャプション構造) --- */
+.ds-spotlight {
+  position: relative;
+  width: 100%;
+  margin-block-end: var(--space-8);
+}
+.ds-spotlight__media {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: var(--bg-sunken);
+}
+.ds-spotlight__media img,
+.ds-spotlight__media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--dur-slow) var(--ease-out);
+}
+.ds-spotlight:hover .ds-spotlight__media img,
+.ds-spotlight:hover .ds-spotlight__media video {
+  transform: scale(1.02);
+}
+/* キャプション: 画像下に控えめに添える */
+.ds-spotlight__caption {
+  margin-block-start: var(--space-2);
+  font-size: var(--text-xs);
+  color: var(--fg-subtle);
+  line-height: var(--leading-normal);
+  padding-inline-start: var(--space-1);
+}
+/* ワイドバリアント: ブレークアウトして本文幅を超えて広がる */
+.ds-spotlight--wide {
+  margin-inline: calc(var(--space-7) * -1);
+  border-radius: 0;
+}
+.ds-spotlight--wide .ds-spotlight__media {
+  border-radius: 0;
+}
+.ds-spotlight--wide .ds-spotlight__caption {
+  padding-inline: var(--space-7);
+}
+
+
+/* =============================================================================
+   還元 (promoted): Testing What Users Actually See with Vitest and Chromatic — 2026-07-12
+   開発者ツール系UIの観察から、コードブロック・diff強調・ステータスバッジ・モノスペースレイアウト向けのトークンとレシピを追記する。既存の--font-mono・ステータス色・--bg-sunkenと整合させつつ、不足している差分表示色ペアとコードブロックレシピのみを追加する。
+   出典: https://tympanus.net/codrops/2026/06/24/testing-what-users-actually-see-with-vitest-and-chromatic/
+   ========================================================================== */
+:root {
+  /* diff 追加行の強調色ペア (緑系: 既存 --success と同系統・soft/fg 2値) */
+  --diff-add-bg: rgba(5, 150, 105, 0.10);   /* diff: 追加行の背景 */
+  --diff-add-fg: #065f46;                   /* diff: 追加行のテキスト */
+  --diff-add-bar: #059669;                  /* diff: 追加行の左端バー色 */
+
+  /* diff 削除行の強調色ペア (赤系: 既存 --danger と同系統) */
+  --diff-del-bg: rgba(220, 38, 38, 0.09);   /* diff: 削除行の背景 */
+  --diff-del-fg: #991b1b;                   /* diff: 削除行のテキスト */
+  --diff-del-bar: #dc2626;                  /* diff: 削除行の左端バー色 */
+
+  /* diff 変更なし行のミュートオーバーレイ (コンテキスト行を視覚的に後退させる) */
+  --diff-unchanged-bg: transparent;         /* diff: 変更なし行の背景(既定は透過) */
+  --diff-unchanged-fg: var(--fg-subtle);    /* diff: 変更なし行のテキスト色 */
+
+  /* コードブロック専用背景 (--bg-sunken より一段暗く、コードの視認性を確保) */
+  --code-bg: #eef2f7;                       /* コードブロック背景 (light) */
+  --code-border: var(--border);             /* コードブロック枠線 */
+  --code-fg: #1e293b;                       /* コードブロック本文色 */
+  --code-line-height: 1.65;                 /* コードブロック行間 (可読性重視) */
+
+  /* サイドバイサイド比較レイアウトの溝幅 */
+  --compare-gap: var(--space-4);            /* 左右ペイン間のギャップ */
+}
+
+[data-theme="dark"],
+.dark {
+  /* ダークモードでのコードブロック背景 (--bg-sunken より深い黒) */
+  --code-bg: #0a0f1c;                       /* コードブロック背景 (dark) */
+  --code-fg: #e2e8f0;                       /* コードブロック本文色 (dark) */
+
+  /* ダークモードでの diff 色 (彩度を抑えて目に優しく) */
+  --diff-add-bg: rgba(16, 185, 129, 0.13);  /* diff: 追加行の背景 (dark) */
+  --diff-add-fg: #6ee7b7;                   /* diff: 追加行のテキスト (dark) */
+  --diff-add-bar: #10b981;                  /* diff: 追加行の左端バー色 (dark) */
+  --diff-del-bg: rgba(248, 113, 113, 0.13); /* diff: 削除行の背景 (dark) */
+  --diff-del-fg: #fca5a5;                   /* diff: 削除行のテキスト (dark) */
+  --diff-del-bar: #f87171;                  /* diff: 削除行の左端バー色 (dark) */
+}
+
+/* --- コードブロック (開発者ツール系UIのコード表示領域) -------------- */
+.ds-code-block {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  line-height: var(--code-line-height);
+  color: var(--code-fg);
+  background: var(--code-bg);
+  border: 1px solid var(--code-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+/* --- diff ビュー (追加・削除・変更なし行の色分け表示) -------------- */
+.ds-diff {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  line-height: var(--code-line-height);
+  background: var(--code-bg);
+  border: 1px solid var(--code-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.ds-diff__line {
+  display: flex;
+  padding: 0.15rem var(--space-4);
+  color: var(--diff-unchanged-fg);
+  background: var(--diff-unchanged-bg);
+  border-left: 3px solid transparent;
+}
+.ds-diff__line--add {
+  color: var(--diff-add-fg);
+  background: var(--diff-add-bg);
+  border-left-color: var(--diff-add-bar);
+}
+.ds-diff__line--del {
+  color: var(--diff-del-fg);
+  background: var(--diff-del-bg);
+  border-left-color: var(--diff-del-bar);
+  text-decoration: line-through;
+  text-decoration-color: var(--diff-del-bar);
+}
+.ds-diff__gutter {
+  -webkit-user-select: none;
+  user-select: none;
+  min-width: 2.5rem;
+  padding-right: var(--space-3);
+  color: var(--fg-subtle);
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* --- サイドバイサイド比較レイアウト (ビジュアルテスト差分表示等) --- */
+.ds-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--compare-gap);
+  align-items: start;
+}
+.ds-compare__pane {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.ds-compare__label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  padding: var(--space-2) var(--space-4);
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-sunken);
+}
+
+/* --- ステータスバッジ: neutral (変更なし・スキップ等の中立状態) ----- */
+.ds-badge-neutral {
+  background: var(--n-100);
+  color: var(--n-600);
+}
+[data-theme="dark"] .ds-badge-neutral,
+.dark .ds-badge-neutral {
+  background: rgba(148, 163, 184, 0.14);
+  color: var(--fg-muted);
+}
+
+
+/* =============================================================================
+   還元 (promoted): The Print Loft — 2026-07-12
+   The Print Loftのアート系EC観察から、無彩色ベースの商品グリッドと余白リズムに関するトークンを抽出。既存の.ds-product-gridおよびニュートラルトークンと重複しない範囲で、スクエア寄りのアスペクト比・広めのグリッドギャップ・ミュートテキスト用セマンティックエイリアスのみを追記する。
+   出典: https://minimal.gallery/the-print-loft/
+   ========================================================================== */
+:root {
+  /* プリント販売向けスクエア寄り商品画像比率(作品を正方形に近い形で見せる) */
+  --product-aspect-print: 3 / 4;
+
+  /* ミニマルギャラリー系ECの広めグリッドギャップ(作品間に十分な呼吸を与える) */
+  --product-grid-gap: var(--space-6);
+
+  /* 商品グリッドの最小カラム幅(プリント販売の大判サムネイルに対応) */
+  --product-col-min: 260px;
+}
+
+/* --- プリント販売向けグリッド変種 (The Print Loft: 広余白・大判サムネイル) --- */
+.ds-product-grid-print {
+  display: grid;
+  gap: var(--product-grid-gap);
+  grid-template-columns: repeat(auto-fill, minmax(var(--product-col-min), 1fr));
+}
+
+/* --- プリント販売向けカード変種 (スクエア寄りメディア比率 + 最小限のボディ) --- */
+.ds-product-card--print .ds-product-card__media {
+  aspect-ratio: var(--product-aspect-print);
+}
+.ds-product-card--print .ds-product-card__body {
+  /* 作品を主役にするため本文パディングを絞る */
+  padding: var(--space-2) var(--space-3) var(--space-3);
+}
+.ds-product-card--print .ds-product-card__name {
+  /* 作品タイトルはセリフ体で格調を出す(theme-editorialと同じ思想) */
+  font-family: var(--font-serif);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-wide);
+  font-size: var(--text-sm);
+}
+
+
+/* =============================================================================
+   還元 (promoted): Website Inspiration: 101 GenAI — 2026-07-12
+   AIヘルスケア系ロングスクロールサイトの観察から、セクション間の余白リズム（ロングスクロール向け大型ギャップ）とダーク×グロー系アクセントの演出トークンを検討したが、余白スケールは既に --space-10/--space-11 で拡張済み、ダークモードも定義済みのため、本当に不足している「グロー発光専用のシャドウ値」と「Problem-Solution構造向けセクションレシピ」のみを最小限追記する。
+   出典: https://onepagelove.com/101-genai
+   ========================================================================== */
+:root {
+  /* AIグロー演出用の発光シャドウ（ダーク背景でアクセントカラーが滲む効果） */
+  --shadow-glow-strong: 0 0 0 1px var(--ring), 0 12px 48px -8px var(--accent-soft), 0 0 60px -10px var(--ring);
+
+  /* 重複解消: --section-gap は DashDigital 還元ブロックの var(--space-9) を正とする */
+  /* セクション内コンテンツの最大幅（ヘルスケア系の読みやすい1カラム幅） */
+  --section-content-max: 860px;
+}
+
+/* --- Problem-Solution セクションブロック（AIヘルスケア系ロングスクロール向け） --- */
+.ds-section-ps {
+  padding-block: var(--section-gap);
+  padding-inline: var(--space-6);
+}
+.ds-section-ps + .ds-section-ps {
+  /* セクション連続時は上部余白を半分にして流れを作る */
+  padding-block-start: calc(var(--section-gap) * 0.5);
+}
+.ds-section-ps__inner {
+  max-width: var(--section-content-max);
+  margin-inline: auto;
+  display: grid;
+  gap: var(--space-7);
+}
+
+/* --- グローアクセントカード（ダーク×AI系のハイライト要素） --- */
+.ds-glow-card {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-glow-strong);
+  padding: var(--space-6);
+  transition: box-shadow var(--dur) var(--ease-out);
+}
+.ds-glow-card:hover {
+  box-shadow: var(--shadow-glow-strong), var(--shadow-lg);
+}
+
+
+/* =============================================================================
+   還元 (promoted): Website Inspiration: AlterG Resources — 2026-07-12
+   AlterG Resources の観察から、グリッドカラム間隔・セクション縦余白・パララックス用オフセットスケール・環境オーバーレイ不透明度の4種トークンを追記する。blur-backdrop は既存 --glass-blur と重複するため不採用、whitespace-ratio は CSS カスタムプロパティとして意味をなさないため不採用。
+   出典: https://onepagelove.com/alterg-resources
+   ========================================================================== */
+/* =============================================================================
+   還元 (promoted): Website Inspiration: AlterG Resources — 2026-06-09
+   ビジブルグリッドのリズム感とパララックス×ブラーの奥行き表現から、
+   グリッド列間隔・セクション縦余白・パララックスオフセット・環境オーバーレイの
+   不足トークンのみを厳選追記。blur-backdrop は既存 --glass-blur と重複のため不採用。
+   ========================================================================== */
+:root {
+  /* グリッド列間隔 (ビジブルグリッドのリズムを保つ基準値) */
+  --grid-col-gap: var(--space-5);   /* 1.5rem = 24px: 3〜12カラム共通の列ガター */
+  --grid-row-gap: var(--space-5);   /* 行ガターも同値で揃え、均等なリズムを確保 */
+
+  /* セクション縦余白 (AlterG 式: たっぷりホワイトスペースで呼吸感を演出) */
+  --section-padding-y: clamp(5rem, 4vw + 3rem, 9rem); /* 既存 space-9(6rem)〜space-10(8rem) の流動版 */
+
+  /* パララックス・オフセットスケール (スクロール連動の奥行き量を段階管理) */
+  --parallax-offset-sm: 20px;   /* 前景に近い要素の控えめなズレ量 */
+  --parallax-offset-md: 50px;   /* 中景要素の標準ズレ量 */
+  --parallax-offset-lg: 100px;  /* 背景要素の大きなズレ量 */
+  --parallax-offset-xl: 180px;  /* 最奥レイヤーの最大ズレ量 */
+
+  /* 環境オーバーレイ不透明度 (パララックス背景に重ねるスクリム濃度) */
+  --overlay-subtle: 0.18;   /* テキスト可読性を保ちつつ背景を透かす最薄スクリム */
+  --overlay-mid: 0.42;      /* ヒーロー画像上のテキスト保護に使う中間スクリム */
+  --overlay-strong: 0.68;   /* 暗い背景が必要なフルスクリーンセクション向け */
+}
+
+
+/* =============================================================================
+   還元 (promoted): Website Inspiration: Billow — 2026-07-12
+   Billowのクラウド系SaaSデザインから「ソフトグラデーション背景」と「大型セクションリズム用レシピ」を抽出。既存トークンで賄えない雲状グラデーション変数と .ds-cloud-section レシピのみを追記する。
+   出典: https://onepagelove.com/billow
+   ========================================================================== */
+/* =============================================================================
+   還元 (promoted): Website Inspiration: Billow — 2026-06-09
+   クラウド系SaaS(Billow)の「広大な余白 × 柔らかいグラデーション背景」から
+   ソフトグラデーション変数と大型セクションレシピを抽出。既存スケールと整合。
+   ========================================================================== */
+:root {
+  /* ソフトクラウドグラデーション(淡いパステル系、light モード用) */
+  --cloud-grad-light: linear-gradient(
+    160deg,
+    #f0f4ff 0%,
+    #f8fafc 40%,
+    #eef6fb 70%,
+    #f5f0ff 100%
+  );
+
+  /* ダークモード用の抑えたクラウドグラデーション */
+  --cloud-grad-dark: linear-gradient(
+    160deg,
+    #0d1525 0%,
+    #0b1120 45%,
+    #0d1a2a 75%,
+    #110d1e 100%
+  );
+
+  /* 重複解消: --section-gap は DashDigital 還元ブロックの var(--space-9) を正とする */
+
+  /* カード角丸の最大値(Billow: 丸みを帯びたカード) */
+  --radius-2xl: 32px;
+}
+
+[data-theme="dark"],
+.dark {
+  /* ダークモードでクラウドグラデを差し替え */
+  --cloud-grad: var(--cloud-grad-dark);
+}
+
+/* light モードの既定値 */
+:root {
+  --cloud-grad: var(--cloud-grad-light);
+}
+
+/* --- クラウドセクション (Billow: 広大な余白 × ソフトグラデ背景) ----- */
+.ds-cloud-section {
+  background: var(--cloud-grad);
+  padding-block: var(--section-gap);
+  padding-inline: var(--space-6);
+}
+
+/* --- ソフトカード (Billow: 角丸大きめ × 影を極力抑えた浮遊感) ------- */
+.ds-soft-card {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-6);
+  transition: box-shadow var(--dur) var(--ease-out),
+    transform var(--dur) var(--ease-out);
+}
+.ds-soft-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(var(--card-lift-y, -6px));
+}
+
+
+/* =============================================================================
+   還元 (promoted): Website Inspiration: Kevin — 2026-07-12
+   ドットグリッド背景テクスチャ用のトークン（ドットサイズ・間隔・不透明度）と、ロングスクロール構成向けのセクション縦余白トークンを追記する。既存の余白スケールや背景変数を壊さず、純粋な追加のみ。
+   出典: https://onepagelove.com/kevin
+   ========================================================================== */
+/* =============================================================================
+   還元 (promoted): Website Inspiration: Kevin — ドットグリッド背景 & セクションリズム
+   ドットグリッドパターン・セクション縦余白・テクスチャ不透明度を追記。
+   既存変数の再定義なし。追記専用。
+   ========================================================================== */
+:root {
+  /* ドットグリッド背景パターン用トークン (Kevin: テクニカル/AIテーマ) */
+  --dot-size: 1.5px;          /* ドット1粒の半径相当サイズ */
+  --dot-gap: 24px;            /* ドット間隔 (グリッドピッチ) */
+  --dot-color: var(--n-300);  /* ライト時のドット色 (slate-300) */
+  --dot-opacity: 0.55;        /* テクスチャ全体の不透明度 (控えめに) */
+
+  /* 重複解消: --section-gap-sm / -md / -lg は Neuropelvic Surgery 還元ブロックの
+     4段スケール (sm 4rem / md 6rem / lg 8rem / xl 12rem) を正とする */
+
+  /* スクロール駆動セクション表示アニメーション用トークン */
+  --reveal-distance: 24px;    /* フェードイン時の移動量 (既存 ds-fade-up の 16px より少し大きめ) */
+  --reveal-dur: var(--dur-slow); /* 既存 600ms を再利用 */
+}
+
+/* ダークモード時のドット色を上書き */
+[data-theme="dark"],
+.dark {
+  --dot-color: var(--n-600);  /* slate-600: ダーク背景に溶け込む控えめなドット */
+  --dot-opacity: 0.35;        /* ダークではさらに抑えめに */
+}
+
+/* --- ドットグリッド背景レシピ (Kevin: テクニカル/AIテーマ背景) ------- */
+/* 使い方: <div class="ds-dot-grid"> でドットグリッド背景を適用 */
+.ds-dot-grid {
+  position: relative;
+  isolation: isolate;
+}
+.ds-dot-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  /* radial-gradient でドットを描画。dot-gap をグリッドピッチとして使用 */
+  background-image: radial-gradient(
+    circle,
+    var(--dot-color) var(--dot-size),
+    transparent var(--dot-size)
+  );
+  background-size: var(--dot-gap) var(--dot-gap);
+  opacity: var(--dot-opacity);
+}
+
+/* --- セクション縦余白ユーティリティ ---------------------------------- */
+/* 使い方: <section class="ds-section"> で標準セクション余白を適用 */
+.ds-section {
+  padding-block: var(--section-gap-md);
+}
+.ds-section--sm {
+  padding-block: var(--section-gap-sm);
+}
+.ds-section--lg {
+  padding-block: var(--section-gap-lg);
+}
+
+/* --- スクロール駆動フェードイン (Kevin: セクション間の視線誘導) ------- */
+/* ds-animate-in の亜種。移動量を --reveal-distance で制御 */
+.ds-reveal {
+  animation: ds-reveal-up var(--reveal-dur) var(--ease-out) backwards;
+}
+@keyframes ds-reveal-up {
+  from { opacity: 0; transform: translateY(var(--reveal-distance)); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
+/* =============================================================================
+   還元 (promoted): Website Inspiration: Lovably — 2026-07-12
+   Lovably参照のホワイトスペース設計から、既存スケールに不足しているセクション縦余白トークンと最小限のディバイダー・コンテンツリズム用レシピを追記する。既存の--space-9〜--space-11・--leading-relaxed・--measureと重複しない範囲のみ。
+   出典: https://onepagelove.com/lovably
+   ========================================================================== */
+/* --- セクション縦余白 (Lovably: 大胆なホワイトスペース設計) ----------- */
+:root {
+  /* 重複解消: --section-gap (=var(--space-9)) は DashDigital 還元ブロック、
+     --section-gap-lg (=var(--space-10)) は Neuropelvic Surgery 還元ブロックを正とする　同値のため挙動は変わらない */
+
+  /* シングルカラム本文の最大幅(--measure=68ch は長文向け、こちらはセクション全体の読み幅) */
+  --content-width-narrow: 640px;          /* 一段組コンテンツの最大幅 (Lovably 縦スクロールリズム) */
+  --content-width: 800px;                 /* 標準コンテンツ幅 */
+  --content-width-wide: 1120px;           /* ワイドレイアウト幅 */
+}
+
+/* --- セクション・ラッパー (Lovably: 縦スクロールリズムの基本単位) ----- */
+.ds-section {
+  /* セクション上下に一定の余白を確保し、縦スクロールのリズムを生む */
+  padding-block: var(--section-gap);
+  padding-inline: var(--space-6);
+}
+.ds-section--lg {
+  /* より大きな呼吸感が必要なヒーロー直下・フィーチャーセクション向け */
+  padding-block: var(--section-gap-lg);
+}
+
+/* --- コンテンツ中央寄せ (Lovably: シングルカラムリズム) --------------- */
+.ds-content {
+  /* 標準コンテンツ幅で中央寄せ。縦スクロール時の視線移動を安定させる */
+  max-width: var(--content-width);
+  margin-inline: auto;
+}
+.ds-content--narrow {
+  /* 本文・説明文など読字に集中させたい箇所の狭い幅 */
+  max-width: var(--content-width-narrow);
+  margin-inline: auto;
+}
+
+/* --- ミニマルディバイダー (Lovably: 主張しない区切り線) --------------- */
+.ds-divider-minimal {
+  /* 既存 .ds-hr より余白を広く取り、セクション間の「間」を演出する */
+  border: none;
+  border-top: 1px solid var(--border);
+  margin-block: var(--section-gap);
+  opacity: 0.6;
+}
+
+
+/* =============================================================================
+   還元 (promoted): Website Inspiration: Monolog — 2026-07-12
+   Monolog の「テクスチャ×個性的タイポ×長尺スクロールリズム」から、editorial テーマに整合するテクスチャオーバーレイ不透明度トークン・セクション間余白トークン・セクション区切りレシピの3点を追記する。既存の theme-editorial や余白スケールを壊さない追記専用。
+   出典: https://onepagelove.com/monolog
+   ========================================================================== */
+/* =============================================================================
+   還元 (promoted): Website Inspiration: Monolog — 2026-06-09
+   テクスチャ×個性タイポ×長尺スクロールリズムの観察から、editorial テーマに
+   整合するオーバーレイ不透明度・スクロールリズム余白・セクション区切りを追記。
+   既存定義の再定義なし。追記専用。
+   ========================================================================== */
+:root {
+  /* テクスチャオーバーレイの不透明度スケール (紙・素材感の強弱を段階的に調整) */
+  --texture-opacity-subtle: 0.03;
+  --texture-opacity-soft:   0.06;
+  --texture-opacity-medium: 0.10;
+  --texture-opacity-strong: 0.16;
+
+  /* 長尺スクロール用セクション間余白 (space-11=12rem の上、ページ章間に使う) */
+  --space-12: 16rem;
+
+  /* セクション区切り線の太さバリエーション (ds-hr は 1px 固定のため拡張) */
+  --divider-width-thin:   1px;
+  --divider-width-medium: 2px;
+  --divider-width-thick:  4px;
+
+  /* セクション区切りの前後余白 (スクロールリズムを一定に保つ基準値) */
+  --divider-spacing: var(--space-9);
+}
+
+/* editorial テーマ専用: 紙質感テクスチャオーバーレイの色 (暖かみのある生成り) */
+.theme-editorial {
+  --texture-color: #8b7355;
+}
+
+/* editorial ダーク専用: テクスチャ色を明るめに反転 */
+[data-theme="dark"].theme-editorial,
+[data-theme="dark"] .theme-editorial,
+.dark.theme-editorial,
+.dark .theme-editorial {
+  --texture-color: #c4b49a;
+}
+
+/* --- テクスチャオーバーレイ (noise / grain 系 bg-image と組み合わせて使う) */
+.ds-texture-overlay {
+  position: relative;
+  isolation: isolate;
+}
+.ds-texture-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  /* 利用側で background-image に noise SVG / PNG を指定し、opacity だけここで制御 */
+  opacity: var(--texture-opacity-soft);
+  background-color: var(--texture-color, #8b7355);
+  border-radius: inherit;
+  z-index: 0;
+}
+/* コンテンツを前面に保つ (テクスチャが文字を隠さないよう) */
+.ds-texture-overlay > * {
+  position: relative;
+  z-index: 1;
+}
+/* 強度バリアント */
+.ds-texture-overlay--subtle::before { opacity: var(--texture-opacity-subtle); }
+.ds-texture-overlay--medium::before { opacity: var(--texture-opacity-medium); }
+.ds-texture-overlay--strong::before { opacity: var(--texture-opacity-strong); }
+
+/* --- スクロールセクション (長尺ページの章ブロック共通構造) ----------- */
+.ds-scroll-section {
+  padding-block: var(--space-10);
+}
+/* 章の冒頭に大きめの余白を取るバリアント (Monolog 的な「間」の演出) */
+.ds-scroll-section--spacious {
+  padding-block: var(--space-11);
+}
+/* 最大幅コンテナ (既存 .ds-hero と同じ基準に揃える) */
+.ds-scroll-section__inner {
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: var(--space-6);
+}
+
+/* --- セクション区切り (ds-hr の上位互換・装飾バリアント付き) --------- */
+/* .ds-hr は 1px ヘアラインのみ。こちらは太さ・余白・装飾を柔軟に扱う */
+.ds-section-divider {
+  border: none;
+  border-top: var(--divider-width-thin) solid var(--border);
+  margin-block: var(--divider-spacing);
+}
+/* 中太: 章の大きな区切りに */
+.ds-section-divider--medium {
+  border-top-width: var(--divider-width-medium);
+  border-top-color: var(--border-strong);
+}
+/* アクセント色の太線: 冒頭・末尾の強調区切りに */
+.ds-section-divider--accent {
+  border-top-width: var(--divider-width-thick);
+  border-top-color: var(--accent);
+  margin-block: var(--space-8);
+}
+/* 中央揃えの短い区切り線 (editorial 的な「・・・」代替) */
+.ds-section-divider--ornament {
+  border: none;
+  width: 3rem;
+  height: var(--divider-width-medium);
+  background: var(--border-strong);
+  margin-block: var(--divider-spacing);
+  margin-inline: auto;
+  border-radius: var(--radius-pill);
+}
+
+
+/* =============================================================================
+   還元 (promoted): Website Inspiration: Neuropelvic Surgery — 2026-07-12
+   医療系ロングスクロールサイトの観察から、セクション間の余白リズムを制御するセクションスペーシングトークンと、長文可読性を高めるbody-text向け行高トークンを追記する。既存スケールと完全に整合し、重複なし。
+   出典: https://onepagelove.com/neuropelvic-surgery
+   ========================================================================== */
+:root {
+  /* セクション間余白スケール (医療系ロングスクロール: セクションの呼吸感を統一管理) */
+  --section-gap-sm: var(--space-8);   /* 4rem: コンパクトなセクション区切り */
+  --section-gap-md: var(--space-9);   /* 6rem: 標準セクション間余白 */
+  --section-gap-lg: var(--space-10);  /* 8rem: 章レベルの大きな区切り */
+  --section-gap-xl: var(--space-11);  /* 12rem: ページ最上部・最下部の余白 */
+
+  /* 本文長文向け行高 (医療・エディトリアル系: 和欧混植の読みやすさを最優先) */
+  --leading-prose: 1.85;
+
+  /* 見出し階層のウェイトコントラスト比 (h1 vs 本文の重さ差を明示) */
+  --weight-heading-primary: var(--weight-black);    /* h1: 最大インパクト */
+  --weight-heading-secondary: var(--weight-bold);   /* h2: セクション見出し */
+  --weight-heading-tertiary: var(--weight-semibold); /* h3: サブ見出し */
+  --weight-body: var(--weight-regular);              /* 本文: 読みやすさ優先 */
+}
+
+/* --- セクションレイアウト (ロングスクロール構成の余白リズム統一) --- */
+.ds-section {
+  padding-block: var(--section-gap-md);
+}
+.ds-section--sm {
+  padding-block: var(--section-gap-sm);
+}
+.ds-section--lg {
+  padding-block: var(--section-gap-lg);
+}
+.ds-section--xl {
+  padding-block: var(--section-gap-xl);
+}
+
+/* --- セクション内コンテナ幅 (医療系: 読みやすい中央寄せ幅) ---------- */
+.ds-section__inner {
+  max-width: 1120px;
+  margin-inline: auto;
+  padding-inline: var(--space-6);
+}
+.ds-section__inner--narrow {
+  /* 本文主体セクション: 可読幅に絞る */
+  max-width: var(--measure);
+  margin-inline: auto;
+  padding-inline: var(--space-6);
+}
+
+/* --- 長文本文 (医療情報・解説文: --leading-prose で可読性を確保) ---- */
+.ds-prose {
+  max-width: var(--measure);
+  line-height: var(--leading-prose);
+  color: var(--fg);
+  font-size: var(--text-base);
+}
+.ds-prose p + p {
+  margin-top: var(--space-5);
+}
+
+/* --- スクロールアンカーナビ (ロングスクロール: セクション間の位置補正) */
+.ds-scroll-target {
+  /* sticky ヘッダー等がある場合のアンカーオフセット調整用 */
+  scroll-margin-top: var(--space-8);
+}
+
+
+/* =============================================================================
+   還元 (promoted): Website Inspiration: Rectangles.fm — 2026-07-12
+   Rectangles.fm の矩形グリッド・テクスチャオーバーレイ・長尺スクロールリズムから、既存トークンに不足している「テクスチャオーバーレイ変数」「ポッドキャストカバーのアスペクト比」「スクロールセクション区切りの余白リズム」の3点のみを厳選追記する。
+   出典: https://onepagelove.com/rectangles-fm
+   ========================================================================== */
+/* --- テクスチャ・オーバーレイ (Rectangles.fm: ざらつき質感の再現) ---------- */
+:root {
+  /* ノイズ系SVGやPNGをdata URIで差し替えて使う汎用オーバーレイ不透明度 */
+  --texture-opacity: 0.035;
+  /* テクスチャ画像のURLを上書きして使う(既定は無し=透明) */
+  --texture-url: none;
+
+  /* ポッドキャストカバーアート標準比率 (1:1 = 正方形) */
+  --aspect-podcast-cover: 1 / 1;
+  /* ワイドカード変形比率 (矩形モチーフ: 横長) */
+  --aspect-rect-wide: 16 / 9;
+  /* ポートレート型カード比率 (矩形モチーフ: 縦長) */
+  --aspect-rect-portrait: 3 / 4;
+
+  /* 重複解消: --space-section は Gusta 還元ブロックの clamp(5rem, 4rem + 5vw, 10rem) を正とする */
+
+  /* セクション区切りラインの太さ(ヘアラインより1段太い) */
+  --divider-weight: 2px;
+  /* セクション区切りの色(既存 --border より少し強め) */
+  --divider-color: var(--border-strong);
+}
+
+/* --- テクスチャオーバーレイ (Rectangles.fm: 背景にざらつきを重ねる) ---------- */
+.ds-texture-overlay {
+  position: relative;
+  isolation: isolate;
+}
+.ds-texture-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background-image: var(--texture-url);
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  opacity: var(--texture-opacity);
+  border-radius: inherit;
+}
+.ds-texture-overlay > * { position: relative; z-index: 2; }
+
+/* --- スクロールセクション区切り (Rectangles.fm: リズム感ある長尺レイアウト) -- */
+.ds-scroll-section {
+  padding-block: var(--space-section);
+}
+/* セクション間の矩形区切りライン */
+.ds-scroll-divider {
+  border: none;
+  border-top: var(--divider-weight) solid var(--divider-color);
+  margin-block: var(--space-section);
+}
+
+/* --- ポッドキャストカバーグリッド (Rectangles.fm: 矩形モチーフの整列) -------- */
+.ds-podcast-grid {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+}
+.ds-podcast-cover {
+  aspect-ratio: var(--aspect-podcast-cover);
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background: var(--bg-sunken);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--dur) var(--ease-out), box-shadow var(--dur) var(--ease-out);
+}
+.ds-podcast-cover:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+.ds-podcast-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* =============================================================================
+   還元 (promoted): Website Inspiration: Right-Click Logo — 2026-07-12
+   右クリックコンテキストメニューのカスタムUIに必要な「コンテキストメニュー専用トークン」と「.ds-context-menu レシピ」を追記する。既存のシャドウ・ブラー・ボーダー・モーション変数を活用しつつ、不足している menu 固有の概念のみを追加する。
+   出典: https://onepagelove.com/rcl
+   ========================================================================== */
+/* --- コンテキストメニュー専用トークン (Right-Click Logo インタラクション参考) --- */
+:root {
+  /* カスタムコンテキストメニューの最小・最大幅 */
+  --menu-min-w: 160px;
+  --menu-max-w: 280px;
+
+  /* メニュー項目の縦パディング(クリック領域を十分に確保) */
+  --menu-item-py: 0.55rem;
+  --menu-item-px: 0.875rem;
+
+  /* メニュー出現時のわずかな浮き上がり量(translateY の起点) */
+  --menu-enter-y: 6px;
+
+  /* メニュー出現アニメーション時間(既存 dur-fast より少し長く、知覚しやすい速度) */
+  --dur-menu: 180ms;
+
+  /* ロゴ等インタラクティブ要素のホバー時スケール倍率 */
+  --logo-hover-scale: 1.06;
+
+  /* インタラクティブフィードバック用の一時的ハイライト色(アクセントの薄め版) */
+  --feedback-highlight: var(--accent-soft);
+}
+
+/* --- カスタムコンテキストメニュー (右クリック起点のカスタムUI) ----------- */
+.ds-context-menu {
+  position: fixed;
+  z-index: 9000;
+  min-width: var(--menu-min-w);
+  max-width: var(--menu-max-w);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg), var(--glass-highlight);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  padding: var(--space-2) 0;
+  /* 出現アニメーション */
+  animation: ds-menu-in var(--dur-menu) var(--ease-out) backwards;
+}
+
+@keyframes ds-menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(var(--menu-enter-y)) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* --- コンテキストメニュー項目 ----------------------------------------- */
+.ds-context-menu__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  width: 100%;
+  padding: var(--menu-item-py) var(--menu-item-px);
+  font-family: inherit;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--fg);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition:
+    background var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out);
+}
+.ds-context-menu__item:hover {
+  background: var(--feedback-highlight);
+  color: var(--accent);
+}
+.ds-context-menu__item:active {
+  background: var(--accent-soft);
+}
+
+/* --- コンテキストメニュー区切り線 ------------------------------------- */
+.ds-context-menu__sep {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: var(--space-2) 0;
+}
+
+/* --- ロゴ・インタラクティブ要素のホバー状態 (logo-hover-state) --------- */
+.ds-logo-interactive {
+  display: inline-flex;
+  cursor: pointer;
+  transition:
+    transform var(--dur-fast) var(--ease-spring),
+    filter var(--dur-fast) var(--ease-out);
+  -webkit-user-select: none;
+  user-select: none;
+}
+.ds-logo-interactive:hover {
+  transform: scale(var(--logo-hover-scale));
+  filter: drop-shadow(0 4px 12px var(--ring));
+}
+.ds-logo-interactive:active {
+  transform: scale(0.98);
+  transition-duration: var(--dur-fast);
+}
+
+
+/* =============================================================================
+   還元 (promoted): Website Inspiration: Secret Garden Stresa — 2026-07-12
+   Secret Garden Stresa の観察から、ロングスクロール構成のセクション間リズムを支えるワイド余白トークンと、アースカラー系ニュートラルパレット、セクション区切りレシピを追記する。言語スイッチャーUIも軽量レシピとして追加する。
+   出典: https://onepagelove.com/secret-garden-stresa
+   ========================================================================== */
+:root {
+  /* 重複解消: --space-12 (16rem) は Monolog 還元ブロックを正とする　同値のため挙動は変わらない */
+
+  /* アースカラー系ニュートラル原色 (Secret Garden: 自然素材・土・砂・苔を想起させる暖色寄りの中間色) */
+  --earth-50:  #f7f4ef;
+  --earth-100: #ede7dc;
+  --earth-200: #d9cfc0;
+  --earth-300: #c0b09a;
+  --earth-400: #a49278;
+  --earth-500: #8a7660;
+  --earth-600: #6e5d4a;
+  --earth-700: #534638;
+  --earth-800: #38302a;
+  --earth-900: #1e1a16;
+
+  /* セクション区切り線の太さバリエーション (ロングスクロール構成での視覚的リズム調整用) */
+  --divider-thin:   1px;
+  --divider-medium: 2px;
+  --divider-thick:  4px;
+}
+
+/* --- セクション区切り (Secret Garden: ロングスクロールのリズムを刻む繊細な仕切り) --- */
+.ds-section-divider {
+  border: none;
+  border-top: var(--divider-thin) solid var(--border);
+  margin-block: var(--space-9);
+  opacity: 0.7;
+}
+.ds-section-divider--wide {
+  margin-block: var(--space-10);
+}
+.ds-section-divider--ornament {
+  /* 中央に短い装飾線を置くエディトリアル的区切り (::before で実装) */
+  position: relative;
+  border: none;
+  margin-block: var(--space-9);
+}
+.ds-section-divider--ornament::before {
+  content: '';
+  display: block;
+  width: 3rem;
+  height: var(--divider-medium);
+  background: var(--accent);
+  margin-inline: auto;
+  border-radius: var(--radius-pill);
+  opacity: 0.55;
+}
+
+/* --- 言語スイッチャー (Secret Garden: 多言語ホテルサイトのUIパターン) --- */
+.ds-lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: 0.35rem 0.85rem;
+  cursor: pointer;
+  transition:
+    color var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out),
+    background var(--dur-fast) var(--ease-out);
+}
+.ds-lang-switcher:hover {
+  color: var(--fg);
+  border-color: var(--border-strong);
+  background: var(--bg-sunken);
+}
+.ds-lang-switcher__sep {
+  /* 言語コード間の縦線区切り (例: JA | EN) */
+  display: inline-block;
+  width: 1px;
+  height: 0.75em;
+  background: var(--border-strong);
+  margin-inline: var(--space-1);
+  opacity: 0.6;
+  vertical-align: middle;
+}
+.ds-lang-switcher__item {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+.ds-lang-switcher__item[aria-current="true"],
+.ds-lang-switcher__item.is-active {
+  color: var(--accent);
+}

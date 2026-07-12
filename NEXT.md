@@ -5,16 +5,23 @@
 進行中
 
 ## いま
-tokens.css を単一の真実とする 127.0.0.1 ローカル専用デザインシステム。最新コミット (2026-06-16) で `tools/export_pptx.py` を追加し、tokens.css ベースの HTML スライドを html2pptx.app API 経由で PPTX 化する第2ルートを整備。HTTP サーバー (launchd `com.designsystem.server`) が port 4173 で常時稼働。直近では scout が自動収集した参照デザイン (全て inbox / auto) が `data/references.json` に溜まり、tokens.css への還元待ち。
+tokens.css を単一の真実とする 127.0.0.1 ローカル専用デザインシステム。2026-07-12 に **scout inbox の還元 (promote) を一括適用**し、tokens.css は 496 行 (106 トークン) → 2518 行 (278 トークン) に拡大。ダークサーフェス/データ表示・コンテキストメニュー・コードブロック&diff・ドットグリッド・WebGL 奥行き・テクスチャ・セクション余白などのトークンとレシピが入った。既存トークンは 1 つも消えず値も不変 (ブラウザ実測で検証済み)。HTTP サーバー (launchd `com.designsystem.server`) は port 4173 で常時稼働。
 
 ## 次にやること
-- [ ] inbox 参照のうち良質なものを `tools/promote_design.py <ref-id> --apply` で tokens.css へ還元 (聖域=追記のみ)
-      → 適用可能な候補が **25 件** 溜まっている (提案 json + additive_css あり)　`python3 tools/promote_design.py --list` で一覧
-      → キュレーターの risk は 36 件すべて low で判別に使えない　どれを採るかは人が中身を見て決める
+- [ ] **重複レシピの整理** (還元の副作用)　同名セレクタを複数の還元ブロックが定義しており、後勝ちで解決している
+      → `.ds-section` x5 / `.ds-section-divider` x5 / `.ds-texture-overlay` x3 / `.ds-scroll-section` x2
+      → 既存ページ (index/library/proposals/slides) はこれらを使っていないので実害は無いが、使う前に1本化する
+- [ ] **似た役割のトークンの名寄せ**　`--section-gap*` / `--space-section` / `--space-narrative` / `--space-breath` が併存
+      同様に幅系 (`--content-max-width` / `--content-width*` / `--section-content-max`) と区切り線系 (`--divider-width-*` / `--divider-thin|medium|thick` / `--divider-weight`) も乱立気味
 - [ ] `.slide` ベースの**本番デッキ HTML が未整備**　tokens.css のテーマ/レシピを使ったデッキ雛形を1本作ると export_pptx が実運用に乗る
       (現状 `.slide` を持つ HTML は動作確認用の out/test-deck.html だけ)
+- [ ] 残 inbox 16 件 + 提案済 2 件　うち 2 件 (claudiu-angheloni / from-years-of-client-work) は additive_css が空で適用対象外
 
 ## 完了 (直近)
+- [x] **inbox 参照 25 件を tokens.css へ還元 (`promote_design.py --apply`)** (2026-07-12)
+      → 新規トークン 172 個 (106 → 278)　追記のみで既存 496 行はバイト単位で不変
+      → 重複トークンは1本化: `--section-gap` (6rem) / `--section-gap-sm,md,lg,xl` (4/6/8/12rem) / `--space-section` / `--space-12` / z-index スタック (base 0 → tooltip 60)
+      → 検証: Chrome で既存 106 トークンの計算値が全て一致・既存レシピ (.ds-card 等) の computed style も一致・console エラー無し・export_pptx.py 通し実行 OK
 - [x] README.md を作成 (起動 / ページ / 設定 / ツール群 / launchd / ディレクトリ構成) (2026-07-12)
 - [x] launchd 3ジョブの稼働確認 — scout.daily (runs=18) / scout.weekly (月曜・digest) / promote.weekly (火曜・data/promotions 出力) いずれも last exit 0 で稼働中 (2026-07-12)
 - [x] `tools/export_pptx.py` を通し検証 → 無料枠のレート制限 (status 3回/分) に対しポーリングが 2 秒間隔で 429 になるバグを修正　21 秒間隔 + 429 自動リトライにして 2 枚の pptx 生成に成功 (2026-07-12)

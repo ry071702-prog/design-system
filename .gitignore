@@ -12,3 +12,6 @@ data/slide-pdfs/
 
 # 還元レビューキュー (AI生成の提案。レビュー用の一時成果物)
 data/promotions/
+
+# tokens.css の適用前バックアップ (git 履歴が正本なので commit しない)
+tokens.css.bak-*
