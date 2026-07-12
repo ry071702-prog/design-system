@@ -57,6 +57,85 @@ def call_dify_promote(cfg, ref, tokens_css):
     return json.loads(txt)
 
 
+# --- 重複チェック --------------------------------------------------------
+# 還元を重ねると同名のレシピ / トークンが別ブロックで再定義され、CSS の「後勝ち」で
+# 意図しない合成が起きる (2026-07-12 に .ds-section x5 / .ds-section-divider x5 を
+# 名寄せした)。適用前にそれを検出して、リネームか統合を人に判断させる。
+
+def strip_css_comments(css):
+    out, i = [], 0
+    while i < len(css):
+        j = css.find("/*", i)
+        if j < 0:
+            out.append(css[i:])
+            break
+        out.append(css[i:j])
+        k = css.find("*/", j + 2)
+        i = len(css) if k < 0 else k + 2
+    return "".join(out)
+
+
+def parse_rules(css):
+    """CSS を [(@ルール文脈, セレクタ, {宣言プロパティ名})] に分解する
+
+    @media 内の同名セレクタは「レスポンシブ上書き」で正当なので、文脈をキーに含めて
+    トップレベルの再定義とは区別する。@keyframes の中身は宣言ではないので捨てる。
+    """
+    css = strip_css_comments(css)
+    rules, stack, depth, start = [], [], 0, 0
+    for i, ch in enumerate(css):
+        if ch == "{":
+            stack.append((css[start:i].strip(), i + 1))
+            depth += 1
+            start = i + 1
+        elif ch == "}":
+            if stack:
+                head, body_start = stack.pop()
+                context = " ".join(h for h, _ in stack if h.startswith("@"))
+                if not head.startswith("@") and "keyframes" not in context:
+                    props = set(re.findall(r"([\w-]+)\s*:", css[body_start:i]))
+                    for sel in (s.strip() for s in head.split(",")):
+                        if sel:
+                            rules.append((context, sel, props))
+            depth -= 1
+            start = i + 1
+        elif ch == ";" and depth == 0:
+            start = i + 1
+    return rules
+
+
+def find_duplicates(new_css, tokens_css):
+    """追記予定の CSS が tokens.css の既存定義とぶつかる箇所を返す"""
+    existing = {}
+    for ctx, sel, props in parse_rules(tokens_css):
+        existing.setdefault((ctx, sel), set()).update(props)
+    dup_sel, dup_prop = [], []
+    for ctx, sel, props in parse_rules(new_css):
+        if (ctx, sel) not in existing:
+            continue
+        clash = sorted(props & existing[(ctx, sel)])
+        # :root / テーマ / ダークは「同じプロパティを再定義したときだけ」重複とみなす
+        if sel.startswith((":root", "[data-theme", ".dark", ".theme-", "html", "body", "*")):
+            if clash:
+                dup_prop.append((sel, clash))
+        else:
+            dup_sel.append((sel, clash))
+    return dup_sel, dup_prop
+
+
+def duplicate_report(new_css, tokens_css):
+    dup_sel, dup_prop = find_duplicates(new_css, tokens_css)
+    if not dup_sel and not dup_prop:
+        return ""
+    lines = []
+    for sel, clash in dup_sel:
+        hint = "宣言が重なる: " + ", ".join(clash) if clash else "宣言は重ならないが同名"
+        lines.append(f"  - レシピ `{sel}` は tokens.css に既にある ({hint})")
+    for sel, clash in dup_prop:
+        lines.append(f"  - `{sel}` の {', '.join(clash)} は既に定義済み (後勝ちで上書きされる)")
+    return "\n".join(lines)
+
+
 def proposal_md(ref, prop):
     return f"""# 還元案: {ref.get('title','')}
 
@@ -77,6 +156,9 @@ def proposal_md(ref, prop):
 ```css
 {prop.get('additive_css','') or '(追記候補なし)'}
 ```
+
+## 重複チェック (既存の tokens.css との衝突)
+{duplicate_report(prop.get('additive_css','') or '', open(TOKENS, encoding='utf-8').read()) or '(重複なし)'}
 
 ## 既存値の変更提案 (適用は手動判断)
 {prop.get('value_changes','') or '(なし)'}
@@ -101,10 +183,20 @@ def write_proposal(ref, prop):
     return path
 
 
-def apply_to_tokens(ref, prop):
+def apply_to_tokens(ref, prop, allow_dup=False):
     css = (prop.get("additive_css") or "").strip()
     if not css:
         return False, "追記候補が無いため tokens.css は変更しません。"
+    report = duplicate_report(css, open(TOKENS, encoding="utf-8").read())
+    if report and not allow_dup:
+        return False, ("既存定義と重複しているため適用を中止しました。\n" + report +
+                       "\n\n対応:\n"
+                       "  1. 同じ役割なら追記せず既存レシピを使う (提案 json の additive_css から削る)\n"
+                       "  2. 挙動が違うなら別名にリネームする (例: .ds-section-hero)\n"
+                       "  3. 意図的に上書きするなら --allow-dup を付けて再実行する")
+    if report:
+        print("[警告] 重複を検出しましたが --allow-dup 指定のため続行します:\n" + report,
+              file=sys.stderr)
     today = datetime.date.today().isoformat()
     block = (f"\n\n/* =============================================================================\n"
              f"   還元 (promoted): {ref.get('title','')} — {today}\n"
@@ -133,6 +225,8 @@ def main():
     ap = argparse.ArgumentParser(description="デザイン還元: tokens.css への追記提案を生成/適用")
     ap.add_argument("ref_id", nargs="?", help="対象 reference の id")
     ap.add_argument("--apply", action="store_true", help="生成済み提案を tokens.css に追記")
+    ap.add_argument("--allow-dup", action="store_true",
+                    help="既存レシピ/トークンと重複していても適用する (既定は中止)")
     ap.add_argument("--weekly", action="store_true", help="直近7日のinboxをまとめて提案 (適用しない)")
     ap.add_argument("--list", action="store_true", help="reference 一覧と状態")
     args = ap.parse_args()
@@ -183,8 +277,10 @@ def main():
             # 提案が無ければ生成してから適用
             prop = call_dify_promote(cfg, ref, open(TOKENS, encoding="utf-8").read())
             write_proposal(ref, prop)
-        ok, msg = apply_to_tokens(ref, prop)
+        ok, msg = apply_to_tokens(ref, prop, allow_dup=args.allow_dup)
         print(msg)
+        if not ok and "重複" in msg:
+            sys.exit(1)
         if ok:
             ref["status"] = "promoted"
             ref["reflected"] = True
@@ -200,6 +296,10 @@ def main():
     save_refs(d)
     print(f"[OK] 還元案を生成: {os.path.relpath(path, ROOT)}  (risk={prop.get('risk')})")
     print(f"     概要: {prop.get('summary','')[:80]}")
+    report = duplicate_report(prop.get("additive_css") or "", open(TOKENS, encoding="utf-8").read())
+    if report:
+        print("[警告] 既存定義と重複しています (このままでは --apply は中止されます):\n" + report,
+              file=sys.stderr)
     print(f"     適用: python3 tools/promote_design.py {ref['id']} --apply")
 
 

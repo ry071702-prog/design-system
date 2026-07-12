@@ -1,0 +1,156 @@
+/* =============================================================================
+   deck.css — tokens.css を土台にしたスライド (.slide) 用の最小フレーム
+   export_pptx.py (html2pptx.app) で pptx 化するデッキ専用のレイヤー
+   色・フォント・角丸・影・アクセントは tokens.css のトークンをそのまま使い、
+   ここではスライド固有の「サイズ (px 固定)」だけを足す
+
+   使い方:
+     python3 tools/export_pptx.py --html decks/template.html \
+         --css tokens.css --css decks/deck.css --name 提案資料.pptx --open
+
+   ハマりどころ (2026-07-12 実測):
+     html2pptx.app はスライドを「class 名に slide を含む要素」で数える
+     そのため子要素のクラスに slide-* を使うと 1 枚のスライドが何十枚にも数えられ、
+     無料枠の 20 枚/ジョブ制限に即当たる (5 枚のデッキが 44 枚と判定された)
+     → デッキ用のクラスはすべて deck- prefix にしてある　slide は .slide だけに使う
+   ========================================================================== */
+
+/* --- スライド本体 (1600x900 = 16:9。幅・高さは HTML 側の style で px 明示する) --- */
+.slide {
+  box-sizing: border-box;
+  padding: 88px 96px;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  line-height: var(--leading-normal);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.deck-center { justify-content: center; }
+
+/* --- スライド上のタイポ (rem スケールだと 1600px 幅では小さいので px で持つ) --- */
+.deck-kicker {          /* .ds-kicker のスライド版 */
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 28px;
+}
+.deck-title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 76px;
+  line-height: 1.12;
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg);
+  margin: 0;
+}
+.deck-heading {         /* 本文スライドの見出し */
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 1.2;
+  color: var(--fg);
+  margin: 0 0 44px;
+  padding-bottom: 20px;
+  border-bottom: 4px solid var(--accent);
+}
+.deck-lead {
+  font-size: 30px;
+  line-height: var(--leading-relaxed);
+  color: var(--fg-muted);
+  margin: 32px 0 0;
+}
+.deck-body { font-size: 24px; line-height: 1.7; color: var(--fg-muted); margin: 0; }
+.deck-meta { font-size: 20px; color: var(--fg-subtle); margin: 56px 0 0; }
+
+/* --- 本文レイアウト --------------------------------------------------- */
+.deck-cols {            /* 横並びカード */
+  display: flex;
+  gap: 32px;
+  flex: 1;
+}
+.deck-col { flex: 1; display: flex; flex-direction: column; }
+
+.deck-card {            /* .ds-card のスライド版 (padding だけ拡大) */
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  padding: 40px;
+  flex: 1;
+}
+.deck-card__no {        /* 連番 */
+  font-family: var(--font-mono);
+  font-size: 20px;
+  color: var(--accent);
+  margin: 0 0 16px;
+}
+.deck-card__title { font-size: 30px; font-weight: 700; color: var(--fg); margin: 0 0 16px; }
+.deck-card__text  { font-size: 22px; line-height: 1.6; color: var(--fg-muted); margin: 0; }
+
+/* --- アジェンダ行 ----------------------------------------------------- */
+.deck-list { list-style: none; margin: 0; padding: 0; flex: 1; }
+.deck-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 28px;
+  font-size: 30px;
+  color: var(--fg);
+  padding: 26px 0;
+  border-bottom: 1px solid var(--border);
+}
+.deck-list li span:first-child {
+  font-family: var(--font-mono);
+  font-size: 22px;
+  color: var(--accent);
+  min-width: 48px;
+}
+.deck-list li small { font-size: 20px; color: var(--fg-subtle); margin-left: auto; }
+
+/* --- 数値 (KPI) ------------------------------------------------------- */
+.deck-stats { display: flex; gap: 32px; flex: 1; }
+.deck-stat {
+  flex: 1;
+  background: var(--bg-sunken);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 44px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.deck-stat__value {
+  font-family: var(--font-mono);
+  font-size: 68px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+  margin: 0 0 18px;
+}
+.deck-stat__label { font-size: 22px; color: var(--fg-muted); margin: 0; }
+
+/* --- 区切り・バッジ (tokens.css のレシピをスライド寸法に合わせる) ------- */
+.deck-divider {
+  border: none;
+  border-top: var(--divider-width-thin) solid var(--border);
+  margin: 40px 0;
+}
+.deck-divider--accent {
+  border-top-width: var(--divider-width-thick);
+  border-top-color: var(--accent);
+  width: 96px;
+  margin: 0 0 40px;
+}
+.deck-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: var(--radius-pill);
+  background: var(--accent-soft);
+  color: var(--accent);
+}

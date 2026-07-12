@@ -97,10 +97,17 @@ python3 tools/scout_designs.py --digest        # 直近7日の未選別を Obsid
 python3 tools/promote_design.py --list         # ref 一覧と状態 (inbox / 提案済 / 還元)
 python3 tools/promote_design.py <ref-id>       # 1件の還元案を生成 (提案のみ・tokens.css は触らない)
 python3 tools/promote_design.py <ref-id> --apply   # 提案を tokens.css へ追記
+python3 tools/promote_design.py <ref-id> --apply --allow-dup  # 重複を承知で強行する
 python3 tools/promote_design.py --weekly       # 直近7日の inbox をまとめて提案 (適用しない)
 ```
 
 適用後の差分は `git diff tokens.css` で確認・取り消しできる
+
+**重複チェック**　`--apply` は、追記予定の CSS が tokens.css の既存レシピ / 既存トークンと
+ぶつかる場合に**適用を中止する** (提案の md にも「重複チェック」節が出る)　還元を重ねると
+同名レシピが増え、CSS の後勝ちで意図しない合成が起きるため (2026-07-12 に `.ds-section` x5 /
+`.ds-section-divider` x5 を名寄せした)　同じ役割なら既存レシピを使い、挙動が違うなら別名に
+リネームする　意図的な上書きだけ `--allow-dup` を付ける
 
 ### スライド生成
 
@@ -116,11 +123,18 @@ python3 tools/build_pptx.py --from out/structure.md --open   # Dify を呼ばな
 
 **`export_pptx.py`** — `tokens.css` ベースの HTML スライドを html2pptx.app の REST API で編集可能な pptx にする第2ルート
 
+デッキの雛形は `decks/template.html` (+ `decks/deck.css`)　これを複製して中身を差し替えるのが本番ルート
+
 ```
-python3 tools/export_pptx.py --html out/deck.html --css tokens.css --name 提案資料.pptx --open
+python3 tools/export_pptx.py --html decks/template.html \
+    --css tokens.css --css decks/deck.css --name 提案資料.pptx --open
 ```
 
 HTML 規約　1 スライド = `.slide` クラスを持つ要素1つ　幅・高さを px で明示する (`<section class="slide" style="width:1600px;height:900px">`)　script / iframe / form / a は除去される　画像は絶対 URL か base64 データ URI のみ
+
+**注意**　html2pptx はスライドを「class 名に `slide` を含む要素」で数える　子要素に `slide-title` のようなクラスを付けると 1 枚が何十枚にも数えられて無料枠 (20 枚/ジョブ) に即当たる　デッキ用のクラスは `deck-` prefix に統一してある
+
+`decks/deck.css` は tokens.css のトークン (色・フォント・角丸・影・アクセント) をそのまま使い、スライド固有の px サイズだけを足す薄い層　テーマ切替は `.slide` に `theme-studio` / `theme-editorial` / `theme-focus` を、ダーク面は `dark` を付けるだけ
 
 無料枠の制限　100 件/日・**status 3 リクエスト/分**・50 スライド/ジョブ・ペイロード 1MB
 ポーリング間隔はこの 3 req/min に合わせて 21 秒にしてある　429 が返った場合はサーバー指定の待ち時間だけ空けて自動リトライする
@@ -185,6 +199,9 @@ design-system/
 ├── slides.html         # 作成済みスライド一覧
 ├── references.md       # 参照デザインと採用ログ (人が読む正本)
 ├── config.example.json # 設定のひな形　config.local.json にコピーして使う
+├── decks/              # 本番デッキ (export_pptx.py の入力)
+│   ├── template.html   # .slide ベースのデッキ雛形 (1600x900・5枚)
+│   └── deck.css        # tokens.css の上に載せるスライド用の薄い層
 ├── data/
 │   ├── references.json # 収集した参照デザイン (status: inbox / promoted)
 │   ├── promotions/     # 還元レビューキュー (gitignore)
@@ -214,3 +231,17 @@ design-system/
 | コンポーネント・レシピ | `ds-` prefix の任意クラス　Tailwind と併用可 |
 | モーション・ユーティリティ | `prefers-reduced-motion` を必ず尊重する |
 | 還元 (promoted) ブロック | `promote_design.py --apply` が追記する　出典 URL と日付つき |
+| 名寄せ (dedupe) ブロック | ファイル末尾　還元で重複した同名レシピの**正本**を1本だけ置く場所 |
+
+名寄せ後の正本 (新規に使うならこちら)
+
+| 用途 | 正本 |
+|---|---|
+| セクション余白 (固定) | `--section-gap-sm/md/lg/xl` (4/6/8/12rem)　`--section-gap` は md のエイリアス |
+| セクション余白 (流体) | `--space-section` / `--space-narrative` / `--space-breath` (clamp 系。固定スケールとは別種) |
+| 区切り線の太さ | `--divider-width-thin/medium/thick`　`--divider-thin/medium/thick` と `--divider-weight` はエイリアス |
+| コンテンツ幅 | `--content-width-narrow/‐/‐wide` (640/800/1120px) |
+| セクション | `.ds-section` (+ `--sm/--lg/--xl/--wide/--fluid`) |
+| 区切り (線のみ) | `.ds-section-divider` (+ `--medium/--accent/--soft/--wide/--ornament`) |
+| 区切り (ラベル付き) | `.ds-divider-label` (+ `--plain`) |
+| テクスチャ | `.ds-texture-overlay` (+ `--subtle/--soft/--medium/--strong`) |

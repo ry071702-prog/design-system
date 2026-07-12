@@ -1,0 +1,89 @@
+<!--
+  template.html — tokens.css + decks/deck.css で作る本番デッキの雛形 (1600x900 / 16:9)
+
+  html2pptx.app の HTML 規約:
+    - 1 スライド = .slide クラスを持つ要素 1 つ　幅・高さを px で明示する
+    - script / iframe / form / a は除去される　画像は絶対 URL か base64 のみ
+
+  テーマの切替: .slide に theme-studio / theme-editorial / theme-focus を付ける
+  ダーク面    : .slide に dark を足す (tokens.css の [data-theme="dark"], .dark 対応)
+
+  pptx にする:
+    python3 tools/export_pptx.py --html decks/template.html \
+        --css tokens.css --css decks/deck.css --name 提案資料.pptx --open
+-->
+
+<!-- 1. 表紙 (ダーク × studio テーマ) -->
+<section class="slide deck-center dark theme-studio" style="width:1600px;height:900px">
+  <p class="deck-kicker">Proposal</p>
+  <h1 class="deck-title">タイトルをここに置く<br>16:9 の本番デッキ雛形</h1>
+  <p class="deck-lead">tokens.css のトークンとテーマをそのまま使い、html2pptx で編集可能な pptx に変換する</p>
+  <p class="deck-meta">2026-07-12 / design-system</p>
+</section>
+
+<!-- 2. アジェンダ -->
+<section class="slide theme-focus" style="width:1600px;height:900px">
+  <h2 class="deck-heading">アジェンダ</h2>
+  <ul class="deck-list">
+    <li><span>01</span>背景と課題<small>現状の整理</small></li>
+    <li><span>02</span>提案の柱<small>3 つの打ち手</small></li>
+    <li><span>03</span>期待できる効果<small>定量の見込み</small></li>
+    <li><span>04</span>進め方<small>次のアクション</small></li>
+  </ul>
+</section>
+
+<!-- 3. 3カラム (カードレシピ) -->
+<section class="slide theme-focus" style="width:1600px;height:900px">
+  <h2 class="deck-heading">提案の柱</h2>
+  <div class="deck-cols">
+    <div class="deck-col">
+      <div class="deck-card">
+        <p class="deck-card__no">01</p>
+        <p class="deck-card__title">仕組みを一本化</p>
+        <p class="deck-card__text">散らばった運用を単一の正本に寄せ、手作業のばらつきをなくす</p>
+      </div>
+    </div>
+    <div class="deck-col">
+      <div class="deck-card">
+        <p class="deck-card__no">02</p>
+        <p class="deck-card__title">自動で集める</p>
+        <p class="deck-card__text">日次で収集し、レビューできる形に整えてから人が判断する</p>
+      </div>
+    </div>
+    <div class="deck-col">
+      <div class="deck-card">
+        <p class="deck-card__no">03</p>
+        <p class="deck-card__title">成果物に還元</p>
+        <p class="deck-card__text">貯めた知見をトークンとレシピに落とし、次の制作物へ直接効かせる</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. 数値 (KPI) -->
+<section class="slide theme-focus" style="width:1600px;height:900px">
+  <h2 class="deck-heading">期待できる効果</h2>
+  <div class="deck-stats">
+    <div class="deck-stat">
+      <p class="deck-stat__value">-40%</p>
+      <p class="deck-stat__label">制作の立ち上げ時間</p>
+    </div>
+    <div class="deck-stat">
+      <p class="deck-stat__value">x2.5</p>
+      <p class="deck-stat__label">参照デザインの活用数</p>
+    </div>
+    <div class="deck-stat">
+      <p class="deck-stat__value">278</p>
+      <p class="deck-stat__label">共通トークン数</p>
+    </div>
+  </div>
+  <p class="deck-body" style="margin-top:36px">数値はプレースホルダ　実データに差し替えて使う</p>
+</section>
+
+<!-- 5. まとめ (editorial テーマ: 紙 × セリフ見出し) -->
+<section class="slide deck-center theme-editorial" style="width:1600px;height:900px">
+  <hr class="deck-divider deck-divider--accent">
+  <h2 class="deck-title" style="font-size:60px">次のアクション</h2>
+  <p class="deck-lead">雛形を複製して .slide を足すだけでスライドが増える　テーマ切替は class の付け替えだけで済む</p>
+  <p style="margin-top:44px"><span class="deck-badge">まずは 1 本作って pptx に出す</span></p>
+</section>

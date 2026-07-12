@@ -781,8 +781,9 @@
   /* 記事コンテンツの最大幅(本文 measure より広い、ページ全体の記事カラム幅) */
   --content-max-width: 780px;
 
-  /* セクション間の大きな区切り余白(見出し〜本文ブロック間のリズム) */
-  --section-gap: var(--space-9);
+  /* セクション間の大きな区切り余白(見出し〜本文ブロック間のリズム)
+     名寄せ: 固定スケールの正本は --section-gap-sm/md/lg/xl　これはその md (6rem) のエイリアス */
+  --section-gap: var(--section-gap-md);
 
   /* セクション内の小見出し〜本文間の余白(階層を明示する中間スペース) */
   --section-inner-gap: var(--space-6);
@@ -795,12 +796,9 @@
   padding-block: var(--section-gap);
 }
 
-/* --- セクション区切り(余白リズムを持つ水平線) ----------------------- */
-.ds-section-divider {
-  border: none;
-  border-top: 1px solid var(--border);
-  margin-block: var(--section-gap);
-}
+/* --- セクション区切り → 名寄せ済み ------------------------------------ */
+/* .ds-section-divider の定義は末尾「名寄せ (dedupe)」セクションが正本
+   (ここにあった 1px ヘアライン hr は正本の既定形と同じなので統合した) */
 
 /* --- エディトリアル見出し階層(h2 相当: セクション冒頭の大見出し) ----- */
 .ds-article-heading {
@@ -843,23 +841,9 @@
   margin: 0;
 }
 
-/* --- エージェンシー系セクション余白レシピ (DreamHouse Productions 参考) ---------- */
-/* .ds-section: たっぷりした縦余白でセクション間の呼吸を確保するラッパー。
-   space-9(6rem)〜space-10(8rem)を上下に取り、ミニマル・エディトリアル系の
-   大胆なホワイトスペース演出を支援する。 */
-.ds-section {
-  padding-block: var(--space-10);
-  padding-inline: var(--space-6);
-  max-width: 1440px;
-  margin-inline: auto;
-}
-
-/* --- エージェンシー系セクション余白の広域バリアント ----------------------- */
-/* .ds-section--wide: ランディングページ最上部など、さらに大きな呼吸が必要な場面向け。
-   space-11(12rem)を上下に取り、スクロール前の印象を支配するヒーロー区画に使う。 */
-.ds-section--wide {
-  padding-block: var(--space-11);
-}
+/* --- エージェンシー系セクション余白レシピ → 名寄せ済み -------------------- */
+/* .ds-section (ラッパー: 縦余白 + 左右余白 + max-width 1440px) と
+   .ds-section--wide は末尾「名寄せ」セクションが正本 */
 
 /* --- モノクローム・アクセント抑制バリアント (theme-editorial 専用) ----------- */
 /* .ds-kicker--mono: エージェンシー系のモノクローム配色に合わせ、kickerをアクセント色ではなく
@@ -1014,10 +998,9 @@
   background: var(--bg-hover);
 }
 
-/* --- ブランドセクション区切り (Gusta: 広いセクション間マージン) ----------- */
-.ds-section {
-  padding-block: var(--space-section);
-}
+/* --- ブランドセクション区切り (Gusta: 広いセクション間マージン) → 名寄せ済み --- */
+/* 流体余白 (--space-section) を使う版は末尾「名寄せ」セクションの
+   .ds-section--fluid にリネームした (.ds-section 本体は固定スケールを正とする) */
 
 /* --- ロゴ・ブランド表現向けモノクロテキスト (Gusta: モノクロ寄りテキストカラー) --- */
 .ds-brand-label {
@@ -1182,26 +1165,9 @@
   gap: var(--space-3);
 }
 
-/* --- セクション区切りリズム ----------------------------------------- */
-/* 音声コンテンツサイト特有の「章立て」区切り(ヘアラインより存在感あり) */
-.ds-section-divider {
-  display: flex;
-  align-items: center;
-  gap: var(--space-4);
-  margin: var(--section-divider-margin) 0;
-  color: var(--fg-subtle);
-  font-size: var(--text-xs);
-  font-weight: 600;
-  letter-spacing: var(--tracking-label);
-  text-transform: uppercase;
-}
-.ds-section-divider::before,
-.ds-section-divider::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: var(--border);
-}
+/* --- セクション区切りリズム → 名寄せ済み ------------------------------ */
+/* 「章立て」ラベル付き区切り (flex 版) は末尾「名寄せ」セクションの
+   .ds-divider-label に統合した (grid 版と役割が同一のため) */
 
 /* --- ミニマル音声プレーヤー進捗バー --------------------------------- */
 /* エピソード行に埋め込む薄型プログレストラック */
@@ -1517,42 +1483,9 @@
   flex-shrink: 0;
 }
 
-/* --- セクション区切り (タイトル付き水平線。単純 hr より情報密度を持たせる) --- */
-.ds-section-divider {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  gap: var(--space-4);
-  margin-block: var(--space-7);
-  color: var(--fg-subtle);
-  font-size: var(--text-xs);
-  font-weight: var(--weight-semibold);
-  letter-spacing: var(--tracking-label);
-  text-transform: uppercase;
-}
-.ds-section-divider::before,
-.ds-section-divider::after {
-  content: "";
-  display: block;
-  height: 1px;
-  background: var(--border);
-}
-/* テキストなし（装飾のみ）の場合は span を省略し ::before / ::after だけで使う */
-.ds-section-divider--plain {
-  grid-template-columns: 1fr;
-  gap: 0;
-}
-.ds-section-divider--plain::before { display: none; }
-.ds-section-divider--plain::after {
-  height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    var(--border-strong) 20%,
-    var(--border-strong) 80%,
-    transparent
-  );
-}
+/* --- セクション区切り (タイトル付き水平線) → 名寄せ済み ---------------- */
+/* grid 版のラベル付き区切りは末尾「名寄せ」セクションの .ds-divider-label /
+   .ds-divider-label--plain にリネームした (実装はこの grid 版を正本として採用) */
 
 /* --- スポットライトヒーロー (記事冒頭の大型ビジュアル + キャプション構造) --- */
 .ds-spotlight {
@@ -1973,17 +1906,8 @@
   opacity: var(--dot-opacity);
 }
 
-/* --- セクション縦余白ユーティリティ ---------------------------------- */
-/* 使い方: <section class="ds-section"> で標準セクション余白を適用 */
-.ds-section {
-  padding-block: var(--section-gap-md);
-}
-.ds-section--sm {
-  padding-block: var(--section-gap-sm);
-}
-.ds-section--lg {
-  padding-block: var(--section-gap-lg);
-}
+/* --- セクション縦余白ユーティリティ → 名寄せ済み ---------------------- */
+/* .ds-section / --sm / --lg は末尾「名寄せ」セクションが正本 (同値のため挙動不変) */
 
 /* --- スクロール駆動フェードイン (Kevin: セクション間の視線誘導) ------- */
 /* ds-animate-in の亜種。移動量を --reveal-distance で制御 */
@@ -2012,16 +1936,9 @@
   --content-width-wide: 1120px;           /* ワイドレイアウト幅 */
 }
 
-/* --- セクション・ラッパー (Lovably: 縦スクロールリズムの基本単位) ----- */
-.ds-section {
-  /* セクション上下に一定の余白を確保し、縦スクロールのリズムを生む */
-  padding-block: var(--section-gap);
-  padding-inline: var(--space-6);
-}
-.ds-section--lg {
-  /* より大きな呼吸感が必要なヒーロー直下・フィーチャーセクション向け */
-  padding-block: var(--section-gap-lg);
-}
+/* --- セクション・ラッパー (Lovably) → 名寄せ済み ---------------------- */
+/* .ds-section / --lg は末尾「名寄せ」セクションが正本
+   (padding-inline: var(--space-6) の指定はそちらに引き継いだ) */
 
 /* --- コンテンツ中央寄せ (Lovably: シングルカラムリズム) --------------- */
 .ds-content {
@@ -2088,75 +2005,11 @@
   --texture-color: #c4b49a;
 }
 
-/* --- テクスチャオーバーレイ (noise / grain 系 bg-image と組み合わせて使う) */
-.ds-texture-overlay {
-  position: relative;
-  isolation: isolate;
-}
-.ds-texture-overlay::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  /* 利用側で background-image に noise SVG / PNG を指定し、opacity だけここで制御 */
-  opacity: var(--texture-opacity-soft);
-  background-color: var(--texture-color, #8b7355);
-  border-radius: inherit;
-  z-index: 0;
-}
-/* コンテンツを前面に保つ (テクスチャが文字を隠さないよう) */
-.ds-texture-overlay > * {
-  position: relative;
-  z-index: 1;
-}
-/* 強度バリアント */
-.ds-texture-overlay--subtle::before { opacity: var(--texture-opacity-subtle); }
-.ds-texture-overlay--medium::before { opacity: var(--texture-opacity-medium); }
-.ds-texture-overlay--strong::before { opacity: var(--texture-opacity-strong); }
-
-/* --- スクロールセクション (長尺ページの章ブロック共通構造) ----------- */
-.ds-scroll-section {
-  padding-block: var(--space-10);
-}
-/* 章の冒頭に大きめの余白を取るバリアント (Monolog 的な「間」の演出) */
-.ds-scroll-section--spacious {
-  padding-block: var(--space-11);
-}
-/* 最大幅コンテナ (既存 .ds-hero と同じ基準に揃える) */
-.ds-scroll-section__inner {
-  max-width: 1440px;
-  margin-inline: auto;
-  padding-inline: var(--space-6);
-}
-
-/* --- セクション区切り (ds-hr の上位互換・装飾バリアント付き) --------- */
-/* .ds-hr は 1px ヘアラインのみ。こちらは太さ・余白・装飾を柔軟に扱う */
-.ds-section-divider {
-  border: none;
-  border-top: var(--divider-width-thin) solid var(--border);
-  margin-block: var(--divider-spacing);
-}
-/* 中太: 章の大きな区切りに */
-.ds-section-divider--medium {
-  border-top-width: var(--divider-width-medium);
-  border-top-color: var(--border-strong);
-}
-/* アクセント色の太線: 冒頭・末尾の強調区切りに */
-.ds-section-divider--accent {
-  border-top-width: var(--divider-width-thick);
-  border-top-color: var(--accent);
-  margin-block: var(--space-8);
-}
-/* 中央揃えの短い区切り線 (editorial 的な「・・・」代替) */
-.ds-section-divider--ornament {
-  border: none;
-  width: 3rem;
-  height: var(--divider-width-medium);
-  background: var(--border-strong);
-  margin-block: var(--divider-spacing);
-  margin-inline: auto;
-  border-radius: var(--radius-pill);
-}
+/* --- テクスチャ / スクロールセクション / セクション区切り → 名寄せ済み --- */
+/* .ds-texture-overlay (+ 強度バリアント) / .ds-scroll-section (+ --spacious /
+   __inner) / .ds-section-divider (+ --medium / --accent / --ornament) は
+   すべて末尾「名寄せ」セクションが正本　この Monolog ブロックの実装を
+   ベースに統合している (トークン --texture-* / --divider-width-* はここが正) */
 
 
 /* =============================================================================
@@ -2181,19 +2034,9 @@
   --weight-body: var(--weight-regular);              /* 本文: 読みやすさ優先 */
 }
 
-/* --- セクションレイアウト (ロングスクロール構成の余白リズム統一) --- */
-.ds-section {
-  padding-block: var(--section-gap-md);
-}
-.ds-section--sm {
-  padding-block: var(--section-gap-sm);
-}
-.ds-section--lg {
-  padding-block: var(--section-gap-lg);
-}
-.ds-section--xl {
-  padding-block: var(--section-gap-xl);
-}
+/* --- セクションレイアウト → 名寄せ済み ------------------------------- */
+/* .ds-section / --sm / --lg / --xl は末尾「名寄せ」セクションが正本
+   (余白トークン --section-gap-sm/md/lg/xl の定義はここが正) */
 
 /* --- セクション内コンテナ幅 (医療系: 読みやすい中央寄せ幅) ---------- */
 .ds-section__inner {
@@ -2247,36 +2090,18 @@
 
   /* 重複解消: --space-section は Gusta 還元ブロックの clamp(5rem, 4rem + 5vw, 10rem) を正とする */
 
-  /* セクション区切りラインの太さ(ヘアラインより1段太い) */
-  --divider-weight: 2px;
+  /* セクション区切りラインの太さ → 名寄せ: --divider-width-medium (2px) のエイリアス */
+  --divider-weight: var(--divider-width-medium);
   /* セクション区切りの色(既存 --border より少し強め) */
   --divider-color: var(--border-strong);
 }
 
-/* --- テクスチャオーバーレイ (Rectangles.fm: 背景にざらつきを重ねる) ---------- */
-.ds-texture-overlay {
-  position: relative;
-  isolation: isolate;
-}
-.ds-texture-overlay::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  background-image: var(--texture-url);
-  background-repeat: repeat;
-  background-size: 200px 200px;
-  opacity: var(--texture-opacity);
-  border-radius: inherit;
-}
-.ds-texture-overlay > * { position: relative; z-index: 2; }
+/* --- テクスチャ / スクロールセクション (Rectangles.fm) → 名寄せ済み ------ */
+/* .ds-texture-overlay の背景画像版 (--texture-url / --texture-opacity) と
+   .ds-scroll-section の流体余白版は、末尾「名寄せ」セクションの正本に統合した
+   (正本の ::before は background-color と background-image の両方を扱う) */
 
-/* --- スクロールセクション区切り (Rectangles.fm: リズム感ある長尺レイアウト) -- */
-.ds-scroll-section {
-  padding-block: var(--space-section);
-}
-/* セクション間の矩形区切りライン */
+/* --- セクション間の矩形区切りライン (Rectangles.fm) ---------------------- */
 .ds-scroll-divider {
   border: none;
   border-top: var(--divider-weight) solid var(--divider-color);
@@ -2439,38 +2264,15 @@
   --earth-800: #38302a;
   --earth-900: #1e1a16;
 
-  /* セクション区切り線の太さバリエーション (ロングスクロール構成での視覚的リズム調整用) */
-  --divider-thin:   1px;
-  --divider-medium: 2px;
-  --divider-thick:  4px;
+  /* セクション区切り線の太さ → 名寄せ: --divider-width-* のエイリアス (値は同一) */
+  --divider-thin:   var(--divider-width-thin);    /* 1px */
+  --divider-medium: var(--divider-width-medium);  /* 2px */
+  --divider-thick:  var(--divider-width-thick);   /* 4px */
 }
 
-/* --- セクション区切り (Secret Garden: ロングスクロールのリズムを刻む繊細な仕切り) --- */
-.ds-section-divider {
-  border: none;
-  border-top: var(--divider-thin) solid var(--border);
-  margin-block: var(--space-9);
-  opacity: 0.7;
-}
-.ds-section-divider--wide {
-  margin-block: var(--space-10);
-}
-.ds-section-divider--ornament {
-  /* 中央に短い装飾線を置くエディトリアル的区切り (::before で実装) */
-  position: relative;
-  border: none;
-  margin-block: var(--space-9);
-}
-.ds-section-divider--ornament::before {
-  content: '';
-  display: block;
-  width: 3rem;
-  height: var(--divider-medium);
-  background: var(--accent);
-  margin-inline: auto;
-  border-radius: var(--radius-pill);
-  opacity: 0.55;
-}
+/* --- セクション区切り (Secret Garden) → 名寄せ済み ---------------------- */
+/* 繊細な hr (opacity 0.7) は .ds-section-divider--soft、広めの余白は --wide、
+   中央の装飾線は --ornament として末尾「名寄せ」セクションに統合した */
 
 /* --- 言語スイッチャー (Secret Garden: 多言語ホテルサイトのUIパターン) --- */
 .ds-lang-switcher {
@@ -2516,3 +2318,146 @@
 .ds-lang-switcher__item.is-active {
   color: var(--accent);
 }
+
+
+/* =============================================================================
+   名寄せ (dedupe) — 2026-07-12
+   還元 (promote) を重ねた結果、同名レシピが複数の還元ブロックで定義され「後勝ち」で
+   解決されていた状態を解消する　各レシピの定義はここが正本 (single definition)
+   元の還元ブロックには「→ 名寄せ済み」コメントだけを残してある
+
+   判断の記録:
+   - .ds-section        … 5 定義 → 1 本化　「縦余白 + 左右余白 + max-width 1440px の
+                          セクションラッパー」を正とし、余白は固定スケール
+                          --section-gap-md を既定にした (後勝ちの計算値と同一なので挙動不変)
+                          流体余白 (--space-section) 版は .ds-section--fluid にリネーム
+   - .ds-section-divider… 5 定義 → 役割で 2 系統に分離
+                          (a) 線だけの hr        → .ds-section-divider (太さ/余白/装飾のバリアント付き)
+                          (b) ラベル付きの区切り → 既存の .ds-divider-label に統合 (同じ役割の
+                              レシピが .ds-divider-label という名前で既にあったため、そちらを正とし
+                              旧 grid 版の「ラベル無し」バリアントだけ --plain として移植)
+                          後勝ちで (a)+(b) が混ざった「display:grid かつ border-top かつ opacity:.7」
+                          という不整合な状態だったため、ここで意味的に切り分けている
+   - .ds-texture-overlay… 3 定義 → 1 本化　::before が背景色 (--texture-color) と
+                          背景画像 (--texture-url) の両方を扱えるようにして統合
+   - .ds-scroll-section … 2 定義 → 1 本化　流体余白 (--space-section) 版を正とした
+                          (後勝ちの計算値と同一)
+
+   トークンの名寄せ (エイリアス方式・値は不変):
+   - 余白 (固定): --section-gap-sm/md/lg/xl が正本　--section-gap は md のエイリアス
+   - 余白 (流体): --space-section (5〜10rem) / --space-narrative (6〜14rem) /
+                  --space-breath (1.5〜3rem)　固定スケールとは別種なので併存させる
+   - 区切り線  : --divider-width-thin/medium/thick が正本
+                 --divider-thin/medium/thick と --divider-weight はそのエイリアス
+   - 幅        : --content-width-narrow(640) / --content-width(800) / --content-width-wide(1120)
+                 を新規用途の正本とする　--content-max-width(780) と --section-content-max(860)
+                 は既存レシピが参照する固有値なのでエイリアス化せず据え置き (値が変わるため)
+   ========================================================================== */
+
+/* --- セクション (縦リズムの基本単位) --------------------------------- */
+.ds-section {
+  padding-block: var(--section-gap-md);
+  padding-inline: var(--space-6);
+  max-width: 1440px;
+  margin-inline: auto;
+}
+.ds-section--sm { padding-block: var(--section-gap-sm); }   /* 4rem */
+.ds-section--lg { padding-block: var(--section-gap-lg); }   /* 8rem */
+.ds-section--xl,
+.ds-section--wide { padding-block: var(--section-gap-xl); } /* 12rem: ヒーロー区画 */
+/* 流体版: ビューポート幅に応じて 5〜10rem (旧 Gusta 還元の .ds-section) */
+.ds-section--fluid { padding-block: var(--space-section); }
+
+/* --- スクロールセクション (長尺ページの章ブロック) -------------------- */
+.ds-scroll-section {
+  padding-block: var(--space-section);
+}
+.ds-scroll-section--spacious {
+  padding-block: var(--space-11);
+}
+.ds-scroll-section__inner {
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: var(--space-6);
+}
+
+/* --- セクション区切り: 線のみ (hr / div どちらでも使える) -------------- */
+.ds-section-divider {
+  border: none;
+  border-top: var(--divider-width-thin) solid var(--border);
+  margin-block: var(--divider-spacing);
+}
+.ds-section-divider--medium {          /* 中太: 章の大きな区切り */
+  border-top-width: var(--divider-width-medium);
+  border-top-color: var(--border-strong);
+}
+.ds-section-divider--accent {          /* アクセント色の太線: 冒頭・末尾の強調 */
+  border-top-width: var(--divider-width-thick);
+  border-top-color: var(--accent);
+  margin-block: var(--space-8);
+}
+.ds-section-divider--soft {            /* 繊細: 存在感を落とす (Secret Garden 由来) */
+  opacity: 0.7;
+}
+.ds-section-divider--wide {            /* 余白を広げる */
+  margin-block: var(--space-10);
+}
+.ds-section-divider--ornament {        /* 中央に短い装飾線 (editorial の「・・・」代替) */
+  border: none;
+  width: 3rem;
+  height: var(--divider-width-medium);
+  background: var(--border-strong);
+  margin-block: var(--divider-spacing);
+  margin-inline: auto;
+  border-radius: var(--radius-pill);
+}
+.ds-section-divider--ornament.ds-section-divider--accent {
+  background: var(--accent);
+}
+
+/* --- セクション区切り: ラベル付き ------------------------------------- */
+/* 本体 (.ds-divider-label) は上部の「ラベル付き区切り線」ブロックが正本 (flex 実装)
+   使い方: <div class="ds-divider-label"><span>CHAPTER 01</span></div>
+   ここでは旧 .ds-section-divider (grid 版) が持っていた「ラベル無し」バリアントだけを
+   flex 実装に移植して足す */
+.ds-divider-label--plain::before { display: none; }
+.ds-divider-label--plain::after {
+  border-top: none;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--border-strong) 20%,
+    var(--border-strong) 80%,
+    transparent
+  );
+}
+
+/* --- テクスチャオーバーレイ (紙・ノイズの質感を重ねる) ----------------- */
+/* 背景色だけ (--texture-color) でも、noise 画像 (--texture-url) でも使える */
+.ds-texture-overlay {
+  position: relative;
+  isolation: isolate;
+}
+.ds-texture-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background-color: var(--texture-color, #8b7355);
+  background-image: var(--texture-url, none);
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  opacity: var(--texture-opacity);
+  border-radius: inherit;
+}
+.ds-texture-overlay > * {
+  position: relative;
+  z-index: 2;
+}
+/* 強度バリアント */
+.ds-texture-overlay--subtle::before { opacity: var(--texture-opacity-subtle); }
+.ds-texture-overlay--soft::before   { opacity: var(--texture-opacity-soft); }
+.ds-texture-overlay--medium::before { opacity: var(--texture-opacity-medium); }
+.ds-texture-overlay--strong::before { opacity: var(--texture-opacity-strong); }

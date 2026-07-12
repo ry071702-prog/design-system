@@ -5,19 +5,23 @@
 進行中
 
 ## いま
-tokens.css を単一の真実とする 127.0.0.1 ローカル専用デザインシステム。2026-07-12 に **scout inbox の還元 (promote) を一括適用**し、tokens.css は 496 行 (106 トークン) → 2518 行 (278 トークン) に拡大。ダークサーフェス/データ表示・コンテキストメニュー・コードブロック&diff・ドットグリッド・WebGL 奥行き・テクスチャ・セクション余白などのトークンとレシピが入った。既存トークンは 1 つも消えず値も不変 (ブラウザ実測で検証済み)。HTTP サーバー (launchd `com.designsystem.server`) は port 4173 で常時稼働。
+tokens.css を単一の真実とする 127.0.0.1 ローカル専用デザインシステム。2026-07-12 に **scout inbox の還元 (promote) を一括適用** (106 → 278 トークン) し、続けて**還元の副作用だった重複レシピを名寄せ**した。tokens.css 末尾に「名寄せ (dedupe)」セクションを置き、同名レシピの正本を1本だけ定義する形にしてある。`.slide` ベースの**本番デッキ雛形** (`decks/template.html` + `decks/deck.css`) も用意し、export_pptx で pptx 化を実測確認済み。HTTP サーバー (launchd `com.designsystem.server`) は port 4173 で常時稼働。
 
 ## 次にやること
-- [ ] **重複レシピの整理** (還元の副作用)　同名セレクタを複数の還元ブロックが定義しており、後勝ちで解決している
-      → `.ds-section` x5 / `.ds-section-divider` x5 / `.ds-texture-overlay` x3 / `.ds-scroll-section` x2
-      → 既存ページ (index/library/proposals/slides) はこれらを使っていないので実害は無いが、使う前に1本化する
-- [ ] **似た役割のトークンの名寄せ**　`--section-gap*` / `--space-section` / `--space-narrative` / `--space-breath` が併存
-      同様に幅系 (`--content-max-width` / `--content-width*` / `--section-content-max`) と区切り線系 (`--divider-width-*` / `--divider-thin|medium|thick` / `--divider-weight`) も乱立気味
-- [ ] `.slide` ベースの**本番デッキ HTML が未整備**　tokens.css のテーマ/レシピを使ったデッキ雛形を1本作ると export_pptx が実運用に乗る
-      (現状 `.slide` を持つ HTML は動作確認用の out/test-deck.html だけ)
 - [ ] 残 inbox 16 件 + 提案済 2 件　うち 2 件 (claudiu-angheloni / from-years-of-client-work) は additive_css が空で適用対象外
+- [ ] index.html (スタイルガイド) に名寄せ後のレシピ (`.ds-section` / `.ds-section-divider` / `.ds-divider-label` / `.ds-texture-overlay`) の見本を足すと、使う前に確認できて便利
+- [ ] デッキ雛形は 5 枚の型 (表紙 / アジェンダ / 3カラム / 数値 / まとめ) だけ　実案件で使いながら型を増やす
 
 ## 完了 (直近)
+- [x] **重複レシピの名寄せ + トークンのエイリアス化** (2026-07-12)
+      → `.ds-section` x5 → 1本 (計算値は据え置き　流体版は `.ds-section--fluid` にリネーム)
+      → `.ds-section-divider` x5 → 役割で2系統に分離: 線のみ = `.ds-section-divider` (+ --medium/--accent/--soft/--wide/--ornament) / ラベル付き = 既存の `.ds-divider-label` (+ --plain) に統合
+      → `.ds-texture-overlay` x3 → 1本 (背景色版と noise 画像版を統合) / `.ds-scroll-section` x2 → 1本
+      → トークン: `--divider-thin|medium|thick` と `--divider-weight` を `--divider-width-*` のエイリアスに、`--section-gap` を `--section-gap-md` のエイリアスに (値は不変)　幅系は値が違う (780/800/860px) のでエイリアス化せず据え置き
+      → 検証: 278 トークンの計算値が全て一致 (消失・変化ゼロ)・既存レシピの computed style も一致・4ページ 200・console エラー無し
+- [x] **`promote_design.py` に重複チェックを追加** (2026-07-12)　追記予定の CSS が既存レシピ / 既存トークンとぶつかると `--apply` を中止する (`--allow-dup` で強行可)　@media 文脈は区別するのでレスポンシブ上書きは誤検知しない
+- [x] **本番デッキ雛形 `decks/template.html` + `decks/deck.css`** (2026-07-12)　1600x900・5枚 (表紙/アジェンダ/3カラム/数値/まとめ)　テーマは class 付け替えだけ (studio / editorial / focus / dark)　export_pptx で 5 枚の編集可能 pptx を生成できることを実測確認
+      → ハマり: html2pptx は「class 名に slide を含む要素」をスライドとして数える　子要素を `slide-*` にすると 5 枚が 44 枚と判定されて無料枠 (20枚/ジョブ) に当たる → デッキ用クラスは `deck-` prefix に統一
 - [x] **inbox 参照 25 件を tokens.css へ還元 (`promote_design.py --apply`)** (2026-07-12)
       → 新規トークン 172 個 (106 → 278)　追記のみで既存 496 行はバイト単位で不変
       → 重複トークンは1本化: `--section-gap` (6rem) / `--section-gap-sm,md,lg,xl` (4/6/8/12rem) / `--space-section` / `--space-12` / z-index スタック (base 0 → tooltip 60)
