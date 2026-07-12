@@ -27,8 +27,9 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONFIG = os.path.join(ROOT, "config.local.json")
 BASE_URL = "https://html2pptx.app"
 PAYLOAD_LIMIT = 1_000_000  # 無料枠 1MB
-POLL_INTERVAL = 2          # 秒 (ドキュメント推奨)
-POLL_TIMEOUT = 300         # 秒
+POLL_INTERVAL = 21         # 秒 (無料枠は status 3回/分 = 20秒に1回まで  2秒だと 429)
+POLL_TIMEOUT = 600         # 秒 (ポーリング間隔を空けたぶん余裕を持たせる)
+RATE_LIMIT_RETRIES = 5     # 429 のリトライ上限
 
 
 def load_api_key():
@@ -44,16 +45,28 @@ def load_api_key():
 
 def api(key, method, path, body=None):
     data = json.dumps(body).encode("utf-8") if body is not None else None
-    req = urllib.request.Request(
-        BASE_URL + path, data=data, method=method,
-        headers={"Authorization": "Bearer " + key,
-                 "Content-Type": "application/json"})
-    try:
-        with urllib.request.urlopen(req, timeout=60) as r:
-            return json.loads(r.read().decode("utf-8"))
-    except urllib.error.HTTPError as e:
-        detail = e.read().decode("utf-8", "replace")[:500]
-        sys.exit(f"API エラー {e.code} ({method} {path}): {detail}")
+    for attempt in range(RATE_LIMIT_RETRIES + 1):
+        req = urllib.request.Request(
+            BASE_URL + path, data=data, method=method,
+            headers={"Authorization": "Bearer " + key,
+                     "Content-Type": "application/json"})
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                return json.loads(r.read().decode("utf-8"))
+        except urllib.error.HTTPError as e:
+            detail = e.read().decode("utf-8", "replace")
+            # 429 (レート制限) はサーバー指定の待ち時間を空けてリトライする
+            if e.code == 429 and attempt < RATE_LIMIT_RETRIES:
+                try:
+                    wait = int(json.loads(detail).get("retryAfterSeconds") or POLL_INTERVAL)
+                except Exception:
+                    wait = POLL_INTERVAL
+                wait = max(1, min(wait, 60)) + 1
+                print(f"  レート制限 (429) → {wait} 秒待って再試行 "
+                      f"({attempt + 1}/{RATE_LIMIT_RETRIES})", file=sys.stderr)
+                time.sleep(wait)
+                continue
+            sys.exit(f"API エラー {e.code} ({method} {path}): {detail[:500]}")
 
 
 def create_job(key, html, css, file_name):

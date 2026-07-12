@@ -9,11 +9,15 @@ tokens.css を単一の真実とする 127.0.0.1 ローカル専用デザイン�
 
 ## 次にやること
 - [ ] inbox 参照のうち良質なものを `tools/promote_design.py <ref-id> --apply` で tokens.css へ還元 (聖域=追記のみ)
-- [ ] `tools/export_pptx.py` を実スライドで一度通し検証し、本番デッキで動作確認
-- [ ] launchd ジョブ (scout.daily / scout.weekly / promote.weekly) が意図通りスケジュール実行されているか `launchctl list` で確認 (要確認)
-- [ ] README が未作成。起動方法・ツール群 (scout / promote / build_pptx / export_pptx / build_marp / deck_to_pdf) の入口を最低限ドキュメント化するか検討 (要確認)
+      → 適用可能な候補が **25 件** 溜まっている (提案 json + additive_css あり)　`python3 tools/promote_design.py --list` で一覧
+      → キュレーターの risk は 36 件すべて low で判別に使えない　どれを採るかは人が中身を見て決める
+- [ ] `.slide` ベースの**本番デッキ HTML が未整備**　tokens.css のテーマ/レシピを使ったデッキ雛形を1本作ると export_pptx が実運用に乗る
+      (現状 `.slide` を持つ HTML は動作確認用の out/test-deck.html だけ)
 
 ## 完了 (直近)
+- [x] README.md を作成 (起動 / ページ / 設定 / ツール群 / launchd / ディレクトリ構成) (2026-07-12)
+- [x] launchd 3ジョブの稼働確認 — scout.daily (runs=18) / scout.weekly (月曜・digest) / promote.weekly (火曜・data/promotions 出力) いずれも last exit 0 で稼働中 (2026-07-12)
+- [x] `tools/export_pptx.py` を通し検証 → 無料枠のレート制限 (status 3回/分) に対しポーリングが 2 秒間隔で 429 になるバグを修正　21 秒間隔 + 429 自動リトライにして 2 枚の pptx 生成に成功 (2026-07-12)
 - [x] scout が自動収集した inbox 参照デザインを data/references.json に追記・コミット (2026-06-28)
 - [x] html2pptx.app API 経由の PPTX エクスポートツール `tools/export_pptx.py` を追加 (2026-06-16)
 - [x] 全ページ PDF 閲覧 (LibreOffice) + 還元レシピ採用 + スタイルガイド反映

@@ -2,6 +2,641 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "stagecrew-53b665",
+      "title": "STAGECREW",
+      "url": "https://minimal.gallery/stagecrew/",
+      "shot": "https://iad.microlink.io/q6U1DpNNwy4N2845mcrm3H83nUeSwavFCBpgGkTQzZXl5em5zq_g1wMgr1BZm6QklGptEWRTb1hUZpgldI2X2g.png",
+      "whatsGood": "プロダクションスタジオ系エージェンシーとして、強いコントラストのタイポグラフィと引き締まったグリッドレイアウトが見どころと推測。余白の取り方とフォントウェイトの階層設計を確認したい。",
+      "extract": "font-size scale (display〜body), font-weight contrast, letter-spacing (tight heading), grid-column-gap, color-contrast (bg vs text), section-padding rhythm",
+      "tags": [
+        "minimal",
+        "typography",
+        "agency",
+        "dark",
+        "editorial"
+      ],
+      "status": "inbox",
+      "date": "2026-07-11",
+      "added": "2026-07-12",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "building-an-interactive-wave-propaga-add87f",
+      "title": "Building an Interactive Wave Propagation Cube Grid with Three.js",
+      "url": "https://tympanus.net/codrops/2026/07/09/building-an-interactive-wave-propagation-cube-grid-with-three-js/",
+      "shot": "https://iad.microlink.io/V9V_CFgsBmlPkh5gDB4R4cDo0a7_GNZXfbIcePfSb9KC81l4CrvJ9l2lwTCvBIgEkMt5O6BHcbbz8qfiLMiWHg.png",
+      "whatsGood": "Three.jsを使ったキューブグリッドの波紋伝播アニメーションの実装手法に注目。個々のキューブのスケール・回転・カラーがタイムオフセットで連鎖する『リズムある奥行き表現』を確認するとよい。",
+      "extract": "wave-delay timing function, grid-gap 3D spacing token, cube scale transform range, propagation easing curve, depth-based color shift, ambient+point light intensity ratio",
+      "tags": [
+        "3d",
+        "motion",
+        "webgl",
+        "dark",
+        "interactive",
+        "tutorials"
+      ],
+      "status": "inbox",
+      "date": "2026-07-09",
+      "added": "2026-07-12",
+      "source": "Codrops",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-matthew-chudnovs-1cdb12",
+      "title": "Website Inspiration: Matthew Chudnovski",
+      "url": "https://onepagelove.com/matthew-chudnovski",
+      "shot": "https://iad.microlink.io/LVaFNKObdnY-1VQb7hfs7gGacWeqpMbSCYs-xIJE1Np0HmA5NZyfvGBPF6BplOt4xOJX5Iaax1s7FPdjax1EVQ.png",
+      "whatsGood": "大胆なホワイトスペースの使い方とプロジェクトオーバーレイの見せ方が参考になりそう。オーディオ統合やイースターエッグなどインタラクション設計の細部にも注目したい。",
+      "extract": "wide whitespace scale, project overlay transition, scroll-triggered reveal, audio toggle UI, easter egg interaction pattern, minimal type hierarchy",
+      "tags": [
+        "minimal",
+        "whitespace",
+        "interactive",
+        "editorial",
+        "longscroll",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-07-09",
+      "added": "2026-07-12",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "future-agi-1c246d",
+      "title": "Future AGI",
+      "url": "https://minimal.gallery/future-agi/",
+      "shot": "https://iad.microlink.io/7sxT4nYxbjbNrOM79FfW55RDkhFYFf-E1B3Et8ZYMqFjaOnMHUCj7vkgVbcA7WfVwEyWObYFWbHTGlHAiB3dvw.png",
+      "whatsGood": "AIスタートアップらしいミニマルな構成の中に、近未来感を演出する配色やタイポグラフィの扱いを確認するとよい。余白の取り方とグリッドのリズムがSaaSらしい信頼感をどう担保しているかも注目ポイント。",
+      "extract": "ダークベース背景色トークン, アクセントグロウカラー, 見出し用大型サンセリフフォントサイズスケール, セクション間の広めの縦余白値, カード境界線のサブトルボーダーカラー, グラデーションオーバーレイ用opacity値",
+      "tags": [
+        "dark",
+        "minimal",
+        "ai",
+        "saas",
+        "futuristic"
+      ],
+      "status": "inbox",
+      "date": "2026-07-08",
+      "added": "2026-07-12",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "ten-years-away-designing-an-interact-a1cadc",
+      "title": "Ten Years Away: Designing an Interactive Comic for Studio375’s Tenth Anniversary",
+      "url": "https://tympanus.net/codrops/2026/07/08/ten-years-away-designing-an-interactive-comic-for-studio375s-tenth-anniversary/",
+      "shot": "https://iad.microlink.io/KhIQAsAW8U65cHZZ-j-vF1fG27aLpbhg6dDbbjzvUMuhdUqi_Xs9jJ7kQSv81wJgB0M6NU7nQFaNapy6_cUQIw.png",
+      "whatsGood": "インタラクティブコミックという特殊フォーマットのため、コマ送り・スクロール連動・シーン遷移のモーション設計が見どころ。パネルレイアウトのグリッド分割とタイポグラフィの演出的な使い方も参考になる可能性が高い。",
+      "extract": "panel-grid layout tokens, scroll-driven animation timing, scene-transition easing curves, narrative typography scale, sequential reveal keyframes, comic-border radius/shadow",
+      "tags": [
+        "motion",
+        "editorial",
+        "interactive",
+        "storytelling",
+        "layout",
+        "articles"
+      ],
+      "status": "inbox",
+      "date": "2026-07-08",
+      "added": "2026-07-12",
+      "source": "Codrops",
+      "auto": true
+    },
+    {
+      "id": "playfight-d21bf9",
+      "title": "Playfight",
+      "url": "https://minimal.gallery/playfight/",
+      "shot": "https://iad.microlink.io/GUWDTRpelsGcN7ojYWpe4U18tz2StrOE4QC3e9gU3wXFUksJUGUgXAsEbeVOJSQBCXzwPw9aDjMXww73N0h78A.png",
+      "whatsGood": "エージェンシー／プロダクションスタジオ系サイトとして、ブランドの個性を打ち出すタイポグラフィの扱いとヒーローセクションのレイアウト構成が参考になりそう。余白のリズムとフォントウェイトのコントラストに注目すると取り込みやすいパターンが見つかるはず。",
+      "extract": "display-font-size-scale, font-weight-contrast-pair, hero-section-spacing, brand-accent-color-token, section-rhythm-gap, heading-letter-spacing",
+      "tags": [
+        "bold",
+        "editorial",
+        "agency",
+        "minimal",
+        "typography"
+      ],
+      "status": "inbox",
+      "date": "2026-07-07",
+      "added": "2026-07-12",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "komma-komma-c901f8",
+      "title": "Komma Komma",
+      "url": "https://minimal.gallery/komma-komma/",
+      "shot": "https://iad.microlink.io/ZwmBzNr6UWMSqrwRCeFY4_GHSiCGFce7_5D0IqMUDc-s2sgYxM_PjYExjexE-Y9kBasKbclrlFU-lu014RwqOA.png",
+      "whatsGood": "minimal.galleryに掲載されたブランディング系エージェンシーサイトとして、余白の取り方とタイポグラフィの階層設計が洗練されている可能性が高い。配色のミニマルさとロゴ・見出し周りのリズム感を重点的に確認したい。",
+      "extract": "ベースとなるニュートラル配色トークン, 見出し用フォントサイズスケール, セクション間の余白(spacing-section), ロゴ周りのレタースペーシング, グリッドカラム比率, ボーダーまたはディバイダースタイル",
+      "tags": [
+        "minimal",
+        "branding",
+        "typography",
+        "editorial",
+        "agency"
+      ],
+      "status": "inbox",
+      "date": "2026-07-10",
+      "added": "2026-07-11",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "the-sleepers-creating-an-atmospheric-361457",
+      "title": "The Sleepers: Creating an Atmospheric WebGL Experience with Lightweight Techniques",
+      "url": "https://tympanus.net/codrops/2026/07/10/the-sleepers-creating-an-atmospheric-webgl-experience-with-lightweight-techniques/",
+      "shot": "https://iad.microlink.io/Ov81Q6QDHENl8Gdv8aOaYuNdw8T0MBNqgtbn1MoJriogWtvOyPcaAvQJSXhv9XvCVFINy0E_w5juReeCd35o8Q.png",
+      "whatsGood": "WebGLを軽量に扱う実装アプローチに注目。霧・光散乱・深度感といった「雰囲気演出」をどのシェーダーパラメータやポストプロセスで実現しているか、トークン化できる数値（fog density, ambient intensity など）を確認するとよい。",
+      "extract": "fog-color-token, depth-blur-radius, ambient-light-intensity, overlay-opacity-dark, scene-transition-duration, grain-texture-opacity",
+      "tags": [
+        "dark",
+        "3d",
+        "atmospheric",
+        "motion",
+        "immersive",
+        "articles"
+      ],
+      "status": "inbox",
+      "date": "2026-07-10",
+      "added": "2026-07-11",
+      "source": "Codrops",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-mat-898b7f",
+      "title": "Website Inspiration: Mat",
+      "url": "https://onepagelove.com/mat",
+      "shot": "https://iad.microlink.io/HAEblKXT_s_f6hATiOiRtY6GNSe5PgiLX8kB5a2JzIcyCYmHN1AKRjRwh1L_TvgkbdxXR-JpvPinK3j2TOaFzQ.png",
+      "whatsGood": "iOSアプリ紹介系のOne Page縦スクロールサイトとして、デバイスモックアップの配置リズムやセクション間の余白設計が参考になりそう。スクロールに連動したコンテンツ切り替えのモーション演出にも注目したい。",
+      "extract": "device-mockup-shadow, section-vertical-spacing, scroll-triggered-reveal, hero-centered-layout, feature-icon-grid, cta-sticky-button",
+      "tags": [
+        "ios",
+        "longscroll",
+        "minimal",
+        "motion",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-07-10",
+      "added": "2026-07-11",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-printable-mockup-69369a",
+      "title": "Website Inspiration: Printable Mockups",
+      "url": "https://onepagelove.com/printable-mockups",
+      "shot": "https://iad.microlink.io/KDNJnLN7IYOFFAvGt82waZ8XihBcI7SzRteES5I6NdPKLyH_enrQH_f3rtbATRRz2iC2CqxMvCfFdzxrVMUNkQ.png",
+      "whatsGood": "印刷物モックアップ系WebアプリはクリーンなグリッドレイアウトとCTAの配置が参考になりやすい。ロングスクロール構成でのセクション区切りのリズムと余白設計を重点的に確認するとよい。",
+      "extract": "section-gap-scale, card-shadow-subtle, cta-button-radius, grid-column-template, neutral-background-token, typography-scale-utility",
+      "tags": [
+        "minimal",
+        "editorial",
+        "longscroll",
+        "webapp",
+        "utility",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-07-10",
+      "added": "2026-07-11",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-medium-rare-001ab1",
+      "title": "Website Inspiration: Medium Rare",
+      "url": "https://onepagelove.com/medium-rare",
+      "shot": "https://iad.microlink.io/fVqKQFrZkFJ1PQNMKeiii4clbqvURSdPJSp8sj5jrxgbQDAzKmsgqjvxmp-HuJpmheFHKxSw_Suz3X6J5ET7nQ.png",
+      "whatsGood": "スキームスイッチャーとイースターエッグの組み合わせから、カラーモード切替のトランジションやインタラクティブな遊び心の仕掛け方を観察すると参考になりそう。ロングスクロール構成でのリズムの作り方にも注目したい。",
+      "extract": "color-scheme toggle transition, easter egg trigger animation, scroll-section rhythm spacing, whimsical accent color tokens, interactive hover state, scheme-aware shadow values",
+      "tags": [
+        "interactive",
+        "motion",
+        "whimsical",
+        "scheme-switcher",
+        "scroll",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-07-10",
+      "added": "2026-07-11",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "arkitektkontoret-vest-e9654e",
+      "title": "Arkitektkontoret Vest",
+      "url": "https://minimal.gallery/arkitektkontoret-vest/",
+      "shot": "https://iad.microlink.io/P3WscwsuzXy2T_nJikE7AAVN_hB5-Ag0qQS0uQNcnNYJJkj3tN5Jk1druabbLUQsCWZvlIClVIXlJP9eY6PxoQ.png",
+      "whatsGood": "建築事務所らしいミニマルな構成の中で、余白のリズムとタイポグラフィの扱い方に注目すると参考になりそう。モノクロまたは限定的な配色でブランドの静けさをどう表現しているかも確認したい。",
+      "extract": "wide-tracking見出し, 大胆な余白スケール, モノクロまたはニュートラルカラーパレット, セリフ×サンセリフの組み合わせ, グリッドベースのイメージレイアウト, 細線ボーダーのセパレーター",
+      "tags": [
+        "minimal",
+        "editorial",
+        "typography",
+        "architecture",
+        "neutral",
+        "agency"
+      ],
+      "status": "inbox",
+      "date": "2026-07-09",
+      "added": "2026-07-11",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "claudiu-angheloni-6e0cca",
+      "title": "Claudiu Angheloni",
+      "url": "https://minimal.gallery/claudiu-angheloni/",
+      "shot": "https://iad.microlink.io/SHjt01V_Lpec4MZr_q8-AdtqLBAHvzFsCmFqeOeB7UCuHLV6SjV7BFIVDDLbckvHOLoncQaOW400uO5hJyg0Cg.png",
+      "whatsGood": "minimal.galleryに掲載されたポートフォリオサイトのため、余白の取り方と書体選定に洗練されたミニマリズムが見られる可能性が高い。タイポグラフィのスケール比率と行間リズムを中心に観察すると参考になるはず。",
+      "extract": "large-scale heading font-size token, tight letter-spacing for display type, generous section padding scale, muted neutral background color, minimal border or hairline divider, restrained accent color",
+      "tags": [
+        "minimal",
+        "typography",
+        "portfolio",
+        "editorial"
+      ],
+      "status": "inbox",
+      "date": "2026-07-03",
+      "added": "2026-07-04",
+      "source": "minimal.gallery",
+      "auto": true,
+      "proposed": true
+    },
+    {
+      "id": "gusta-a2a4d6",
+      "title": "Gusta",
+      "url": "https://minimal.gallery/gusta/",
+      "shot": "https://iad.microlink.io/zEYcmlRSjqPgHOaEAK0upiPAdjpqOx_GKJ-LnKjQ9OYqQSSTrvZl0ZcHNPy2Km4RAdjO4iO3eWIs_ROfpwZQ-A.png",
+      "whatsGood": "ミニマルギャラリー掲載のブランディング・エージェンシーサイトとして、余白の取り方とタイポグラフィの階層設計が洗練されている可能性が高い。配色のシンプルさとロゴまわりのブランド表現を中心に観察したい。",
+      "extract": "ニュートラルベースの2〜3色パレット, 大きめ見出しのフォントサイズスケール, 広めのセクション間マージン, グリッドベースのカード余白, シンプルなホバーカラートランジション, モノクロ寄りのテキストカラートークン",
+      "tags": [
+        "minimal",
+        "branding",
+        "typography",
+        "editorial",
+        "agency"
+      ],
+      "status": "inbox",
+      "date": "2026-07-02",
+      "added": "2026-07-04",
+      "source": "minimal.gallery",
+      "auto": true,
+      "proposed": true
+    },
+    {
+      "id": "from-years-of-client-work-to-a-nextj-efc058",
+      "title": "From Years of Client Work to a Next.js + Sanity Starter Kit",
+      "url": "https://tympanus.net/codrops/2026/07/02/from-years-of-client-work-to-a-next-js-sanity-starter-kit/",
+      "shot": "https://iad.microlink.io/YEzGceXk6VBsrJrnO4FqOPPVU7Y09CKV0aundnmgJInPPdBbR9-Ly-xlKIVb13zQhN9eBSjJ5yX1ufs2Uo079g.png",
+      "whatsGood": "ヘッドレスCMS構成のスターターキット紹介記事として、実務から抽出されたコンポーネント設計やトークン構造の整理方法に注目すると参考になる可能性がある。Next.js + Sanity の型安全なデータフローとスキーマ設計の実例も見どころ。",
+      "extract": "typography-scale-tokens, spacing-rhythm-system, component-variant-structure, cms-schema-to-token-mapping, color-semantic-tokens, layout-grid-baseline",
+      "tags": [
+        "headless",
+        "minimal",
+        "typography",
+        "editorial",
+        "systematic",
+        "articles"
+      ],
+      "status": "inbox",
+      "date": "2026-07-02",
+      "added": "2026-07-04",
+      "source": "Codrops",
+      "auto": true,
+      "proposed": true
+    },
+    {
+      "id": "website-inspiration-secret-garden-st-b50a36",
+      "title": "Website Inspiration: Secret Garden Stresa",
+      "url": "https://onepagelove.com/secret-garden-stresa",
+      "shot": "https://iad.microlink.io/Pc8xOliFuoM9jhriKrouARTCpiX4OmRCJKGadQfeFCt7oVbanuWc2vLbkdeOCbWu3FPMWzwhM6ALl88ZU8LnOQ.png",
+      "whatsGood": "「Secret Garden」という名称とホテル・邸宅系カテゴリから、豊かな余白と自然素材を想起させるアースカラーの配色が見どころと推測。ロングスクロール構成でのセクション間リズムと、言語スイッチャーのUIパターンも確認しておきたい。",
+      "extract": "wide whitespace scale, earthy neutral palette, language switcher component, long-scroll section rhythm, serif editorial typography, subtle section divider",
+      "tags": [
+        "whitespace",
+        "editorial",
+        "minimal",
+        "neutral",
+        "longscroll",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-07-02",
+      "added": "2026-07-04",
+      "source": "One Page Love",
+      "auto": true,
+      "proposed": true
+    },
+    {
+      "id": "the-print-loft-4660ee",
+      "title": "The Print Loft",
+      "url": "https://minimal.gallery/the-print-loft/",
+      "shot": "https://iad.microlink.io/lYP3AEKM8CGYMNb0c9kpCcYfpxoSTsJKKFTZbkl4Coa-OqWhbwHs9H4YlPil_qvKF4EfEo2FjPvkvljtscWxJA.png",
+      "whatsGood": "ミニマルギャラリー出典のアート系ECサイトとして、余白の取り方とタイポグラフィの階層設計が洗練されている可能性が高い。プリント販売特有の「作品を引き立てる無彩色ベース配色」と画像グリッドのリズムに注目したい。",
+      "extract": "neutral-background-token, editorial-type-scale, generous-whitespace-rhythm, product-grid-gap, serif-display-heading, muted-text-secondary",
+      "tags": [
+        "minimal",
+        "editorial",
+        "ecommerce",
+        "typography",
+        "monochrome",
+        "e-commerce"
+      ],
+      "status": "inbox",
+      "date": "2026-07-01",
+      "added": "2026-07-04",
+      "source": "minimal.gallery",
+      "auto": true,
+      "proposed": true
+    },
+    {
+      "id": "sculpting-a-digital-athlete-capturin-09b64e",
+      "title": "Sculpting a Digital Athlete: Capturing Stefanos Tsitsipas Beyond the Court",
+      "url": "https://tympanus.net/codrops/2026/07/01/sculpting-a-digital-athlete-capturing-stefanos-tsitsipas-beyond-the-court/",
+      "shot": "https://iad.microlink.io/4304yKCNNZJdQzemnfIy-sYL26fPxxq4bBEPUXre3R-ujJoP2EvlXAf1LLgiVXualZAcgcDcpflrfESXeVo6qA.png",
+      "whatsGood": "Blender×WebGLで制作された3Dアスリート像のケーススタディなので、立体感を生むライティング設定やマテリアルの質感表現を重点的に確認したい。WebGLとの統合手法（シェーダー・レンダリングパイプライン）も参考になる可能性が高い。",
+      "extract": "3Dモデル用ライティングトークン, シェーダーベースの影・ハイライト変数, ヒーローセクションの奥行きレイヤー構成, WebGLキャンバスとHTMLレイアウトの共存パターン, アニメーションイージング値, テクスチャ品質スケール定義",
+      "tags": [
+        "3d",
+        "webgl",
+        "motion",
+        "depth",
+        "dark",
+        "articles"
+      ],
+      "status": "inbox",
+      "date": "2026-07-01",
+      "added": "2026-07-04",
+      "source": "Codrops",
+      "auto": true,
+      "proposed": true
+    },
+    {
+      "id": "belen-jones-3ee99d",
+      "title": "Belen Jones",
+      "url": "https://minimal.gallery/belen-jones/",
+      "shot": "https://iad.microlink.io/VgfzXgQiQUmUz3iPjtFYM2cGbpIoWVYI0Vc6HXqbv_TEAlBBABUqEzC52fzJQevbn4iRscIx2QkOHUygQgpXEg.png",
+      "whatsGood": "ミニマルギャラリー掲載のポートフォリオ系サイトとして、余白の取り方とタイポグラフィの階層設計が洗練されている可能性が高い。個人ポートフォリオらしいパーソナルなカラーパレットの選択も確認する価値がある。",
+      "extract": "ベースとなるホワイト/オフホワイト背景色トークン, 見出し用セリフまたはディスプレイフォントのサイズスケール, セクション間の大きめ余白(spacing-xl〜2xl相当), アクセントカラー1色のみのシンプルなパレット, テキストリンクのホバー表現, グリッドの列数と最大幅設定",
+      "tags": [
+        "minimal",
+        "portfolio",
+        "typography",
+        "whitespace",
+        "personal"
+      ],
+      "status": "inbox",
+      "date": "2026-06-28",
+      "added": "2026-06-29",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-alterg-resources-709b6a",
+      "title": "Website Inspiration: AlterG Resources",
+      "url": "https://onepagelove.com/alterg-resources",
+      "shot": "https://iad.microlink.io/mo_FZ07KdN_l7YRSKJytJutQd2wjB9EdRWFmRKh1SJijbvbBTCDei0TmkeGb-rU0p6iSRG72Es5Z9G-Wm-0e8g.png",
+      "whatsGood": "ビジブルグリッドとホワイトスペースの組み合わせによるリズム感、およびパララックス×ブラーを使った奥行き表現の処理方法を確認しておくと参考になる。",
+      "extract": "grid-column-gap token, section-padding-vertical token, blur-backdrop value, parallax-offset scale, whitespace-ratio, environmental-overlay opacity",
+      "tags": [
+        "parallax",
+        "blur",
+        "whitespace",
+        "grid",
+        "longscroll",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-06-23",
+      "added": "2026-06-29",
+      "source": "One Page Love",
+      "auto": true,
+      "proposed": true
+    },
+    {
+      "id": "website-inspiration-right-click-logo-f01ab5",
+      "title": "Website Inspiration: Right-Click Logo",
+      "url": "https://onepagelove.com/rcl",
+      "shot": "https://iad.microlink.io/G1rw3S_iez_jkz_mV8FqonyjSo2Drf4tni1ylpD3km6t_6sNBJDvO4wVJFSWvky6b1Ye8Ax9LUymZPd7uLtEgA.png",
+      "whatsGood": "ロゴ要素に対する右クリック操作を起点としたインタラクションが見どころと推測。コンテキストメニューのカスタムUIやフィードバックアニメーションの処理方法を確認するとよい。",
+      "extract": "custom-context-menu-shadow, interactive-feedback-color, menu-border-radius, overlay-backdrop-blur, micro-animation-timing, logo-hover-state",
+      "tags": [
+        "interactive",
+        "motion",
+        "minimal",
+        "utility",
+        "inspiration",
+        "code snippets"
+      ],
+      "status": "inbox",
+      "date": "2026-06-23",
+      "added": "2026-06-29",
+      "source": "One Page Love",
+      "auto": true,
+      "proposed": true
+    },
+    {
+      "id": "cantor8-88d94d",
+      "title": "Cantor8",
+      "url": "https://minimal.gallery/cantor8/",
+      "shot": "https://iad.microlink.io/uQiZwyCySqPjF2gVdOcz-bvXvAAgGcL0QcWV7jx5fe_8Ed3PnpeyRoLq5I_OMrsfcv-t1eSa_USbAiLW1bxQMA.png",
+      "whatsGood": "Web3系ミニマルギャラリー掲載作品として、暗号資産UIに多い濃色背景×アクセントカラーの配色バランスと、データ表示に適したモノスペース系タイポグラフィの扱いを確認しておくとよい。余白の取り方とグリッドの密度感もSaaSダッシュボード設計の参考になる可能性がある。",
+      "extract": "dark-surface token, accent-glow color, monospace font stack, tight grid spacing, data-label typography scale, subtle border token",
+      "tags": [
+        "dark",
+        "web3",
+        "minimal",
+        "data",
+        "saas",
+        "crypto & web3"
+      ],
+      "status": "inbox",
+      "date": "2026-06-22",
+      "added": "2026-06-29",
+      "source": "minimal.gallery",
+      "auto": true,
+      "proposed": true
+    },
+    {
+      "id": "designing-beyond-the-surface-how-das-fe51b3",
+      "title": "Designing Beyond the Surface: How DashDigital Turns Complexity into Clarity",
+      "url": "https://tympanus.net/codrops/2026/06/22/designing-beyond-the-surface-how-dashdigital-turns-complexity-into-clarity/",
+      "shot": "https://iad.microlink.io/5rG4v1Fwm220uS30wVzDJjTodpHwI8nkomljmmXVHHzS6ZXtK1vBuCV5sspWIGEC8Ad-99xVq3iFapWpKMASpQ.png",
+      "whatsGood": "スタジオのブランド哲学を伝える記事レイアウトとして、情報の階層整理や余白のリズムに注目すると参考になりそう。エディトリアル寄りのタイポグラフィ選定と見出し・本文間のコントラスト比も確認する価値がある。",
+      "extract": "editorial-heading-scale, section-divider-spacing, article-body-line-height, pull-quote-style, studio-neutral-palette, content-max-width-container",
+      "tags": [
+        "editorial",
+        "minimal",
+        "typography",
+        "agency",
+        "layout",
+        "articles"
+      ],
+      "status": "inbox",
+      "date": "2026-06-22",
+      "added": "2026-06-29",
+      "source": "Codrops",
+      "auto": true,
+      "proposed": true
+    },
+    {
+      "id": "website-inspiration-rectanglesfm-6f81b3",
+      "title": "Website Inspiration: Rectangles.fm",
+      "url": "https://onepagelove.com/rectangles-fm",
+      "shot": "https://iad.microlink.io/UBTgTYK8_TsiasdvM4J9Z6LPei_s5ibVVAG_LwN53WuSUf20wWF8u8wP2WHLm65rguup29JeP2jbysSukEJGVA.png",
+      "whatsGood": "ポッドキャストサイトらしいテクスチャと長尺スクロールの組み合わせに注目。矩形モチーフを活かしたグリッドレイアウトや、スクロールに連動したセクション区切りのリズム感を確認するとよい。",
+      "extract": "texture-overlay-token, rectangle-card-grid, scroll-section-divider, podcast-cover-aspect-ratio, long-scroll-rhythm-spacing, muted-background-with-accent",
+      "tags": [
+        "texture",
+        "editorial",
+        "scrollytelling",
+        "podcast",
+        "grid",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-06-22",
+      "added": "2026-06-29",
+      "source": "One Page Love",
+      "auto": true,
+      "proposed": true
+    },
+    {
+      "id": "longbow-7f492a",
+      "title": "Longbow",
+      "url": "https://minimal.gallery/longbow/",
+      "shot": "https://iad.microlink.io/DDiLr_ZTz-Z0tfnLScyvaQld23xsCY06wmsodwspPZOw6Pi8d1VK6NrD_HLTTqiIttfiIuQXfrf1kz6KFGcBuw.png",
+      "whatsGood": "ミニマルギャラリー掲載の自動車系サイトは、余白の取り方とタイポグラフィのスケール感が洗練されていることが多い。配色のコントラスト比と見出しフォントのウェイト選択を重点的に確認したい。",
+      "extract": "large-scale-heading-size, high-contrast-color-pair, wide-letter-spacing, generous-section-padding, subtle-dark-background, accent-line-or-rule",
+      "tags": [
+        "dark",
+        "minimal",
+        "typography",
+        "automotive",
+        "editorial"
+      ],
+      "status": "inbox",
+      "date": "2026-06-26",
+      "added": "2026-06-28",
+      "source": "minimal.gallery",
+      "auto": true,
+      "proposed": true
+    },
+    {
+      "id": "engineering-the-web-experience-behin-cd8dbd",
+      "title": "Engineering the Web Experience Behind Shopify’s Spring ’26 Edition: Everywhere",
+      "url": "https://tympanus.net/codrops/2026/06/26/engineering-the-web-experience-behind-shopifys-spring-26-edition-everywhere/",
+      "shot": "https://iad.microlink.io/kcQySnDplnkYKOPjRzR9MU-JO90gIrNDchft_MotDZzZLDxguTL7jmQRSYAvWieK6IQahfvQ1ObqggJcRDthgg.png",
+      "whatsGood": "ShopifyのEditionサイトという高品質なブランドショーケースのため、WebGLとReact Three Fiberを使った3D演出とUIの共存方法、パフォーマンスを保ちながらリッチなビジュアルを実現するレイヤー構造を見ておくとよい。Codropsのcase study記事なので実装の意図や技術的トレードオフも読み取れる。",
+      "extract": "3D canvas overlay z-index stack, scroll-driven animation timing tokens, GPU-friendly color palette (limited stops), section transition easing curves, responsive canvas scaling breakpoints, loading/progress indicator pattern",
+      "tags": [
+        "webgl",
+        "3d",
+        "motion",
+        "performance",
+        "immersive",
+        "articles"
+      ],
+      "status": "inbox",
+      "date": "2026-06-26",
+      "added": "2026-06-28",
+      "source": "Codrops",
+      "auto": true,
+      "proposed": true
+    },
+    {
+      "id": "website-inspiration-kevin-a8356f",
+      "title": "Website Inspiration: Kevin",
+      "url": "https://onepagelove.com/kevin",
+      "shot": "https://iad.microlink.io/i9pvqu30egz81Gxjpxfamj0vEASyqKZ-VclyxKtzFhj5itunEPo6nFs5w3fK_Zp-O_gQ4xcpR1op83UuXuALgg.png",
+      "whatsGood": "ドットグリッドの背景パターンとAIテーマの組み合わせから、テクニカルな雰囲気を演出する背景テクスチャと余白のリズムが参考になりそう。ロングスクロール構成でセクション間のリズム感や視線誘導の工夫も確認したい。",
+      "extract": "dot-grid background pattern, section vertical spacing scale, monochrome or accent color on dark base, scroll-driven section reveal, grid-aligned content blocks, subtle texture overlay opacity",
+      "tags": [
+        "dark",
+        "grid",
+        "minimal",
+        "editorial",
+        "ai",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-06-26",
+      "added": "2026-06-28",
+      "source": "One Page Love",
+      "auto": true,
+      "proposed": true
+    },
+    {
+      "id": "off-mute-b3e8d8",
+      "title": "Off Mute",
+      "url": "https://minimal.gallery/off-mute/",
+      "shot": "https://iad.microlink.io/Bq4rerHdoH_O0wV_1x63WE9vAN0uiT4LiR1M9o0v20BIvfvdHp6KALsnUCzNY8XzVcGa5bTUIeHIZSOXTL40kg.png",
+      "whatsGood": "ポッドキャスト×教育系サイトとしてミニマルギャラリー掲載作品なので、音声コンテンツを引き立てるタイポグラフィ階層と余白のリズム感に注目すると参考になりそう。エピソード一覧などのリスト型レイアウトがどう整理されているかも確認したい。",
+      "extract": "episode-list-spacing, heading-scale-ratio, muted-color-palette, audio-player-ui-token, section-divider-rhythm, readable-body-font-stack",
+      "tags": [
+        "minimal",
+        "typography",
+        "editorial",
+        "podcast"
+      ],
+      "status": "inbox",
+      "date": "2026-06-25",
+      "added": "2026-06-28",
+      "source": "minimal.gallery",
+      "auto": true,
+      "proposed": true
+    },
+    {
+      "id": "shaping-stories-into-experience-the--6a30b9",
+      "title": "Shaping Stories into Experience: The Work of Kevin Lam",
+      "url": "https://tympanus.net/codrops/2026/06/25/shaping-stories-into-experience-the-work-of-kevin-lam/",
+      "shot": "https://iad.microlink.io/dRm4KwTkawF3ykJamhhwXTwVTW6wDzAybuzQLf4oKR8KJRFETETGA0nc7TkMBCdy0DfGQYOTNWwLDaBLxKL92Q.png",
+      "whatsGood": "デザイナーのポートフォリオ紹介記事として、ストーリーテリングを視覚体験に落とし込む手法に注目。タイポグラフィの階層設計や余白のリズムが記事レイアウトのお手本になりそう。",
+      "extract": "editorial-type-scale, article-leading-rhythm, spotlight-hero-layout, pull-quote-style, byline-meta-spacing, section-divider-treatment",
+      "tags": [
+        "editorial",
+        "typography",
+        "minimal",
+        "portfolio",
+        "storytelling",
+        "articles"
+      ],
+      "status": "inbox",
+      "date": "2026-06-25",
+      "added": "2026-06-28",
+      "source": "Codrops",
+      "auto": true,
+      "proposed": true
+    },
+    {
+      "id": "website-inspiration-101-genai-b1934d",
+      "title": "Website Inspiration: 101 GenAI",
+      "url": "https://onepagelove.com/101-genai",
+      "shot": "https://iad.microlink.io/K8e0aSQq5bWr06SHpvtkCgOqZ-qhdl5KN_9q4-xB2G9btnERUEvKIUIpLb8oq3wJOpfZ427FRhQAQrODXnNJTQ.png",
+      "whatsGood": "AIヘルスケア系のロングスクロールサイトとして、Problem-Solution構造に沿ったセクション間の余白リズムと、AIらしさを演出する配色（ダーク×アクセントグロー系が多い）を確認しておくと参考になる。",
+      "extract": "section-gap-scale, problem-solution-block-layout, ai-glow-accent-color, long-scroll-anchor-rhythm, cta-contrast-token, healthcare-neutral-palette",
+      "tags": [
+        "dark",
+        "ai",
+        "healthcare",
+        "longscroll",
+        "minimal",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-06-25",
+      "added": "2026-06-28",
+      "source": "One Page Love",
+      "auto": true,
+      "proposed": true
+    },
+    {
       "id": "anatoly-ivanov-473dca",
       "title": "Anatoly Ivanov",
       "url": "https://minimal.gallery/anatoly-ivanov/",
@@ -18,7 +653,8 @@
       "date": "2026-06-24",
       "added": "2026-06-25",
       "source": "minimal.gallery",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "testing-what-users-actually-see-with-a3a175",
@@ -39,7 +675,8 @@
       "date": "2026-06-24",
       "added": "2026-06-25",
       "source": "Codrops",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "website-inspiration-neuropelvic-surg-84a2d7",
@@ -60,7 +697,8 @@
       "date": "2026-06-24",
       "added": "2026-06-25",
       "source": "One Page Love",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "website-inspiration-monolog-d346d0",
@@ -81,7 +719,8 @@
       "date": "2026-06-24",
       "added": "2026-06-25",
       "source": "One Page Love",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "blank-inside-f65b23",
@@ -101,7 +740,8 @@
       "date": "2026-06-23",
       "added": "2026-06-25",
       "source": "minimal.gallery",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "podium-building-a-website-where-runn-942f94",
@@ -122,7 +762,8 @@
       "date": "2026-06-23",
       "added": "2026-06-25",
       "source": "Codrops",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "fabra-comunicación-fca6a8",
