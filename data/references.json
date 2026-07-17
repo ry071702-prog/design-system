@@ -2,6 +2,127 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "konolee-2c5eae",
+      "title": "Konolee",
+      "url": "https://minimal.gallery/konolee-2026/",
+      "shot": "https://iad.microlink.io/c3FoivNHJuG0z1aIFtpfO0J1xb-UFU9YGXDD28UxQaXw65gi95JAj27C1viZfl_suKz7PQySq8UWmEQH3ofVUw.png",
+      "whatsGood": "minimal.galleryに掲載されたポートフォリオ系サイトとして、余白の取り方とタイポグラフィの階層設計が洗練されている可能性が高い。配色のミニマルさとグリッドの使い方を中心に観察したい。",
+      "extract": "ベースとなるホワイト/オフホワイトの背景色トークン, 見出し用セリフまたはサンセリフのフォントサイズスケール, セクション間の大きめ余白(spacing-xl〜2xl相当), テキストカラーの濃淡2〜3段階, シンプルなホバー時のアンダーラインアニメーション, コンテナ幅とセンタリングのレイアウトトークン",
+      "tags": [
+        "minimal",
+        "portfolio",
+        "typography",
+        "whitespace"
+      ],
+      "status": "inbox",
+      "date": "2026-07-16",
+      "added": "2026-07-17",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "meet-the-speakers-of-the-first-three-91599c",
+      "title": "Meet the Speakers of the First Three.js Conference",
+      "url": "https://tympanus.net/codrops/2026/07/16/meet-the-speakers-of-the-first-three-js-conference/",
+      "shot": "https://iad.microlink.io/HIYa8J9bI41lo8QNctyW8vpcnaP3im1CsuM7TMR24pcXoWiELX_JI7ePHElTvQvFwweMwPJX6GTAh8T4Bvte9A.png",
+      "whatsGood": "Three.jsカンファレンスのスピーカー紹介ページとして、3DグラフィクスやインタラクティブなウェブGL表現が随所に使われている可能性が高い。特にヒーローセクションのタイポグラフィと3D空間演出の組み合わせ、およびスピーカーカードのホバーモーションを確認したい。",
+      "extract": "3Dシーン背景トークン, スピーカーカードのグラスモーフィズム, ヒーロー見出しの大型ディスプレイフォントスタイル, ホバー時のパースペクティブ変形, セクション間の奥行きグラデーション, アクセントカラーパレット",
+      "tags": [
+        "3d",
+        "motion",
+        "dark",
+        "typography",
+        "glass",
+        "articles"
+      ],
+      "status": "inbox",
+      "date": "2026-07-16",
+      "added": "2026-07-17",
+      "source": "Codrops",
+      "auto": true
+    },
+    {
+      "id": "nudot-studio-cd2bbf",
+      "title": "Nudot Studio",
+      "url": "https://minimal.gallery/nudot-studio/",
+      "shot": "https://iad.microlink.io/3cGx1oqgBenlc_Y2QUnMoJcpWMlZKJkMqw_VMCkREFKMp0_CetzFFLxfUfCBC3mRQsoUJIz5hVE0K05Dgq-JRQ.png",
+      "whatsGood": "ミニマルギャラリー掲載のエージェンシーサイトとして、抑制された配色と洗練された余白のリズムが参考になる可能性が高い。タイポグラフィの扱い（ウェイト対比やトラッキング）にも注目したい。",
+      "extract": "ニュートラルベースの配色トークン, 大きめのトラッキング値, セクション間の余白スケール, モノクロ寄りのテキストカラー階層, シンプルなホバーアンダーライン, グリッドのカラム比率",
+      "tags": [
+        "minimal",
+        "agency",
+        "typography",
+        "whitespace"
+      ],
+      "status": "inbox",
+      "date": "2026-07-15",
+      "added": "2026-07-17",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "the-architecture-behind-trionn-coord-214497",
+      "title": "The Architecture Behind Trionn: Coordinating GSAP, Three.js, Lenis, and Web Audio",
+      "url": "https://tympanus.net/codrops/2026/07/15/the-architecture-behind-trionn-coordinating-gsap-three-js-lenis-and-web-audio/",
+      "shot": "https://iad.microlink.io/LJjNrIWoeVmpNch_O-MS9ei2o9iR6BA0aJKoRZzwgBMpzU3Zw6BlIqvcfYpCIw2NUfuo6Gfd8nUbWZaJnEA-cA.png",
+      "whatsGood": "GSAP・Three.js・Lenis・Web Audioを統合したアーキテクチャの解説記事のため、スクロール連動アニメーションと3D表現の組み合わせ方、タイムライン管理の設計パターンを見ておくと参考になる。モーションとサウンドの同期手法も注目点。",
+      "extract": "scroll-linked animation timing, GSAP timeline tokens, easing curve variables, WebGL overlay z-index layering, scroll-speed multiplier variable, audio-trigger threshold",
+      "tags": [
+        "motion",
+        "webgl",
+        "scroll",
+        "interactive",
+        "3d",
+        "articles"
+      ],
+      "status": "inbox",
+      "date": "2026-07-15",
+      "added": "2026-07-17",
+      "source": "Codrops",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-alikepage-3df1dc",
+      "title": "Website Inspiration: alike.page",
+      "url": "https://onepagelove.com/alike",
+      "shot": "https://iad.microlink.io/a0e81E2QDJUnq-isCNxmyGaPGok_ts6iSWhz6JqPJpEJAqUBaar8GzbPOoAbvQSSgpfQqT-DcB34wzk31_dYXw.png",
+      "whatsGood": "ロングスクロール構成のリズムとセクション間の余白設計が参考になりそう。スクロールに連動したタイポグラフィや配色の切り替え方にも注目したい。",
+      "extract": "section-gap-scale, scroll-driven-color-transition, fluid-typography-size, vertical-rhythm-spacing, full-width-section-padding, anchor-nav-indicator",
+      "tags": [
+        "longscroll",
+        "minimal",
+        "typography",
+        "rhythm",
+        "editorial",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-07-15",
+      "added": "2026-07-17",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "tillmann-franzen-5a854a",
+      "title": "Tillmann Franzen",
+      "url": "https://minimal.gallery/tillmann-franzen/",
+      "shot": "https://iad.microlink.io/2BVj1lkZDHwIFFPvzTvPaBc_MQRETcVH2qh0Pb2tdSPdSBShc9SvXwU1WJR0D4otvVaCZhNvI-7Ny9UKwEZPsw.png",
+      "whatsGood": "写真家のポートフォリオとして、余白の取り方と画像とテキストのリズム感に注目すると参考になりそう。タイポグラフィのスケールと細いウェイトの使い方も確認する価値がある。",
+      "extract": "large-scale image grid, generous whitespace token, lightweight font-weight scale, muted neutral palette, minimal navigation style, subtle hover transition",
+      "tags": [
+        "minimal",
+        "photography",
+        "editorial",
+        "typography",
+        "portfolio"
+      ],
+      "status": "inbox",
+      "date": "2026-07-14",
+      "added": "2026-07-17",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
       "id": "stagecrew-53b665",
       "title": "STAGECREW",
       "url": "https://minimal.gallery/stagecrew/",
