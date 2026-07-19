@@ -2,6 +2,129 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "ekaterina-busygina-254c73",
+      "title": "Ekaterina Busygina",
+      "url": "https://minimal.gallery/ekaterina-busygina/",
+      "shot": "https://iad.microlink.io/Oiju3Zfp3D3NDNROaUiou4VUdsdSrWF9rqXLgq-w8i3ADXw0k1zeK8tVzzi7FJKwUAzO2vOyB8AHuPgdesbvUg.png",
+      "whatsGood": "写真家のポートフォリオとして、余白の取り方と写真を引き立てるタイポグラフィの組み合わせに注目すると参考になりそう。ミニマルギャラリー掲載という点から、抑制された配色と洗練されたグリッドレイアウトが見どころと推測される。",
+      "extract": "large-whitespace-section-padding, neutral-background-token, serif-or-thin-sans-heading, photo-grid-aspect-ratio, muted-text-color, minimal-nav-style",
+      "tags": [
+        "minimal",
+        "photography",
+        "editorial",
+        "portfolio",
+        "typography"
+      ],
+      "status": "inbox",
+      "date": "2026-07-18",
+      "added": "2026-07-19",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "cofactr-b6e687",
+      "title": "Cofactr",
+      "url": "https://minimal.gallery/cofactr/",
+      "shot": "https://iad.microlink.io/1w85BpFZqikIIwVEuz_HqlSwrJjJaXQDhm6hQBT11oBw5_TrJqxpQYORWOsc8gTWHyAUeYMDJjJT3i19g4A4tQ.png",
+      "whatsGood": "製造業向けにもかかわらずミニマルギャラリー掲載という点から、無駄を削ぎ落とした清潔感のある配色とタイポグラフィが際立っている可能性が高い。余白の取り方とグリッドの整合性を重点的に確認したい。",
+      "extract": "neutral-industrial-palette, tight-grid-layout, monospace-or-sans-data-font, subtle-border-dividers, functional-whitespace-scale, muted-accent-color",
+      "tags": [
+        "minimal",
+        "industrial",
+        "b2b",
+        "clean",
+        "typography",
+        "manufacturing"
+      ],
+      "status": "inbox",
+      "date": "2026-07-17",
+      "added": "2026-07-19",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "zero-the-engineering-behind-a-defian-77753e",
+      "title": "ZERO: The Engineering Behind a Defiant Interactive Narrative",
+      "url": "https://tympanus.net/codrops/2026/07/17/zero-the-engineering-behind-a-defiant-interactive-narrative/",
+      "shot": "https://iad.microlink.io/_SqwVOsss0Ay-dMpDjei3SMb1JtGOIu0jo8kIx7BZ3C62Jjmkl-AgZUix_lXS84_qtg0rFygLS_beFkc9ObA5Q.png",
+      "whatsGood": "Three.js／WebGLを用いたインタラクティブナラティブの実装解説記事のため、3Dシーン構成・カメラワーク・スクロール連動アニメーションの設計思想を読み取るとよい。奥行き表現やライティングのトークン化ヒントが得られる可能性が高い。",
+      "extract": "scroll-driven camera transition, depth-of-field blur value, 3d scene lighting tokens, motion easing curves, dark background base color, z-depth layering scale",
+      "tags": [
+        "3d",
+        "motion",
+        "dark",
+        "webgl",
+        "immersive",
+        "articles"
+      ],
+      "status": "inbox",
+      "date": "2026-07-17",
+      "added": "2026-07-19",
+      "source": "Codrops",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-george-wood-7d3217",
+      "title": "Website Inspiration: George Wood",
+      "url": "https://onepagelove.com/george-wood",
+      "shot": "https://iad.microlink.io/IQ_xuOeu82tAluD3560BPc-l50kAnNF0wlhyepCZa-3qrA1zV-daGnB78IZe-6AnU9j-u7jy8RhotYYPZscK6w.png",
+      "whatsGood": "左揃えレイアウトとリアルタイム情報(現地時間・天気・Spotify連携)の組み合わせが個性的で、データ表示のタイポグラフィ処理と余白設計に注目する価値がある。インタラクティブ要素がどのようにスクロール体験と統合されているかも確認したい。",
+      "extract": "left-aligned hero layout token, monospace/tabular figures for live data, subtle section rhythm via long-scroll spacing, ambient data widget style (time/weather), spotify now-playing badge pattern, muted background with accent text color",
+      "tags": [
+        "interactive",
+        "editorial",
+        "minimal",
+        "typography",
+        "dark",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-07-17",
+      "added": "2026-07-19",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-digital-original-0dc1f9",
+      "title": "Website Inspiration: Digital Original XR",
+      "url": "https://onepagelove.com/digital-original-xr",
+      "shot": "https://iad.microlink.io/mYjJLHVu5U7NRgPnKpGGnilxO-y_DaXimihImnVyTRqU21_mXWbkHdfiK4yIMjcl5c-_0SCEDtuO2vJygiayfw.png",
+      "whatsGood": "AR/VR文脈のホワイトスペース活用とロングスクロール演出に注目。没入感を損なわずに情報を段階的に開示するセクション構成とタイポグラフィのスケール感を確認したい。",
+      "extract": "large-scale-heading-scale, generous-section-padding, scroll-triggered-reveal, in-page-demo-container, neutral-whitespace-palette, depth-layering-z-index",
+      "tags": [
+        "minimal",
+        "whitespace",
+        "motion",
+        "editorial",
+        "immersive",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-07-14",
+      "added": "2026-07-19",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "karol-ortyl-0069c6",
+      "title": "Karol Ortyl",
+      "url": "https://minimal.gallery/karol-ortyl/",
+      "shot": "https://iad.microlink.io/7Vb1Ydo1lfy_oztQmkxLAeJjzzhkq2tdOV0D97fVjn2wXjT4GnZtuiyQq00y8YAHqpO8-02ZMhDY1gDIcJPClA.png",
+      "whatsGood": "ミニマルギャラリー掲載のポートフォリオとして、余白の取り方とタイポグラフィの階層設計が洗練されている可能性が高い。配色の抑制具合とグリッドの使い方を重点的に確認したい。",
+      "extract": "ベースカラーのニュートラルトーン, 大きめの見出しフォントサイズトークン, 広めのセクション間マージン, シンプルなリンクホバースタイル, モノクロ寄りのアクセントカラー",
+      "tags": [
+        "minimal",
+        "portfolio",
+        "typography",
+        "whitespace"
+      ],
+      "status": "inbox",
+      "date": "2026-07-13",
+      "added": "2026-07-19",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
       "id": "konolee-2c5eae",
       "title": "Konolee",
       "url": "https://minimal.gallery/konolee-2026/",
