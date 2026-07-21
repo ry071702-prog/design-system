@@ -19,7 +19,8 @@
       "date": "2026-07-18",
       "added": "2026-07-19",
       "source": "minimal.gallery",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "cofactr-b6e687",
@@ -61,7 +62,8 @@
       "date": "2026-07-17",
       "added": "2026-07-19",
       "source": "Codrops",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "website-inspiration-george-wood-7d3217",
@@ -82,7 +84,8 @@
       "date": "2026-07-17",
       "added": "2026-07-19",
       "source": "One Page Love",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "website-inspiration-digital-original-0dc1f9",
@@ -103,7 +106,8 @@
       "date": "2026-07-14",
       "added": "2026-07-19",
       "source": "One Page Love",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "karol-ortyl-0069c6",
@@ -122,7 +126,8 @@
       "date": "2026-07-13",
       "added": "2026-07-19",
       "source": "minimal.gallery",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "konolee-2c5eae",
@@ -141,7 +146,8 @@
       "date": "2026-07-16",
       "added": "2026-07-17",
       "source": "minimal.gallery",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "meet-the-speakers-of-the-first-three-91599c",
@@ -162,7 +168,8 @@
       "date": "2026-07-16",
       "added": "2026-07-17",
       "source": "Codrops",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "nudot-studio-cd2bbf",
@@ -181,7 +188,8 @@
       "date": "2026-07-15",
       "added": "2026-07-17",
       "source": "minimal.gallery",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "the-architecture-behind-trionn-coord-214497",
@@ -202,7 +210,8 @@
       "date": "2026-07-15",
       "added": "2026-07-17",
       "source": "Codrops",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "website-inspiration-alikepage-3df1dc",
@@ -223,7 +232,8 @@
       "date": "2026-07-15",
       "added": "2026-07-17",
       "source": "One Page Love",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "tillmann-franzen-5a854a",
@@ -243,7 +253,8 @@
       "date": "2026-07-14",
       "added": "2026-07-17",
       "source": "minimal.gallery",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "stagecrew-53b665",
