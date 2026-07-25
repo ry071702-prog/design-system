@@ -2,6 +2,131 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "mattia-saggiomo-160b36",
+      "title": "Mattia Saggiomo",
+      "url": "https://minimal.gallery/mattia-saggiomo/",
+      "shot": "https://iad.microlink.io/lPPqW0Sac1nKxm4sOjmtdrOiru08QmkSglmGLwIeL4kOvhqUr-Zw2SWlLkZgRE-7kfIaNTAyemnsWxOZVcXOSg.png",
+      "whatsGood": "minimal.galleryに掲載されたポートフォリオサイトとして、余白の取り方とタイポグラフィのスケール感に注目すると参考になりそう。個人ポートフォリオらしいパーソナルなカラーパレットや、テキスト主体のレイアウトリズムも確認したい。",
+      "extract": "ベースとなるホワイト/オフホワイト背景色, 見出し用セリフまたはサンセリフのフォントサイズスケール, セクション間の大きめな垂直マージン, アクセントカラー1色, テキストリンクのホバースタイル, グリッドのカラム幅設定",
+      "tags": [
+        "minimal",
+        "portfolio",
+        "typography",
+        "whitespace",
+        "personal"
+      ],
+      "status": "inbox",
+      "date": "2026-07-24",
+      "added": "2026-07-25",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "the-art-of-continuous-transformation-d3d977",
+      "title": "The Art of Continuous Transformation: How Garden Eight Blends Integrity with Play",
+      "url": "https://tympanus.net/codrops/2026/07/24/the-art-of-continuous-transformation-how-garden-eight-blends-integrity-with-play/",
+      "shot": "https://iad.microlink.io/msbICo_yd_XBqf-V-U6naxep6Y9pG1iThzcvTlhvLU2GWZzWiDRlEnYk6AHmShqmPpsHLN-2ej_x5Lgjvxjsow.png",
+      "whatsGood": "スタジオのブランド哲学を語るエディトリアル記事として、タイポグラフィの階層設計と余白のリズムに注目すると参考になりそう。「誠実さ×遊び心」というコンセプトがビジュアル言語にどう落とし込まれているか（フォント選択・カラーアクセント・レイアウトの緩急）を確認したい。",
+      "extract": "editorial-heading-scale, fluid-section-spacing, accent-color-token, mixed-weight-typography-pair, asymmetric-grid-column, playful-serif-display-font",
+      "tags": [
+        "editorial",
+        "typography",
+        "minimal",
+        "studio",
+        "branding",
+        "articles"
+      ],
+      "status": "inbox",
+      "date": "2026-07-24",
+      "added": "2026-07-25",
+      "source": "Codrops",
+      "auto": true
+    },
+    {
+      "id": "serotoninn-ba9bfa",
+      "title": "Serotoninn",
+      "url": "https://minimal.gallery/serotoninn/",
+      "shot": "https://iad.microlink.io/lFDmwPTgvYoaMlc0ycJc5Uck9HPZOu_Pe1Q6_m2z-9Vay1T41taNZJ3mehQS3tmGUGTeFyNJmA1WDvaNvSgQ2w.png",
+      "whatsGood": "ファッションECとしてのミニマルな余白設計とタイポグラフィの使い方に注目。商品を引き立てるための抑制された配色とグリッドレイアウトの洗練度を確認したい。",
+      "extract": "neutral-base-color, editorial-type-scale, generous-whitespace-token, product-grid-gap, restrained-accent-color, serif-display-font",
+      "tags": [
+        "minimal",
+        "editorial",
+        "fashion",
+        "ecommerce",
+        "typography",
+        "e-commerce"
+      ],
+      "status": "inbox",
+      "date": "2026-07-23",
+      "added": "2026-07-25",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "building-cerebrium-making-serverless-3ecb6f",
+      "title": "Building Cerebrium: Making Serverless Infrastructure Tangible",
+      "url": "https://tympanus.net/codrops/2026/07/23/building-cerebrium-making-serverless-infrastructure-tangible/",
+      "shot": "https://iad.microlink.io/0Rr43BYc9w50wQ0K9Pn-r-o_hZPqf9frYWlUiR8ldI_QqfEoUPXyN2iJGpMJnw4emapfxKKCD7lOv-3xKsnsuQ.png",
+      "whatsGood": "Three.js/WebGPUを用いたサーバーレスインフラの「見えない概念」を3Dビジュアルで可視化するアプローチに注目。抽象的なテック概念をどう空間・奥行き・パーティクルで表現しているかの手法が参考になる。",
+      "extract": "3D depth layering tokens, particle density scale, dark background base color, ambient glow color stops, typographic hierarchy for technical copy, section pacing rhythm",
+      "tags": [
+        "dark",
+        "3d",
+        "webgl",
+        "motion",
+        "editorial",
+        "articles"
+      ],
+      "status": "inbox",
+      "date": "2026-07-23",
+      "added": "2026-07-25",
+      "source": "Codrops",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-pp-neue-montreal-c0b948",
+      "title": "Website Inspiration: PP Neue Montreal",
+      "url": "https://onepagelove.com/pp-neue-montreal",
+      "shot": "https://iad.microlink.io/kR7xV896Of0iNpcQku_gvgJrMbwiRmVnQSo7GGOxyfB4O17jkFdycHx6nk3fnJhaIqcCZrBHijC2idwZMYEd7A.png",
+      "whatsGood": "PP Neue Montrealフォント自体の見せ方（ウェイト・サイズ・字間のコントラスト）と、ロングスクロール上での余白リズムの取り方が参考になりそう。インタラクティブ要素がどのようにタイポグラフィと連動しているかも確認する価値あり。",
+      "extract": "fluid-typography scale, large-heading letter-spacing, section-padding rhythm, font-weight contrast tokens, scroll-triggered reveal timing, whitespace ratio",
+      "tags": [
+        "typography",
+        "editorial",
+        "minimal",
+        "motion",
+        "whitespace",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-07-23",
+      "added": "2026-07-25",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-simplesketche-4bfe11",
+      "title": "Website Inspiration: SimpleSketche",
+      "url": "https://onepagelove.com/simplesketche",
+      "shot": "https://iad.microlink.io/a6Jd496qF1wsUXZxBuqN_p3c28Co610nGV9qWV1wMzot4PUrZWpLqivU3GaEcDkf_TtKdnlDWeTMTUTWZM3_ag.png",
+      "whatsGood": "ロングスクロール構成でのスケッチ風ビジュアルとユニークなレイアウトリズムに注目。手描き感のあるイラストと余白の取り方がブランドトーンを形成している可能性が高い。",
+      "extract": "hand-drawn stroke border, sketch-style illustration token, loose spacing scale, organic section divider, playful font pairing, scroll-triggered reveal",
+      "tags": [
+        "illustration",
+        "editorial",
+        "playful",
+        "longscroll",
+        "minimal",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-07-23",
+      "added": "2026-07-25",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "ekaterina-busygina-254c73",
       "title": "Ekaterina Busygina",
       "url": "https://minimal.gallery/ekaterina-busygina/",
