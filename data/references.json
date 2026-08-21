@@ -2,6 +2,132 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "van-gogh-museum-798b84",
+      "title": "Van Gogh Museum",
+      "url": "https://minimal.gallery/van-gogh-museum/",
+      "shot": "https://iad.microlink.io/kvLwNllC3ZKVJlEngHmWk0g0ayT79jOcCLSCrKK8_Tb0AQtQzl8o5s0xqSZxHsHBrFgNxirrTQc9NETopGLnfQ.png",
+      "whatsGood": "ミュージアム系サイトとして、絵画作品を引き立てる余白の取り方とタイポグラフィの格調感に注目。minimal.gallery掲載であることからノイズを排した構成が期待でき、アートワークを主役にする配色の抑制ぶりを確認したい。",
+      "extract": "neutral-background-token, editorial-serif-typeface, generous-section-spacing, muted-accent-color, artwork-card-aspect-ratio, restrained-ui-chrome",
+      "tags": [
+        "minimal",
+        "editorial",
+        "typography",
+        "museum",
+        "neutral",
+        "museum & gallery"
+      ],
+      "status": "inbox",
+      "date": "2026-08-20",
+      "added": "2026-08-21",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "run-rob-run-building-a-music-reactiv-7104f0",
+      "title": "Run Rob Run: Building a Music-Reactive Goo with Three.js and WebGPU",
+      "url": "https://tympanus.net/codrops/2026/08/20/run-rob-run-building-a-music-reactive-goo-with-three-js-and-webgpu/",
+      "shot": "https://iad.microlink.io/O942HZxV3nqbFtkHBE1BhYZHgISxP5SqTJeb5F0UwyH7qBdZbuaiWCbuZ7KgJ5nL0o97dS4-VV5KlPWzdEUtng.png",
+      "whatsGood": "WebGPUとWeb Audio APIを組み合わせた音楽連動ゴー表現の実装アプローチに注目。シェーダーベースのdistortionやgooeyエフェクトのパラメータ設計（粘性・反応速度・色変化のマッピング）が自分のモーショントークンの参考になる。",
+      "extract": "audio-reactive easing curve, goo viscosity timing variable, distortion amplitude token, blob border-radius keyframe, shader-driven color shift, motion intensity scale",
+      "tags": [
+        "3d",
+        "motion",
+        "generative",
+        "webgl",
+        "dark",
+        "articles"
+      ],
+      "status": "inbox",
+      "date": "2026-08-20",
+      "added": "2026-08-21",
+      "source": "Codrops",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-tiffany-devos-9ff1f5",
+      "title": "Website Inspiration: Tiffany Devos",
+      "url": "https://onepagelove.com/tiffany-devos",
+      "shot": "https://iad.microlink.io/K7rh4EluitGDt4WE_L5yBySmTAOp5gZ7HdbztxMieuVFUW5FWLNArSNomsE9U1YFeNV09SRtNEc8uMJIyHWcPw.png",
+      "whatsGood": "グリッドとストライプ・幾何学シェイプを組み合わせたパターン構成が参考になりそう。余白の使い方とモジュラーグリッドのリズム感に注目すると自システムへの応用ヒントが得やすい。",
+      "extract": "geometric-pattern-background, stripe-accent-divider, modular-grid-layout, whitespace-section-padding, abstract-shape-overlay, grid-based-card-rhythm",
+      "tags": [
+        "minimal",
+        "geometric",
+        "grid",
+        "editorial",
+        "whitespace",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-08-20",
+      "added": "2026-08-21",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-estacion-venenta-90f2b5",
+      "title": "Website Inspiration: estacion venenta",
+      "url": "https://onepagelove.com/estacion-venenta",
+      "shot": "https://iad.microlink.io/XhOpAWM2t9aik7dmQhyi0-rIKPkaZmHfp1CPvKg550EFDVrLU878FLJy-ZDdf1x-OTRzbyEBVd8mP0-hO7v2NQ.png",
+      "whatsGood": "Dither Effectという独特のビジュアル処理とDuo・Composerというアーティスト文脈から、粗粒子感のあるテクスチャ表現と限定的な配色の組み合わせが見どころと推測される。アルバムリリースサイトとして余白のリズムや見出しのタイポグラフィにも注目したい。",
+      "extract": "dither-texture-overlay, limited-palette-color-tokens, grainy-background-filter, editorial-heading-scale, album-art-aspect-ratio, muted-accent-color",
+      "tags": [
+        "texture",
+        "editorial",
+        "minimal",
+        "dark",
+        "typography",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-08-20",
+      "added": "2026-08-21",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-specia1ne-2e8471",
+      "title": "Website Inspiration: Specia1ne",
+      "url": "https://onepagelove.com/specia1ne",
+      "shot": "https://iad.microlink.io/taKsMsXMfE4vhf4ai8YinY3hANaFsLZekCICfQwQsSUKn_weOT4MrIJYKliMuvNuLHVHNtVNEv4p5Rb7noZdlQ.png",
+      "whatsGood": "ナンバード・ナビゲーションとグリッドの組み合わせによるスクロール体験の構成が参考になりそう。ミニマルな余白設計とセクション間のリズム感を確認したい。",
+      "extract": "numbered-nav spacing, grid column rhythm, section divider style, scroll-triggered reveal timing, monochrome type scale, whitespace ratio",
+      "tags": [
+        "minimal",
+        "grid",
+        "typography",
+        "interactive",
+        "editorial",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-08-18",
+      "added": "2026-08-21",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-the-new-industri-777d64",
+      "title": "Website Inspiration: The New Industrials",
+      "url": "https://onepagelove.com/the-new-industrials",
+      "shot": "https://iad.microlink.io/ImERG9BZWwJiQYBGGo0KNLSNRJR_gqufIF0riCixdkLhqQGQcDLbxY98cpmTnFuyUrzQW0cYcnFj_FWMaDgFYg.png",
+      "whatsGood": "インダストリアル系のロングスクロールサイトとして、ページ境界線の処理と動く要素のリズム感に注目すると参考になりそう。スクロールに連動したモーション設計とページボーダーの装飾的な使い方を確認したい。",
+      "extract": "page-border-width, scrolling-motion-timing, industrial-accent-color, section-divider-style, moving-element-speed, long-scroll-section-spacing",
+      "tags": [
+        "industrial",
+        "motion",
+        "editorial",
+        "dark",
+        "scroll",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-08-18",
+      "added": "2026-08-21",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "wwake-749168",
       "title": "Wwake",
       "url": "https://minimal.gallery/wwake/",
