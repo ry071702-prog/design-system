@@ -2,6 +2,126 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "kai-blamey-809b9d",
+      "title": "Kai Blamey",
+      "url": "https://minimal.gallery/kai-blamey/",
+      "shot": "https://iad.microlink.io/U7yk66KfWgmiIX04p140h-AeOaU6VXp9xyUpcfK1YOMmZYibInX6P_7A-q-BUe01v1WXE2i7xUmgq_Hqxj-DtA.png",
+      "whatsGood": "フォトグラファー／プロダクションスタジオのポートフォリオとして、写真を主役にした余白の取り方とタイポグラフィの抑制具合が参考になりそう。ミニマルギャラリー掲載作品らしく、グリッドと余白のリズムに注目したい。",
+      "extract": "large-whitespace-section-padding, muted-neutral-palette, editorial-serif-or-grotesque-pairing, full-bleed-image-layout, restrained-caption-typography, minimal-nav-style",
+      "tags": [
+        "minimal",
+        "editorial",
+        "photography",
+        "portfolio",
+        "typography",
+        "personal"
+      ],
+      "status": "inbox",
+      "date": "2026-08-22",
+      "added": "2026-08-23",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-superlocal-2026-d8d8ca",
+      "title": "Website Inspiration: Superlocal 2026",
+      "url": "https://onepagelove.com/superlocal-2026",
+      "shot": "https://iad.microlink.io/fUyaijTwq8-vdX0liDGNJklv_UOyDUTXcb0CNOcAP8nI-ORAUA3GwIgZ6bp62g9ajhmpHy9urlT0xq2574w89A.png",
+      "whatsGood": "フェスティバル×コミュニティ系サイトとして、エディトリアルな配色やカルチャー感のあるタイポグラフィの使い方を確認する価値がある。ページロードアニメーションが実装されているため、初期表示のモーション設計（タイミング・イージング）も参考になりそう。",
+      "extract": "フェスティバル向けアクセントカラートークン, ロードアニメーション用transition-timing, 見出し用display-font-size scale, セクション区切りの余白リズム, カルチャー系カードレイアウト",
+      "tags": [
+        "editorial",
+        "motion",
+        "festival",
+        "typography",
+        "community",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-08-22",
+      "added": "2026-08-23",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-starboy-1dd6e3",
+      "title": "Website Inspiration: starboy",
+      "url": "https://onepagelove.com/when-you-wish-upon-a-starboy",
+      "shot": "https://iad.microlink.io/5JFmW3MG0NSl3Cla925v3ejWzapkPnCi6i95uVT_v3QhNb42mRoAhjgN9oYWDzd8BjBu-OKCfJJO6om7HNdcMg.png",
+      "whatsGood": "マスコットキャラクターと大型ビジュアルを組み合わせたスクロール演出が見どころ。プロダクトデモのアニメーション連携とキャラクター動線の使い方を確認したい。",
+      "extract": "hero-image-scale, scroll-triggered-animation, mascot-motion-path, product-reveal-transition, long-scroll-section-rhythm, large-image-overlay-text",
+      "tags": [
+        "animation",
+        "scroll",
+        "product",
+        "mascot",
+        "bold",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-08-22",
+      "added": "2026-08-23",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "jacob-ince-00fb20",
+      "title": "Jacob Ince",
+      "url": "https://minimal.gallery/jacob-ince/",
+      "shot": "https://iad.microlink.io/4z61aNouDUGnFcOZ-wTDsJG9uyvVhn664M8_gSMvCrqLaKyofZlFqB2712mGk-wKQ0t0A4bto0W-8AiyhdHmaw.png",
+      "whatsGood": "ミニマルギャラリー掲載のパーソナルポートフォリオとして、余白の取り方とタイポグラフィの階層設計が洗練されている可能性が高い。フォントサイズ・ウェイトのコントラストと、グリッドの呼吸感を中心に観察したい。",
+      "extract": "font-size scale, font-weight contrast, letter-spacing, section padding rhythm, neutral color palette, grid column gap",
+      "tags": [
+        "minimal",
+        "typography",
+        "portfolio",
+        "whitespace"
+      ],
+      "status": "inbox",
+      "date": "2026-08-21",
+      "added": "2026-08-23",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-the-content-arch-1b2d9c",
+      "title": "Website Inspiration: The Content Architecture",
+      "url": "https://onepagelove.com/the-content-architecture",
+      "shot": "https://iad.microlink.io/mt7fnEm5JZrdlOxw_sCT8MK0uEPbJhclZO_8pJMVYKCp3iZjyhRx7GVSIZdBhz_2XC-jYTbD-JgSJOVyVoDdnw.png",
+      "whatsGood": "ドットグリッドやスパイラルといった幾何学的バックグラウンドパターンと、ディザリング効果の組み合わせによるテクスチャ表現が注目点。ロングスクロール構成でのコンテンツ階層の見せ方も参考になりそう。",
+      "extract": "dot-grid background pattern, dither texture overlay, spiral decorative motif, long-scroll section spacing, monochrome pattern + accent color scheme, code-block typography style",
+      "tags": [
+        "pattern",
+        "texture",
+        "minimal",
+        "editorial",
+        "dark",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-08-21",
+      "added": "2026-08-23",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-voxt-40e8f0",
+      "title": "Website Inspiration: Voxt",
+      "url": "https://onepagelove.com/voxt",
+      "shot": "https://iad.microlink.io/5-b8J60ZtWDhE_imrTJB15p97clcOfju4J7eQmjYWl1GQL4_fbCA6rNdlCsZl5q6PxrqdN7EJBkDG6qjVzXUvA.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "inspiration",
+        "artificial intelligence (ai)"
+      ],
+      "status": "inbox",
+      "date": "2026-08-21",
+      "added": "2026-08-23",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "van-gogh-museum-798b84",
       "title": "Van Gogh Museum",
       "url": "https://minimal.gallery/van-gogh-museum/",
