@@ -2,6 +2,130 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "sevengrid-7c8e17",
+      "title": "SevenGrid",
+      "url": "https://minimal.gallery/sevengrid/",
+      "shot": "https://iad.microlink.io/7ODqqriOnECZiljq3eUOEnvRue_512_jdX79SlNFstzqp3OVx9ju6VsQepYRPRE5ynHPjnddioXpJPOqSBAgdA.png",
+      "whatsGood": "「SevenGrid」というツール系アプリとしてminimal.galleryに掲載されている点から、グリッドシステムの見せ方や機能UIの整理された余白・タイポグラフィが参考になる可能性が高い。配色はミニマル系特有のモノクロまたは限定アクセントカラーの使い方に注目したい。",
+      "extract": "グリッドベースのレイアウトトークン, モノクロ or 単色アクセントカラー変数, 機能UIの余白スケール, ラベル・キャプション用小サイズタイポスケール, ツールUIのボーダー/セパレータースタイル, フォーカス状態のアウトラインスタイル",
+      "tags": [
+        "minimal",
+        "grid",
+        "tools",
+        "monochrome",
+        "functional"
+      ],
+      "status": "inbox",
+      "date": "2026-08-26",
+      "added": "2026-08-26",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-woblo-d1c423",
+      "title": "Website Inspiration: Woblo",
+      "url": "https://onepagelove.com/woblo",
+      "shot": "https://iad.microlink.io/UP4N0CEGmTuyPj93cxtiAJ6s_0L-sKiL6j_NaD2dIZcbUtwqVPsGRo61vvSvt3DOTBvIY-brt1AO1JNyB6MN0g.png",
+      "whatsGood": "AIツール系のデザインシステムを持つChrome拡張のランディングページと推測され、カードグリッドとカラーピッカーUIの配色トークンやコンポーネント間の余白リズムが参考になりそう。インページデモセクションでのインタラクティブな見せ方も確認する価値がある。",
+      "extract": "card-border-radius, color-swatch-grid-gap, section-vertical-rhythm, demo-container-shadow, grid-column-template, cta-accent-color",
+      "tags": [
+        "colorful",
+        "grid",
+        "cards",
+        "design-system",
+        "ai",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-08-26",
+      "added": "2026-08-26",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "artem-morozov-649e55",
+      "title": "Artem Morozov",
+      "url": "https://minimal.gallery/artem-morozov/",
+      "shot": "https://iad.microlink.io/qUcZjuHAEA87igye4xc8YNAt4xy1heDgoKE3fYCZvz2RiHcwTO1Mes6JZ1MQJg395x5ST_nxH9VPI6Ir5U4vhQ.png",
+      "whatsGood": "ミニマルギャラリー掲載のポートフォリオとして、余白のリズムと書体の扱い方（サイズ階層・ウェイト対比）に注目すると参考になりそう。個人ポートフォリオらしいパーソナルなトーンの配色選択も確認したい。",
+      "extract": "ベーストーンの配色ペア, 見出しフォントサイズスケール, セクション間の余白トークン, テキストウェイトコントラスト, グリッドカラム幅定義, リンクホバー処理",
+      "tags": [
+        "minimal",
+        "portfolio",
+        "typography",
+        "personal",
+        "editorial"
+      ],
+      "status": "inbox",
+      "date": "2026-08-25",
+      "added": "2026-08-26",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "building-a-mouse-following-square-le-e5dfc2",
+      "title": "Building a Mouse-Following Square Lens Effect with Three.js and GLSL",
+      "url": "https://tympanus.net/codrops/2026/08/25/building-a-mouse-following-square-lens-effect-with-three-js-and-glsl/",
+      "shot": "https://iad.microlink.io/SXESRNMYWUi1e3nD9bu9WMjVBnAyVmLW0z4pW5OmPUV_qnaZF8ghfrOm__F8VYQrt-_tUriLeRtL_3kQqgZeeA.png",
+      "whatsGood": "マウス追従レンズ歪みのGLSLシェーダー実装に注目。カーソル位置に応じたリアルタイム歪みエフェクトのパラメータ設計（歪み強度・半径・イージング）が参考になるはず。",
+      "extract": "--lens-radius, --distortion-strength, --cursor-easing-duration, --lens-border-radius, --overlay-blend-mode, --transition-follow-speed",
+      "tags": [
+        "webgl",
+        "cursor",
+        "distortion",
+        "motion",
+        "interactive",
+        "tutorials"
+      ],
+      "status": "inbox",
+      "date": "2026-08-25",
+      "added": "2026-08-26",
+      "source": "Codrops",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-tapdaa-9f614b",
+      "title": "Website Inspiration: Tapdaa",
+      "url": "https://onepagelove.com/tapdaa",
+      "shot": "https://iad.microlink.io/YyYP-ZwLPFY2BXP3QqaycGclqPpIMGKlcaEMAzjsWZtiUBxdI1RS2Z-JqXFQacbVQK2vDJ3Mmhnjempc0ei1og.png",
+      "whatsGood": "ホスピタリティ×B2B文脈のブッキングフォームUIとQRコード連携の見せ方に注目。ロングスクロール構成でプロダクトデモをどう段階的に訴求しているかレイアウトリズムを確認したい。",
+      "extract": "booking-form-step-layout, qr-code-display-card, section-scroll-rhythm-spacing, cta-button-hierarchy, product-demo-feature-strip, order-form-field-grouping",
+      "tags": [
+        "b2b",
+        "hospitality",
+        "form",
+        "longscroll",
+        "minimal",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-08-25",
+      "added": "2026-08-26",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-samuel-räikkönen-69e5c8",
+      "title": "Website Inspiration: Samuel Räikkönen Portfolio",
+      "url": "https://onepagelove.com/samuel-raikkonen-portfolio",
+      "shot": "https://iad.microlink.io/qOJpNVEjgTDqVp73saOiDaEEAIKzWTKqMXg2YL1qlhTafxz6njSW82NiAviFdbZDqJ7h67p4l1OPBNP6Sfr2sg.png",
+      "whatsGood": "WebGLとループスクロールを組み合わせたクリエイティブディレクターのポートフォリオとして、スクロール連動のモーション演出と映像背景の重ね方に注目する価値がある。フィンランド系デザインらしいミニマルな余白とタイポグラフィの扱いも確認しておきたい。",
+      "extract": "looping-scroll-trigger, webgl-canvas-overlay, video-background-blend-mode, scroll-driven-animation-timing, fullscreen-section-padding, minimal-nav-z-index",
+      "tags": [
+        "motion",
+        "webgl",
+        "dark",
+        "editorial",
+        "minimal",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-08-25",
+      "added": "2026-08-26",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "kai-blamey-809b9d",
       "title": "Kai Blamey",
       "url": "https://minimal.gallery/kai-blamey/",
