@@ -2,6 +2,124 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "website-inspiration-tiago-fragoso-376323",
+      "title": "Website Inspiration: Tiago Fragoso",
+      "url": "https://onepagelove.com/tiago-fragoso",
+      "shot": "https://iad.microlink.io/GaJbO2-KXr4jXW4qftfxJd6O3Y1yx58A8MDlP2_ROkmungTQn7_6iKSrLmPfd3cYCbwNBIqFMYOtzqWN62VnJg.png",
+      "whatsGood": "手描き・コミックスタイルとインタラクティブなストーリーテリングの組み合わせが特徴的と思われるため、イラスト的なテクスチャ表現やスクロール連動アニメーションの実装手法を確認する価値がある。音声統合やビデオヘッダーの演出も、没入感を高めるモーション設計の参考になりそう。",
+      "extract": "hand-drawn border / stroke style, sketch-texture background-token, storyboard-grid layout, scroll-triggered animation timing, handwriting font pairing, video-header overlay color",
+      "tags": [
+        "illustration",
+        "motion",
+        "storytelling",
+        "editorial",
+        "interactive",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-08-29",
+      "added": "2026-08-29",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-tiny-computer-co-bc6f5a",
+      "title": "Website Inspiration: Tiny Computer Co.",
+      "url": "https://onepagelove.com/tiny-computer-co",
+      "shot": "https://iad.microlink.io/ot81h4a3EL_fqB07FFTp0hChW9bkozKEqWXP2A57YLa2OKOZ6M37PpBU_SowFmg9XAQT2xCZQFMXlgDV1a8dLg.png",
+      "whatsGood": "ビューポート基準のタイポグラフィと大胆な余白の使い方に注目。ページロードアニメーションとロングスクロールの組み合わせがリズムを生んでいる可能性が高い。",
+      "extract": "viewport-sized fluid typography scale, generous whitespace spacing tokens, page-load fade/slide animation timing, minimal icon style, blog card layout pattern, signup box component",
+      "tags": [
+        "minimal",
+        "typography",
+        "whitespace",
+        "motion",
+        "editorial",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-08-28",
+      "added": "2026-08-29",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-ayush-halder-por-013851",
+      "title": "Website Inspiration: Ayush Halder Portfolio",
+      "url": "https://onepagelove.com/ayush-halder-portfolio",
+      "shot": "https://iad.microlink.io/vKQ6ndG77ZKAejx9JazBMRw6g-wgm_yfLYa0ZV55KS1aB6po81CPTFTAL8Ry7LDe357gMq3JS-aERR2CSkTX-g.png",
+      "whatsGood": "水平パララックスとスクロールジャッキングの組み合わせによるスクロール体験の設計が見どころ。ページロードアニメーションからスムーズスクロールへの流れで、モーションのタイミング設計を参考にできる可能性が高い。",
+      "extract": "scroll-driven parallax offset token, page-load animation easing curve, video background overlay opacity, horizontal scroll container spacing, section transition timing, smooth scroll behavior variable",
+      "tags": [
+        "motion",
+        "parallax",
+        "portfolio",
+        "scrolljacking",
+        "dark",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-08-28",
+      "added": "2026-08-29",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-beige-force-8bdded",
+      "title": "Website Inspiration: BEIGE FORCE",
+      "url": "https://onepagelove.com/beige-force",
+      "shot": "",
+      "whatsGood": "「BEIGE FORCE」というタイトルとアーケード・宇宙テーマから、8ビットピクセルフォントとベージュ系のレトロカラーパレットの組み合わせが見どころと推測。オーディオ連動インタラクションとグリッドレイアウトがどう融合しているかに注目。",
+      "extract": "retro-beige color palette, pixel / 8-bit font stack, audio-reactive animation token, fixed grid with pixel-border cells, space-themed background texture, CRT scanline overlay effect",
+      "tags": [
+        "retro",
+        "8bit",
+        "interactive",
+        "audio",
+        "gaming",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-08-27",
+      "added": "2026-08-29",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-justin-lerner-85f1ab",
+      "title": "Website Inspiration: Justin Lerner",
+      "url": "https://onepagelove.com/justin-lerner",
+      "shot": "https://iad.microlink.io/vC1GRhYx8jeO21W7jGxbLM0Yu3PYGOKNNqjTcuVbxc2LDZr3tdylcGnTXhxQylUVMyDaRm_L-zFvzrFPgOu4bQ.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "inspiration",
+        "animations"
+      ],
+      "status": "inbox",
+      "date": "2026-08-26",
+      "added": "2026-08-29",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-the-state-of-sof-079099",
+      "title": "Website Inspiration: The State of Software Delivery in Healthcare",
+      "url": "https://onepagelove.com/the-state-of-software-delivery-in-healthcare",
+      "shot": "https://iad.microlink.io/KqJYWdxdD8QdxKVvsuqi2yUXgdT6h-YwAaQPrdsLqlwxvPTMtS8MxzIte4VpC41N9D8mOdpwzD1TUGg0UJm3Ow.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "inspiration",
+        "artificial intelligence (ai)"
+      ],
+      "status": "inbox",
+      "date": "2026-08-24",
+      "added": "2026-08-29",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "sevengrid-7c8e17",
       "title": "SevenGrid",
       "url": "https://minimal.gallery/sevengrid/",
