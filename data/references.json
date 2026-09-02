@@ -2,6 +2,130 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "buena-dev-71c5e6",
+      "title": "Buena Dev",
+      "url": "https://minimal.gallery/buena-dev/",
+      "shot": "https://iad.microlink.io/Bct8-oZPbDjE3ZnbvCTTMoW04pQgxMasKYpeMLbwx_OgEcpcNHfhLLQNdRKPdd4DZcRKbxJjl80IXcXHXw49Kg.png",
+      "whatsGood": "minimal.galleryに掲載されたソフトウェア×不動産系サービスのサイトとして、余白の取り方とタイポグラフィのヒエラルキーが洗練されている可能性が高い。配色のミニマルさとグリッドの整合性を中心に確認したい。",
+      "extract": "ニュートラルなベース配色トークン, セクション間の大きめ余白スケール, 見出しと本文のフォントサイズ比, カード or リスト型レイアウトのグリッド定義, CTAボタンのシンプルなスタイル",
+      "tags": [
+        "minimal",
+        "typography",
+        "layout",
+        "neutral",
+        "saas",
+        "software"
+      ],
+      "status": "inbox",
+      "date": "2026-09-02",
+      "added": "2026-09-02",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-brikkenco-96d916",
+      "title": "Website Inspiration: Brikken+Co",
+      "url": "https://onepagelove.com/brikkenco",
+      "shot": "https://iad.microlink.io/QRiiVuN2OyGWLAROrNvPxuYB8w5847u456qJL03SDUaDLnz2Yjg9yO1FlYlDyJBM12-4ascdMjVemP6ss8Ll7Q.png",
+      "whatsGood": "デジタルエージェンシーのブランドアイデンティティとジオメトリックシェイプの組み合わせに注目。スクロール連動アニメーションとビデオモーダルの実装パターンが参考になりそう。",
+      "extract": "geometric-shape-token, scroll-triggered-animation, video-modal-overlay, long-scroll-section-spacing, brand-accent-color, motion-easing-curve",
+      "tags": [
+        "motion",
+        "geometric",
+        "agency",
+        "editorial",
+        "dark",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-02",
+      "added": "2026-09-02",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "allagi-5d2a93",
+      "title": "Allagi",
+      "url": "https://minimal.gallery/allagi/",
+      "shot": "https://iad.microlink.io/URpLwQXGq_tojkJgikKothNtoGojksvMn6sqe4gBbZjx1MHhkMnbndiBPZQ-k3tIngmdoJC7H8u_ExCY5OQtzQ.png",
+      "whatsGood": "ミュージック系カタログサイトとして、アルバムやトラックの並びに使われるグリッドレイアウトと余白のリズム感を確認したい。minimal.gallery掲載であることからモノトーンや抑制された配色の中でタイポグラフィが主役になっている可能性が高い。",
+      "extract": "catalog-grid-gap, muted-color-palette, type-scale-display, track-list-spacing, cover-art-aspect-ratio, subtle-hover-state",
+      "tags": [
+        "minimal",
+        "editorial",
+        "typography",
+        "catalogue",
+        "music"
+      ],
+      "status": "inbox",
+      "date": "2026-09-01",
+      "added": "2026-09-02",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "bend-aim-fling-turning-the-eiffel-to-c11614",
+      "title": "Bend, Aim, Fling: Turning the Eiffel Tower into a Catapult with Three.js",
+      "url": "https://tympanus.net/codrops/2026/09/01/bend-aim-fling-turning-the-eiffel-tower-into-a-catapult-with-three-js/",
+      "shot": "https://iad.microlink.io/LsbQKsCJO4nBClzDv-Nq6KLJHMp-LyQFzwL-Bg2hj9c6gGsQWUkkfgPhoP5QPLDGQeswnmyp_Jud_Po1DKfoCw.png",
+      "whatsGood": "Three.jsを使ったインタラクティブな3D演出の実装アプローチに注目。物理ベースのモーション（投擲・弧を描く軌跡）とカメラワークの組み合わせ方が参考になる可能性がある。",
+      "extract": "3d-scene-background-color, physics-motion-easing, camera-transition-timing, interactive-object-highlight-color, trajectory-arc-stroke, ambient-light-intensity-token",
+      "tags": [
+        "3d",
+        "motion",
+        "interactive",
+        "webgl",
+        "playful",
+        "playground"
+      ],
+      "status": "inbox",
+      "date": "2026-09-01",
+      "added": "2026-09-02",
+      "source": "Codrops",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-is-that-pigeon-a-28a474",
+      "title": "Website Inspiration: Is That Pigeon a Fed?",
+      "url": "https://onepagelove.com/is-that-pigeon-a-fed",
+      "shot": "https://iad.microlink.io/RBosVO2UNy9m5q1-rFZ8zqXf39eFQ3BiZq3G1_TTUE3egssbrmhNppvO6T-IyVzTnidJ-aOUYHw_c6l90VYFpQ.png",
+      "whatsGood": "パロディ・風刺系AIサイトとして、ユーモラスなイラストやコピーと機能UIの組み合わせ方が参考になりそう。ロングスクロール×インタラクティブ構成でセクション間のリズムの付け方も確認したい。",
+      "extract": "quirky illustration accent, playful hero typography, scroll-triggered reveal, file upload UI styling, satirical badge/label component, single-page section spacing",
+      "tags": [
+        "playful",
+        "interactive",
+        "scrolling",
+        "illustration",
+        "minimal",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-01",
+      "added": "2026-09-02",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "house-of-yellow-92681d",
+      "title": "House of Yellow",
+      "url": "https://minimal.gallery/house-of-yellow/",
+      "shot": "https://iad.microlink.io/eE24IqU6XHTyTEjyds7ApArkpaAcXtjeX595E9JtyXRfIJ9B30thKix4EgWJkFN4VOnw6gkf3iNQ8k4ho2OnUA.png",
+      "whatsGood": "ミニマルギャラリー掲載のエージェンシー系サイトとして、余白の取り方とタイポグラフィの階層設計が洗練されている可能性が高い。イエローをアクセントカラーとしてどの比率・文脈で使っているかを確認したい。",
+      "extract": "accent-color-yellow, large-display-typeface, generous-whitespace-scale, high-contrast-text-on-light, minimal-nav-layout, section-rhythm-spacing",
+      "tags": [
+        "minimal",
+        "editorial",
+        "typography",
+        "agency",
+        "accent"
+      ],
+      "status": "inbox",
+      "date": "2026-08-31",
+      "added": "2026-09-02",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
       "id": "website-inspiration-tiago-fragoso-376323",
       "title": "Website Inspiration: Tiago Fragoso",
       "url": "https://onepagelove.com/tiago-fragoso",
