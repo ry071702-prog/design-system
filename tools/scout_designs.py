@@ -17,6 +17,15 @@ data/references.json の inbox に追記 (URL で重複排除)。
 import argparse, json, os, re, sys, hashlib, datetime, urllib.request, urllib.parse
 import xml.etree.ElementTree as ET
 
+sys.path.insert(0, os.path.expanduser("~/.claude/lib"))
+try:
+    import automation_stamp as stamp   # 成功/失敗の印 (automation-health.sh が見る)
+    import automation_net as net       # ネット断ガード
+except ImportError:                    # ライブラリが無い環境でも単体実行はできるようにする
+    stamp = net = None
+
+JOB = "ds-scout"
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONFIG = os.path.join(ROOT, "config.local.json")
 REFS = os.path.join(ROOT, "data", "references.json")
@@ -80,6 +89,19 @@ def call_dify_scout(cfg, title, source, categories):
         return {"whatsGood": "", "extract": "", "tags": []}
 
 
+def scout_meta(cfg, c):
+    """call_dify_scout の失敗を1件ぶんに閉じ込める。
+
+    以前は socket.timeout がそのまま main を貫通し、その回に集めた候補を丸ごと捨てて
+    references.json を書かずに終了していた (2026-09-01 の実例: 19件中4件処理した時点で全滅)。
+    """
+    try:
+        return call_dify_scout(cfg, c["title"], c["source"], c["categories"]), ""
+    except Exception as e:
+        print(f"[warn] Dify 付与に失敗 ({c['title']}): {e}", file=sys.stderr)
+        return {"whatsGood": "", "extract": "", "tags": []}, str(e)
+
+
 def screenshot(url, attempts=2):
     """microlink でスクリーンショットURLを取得 (失敗時は空)。一時失敗に備え数回リトライ。"""
     api = "https://api.microlink.io/?" + urllib.parse.urlencode(
@@ -102,7 +124,9 @@ def slugify(s):
     return re.sub(r"\s+", "-", s)[:36] or "ref"
 
 
-VAULT_INBOX = os.path.expanduser("~/Documents/obsidian/mybrain/Inbox")
+# vault は 2026-07-13 に ~/Documents から ~/obsidian へ移動済み
+# (旧パスに書き続けていたため週次ダイジェストが Obsidian から見えなくなっていた)
+VAULT_INBOX = os.path.expanduser("~/obsidian/mybrain/Inbox")
 
 
 def run_digest():
@@ -139,6 +163,14 @@ def main():
         run_digest()
         return
 
+    # ログに時刻が無く「いつから壊れたか」を追えなかったので実行ごとに1行入れる
+    print(f"=== {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')} scout start ===", file=sys.stderr)
+
+    # スリープ復帰直後は DNS が上がっておらず全ソースが空振りする  最大5分待つ
+    if net and not net.wait_for_network(JOB):
+        net.skip_offline(JOB, "ネット未確立のまま5分待って諦めた (スリープ復帰直後の可能性)")
+        return
+
     cfg = load_config()
     if not cfg.get("difyScoutAppKey"):
         sys.exit("config.local.json に difyScoutAppKey がありません。")
@@ -150,14 +182,25 @@ def main():
 
     # 全ソースの新着を集めて新しい順に
     candidates = []
+    fetch_errors = []
     for src in sources:
         try:
             for it in fetch_feed(src["feed"]):
                 if it["link"] and it["link"] not in existing:
                     candidates.append({**it, "source": src["name"]})
         except Exception as e:
+            fetch_errors.append(str(e))
             print(f"[warn] {src['name']} 取得失敗: {e}", file=sys.stderr)
     candidates.sort(key=lambda x: x["date"], reverse=True)
+
+    # 全ソースが落ちた = 収集ゼロ  ネット断なら .fail を書かずに降りる (自己修復の空振り防止)
+    if not candidates and fetch_errors and len(fetch_errors) == len(sources):
+        if net and net.is_offline_failure(fetch_errors):
+            net.skip_offline(JOB, "全ソース取得失敗だが原因はネット断")
+            return
+        if stamp and not args.dry_run:
+            stamp.fail(JOB, f"全ソースの取得に失敗: {fetch_errors[0][:150]}")
+        sys.exit("全ソースの取得に失敗")
 
     seen, picked = set(), []
     for c in candidates:
@@ -170,8 +213,11 @@ def main():
 
     print(f"新着候補 {len(candidates)} 件 → 追加 {len(picked)} 件", file=sys.stderr)
     added = []
+    meta_errors = []
     for c in picked:
-        meta = call_dify_scout(cfg, c["title"], c["source"], c["categories"])
+        meta, err = scout_meta(cfg, c)
+        if err:
+            meta_errors.append(err)
         shot = "" if args.no_shot else screenshot(c["link"])
         tags = meta.get("tags") or []
         tags = list(dict.fromkeys([t.strip().lower() for t in tags if t.strip()] +
@@ -196,10 +242,21 @@ def main():
     if args.dry_run:
         print(json.dumps(added, ensure_ascii=False, indent=2))
         return
-    refs["references"] = added + refs.get("references", [])
-    with open(REFS, "w", encoding="utf-8") as f:
-        json.dump(refs, f, ensure_ascii=False, indent=2)
+
+    # 追加が無い回に references.json を書き直すと mtime だけが新しくなり、
+    # automation-health.sh が「成果物は新しい」と誤判定して静かな死を隠してしまう
+    if added:
+        refs["references"] = added + refs.get("references", [])
+        with open(REFS, "w", encoding="utf-8") as f:
+            json.dump(refs, f, ensure_ascii=False, indent=2)
     print(f"[OK] {len(added)} 件を inbox に追加 → {REFS}")
+
+    if stamp:
+        note = f"{len(added)} 件を inbox に追加 (候補 {len(candidates)})"
+        if meta_errors or fetch_errors:
+            note = (f"degraded: {note}  "
+                    f"ソース失敗 {len(fetch_errors)}/{len(sources)} / Dify 失敗 {len(meta_errors)}件")
+        stamp.ok(JOB, note)
 
 
 if __name__ == "__main__":
