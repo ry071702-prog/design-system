@@ -2,6 +2,127 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "philip-readman-846c65",
+      "title": "Philip Readman",
+      "url": "https://minimal.gallery/philip-readman/",
+      "shot": "https://iad.microlink.io/V3IpqwbrPM86z0R7nAkDFetM-9ePxudZ1sEX4wj-Td2P9KMMf7iTzHvr1jtmfHzPTGYbnci66ifgW-YU4STVdg.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "portfolio"
+      ],
+      "status": "inbox",
+      "date": "2026-09-03",
+      "added": "2026-09-04",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "from-rays-to-meshes-building-vercels-64e3cd",
+      "title": "From Rays to Meshes: Building Vercel’s Prism with vgpu",
+      "url": "https://tympanus.net/codrops/2026/09/03/from-rays-to-meshes-building-vercels-prism-with-vgpu/",
+      "shot": "https://iad.microlink.io/fiUhcQdFGO0Q8PakCpz6-Qd2QPWuyNpHYuzYrkem1mXGMy7dooYjXKZBARtRieT48UXqVPOOrouPxiFdFs82nA.png",
+      "whatsGood": "WebGLとGLSLを用いたプリズム光学エフェクトの実装記事のため、レイからメッシュへの変換における光の屈折・分散表現と、それを支えるシェーダー由来の配色グラデーションに注目すると良い。Vercelブランドのビジュアルアイデンティティとして洗練された奥行き表現やスペクトルカラーの使い方が参考になる可能性が高い。",
+      "extract": "スペクトルグラデーションカラートークン, ガラス・屈折感を模したbox-shadow/filter値, メッシュ背景用のconic-gradient or SVGパターン, 光彩(glow)エフェクト用のdrop-shadow値, 3Dシーン向けperspective/transform-style定数, アニメーション用ease曲線(光の動き)",
+      "tags": [
+        "3d",
+        "webgl",
+        "glow",
+        "dark",
+        "motion",
+        "articles"
+      ],
+      "status": "inbox",
+      "date": "2026-09-03",
+      "added": "2026-09-04",
+      "source": "Codrops",
+      "auto": true
+    },
+    {
+      "id": "more-threejs-speakers-more-ideas-fro-fc2692",
+      "title": "More Three.js Speakers, More Ideas from Paris",
+      "url": "https://tympanus.net/codrops/2026/09/03/more-three-js-speakers-more-ideas-from-paris/",
+      "shot": "https://iad.microlink.io/VsF1rRwpT5mXG7dSLg6rLKfmlARLA3OGG-Ss-RPi_LB4Xau85slpP9TxuKk6J6vT-AIZSTlvm88lWSL7mb4zlw.png",
+      "whatsGood": "Three.jsを活用した3D/WebGLの表現手法やインタラクションのアイデアが参照できる可能性がある。カンファレンス発表まとめ記事であれば、複数の実装パターンやビジュアルトレンドを一覧できる点に注目。",
+      "extract": "3D depth shadow token, WebGL gradient palette, motion easing curve, immersive hero layout, particle color scheme, interactive surface overlay",
+      "tags": [
+        "3d",
+        "motion",
+        "webgl",
+        "interactive",
+        "editorial",
+        "articles"
+      ],
+      "status": "inbox",
+      "date": "2026-09-03",
+      "added": "2026-09-04",
+      "source": "Codrops",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-nodeck-116ef1",
+      "title": "Website Inspiration: Nodeck",
+      "url": "https://onepagelove.com/nodeck",
+      "shot": "https://iad.microlink.io/i8MPXiwq9wCDmoSXuCueQqbisU59iwWoM2Pgrd3akOelTwOk5heA8_BAuUUYHfjq13VFin4dTnjp8q0AwNXsdA.png",
+      "whatsGood": "コミックスタイル×ネオンエフェクトの組み合わせがB2Bピッチ文脈でどう機能しているか、太めのアウトライン・吹き出し・蛍光カラーの使い方を確認する価値がある。スライドショー形式のロングスクロールでSFXを伴うモーション演出がどの程度インタラクションのリズムを作っているかも注目ポイント。",
+      "extract": "neon-glow shadow token, comic-border stroke width, high-contrast accent color pair, panel-based section layout, sound-triggered animation timing, slideshow scroll snap spacing",
+      "tags": [
+        "neon",
+        "comic",
+        "dark",
+        "motion",
+        "b2b",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-03",
+      "added": "2026-09-04",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-davesocozy-e3ae7c",
+      "title": "Website Inspiration: davesocozy",
+      "url": "https://onepagelove.com/davesocozy",
+      "shot": "https://iad.microlink.io/VUu8rbl9ci9K86d-M_vFWTHw1N0zSeGaHhvy1SzCd8F-21V-T4t0k44-pqKUhCFK6pZz8AahnAcbLsHOC80bpA.png",
+      "whatsGood": "ハンドメイド・コラージュ的なテクスチャと手書き風タイポグラフィの組み合わせ、およびページロードアニメーションとSFXによる「体験の入口」演出を確認しておくと参考になる。ノスタルジックな配色（くすみトーン・セピア系）とレイアウトの崩し方にも注目。",
+      "extract": "handmade-texture-overlay, muted-nostalgic-palette, page-load-reveal-animation, sfx-trigger-on-interaction, collage-asymmetric-layout, rough-border-or-torn-edge-motif",
+      "tags": [
+        "nostalgia",
+        "handmade",
+        "motion",
+        "editorial",
+        "dark",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-03",
+      "added": "2026-09-04",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "breaking-the-frame-building-a-real-t-44e7da",
+      "title": "Breaking the Frame: Building a Real-Time Datamosh Effect with Three.js",
+      "url": "https://tympanus.net/codrops/2026/09/02/breaking-the-frame-building-a-real-time-datamosh-effect-with-three-js/",
+      "shot": "https://iad.microlink.io/E_nzMImEoypc8Uio1j8u-W_kWoDdyOuuOYVrBSn2no56tToi1lZz6uog0ZQAIRu7VRliFkpTKU3-uv5z8txxjA.png",
+      "whatsGood": "リアルタイムのデータモッシュ効果をThree.jsで実装するチュートリアルなので、ポストプロセッシングのシェーダー構成とフレームバッファの使い回しパターンを重点的に確認するとよい。グリッチ系ビジュアルのノイズ・ブロックアーティファクト表現がどう制御されているかも注目ポイント。",
+      "extract": "--glitch-block-size, --feedback-opacity, --displacement-strength, --noise-frequency, --color-aberration-offset, --frame-blend-mix",
+      "tags": [
+        "glitch",
+        "webgl",
+        "motion",
+        "shader",
+        "dark",
+        "tutorials"
+      ],
+      "status": "inbox",
+      "date": "2026-09-02",
+      "added": "2026-09-04",
+      "source": "Codrops",
+      "auto": true
+    },
+    {
       "id": "buena-dev-71c5e6",
       "title": "Buena Dev",
       "url": "https://minimal.gallery/buena-dev/",
