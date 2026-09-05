@@ -2,6 +2,108 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "duft-und-kultur-4517ff",
+      "title": "Duft und Kultur",
+      "url": "https://minimal.gallery/duft-und-kultur/",
+      "shot": "https://iad.microlink.io/wv3zVsgoUYy4_kv9Zz8qOWWj0hLTZdryibpQeYU0NSnyFRQI4wknKYTMo8T5jcPhQezhnWSUr3BXRsGB8Po1Jg.png",
+      "whatsGood": "minimal.galleryの掲載事例として、余白の取り方とタイポグラフィの階層設計に注目すると参考になりそう。ドイツ語圏の文化・香りをテーマにしたサイトであれば、落ち着いたアースカラーや洗練されたセリフ体の使い方が見どころと推測される。",
+      "extract": "セリフ体見出しのフォントサイズスケール, アースカラーのカラートークン, 広めのセクション余白(padding-block), テキスト主体のレイアウトグリッド, 控えめなボーダー・区切り線スタイル",
+      "tags": [
+        "minimal",
+        "editorial",
+        "typography",
+        "neutral"
+      ],
+      "status": "inbox",
+      "date": "2026-08-28",
+      "added": "2026-09-05",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "hellomatik-baaf11",
+      "title": "Hellomatik",
+      "url": "https://minimal.gallery/hellomatik/",
+      "shot": "https://iad.microlink.io/HkhtlVyOTZa4l0PhxgvmE5nSRDpOb3kq70fl68uSgOOkX5sO_e3BDM-CunNrd_hcNnEtfKLx4KMtAZ_v9Jab0w.png",
+      "whatsGood": "minimal.galleryに掲載されたAI/SaaS系スタートアップとして、洗練されたタイポグラフィと抑制された配色による信頼感の演出が見どころと推測される。余白のリズムとグリッドの整合性を確認したい。",
+      "extract": "プライマリ/アクセントカラートークン, サンセリフ見出しのフォントサイズスケール, セクション間の余白(spacing-section), カード背景の微細なサーフェス色, CTAボタンのボーダーラジウスと影",
+      "tags": [
+        "minimal",
+        "saas",
+        "ai",
+        "typography",
+        "light"
+      ],
+      "status": "inbox",
+      "date": "2026-08-27",
+      "added": "2026-09-05",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "goodgrowth-boot-sequences-spinning-d-911f8e",
+      "title": "Goodgrowth: Boot Sequences, Spinning Discs, and the Art of the Portfolio",
+      "url": "https://tympanus.net/codrops/2026/08/27/goodgrowth-boot-sequences-spinning-discs-and-the-art-of-the-portfolio/",
+      "shot": "https://iad.microlink.io/CL5stEsbS4fKSJsIRUlyE3gNHGGU_cWBZ0VQL4v4QRAXt5TBlFbg0CXDeZiTM4_cYTaXC8DETO2mhRHHsyfJOQ.png",
+      "whatsGood": "Three.jsとGSAPを組み合わせたポートフォリオのケーススタディなので、3Dオブジェクト(スピニングディスク)のステージング手法とブート画面風のローディングシーケンスの演出設計を重点的に確認したい。モーションのタイミング関数とシーン遷移のリズム感が参考になる可能性が高い。",
+      "extract": "boot-sequence loading animation token, 3D disc rotation easing curve, GSAP timeline stagger timing, scene transition duration scale, depth-of-field blur variable, monospace terminal typography scale",
+      "tags": [
+        "3d",
+        "motion",
+        "dark",
+        "editorial",
+        "portfolio",
+        "articles"
+      ],
+      "status": "inbox",
+      "date": "2026-08-27",
+      "added": "2026-09-05",
+      "source": "Codrops",
+      "auto": true
+    },
+    {
+      "id": "blender-to-threejs-and-back-10-tips--a8db4d",
+      "title": "Blender to Three.js and Back: 10 Tips for a Better Workflow",
+      "url": "https://tympanus.net/codrops/2026/08/24/blender-to-three-js-and-back-10-tips-for-a-better-workflow/",
+      "shot": "https://iad.microlink.io/077DDa945vAROUWJSC13xzFCHULa6h91DQiQ4HxmzCmkvz_Cs0sSWrZ8e7OJ0RBR7vY2osv9BYi1V_AY7D8GMA.png",
+      "whatsGood": "3DワークフローをテーマにしたCodropsのArticleなので、コードデモやインタラクティブなThree.jsシーンのUI表現（コントロールパネル・オーバーレイ・デバッグUI）に注目すると参考になる観点が多い。技術記事特有の『コードブロック × 3Dビューポート』の共存レイアウトも確認しておくと良い。",
+      "extract": "--color-code-bg, --font-mono-size-sm, --space-article-column-max-width, --shadow-viewport-overlay, --radius-panel",
+      "tags": [
+        "3d",
+        "editorial",
+        "dark",
+        "typography",
+        "minimal",
+        "articles"
+      ],
+      "status": "inbox",
+      "date": "2026-08-24",
+      "added": "2026-09-05",
+      "source": "Codrops",
+      "auto": true
+    },
+    {
+      "id": "sixty-frames-for-the-record-a-threej-e5b71d",
+      "title": "Sixty Frames for the Record: A Three.js Game, Seven Fly-Throughs, and a Wall of CRTs",
+      "url": "https://tympanus.net/codrops/2026/08/22/sixty-frames-for-the-record-a-three-js-game-seven-fly-throughs-and-a-wall-of-crts/",
+      "shot": "https://iad.microlink.io/fxDAwXURcrQeGWL-XPr9xp6ll85rB8x0U5cnCVTSuG8WM2uP_9zEoUSDVTwNw_iOHx_E97bAjAT2bI_dlrTiRw.png",
+      "whatsGood": "Three.jsを用いた60fps維持のゲーム実装とフライスルー演出に注目。パフォーマンスチューニングの手法やCRTウォール風レトロ表現のビジュアル設計が参考になる可能性が高い。",
+      "extract": "CRTスキャンライン風テクスチャトークン, レトログリーン/アンバー配色変数, 奥行き感を出すvignette shadow値, モノスペースタイポグラフィスタック, フライスルー用イージング曲線, ノイズ/グリッチ演出用opacity段階値",
+      "tags": [
+        "3d",
+        "retro",
+        "motion",
+        "dark",
+        "performance",
+        "articles"
+      ],
+      "status": "inbox",
+      "date": "2026-08-22",
+      "added": "2026-09-05",
+      "source": "Codrops",
+      "auto": true
+    },
+    {
       "id": "website-inspiration-protip-marketing-0579bb",
       "title": "Website Inspiration: Protip Marketing",
       "url": "https://onepagelove.com/protip-marketing",
