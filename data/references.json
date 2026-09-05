@@ -2,6 +2,132 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "website-inspiration-protip-marketing-0579bb",
+      "title": "Website Inspiration: Protip Marketing",
+      "url": "https://onepagelove.com/protip-marketing",
+      "shot": "https://iad.microlink.io/TishwEU9miup8lQD_YD8uYsSJrC-VvwYfZgMPOSoRsMp1g7avI11hYzmPxnLXLpmHHqyLU7lJdiO6m_epP_oiA.png",
+      "whatsGood": "スクロール連動のナンバード・セクションとスティッキーCTAボタンの配置リズムに注目。ビデオ背景とビッグイメージの重ね方でブランド訴求力をどう高めているか確認するとよい。",
+      "extract": "numbered-section-counter, sticky-cta-button, video-background-overlay, big-image-hero-ratio, visible-grid-column-gap, scroll-triggered-section-transition",
+      "tags": [
+        "motion",
+        "editorial",
+        "marketing",
+        "dark",
+        "grid",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-04",
+      "added": "2026-09-05",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-buenofyi-385285",
+      "title": "Website Inspiration: bueno.fyi",
+      "url": "https://onepagelove.com/bueno-fyi",
+      "shot": "https://iad.microlink.io/e6FEskdYDPz0Ml6vPR6h7mhm-8CV4bm6uWpYP0_Vd8HVEldP7iLrqm7WtdGdZCTGrIOlkanHDl7FS_b7BbSwjw.png",
+      "whatsGood": "キュレーション・ディレクトリ系サイトとして、カード一覧のグリッドレイアウトやフィルター／検索UIの整理のされ方が参考になりそう。ロングスクロール構成におけるリズムの取り方と余白設計に注目したい。",
+      "extract": "card-grid-layout, filter-chip-component, search-bar-style, bookmark-tag-system, scroll-rhythm-spacing, list-to-grid-toggle",
+      "tags": [
+        "minimal",
+        "directory",
+        "editorial",
+        "utility",
+        "inspiration",
+        "bookmarks"
+      ],
+      "status": "inbox",
+      "date": "2026-09-04",
+      "added": "2026-09-05",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-uglycash-7b4510",
+      "title": "Website Inspiration: UGLYCASH",
+      "url": "https://onepagelove.com/uglycash",
+      "shot": "https://iad.microlink.io/EUSoC3SA6OZZ1zznb20lB44ao5lQWv9MkGGRnjDmkyWywx0tEAdYDUn6WpHdwZ3ayenlUga37wlt-nWAxZZnXg.png",
+      "whatsGood": "Neubrutalism×Fintechという珍しい組み合わせで、グロウエフェクトや太いボーダー・高彩度カラーの使い方が参考になりそう。アニメーションとカードスタイルの組み合わせで、スクロール連動の演出も確認する価値あり。",
+      "extract": "neubrutalism-border-width, glow-shadow-token, high-saturation-accent-color, card-offset-shadow, scroll-triggered-animation-timing, bold-stroke-outline",
+      "tags": [
+        "neubrutalism",
+        "fintech",
+        "glow",
+        "motion",
+        "dark",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-08-31",
+      "added": "2026-09-05",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-vessa-d8e18b",
+      "title": "Website Inspiration: Vessa",
+      "url": "https://onepagelove.com/vessa",
+      "shot": "https://iad.microlink.io/y75BwlErIGRg_51PZp4UF9yaokP-wea5-oMuugFQjod28sWNI5FoFc9kNJjBIVXdDpV2iMC6hoE4t0IjCqdlqA.png",
+      "whatsGood": "SVGアニメーションとロングスクロールの組み合わせによるストーリーテリング構造が参考になりそう。AIツール系SaaSらしいブランドガイドライン準拠の配色・タイポの一貫性も確認したい観点。",
+      "extract": "SVGアニメーション用イージング変数, スクロール連動セクション余白トークン, ブランドカラーパレット(プライマリ+アクセント), 長文コンテンツ向け行間・文字サイズスケール, CTAボタンのホバーステート, グリッドレイアウト(ロングスクロール用セクション区切り)",
+      "tags": [
+        "motion",
+        "editorial",
+        "saas",
+        "longscroll",
+        "branding",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-08-31",
+      "added": "2026-09-05",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-vestris-bc01c4",
+      "title": "Website Inspiration: Vestris",
+      "url": "https://onepagelove.com/vestris",
+      "shot": "https://iad.microlink.io/Q_W0m5OLYOTQmM3xiafptmvw-2rjYjmLixTghq6zA3Z4Cwb-pRRsp95HRHqBgqE3Yl2z1wKars7pGCVPfYYbsA.png",
+      "whatsGood": "Y Combinator発のAI×不動産管理SaaSとして、信頼感を醸成するクリーンなビジネス配色と、ロングスクロール構成でのセクションリズムが参考になりそう。植物・グリーン系のアクセントカラーとホワイトスペースの使い方に注目したい。",
+      "extract": "section-spacing-scale, accent-green-palette, trust-badge-layout, long-scroll-section-divider, cta-button-hierarchy, card-grid-rhythm",
+      "tags": [
+        "minimal",
+        "business",
+        "green",
+        "longscroll",
+        "saas",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-08-30",
+      "added": "2026-09-05",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-britt-taylor-397e07",
+      "title": "Website Inspiration: Britt Taylor",
+      "url": "https://onepagelove.com/britt-taylor",
+      "shot": "https://iad.microlink.io/oZt9Wq4SiE1hHI9BzLsYhRublpDwr0Emmqi9s31kngTgD34SyCv_Jq84rEqrgUjqFDMbxREgKdczmYLz4ymhyg.png",
+      "whatsGood": "ノスタルジア×ダークモードの組み合わせによるテクスチャの使い方と、ビューポート基準の大型タイポグラフィがどのようにスクロールリズムを作っているかを確認したい。フリーランスクリエイター向けの個性的なトーン設定も参考になる。",
+      "extract": "viewport-sized fluid typography scale, dark background texture token, nostalgic serif/display font pairing, long-scroll section spacing rhythm, muted dark color palette, grain/noise overlay opacity",
+      "tags": [
+        "dark",
+        "typography",
+        "texture",
+        "editorial",
+        "nostalgia",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-08-30",
+      "added": "2026-09-05",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "denmu-b985e3",
       "title": "Denmu",
       "url": "https://minimal.gallery/denmu/",
