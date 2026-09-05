@@ -2,6 +2,123 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "denmu-b985e3",
+      "title": "Denmu",
+      "url": "https://minimal.gallery/denmu/",
+      "shot": "https://iad.microlink.io/LMc7BRYvr9nQEatn1nlJ6vocE_s7oEkt6Why4NZrK-S4sVi6PTskIIFWOxE4FNM1vVFTC8AqpgGvYCa11QS-QQ.png",
+      "whatsGood": "ミニマルギャラリー掲載のファイナンス×ゲーミング系サイトとして、無駄を削ぎ落としたグリッドレイアウトと、ゲーム的な緊張感を演出するアクセントカラーの使い方を確認したい。",
+      "extract": "accent-color token, monospace or geometric sans font-stack, tight letter-spacing utility, dark background surface token, subtle border or rule divider, grid column template",
+      "tags": [
+        "dark",
+        "minimal",
+        "finance",
+        "gaming",
+        "typography"
+      ],
+      "status": "inbox",
+      "date": "2026-09-04",
+      "added": "2026-09-05",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "beyond-the-luminance-ramp-a-shape-aw-fa3a6f",
+      "title": "Beyond the Luminance Ramp: A Shape-Aware ASCII Renderer in Three.js",
+      "url": "https://tympanus.net/codrops/2026/09/04/beyond-the-luminance-ramp-a-shape-aware-ascii-renderer-in-three-js/",
+      "shot": "https://iad.microlink.io/7GvdpFPrYX36hw9oNTCPikSfzlbkaPPjbRj0n42gVpM7OlmY6q7OnMZYhFaUUMRXftJd6XxBcMxYOcpgDHkZWg.png",
+      "whatsGood": "ASCIIレンダリングとWebGLシェーダーの組み合わせによる独自の奥行き表現に注目。輝度だけでなく形状情報を文字密度にマッピングする手法が、テキストベースのビジュアルトークンに応用できるか確認したい。",
+      "extract": "monospace font-stack token, character-density gradient scale, shader-driven text-fill pattern, draggable interaction easing, dark-background contrast ratio, ASCII grid spacing unit",
+      "tags": [
+        "ascii",
+        "webgl",
+        "dark",
+        "motion",
+        "typography",
+        "tutorials"
+      ],
+      "status": "inbox",
+      "date": "2026-09-04",
+      "added": "2026-09-05",
+      "source": "Codrops",
+      "auto": true
+    },
+    {
+      "id": "andmade-inc-f25225",
+      "title": "ANDMADE Inc.",
+      "url": "https://minimal.gallery/andmade-inc/",
+      "shot": "https://iad.microlink.io/FAOA7NDuQl0Kpr8EFB3TQfSAu4xkCOaz2rjVeo1gDgJz-41LmDrofw742e4SsAyS8pbuHhiDZmsWd0C7rGNJfw.png",
+      "whatsGood": "ミニマルギャラリー掲載のブランディングエージェンシーサイトとして、余白の取り方とタイポグラフィの階層設計が洗練されている可能性が高い。配色はモノクロまたは限定パレットで、ブランドロゴ周辺のレイアウトリズムに注目したい。",
+      "extract": "モノクロ or デュオトーンパレット, 大きめのディスプレイ書体トークン, セクション間の広い余白スケール, グリッドベースの非対称レイアウト, シンプルなホバーインタラクション",
+      "tags": [
+        "minimal",
+        "branding",
+        "typography",
+        "monochrome",
+        "agency"
+      ],
+      "status": "inbox",
+      "date": "2026-08-31",
+      "added": "2026-09-05",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "volatile-nexus-tinkering-with-glass--4fe247",
+      "title": "Volatile Nexus: Tinkering with Glass, Caustics, Cubes and Sound in Three.js",
+      "url": "https://tympanus.net/codrops/2026/08/31/volatile-nexus-tinkering-with-glass-caustics-cubes-and-sound-in-three-js/",
+      "shot": "https://iad.microlink.io/DB5P2O6ngNya-am0nscYhRy4L1_oQ3EpttxynRwHLN-aMfj9IrhO_bU5ON9HitMmERYMgpPfHZD29hXgzaMF3A.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "playground",
+        "3d"
+      ],
+      "status": "inbox",
+      "date": "2026-08-31",
+      "added": "2026-09-05",
+      "source": "Codrops",
+      "auto": true
+    },
+    {
+      "id": "company-policy-66975b",
+      "title": "Company Policy",
+      "url": "https://minimal.gallery/company-policy/",
+      "shot": "https://iad.microlink.io/twiDLLt7J2ZCRvCisEYjGRQ_iA995HOt5LyDO-qKZD8OMu7V1om_H1Lqe7Ws4xYSIoNhJcaf1O8JL1Vu2mOh6A.png",
+      "whatsGood": "ミニマルギャラリー掲載のエージェンシー系サイトとして、余白の取り方と書体階層のシンプルな整理が参考になる可能性が高い。ポリシー系コンテンツをどう読みやすくレイアウトしているか（行長・行間・セクション区切り）に注目したい。",
+      "extract": "body line-height token, section-gap spacing scale, heading font-size ratio, muted text color, divider stroke style, max-width container",
+      "tags": [
+        "minimal",
+        "typography",
+        "editorial",
+        "whitespace",
+        "agency"
+      ],
+      "status": "inbox",
+      "date": "2026-08-30",
+      "added": "2026-09-05",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "yana-savchuk-b1fa37",
+      "title": "Yana Savchuk",
+      "url": "https://minimal.gallery/yana-savchuk/",
+      "shot": "https://iad.microlink.io/7wXdb-ST8kV3RsWYTQcs18JUAc2TSFagLYnHHIzor7B0plZmomhHJ3ZLBWgEPfe7jtB89yWBcdR717DbhrT8WA.png",
+      "whatsGood": "ポートフォリオ系ミニマルギャラリー掲載のため、余白の取り方とタイポグラフィの階層設計が洗練されている可能性が高い。名前をそのままタイトルにした個人サイトとして、ヒーローセクションのレイアウトとフォント選択を重点的に確認したい。",
+      "extract": "hero-font-size-scale, letter-spacing-loose, section-padding-vertical, text-color-muted, grid-asymmetric-layout, link-hover-underline-style",
+      "tags": [
+        "minimal",
+        "typography",
+        "editorial",
+        "portfolio"
+      ],
+      "status": "inbox",
+      "date": "2026-08-29",
+      "added": "2026-09-05",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
       "id": "philip-readman-846c65",
       "title": "Philip Readman",
       "url": "https://minimal.gallery/philip-readman/",
