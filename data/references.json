@@ -2,6 +2,86 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "cozy-journal-d40011",
+      "title": "Cozy Journal",
+      "url": "https://minimal.gallery/cozy-journal/",
+      "shot": "https://iad.microlink.io/z68md-lRvj4M3eJp_Zttc7T_Pc95lRSpcWPCJgjdEKeHLvFo6tSyhTajRXjMr2Px5aXu3awnW_f864-EB48Zpw.png",
+      "whatsGood": "「Cozy」という名称とminimal.gallery掲載から、温かみのある中間色のパレットと読みやすいセリフ系またはハンドライティング風タイポグラフィが特徴的と推測される。ジャーナル・ノートアプリとして余白のリズムと行間設計を重点的に確認したい。",
+      "extract": "warm-neutral background token, serif or handwriting font-family pair, generous line-height scale, soft card shadow (low elevation), muted accent color, comfortable reading max-width",
+      "tags": [
+        "warm",
+        "minimal",
+        "typography",
+        "editorial",
+        "app",
+        "tools"
+      ],
+      "status": "inbox",
+      "date": "2026-09-05",
+      "added": "2026-09-06",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "building-an-infinite-loom-unravellin-cf812e",
+      "title": "Building an Infinite Loom: Unravelling Images into Threads with Three.js",
+      "url": "https://tympanus.net/codrops/2026/09/05/building-an-infinite-loom-unravelling-images-into-threads-with-three-js/",
+      "shot": "https://iad.microlink.io/sVi7HRzc4VrbJLyPJoVC8-IfHhq65f4GqFwZHkAQujcai4ptL86bD63qMAUq2t1_hiQNjVDNgYsWzcz1swg-ZA.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "playground",
+        "marquee"
+      ],
+      "status": "inbox",
+      "date": "2026-09-05",
+      "added": "2026-09-06",
+      "source": "Codrops",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-postaway-890ba4",
+      "title": "Website Inspiration: Postaway",
+      "url": "https://onepagelove.com/postaway",
+      "shot": "https://iad.microlink.io/9sKLtuiqATOIiA5EleO7l1lpPUjrVGm6l-o69r2OUvf75IUTQfrSwEXelf6XRJIyuWICV5GhJXGdYIpIZr2SuQ.png",
+      "whatsGood": "ノスタルジア・ポストカードをテーマにしたサイトなので、レトロな配色（くすみトーン・セピア系）と手書き風またはセリフ体タイポグラフィの組み合わせ方を確認したい。余白のリズムや紙質感を演出するテクスチャ背景の使い方も参考になる可能性が高い。",
+      "extract": "retro-muted color palette tokens, serif/handwritten font pairing, paper-texture background pattern, stamp/badge UI component, postcard-style card layout, nostalgic border radius & frame style",
+      "tags": [
+        "retro",
+        "editorial",
+        "warm",
+        "minimal",
+        "typography",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-05",
+      "added": "2026-09-06",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-glide-typeface-1f745d",
+      "title": "Website Inspiration: Glide Typeface",
+      "url": "https://onepagelove.com/glide-typeface",
+      "shot": "https://iad.microlink.io/VzJADLotfnFS94xe5UahwrmS7dPf01KPED3-QL3XZC1-Yj2hJCeMdqs9tuE3FOvvVtMSJS5ml_3V5sku46_4Ng.png",
+      "whatsGood": "ビューポート幅に追従する大型タイポグラフィの扱い方と、スクロール連動スライダーのリズム感を確認しておくと参考になる。タイプフェイス紹介サイトならではの余白設計とフォントウェイトの対比も見どころ。",
+      "extract": "viewport-sized fluid typography scale, scroll-driven slider transition, font-weight contrast pairing, full-viewport section padding, typographic hero letter-spacing, section rhythm via vh units",
+      "tags": [
+        "typography",
+        "editorial",
+        "motion",
+        "minimal",
+        "interactive",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-05",
+      "added": "2026-09-06",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "duft-und-kultur-4517ff",
       "title": "Duft und Kultur",
       "url": "https://minimal.gallery/duft-und-kultur/",
