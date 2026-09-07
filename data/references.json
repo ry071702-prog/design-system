@@ -2,6 +2,44 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "building-a-real-time-3d-face-mask-wi-ad0cb6",
+      "title": "Building a Real-Time 3D Face Mask with MediaPipe, Threlte and Three.js",
+      "url": "https://tympanus.net/codrops/2026/09/06/building-a-real-time-3d-face-mask-with-mediapipe-threlte-and-three-js/",
+      "shot": "",
+      "whatsGood": "WebカメラとMediaPipeを組み合わせたリアルタイム3Dフェイスマスクの実装例として、Three.jsのマテリアル設定やシェーダーの使い方、顔へのメッシュ追従アニメーションの滑らかさに注目すると参考になる。Threlte(SvelteベースのThree.jsラッパー)のコンポーネント設計パターンも確認しておきたい。",
+      "extract": "3Dマスク用半透明マテリアルトークン, リアルタイムモーション用イージング値, WebGL向けz-depth管理変数, フェイストラッキングUI用オーバーレイ配色, カメラフィード背景用ブレンドモード設定, デバッグ用ランドマーク可視化カラー",
+      "tags": [
+        "3d",
+        "motion",
+        "webgl",
+        "realtime",
+        "dark",
+        "tutorials"
+      ],
+      "status": "inbox",
+      "date": "2026-09-06",
+      "added": "2026-09-07",
+      "source": "Codrops",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-elva-dc2457",
+      "title": "Website Inspiration: Elva",
+      "url": "https://onepagelove.com/elva",
+      "shot": "",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "inspiration",
+        "agentic ai"
+      ],
+      "status": "inbox",
+      "date": "2026-09-06",
+      "added": "2026-09-07",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "cozy-journal-d40011",
       "title": "Cozy Journal",
       "url": "https://minimal.gallery/cozy-journal/",
