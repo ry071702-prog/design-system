@@ -345,7 +345,8 @@
       "date": "2026-08-30",
       "added": "2026-09-05",
       "source": "One Page Love",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "denmu-b985e3",
@@ -423,7 +424,8 @@
       "date": "2026-08-31",
       "added": "2026-09-05",
       "source": "Codrops",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "company-policy-66975b",
@@ -443,7 +445,8 @@
       "date": "2026-08-30",
       "added": "2026-09-05",
       "source": "minimal.gallery",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "yana-savchuk-b1fa37",
@@ -462,7 +465,8 @@
       "date": "2026-08-29",
       "added": "2026-09-05",
       "source": "minimal.gallery",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "philip-readman-846c65",
@@ -478,7 +482,8 @@
       "date": "2026-09-03",
       "added": "2026-09-04",
       "source": "minimal.gallery",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "from-rays-to-meshes-building-vercels-64e3cd",
@@ -499,7 +504,8 @@
       "date": "2026-09-03",
       "added": "2026-09-04",
       "source": "Codrops",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "more-threejs-speakers-more-ideas-fro-fc2692",
@@ -520,7 +526,8 @@
       "date": "2026-09-03",
       "added": "2026-09-04",
       "source": "Codrops",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "website-inspiration-nodeck-116ef1",
@@ -541,7 +548,8 @@
       "date": "2026-09-03",
       "added": "2026-09-04",
       "source": "One Page Love",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "website-inspiration-davesocozy-e3ae7c",
@@ -562,7 +570,8 @@
       "date": "2026-09-03",
       "added": "2026-09-04",
       "source": "One Page Love",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "breaking-the-frame-building-a-real-t-44e7da",
@@ -583,7 +592,8 @@
       "date": "2026-09-02",
       "added": "2026-09-04",
       "source": "Codrops",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "buena-dev-71c5e6",
@@ -604,7 +614,8 @@
       "date": "2026-09-02",
       "added": "2026-09-02",
       "source": "minimal.gallery",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "website-inspiration-brikkenco-96d916",
@@ -625,7 +636,8 @@
       "date": "2026-09-02",
       "added": "2026-09-02",
       "source": "One Page Love",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "allagi-5d2a93",
@@ -666,7 +678,8 @@
       "date": "2026-09-01",
       "added": "2026-09-02",
       "source": "Codrops",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "website-inspiration-is-that-pigeon-a-28a474",
@@ -687,7 +700,8 @@
       "date": "2026-09-01",
       "added": "2026-09-02",
       "source": "One Page Love",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "house-of-yellow-92681d",
@@ -707,7 +721,8 @@
       "date": "2026-08-31",
       "added": "2026-09-02",
       "source": "minimal.gallery",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "website-inspiration-tiago-fragoso-376323",
