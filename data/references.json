@@ -2,6 +2,38 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "gabriel-beaugonin-bea922",
+      "title": "Gabriel Beaugonin",
+      "url": "https://minimal.gallery/gabriel-beaugonin/",
+      "shot": "https://iad.microlink.io/w8g48tkAgcZeaU8rJ1cMAkZfPeFoqbKuLfvEI4bpWqo91RGg6tlJizNWJFsVqSDpPFCLsVvFSDYVcrjP6NcBPQ.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "portfolio"
+      ],
+      "status": "inbox",
+      "date": "2026-09-08",
+      "added": "2026-09-09",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "bocstudio-cefadf",
+      "title": "Boc.Studio",
+      "url": "https://minimal.gallery/boc-studio/",
+      "shot": "https://iad.microlink.io/zpFKjgPDpzcsB5KBMD39cjQ31YAd_WhGfCEZBBBtZdW-LZRM8FYUhAuKBSMV52bizcy1gjODuOUjJ7Id0MaO9g.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "agency"
+      ],
+      "status": "inbox",
+      "date": "2026-09-07",
+      "added": "2026-09-09",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
       "id": "building-a-real-time-3d-face-mask-wi-ad0cb6",
       "title": "Building a Real-Time 3D Face Mask with MediaPipe, Threlte and Three.js",
       "url": "https://tympanus.net/codrops/2026/09/06/building-a-real-time-3d-face-mask-with-mediapipe-threlte-and-three-js/",
