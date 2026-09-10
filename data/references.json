@@ -2,6 +2,130 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "samuel-räikkönen-67bd3c",
+      "title": "Samuel Räikkönen",
+      "url": "https://minimal.gallery/samuel-raikkonen/",
+      "shot": "https://iad.microlink.io/37-iZ4IGBkVqrVUpPO607uOwf9iepckvXn_LiRCUJkVbvzhFjniWDxhZkH-ovaZGrTAUakKM3ajHK40a82Bn7g.png",
+      "whatsGood": "ミニマルギャラリー掲載のポートフォリオとして、余白のスケールと書体の扱い（サイズ比・ウェイト対比）に注目すると参考になりそう。個人ポートフォリオらしい一貫したトーンと、情報密度を抑えたレイアウトリズムを確認したい。",
+      "extract": "large-scale-heading-size, generous-whitespace-scale, restrained-color-palette, type-weight-contrast, single-column-layout, subtle-link-style",
+      "tags": [
+        "minimal",
+        "typography",
+        "editorial",
+        "portfolio"
+      ],
+      "status": "inbox",
+      "date": "2026-09-09",
+      "added": "2026-09-10",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "still-from-akira-to-ink-wash-buildin-acf42d",
+      "title": "Still: From Akira to Ink Wash, Building a Generative Garden in WebGPU",
+      "url": "https://tympanus.net/codrops/2026/09/09/still-from-akira-to-ink-wash-building-a-generative-garden-in-webgpu/",
+      "shot": "https://iad.microlink.io/hEH1505L3wTGsGV425nZveDB6F5e3obbzD6Lpg-9Hb_5EOCtmTDccLScCDDyOR1bs63eYwaxv5kgse9LVozTHg.png",
+      "whatsGood": "WebGPUとTSLを用いたプロシージャル生成の実装アプローチに注目。『Akira』風サイバーパンクと水墨画という異質な美学を融合させたビジュアル表現のトーン・テクスチャ設計が参考になる可能性がある。",
+      "extract": "ink-wash風グレースケールパレット, ノイズベースのテクスチャトークン, 有機的なアニメーションイージング, 和風モノクロ配色変数, グレイン/フィルムオーバーレイ強度, プロシージャル背景パターン",
+      "tags": [
+        "procedural",
+        "dark",
+        "motion",
+        "texture",
+        "editorial",
+        "articles"
+      ],
+      "status": "inbox",
+      "date": "2026-09-09",
+      "added": "2026-09-10",
+      "source": "Codrops",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-openscreenshot-19b7bb",
+      "title": "Website Inspiration: OpenScreenShot",
+      "url": "https://onepagelove.com/full-page-screenshot-in-one-click",
+      "shot": "https://iad.microlink.io/eIxTGHmWPE9QRlhzipHWIJcF-mAidsrI0ZheXhMbXfUMs2Vy7tCBLiGM4qFRteEzOcHlNvYRPCGqtaftEEC2RQ.png",
+      "whatsGood": "スクリーンショットツール系SaaSに多い「機能訴求型レイアウト」として、ヒーローセクションのコピー配置とCTAボタンの視覚的重みを確認すると参考になる。オープンソース・多言語対応を示すバッジやラベルの扱い方にも注目したい。",
+      "extract": "hero-cta-button-radius, feature-badge-style, section-divider-spacing, neutral-utility-color-palette, monospace-code-font-pairing, icon-label-lockup",
+      "tags": [
+        "minimal",
+        "utility",
+        "saas",
+        "opensource",
+        "functional",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-09",
+      "added": "2026-09-10",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-svg-doodles-de8580",
+      "title": "Website Inspiration: SVG Doodles",
+      "url": "https://onepagelove.com/svg-doodles",
+      "shot": "https://iad.microlink.io/6tOnUX3ESFfGkqyYMNTiRd_tkjf_bdaquKmYa3mnd4Ebq7YjXHqqrzxxc5Nk0Ic7BJIEV21dNw8RmywTV1J_xA.png",
+      "whatsGood": "手描き風SVGアイコンやシェイプの線質・ストローク表現と、メッシュグラデーションとの組み合わせ方を確認すると参考になる。ドラッグ可能なインタラクションのUXパターンも見ておく価値がある。",
+      "extract": "hand-drawn stroke width token, mesh gradient background vars, svg shape color palette, icon size scale, draggable element shadow/lift state, freeform border-radius",
+      "tags": [
+        "illustration",
+        "interactive",
+        "svg",
+        "gradient",
+        "playful",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-09",
+      "added": "2026-09-10",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "building-an-infinite-liquid-glass-gr-53e87f",
+      "title": "Building an Infinite Liquid Glass Grid with Three.js, WebGPU, and TSL",
+      "url": "https://tympanus.net/codrops/2026/09/08/building-an-infinite-liquid-glass-grid-with-three-js-webgpu-and-tsl/",
+      "shot": "https://iad.microlink.io/vU36f182XK7L1wpBt1k6xn4X786_jlM-6h55Hcknh8YhCFw5AiREAYP0ELkjGsfaX8r-ptdZsDdDY9w6KuA2Xw.png",
+      "whatsGood": "WebGPUとTSLを用いた液体ガラス質感の無限グリッドがどのようにシェーダーレベルで実装されているか、屈折・歪み・光沢の表現手法を観察するとよい。React Three Fiberとの統合パターンも、3Dコンポーネントをデザインシステムへ組み込む際の参考になる。",
+      "extract": "liquid-glass refraction token, backdrop-blur intensity scale, grid-cell aspect-ratio rhythm, surface-highlight gradient stop, depth-distortion blur variable, infinite-scroll tile spacing",
+      "tags": [
+        "glass",
+        "3d",
+        "webgpu",
+        "motion",
+        "dark",
+        "tutorials"
+      ],
+      "status": "inbox",
+      "date": "2026-09-08",
+      "added": "2026-09-10",
+      "source": "Codrops",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-smallbits-c2fb9c",
+      "title": "Website Inspiration: Smallbits",
+      "url": "https://onepagelove.com/smallbits",
+      "shot": "https://iad.microlink.io/SaRGPApzKUYV5g-hPhSG-v3UBmOYlJk0fdu2asz9CDA7iTQORX-VJ_TlQwErO67Ra4TT2HIlCAFlMAT36e7ToQ.png",
+      "whatsGood": "アイコンパターンやライブラリ系ツールのUIとして、グリッドレイアウトや反復要素のリズム感を確認するとよい。Product Hunt Widgetの組み込み方など、サードパーティバッジの配置バランスも参考になる可能性がある。",
+      "extract": "icon-grid-gap, pattern-repeat-spacing, badge-border-radius, widget-shadow-elevation, tool-card-padding, muted-background-color",
+      "tags": [
+        "minimal",
+        "grid",
+        "tool",
+        "light",
+        "product",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-08",
+      "added": "2026-09-10",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "gabriel-beaugonin-bea922",
       "title": "Gabriel Beaugonin",
       "url": "https://minimal.gallery/gabriel-beaugonin/",
