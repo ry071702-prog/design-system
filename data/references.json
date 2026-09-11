@@ -2,6 +2,132 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "buena-57008b",
+      "title": "Buena",
+      "url": "https://minimal.gallery/buena/",
+      "shot": "https://iad.microlink.io/fQ7gSPBJSUmPL4B1hSAiaXy1jo1KVZI6KAbcPL81AL_s0UG0UrFkhBPYgPBHKtH_iHgWxXLWVb3k-uLvVvsBCw.png",
+      "whatsGood": "不動産サイトとしてのミニマルな余白設計と、物件の魅力を引き立てる落ち着いた配色・タイポグラフィの組み合わせに注目。余白のリズムと見出しのウェイト対比が洗練された印象を生む可能性が高い。",
+      "extract": "wide letter-spacing for headings, neutral earth tone palette, generous section padding, serif/sans-serif contrast pairing, subtle grid-based layout, muted background with high-contrast text",
+      "tags": [
+        "minimal",
+        "editorial",
+        "typography",
+        "neutral",
+        "realestate",
+        "real estate"
+      ],
+      "status": "inbox",
+      "date": "2026-09-10",
+      "added": "2026-09-11",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "inside-the-first-threejs-conference--1eaaf3",
+      "title": "Inside the First Three.js Conference in Paris",
+      "url": "https://tympanus.net/codrops/2026/09/10/inside-the-first-three-js-conference-in-paris/",
+      "shot": "https://iad.microlink.io/beX5esd69IWoZ0vItJGJ06joR0akhWZmkBWU51aaCLpkJoDIHTkvu-bcu2tBmYYKESBgX8dY3FrSR0sOjMJt5A.png",
+      "whatsGood": "Three.jsカンファレンスのレポート記事として、WebGLやインタラクティブ3Dを活用したエディトリアルレイアウトや見出し処理に注目すると良い。コードデモや写真の見せ方にCodrops特有のリズム感が出ている可能性が高い。",
+      "extract": "3D/WebGL埋め込みブロックの余白設計, コードスニペットの配色トークン, セクション区切りの水平リズム, 見出し階層のタイポスケール, キャプション用の小サイズテキストスタイル, ヒーロービジュアルのアスペクト比設定",
+      "tags": [
+        "editorial",
+        "typography",
+        "3d",
+        "dark",
+        "minimal",
+        "articles"
+      ],
+      "status": "inbox",
+      "date": "2026-09-10",
+      "added": "2026-09-11",
+      "source": "Codrops",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-hustla-9a5375",
+      "title": "Website Inspiration: Hustla",
+      "url": "https://onepagelove.com/hustla",
+      "shot": "https://iad.microlink.io/ByrcB_jla9dbYRzEcgHEX91Of25-qmOdio41pzksVjtsVD0irOJIfRGgo3LeZwzUcWNNUGa1mLBp50COBIq4qA.png",
+      "whatsGood": "アコーディオンとカードを組み合わせたUI構成が参考になりそう。クリーンな余白設計とチェックリスト・レビューの視覚的階層の付け方を確認したい。",
+      "extract": "accordion-border-radius, card-shadow-subtle, checklist-icon-color, review-star-color, section-vertical-spacing, cta-button-radius",
+      "tags": [
+        "clean",
+        "minimal",
+        "productivity",
+        "cards",
+        "light",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-10",
+      "added": "2026-09-11",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-fromt-6a94fc",
+      "title": "Website Inspiration: fromT",
+      "url": "https://onepagelove.com/fromt",
+      "shot": "https://iad.microlink.io/CrV--MMDGKcgeH7D03Gc5k63S9PPmgmCnc0hReOuod5wwk-ukTNVTb0KyENqS5NZdmTQSwJeHkgikDBCtQg0Mw.png",
+      "whatsGood": "FigmaプラグインのWebアプリUIとして、カードレイアウトのグリッドリズムとフィルター/ソートUIのインタラクションパターンが参考になりそう。言語スイッチャーやPDFダウンロードなどの機能UIがどう整理されているかも確認したい。",
+      "extract": "card-border-radius, filter-chip-style, grid-column-gap, language-switcher-toggle, icon-glyph-size-scale, surface-background-color",
+      "tags": [
+        "card",
+        "tool",
+        "webapp",
+        "minimal",
+        "functional",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-10",
+      "added": "2026-09-11",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-aevion-bf1f66",
+      "title": "Website Inspiration: Aevion",
+      "url": "https://onepagelove.com/aevion",
+      "shot": "https://iad.microlink.io/awvFaa0f545GFK5LUo_gh66bm7s1buQDZOjuYt1fXEdjvnuexRUOM5j_Oiz6UfPMv1hUHtV3pvjHVjmcH6WtyA.png",
+      "whatsGood": "航空・ロボティクス系テックサイトとして、スクロール連動アニメーションや工業的な配色（ダーク＋アクセントカラー）の使い方を確認する価値がある。ロングスクロール構成でのセクション間リズムとモーションの組み合わせ方が参考になりそう。",
+      "extract": "dark-bg-token, industrial-accent-color, scroll-triggered-animation-timing, section-spacing-rhythm, tech-grid-layout, cta-button-glow-effect",
+      "tags": [
+        "dark",
+        "motion",
+        "industrial",
+        "technology",
+        "editorial",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-08",
+      "added": "2026-09-11",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "drawing-with-light-an-exploration-of-54ac5c",
+      "title": "Drawing With Light: An Exploration of Lit GPU Tubes with TSL and WebGPU",
+      "url": "https://tympanus.net/codrops/2026/09/07/drawing-with-light-an-exploration-of-lit-gpu-tubes-with-tsl-and-webgpu/",
+      "shot": "https://iad.microlink.io/LbUkVm2Fr_J2gfodcwdpUVarxw_XHPekojLmKZNkbl_ccuvJR6Yi5ui_f1OGUMkhsBRmUN86V9jJ_WSo_GKWZQ.png",
+      "whatsGood": "WebGPUとTSLを用いた発光チューブ表現の実装アプローチに注目。光源・グロー・ブルームの重なり方や、暗背景に対する輝度コントラストの設計が参考になる可能性が高い。",
+      "extract": "glow-color-token, bloom-intensity-scale, dark-surface-base, emissive-accent-hue, tube-gradient-stop, depth-fog-opacity",
+      "tags": [
+        "dark",
+        "3d",
+        "glow",
+        "webgpu",
+        "motion",
+        "playground"
+      ],
+      "status": "inbox",
+      "date": "2026-09-07",
+      "added": "2026-09-11",
+      "source": "Codrops",
+      "auto": true
+    },
+    {
       "id": "samuel-räikkönen-67bd3c",
       "title": "Samuel Räikkönen",
       "url": "https://minimal.gallery/samuel-raikkonen/",
