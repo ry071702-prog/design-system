@@ -2,6 +2,122 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "goodside-ace6e7",
+      "title": "Goodside",
+      "url": "https://minimal.gallery/goodside/",
+      "shot": "https://iad.microlink.io/i8Sxe7dL3HBPijDaALVWDYewVOUwIkHcq84CDDFyn_-2pTFltpm3FEh28krX83C4rznqsvxr7q3V_c-duPXA-w.png",
+      "whatsGood": "ミニマルギャラリー掲載のエージェンシーサイトとして、余白の取り方とタイポグラフィのスケール感に注目すると参考になりそう。ブランドカラーの使い方やグリッドの整理具合も確認する価値がある。",
+      "extract": "ホワイトスペーストークン, フォントサイズスケール, プライマリ/アクセントカラーペア, グリッドカラム幅, セクション区切りのリズム単位, 見出しウェイト設定",
+      "tags": [
+        "minimal",
+        "agency",
+        "typography",
+        "whitespace"
+      ],
+      "status": "inbox",
+      "date": "2026-09-12",
+      "added": "2026-09-12",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "yestalgia-bringing-decathlons-90s-sp-82a0e0",
+      "title": "Yestalgia: Bringing Decathlon’s ’90s Spirit to Life Through a Playful Digital Experience",
+      "url": "https://tympanus.net/codrops/2026/09/12/yestalgia-bringing-decathlons-90s-spirit-to-life-through-a-playful-digital-experience/",
+      "shot": "https://iad.microlink.io/3gH0gJVCVb1EwRboTigWp58-ZVFaEblDPNB65PpRL_pSVISnkcV-O2Mo5P5oeF1gVs6BaD14hRO-MOfHikwnQA.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "articles",
+        "case study"
+      ],
+      "status": "inbox",
+      "date": "2026-09-12",
+      "added": "2026-09-12",
+      "source": "Codrops",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-nia-creative-0a0a14",
+      "title": "Website Inspiration: Nia Creative",
+      "url": "https://onepagelove.com/nia-creative",
+      "shot": "https://iad.microlink.io/wSzWZkxphAiutT4bBofddIe79JdWLIUo7HTnoz3Ng6pgdtfmzc2v5YZqK06GfjRlxYub_OmfgkwomBJxV5K6mw.png",
+      "whatsGood": "クリエイティブスタジオらしいカード型グリッドレイアウトと、ブランドアイデンティティを体現する配色・タイポの組み合わせ方が参考になりそう。ロングスクロール構成におけるリズムの作り方にも注目したい。",
+      "extract": "card-grid-gap, brand-accent-color, section-vertical-rhythm, editorial-type-scale, scroll-section-spacing, card-border-radius",
+      "tags": [
+        "editorial",
+        "grid",
+        "branding",
+        "minimal",
+        "scrolling",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-12",
+      "added": "2026-09-12",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "eternal-blue-843ecc",
+      "title": "Eternal Blue",
+      "url": "https://minimal.gallery/eternal-blue/",
+      "shot": "https://iad.microlink.io/pjVp-YVhqC5dOVYpbiCVCUamLC5RpGqdjY7cQFwa0qvl0SXcz__HPHeDl4J3m7jFnnv7IN7D2mII2xaDeE4Fgg.png",
+      "whatsGood": "「Eternal Blue」というタイトルと minimal.gallery 出典から、深みのあるブルー系の配色と洗練された余白設計が見どころと推測される。Eコマースでのカラーブランディングの使い方を確認したい。",
+      "extract": "--color-primary-deep-blue, --color-bg-navy, --spacing-section-lg, --font-weight-light, --border-radius-product-card, --shadow-subtle-blue",
+      "tags": [
+        "dark",
+        "minimal",
+        "ecommerce",
+        "monochrome",
+        "editorial",
+        "e-commerce"
+      ],
+      "status": "inbox",
+      "date": "2026-09-11",
+      "added": "2026-09-12",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-readymagic-studi-498a90",
+      "title": "Website Inspiration: READYMAGIC Studio",
+      "url": "https://onepagelove.com/readymagic-studio",
+      "shot": "https://iad.microlink.io/zeIAyAwYrOFKZiT8c0IB3QYCyKzBiU6r4s35RXfkuFPXt5l-BfQmZfB3k99-n8FpW8f6kt1OGqOLowmSJWUDog.png",
+      "whatsGood": "クリエイティブスタジオらしいページロードアニメーションとフローティング要素の組み合わせ方に注目。スムーズスクロールと奥行き演出がどう連動しているかを確認すると参考になる。",
+      "extract": "page-load-animation-timing, floating-element-offset, smooth-scroll-easing, section-spacing-long-scroll, responsive-fluid-type-scale, layered-z-index-depth",
+      "tags": [
+        "motion",
+        "creative",
+        "scroll",
+        "agency",
+        "editorial",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-11",
+      "added": "2026-09-12",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "turning-names-into-digital-architect-60b462",
+      "title": "Turning Names Into Digital Architecture with Three.js",
+      "url": "https://tympanus.net/codrops/2026/09/09/turning-names-into-digital-architecture-with-three-js/",
+      "shot": "https://iad.microlink.io/ZxHnl87WQ5_lVLb7mULnwyFOl0getreDNXqlitWrVTx3iFM_R9p1kSpzOpenOzMtXZ56zhmLwIcbhP6LOhe-sA.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "articles",
+        "3d"
+      ],
+      "status": "inbox",
+      "date": "2026-09-09",
+      "added": "2026-09-12",
+      "source": "Codrops",
+      "auto": true
+    },
+    {
       "id": "buena-57008b",
       "title": "Buena",
       "url": "https://minimal.gallery/buena/",
