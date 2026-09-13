@@ -2,6 +2,48 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "website-inspiration-april-leihuanani-920458",
+      "title": "Website Inspiration: April Leihuanani Evangelista",
+      "url": "https://onepagelove.com/april-leihuanani-evangelista",
+      "shot": "https://iad.microlink.io/3kFJjsoYOvWEqpH_bX6vXcoNjawWStLhs2Djrf_I-6rcyUQPBD5wiVKaijjB2S7yWhXSQPcMBiYaU3-IRvVr6A.png",
+      "whatsGood": "コラージュ的なビジュアル構成とロングスクロールの流れに注目。クリエイティブディレクターのポートフォリオとして、余白のリズムと画像配置のレイアウトパターンが参考になりそう。",
+      "extract": "collage-grid layout, editorial image-text overlap, long-scroll section spacing, organic shape mask, muted california palette, scroll-triggered reveal",
+      "tags": [
+        "editorial",
+        "collage",
+        "portfolio",
+        "longscroll",
+        "minimal",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-12",
+      "added": "2026-09-13",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-dialkit-6fae63",
+      "title": "Website Inspiration: DialKit",
+      "url": "https://onepagelove.com/dialkit",
+      "shot": "https://iad.microlink.io/bdR4Eo51lo7Hd70lNfVpsbmLOu1XioiwSFfDt7xuIfyDWnT2S1dRUurKeqtS8ACbBUzouAeZh2rmTtt8euLFxA.png",
+      "whatsGood": "Liquid GlassとDark Modeの組み合わせによる奥行き表現と、Viewport Sized Typographyによる大胆なスケーリング手法は特に注目。スクロール連動のモーションやガラス質マテリアルのトークン設計の参考になりそう。",
+      "extract": "liquid-glass backdrop-filter値, viewport-clampタイポスケール, dark背景カラートークン, ガラス境界線の border + opacity 組み合わせ, スクロール連動モーションのeasing値, セクション間の余白リズム(vh単位)",
+      "tags": [
+        "dark",
+        "glass",
+        "typography",
+        "motion",
+        "long-scroll",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-07",
+      "added": "2026-09-13",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "goodside-ace6e7",
       "title": "Goodside",
       "url": "https://minimal.gallery/goodside/",
