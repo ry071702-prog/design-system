@@ -2,6 +2,89 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "watts-pet-3ecb5c",
+      "title": "Watts Pet",
+      "url": "https://minimal.gallery/watts-pet/",
+      "shot": "https://iad.microlink.io/38Gp7NR_JAcQ8wFEbfc1XzoDD7p7wi7lY9FPX9fULUIItb-8aSnudA9E1m_h0eQrD389fQgbr8AZ2jG3OUinHw.png",
+      "whatsGood": "ペット系ECとしてはめずらしくミニマルギャラリー掲載のため、過剰な装飾を排した余白設計とタイポグラフィの扱いが洗練されている可能性が高い。商品グリッドのリズムと余白トークンを中心に観察したい。",
+      "extract": "product-grid-gap, card-border-radius, neutral-palette-tokens, body-typeface-scale, cta-button-shape, whitespace-section-spacing",
+      "tags": [
+        "minimal",
+        "ecommerce",
+        "clean",
+        "editorial",
+        "e-commerce"
+      ],
+      "status": "inbox",
+      "date": "2026-09-13",
+      "added": "2026-09-14",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "building-depth-designing-and-develop-781797",
+      "title": "Building Depth: Designing and Developing a 3D Renderer Inside Figma",
+      "url": "https://tympanus.net/codrops/2026/09/13/building-depth-designing-and-developing-a-3d-renderer-inside-figma/",
+      "shot": "https://iad.microlink.io/6gTYCRMa2mzHfG5KMuEowXqtqQQPYk6r9PHi2qz9tn8FfrtNd645opq2Hsd7Bot8Cu-pWEuJK3pxSXFKJaHKtA.png",
+      "whatsGood": "Figma内で3Dレンダラーを構築したケーススタディなので、奥行き表現（影・ライティング・パースペクティブ）の実装アプローチと、WebGL/Three.jsとデザインツールを橋渡しするトークン設計の観点が参考になりそう。",
+      "extract": "depth-shadow tokens, perspective transform values, z-layer scale steps, light-source angle variables, surface material opacity, 3d-to-css fallback patterns",
+      "tags": [
+        "3d",
+        "depth",
+        "webgl",
+        "figma",
+        "motion",
+        "articles"
+      ],
+      "status": "inbox",
+      "date": "2026-09-13",
+      "added": "2026-09-14",
+      "source": "Codrops",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-txt-text-editor-353bc9",
+      "title": "Website Inspiration: Txt Text Editor",
+      "url": "https://onepagelove.com/txt-text-editor",
+      "shot": "https://iad.microlink.io/A-HZMv3H8Apdc8TR8HBC-LNRSVJ55RMWFrnkjGtzEVZSQURv53jh-Sj_AMQonYC4AWBddlZShiKEIKe3Bw0zcA.png",
+      "whatsGood": "ダークモード×ネイチャー系の配色とテキストエディタUIの組み合わせが独特で、タイポグラフィの読みやすさと余白のリズムに注目すると参考になりそう。ロングスクロール構成でのセクション間の奥行き表現（影やレイヤー感）も確認する価値がある。",
+      "extract": "dark-bg-token, nature-accent-color, monospace-font-stack, section-spacing-rhythm, subtle-shadow-depth, scrolling-section-divider",
+      "tags": [
+        "dark",
+        "minimal",
+        "typography",
+        "editorial",
+        "productivity",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-13",
+      "added": "2026-09-14",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-zara-webb-08d4c8",
+      "title": "Website Inspiration: Zara Webb",
+      "url": "https://onepagelove.com/zara-webb",
+      "shot": "https://iad.microlink.io/yoZmgidCfFD6KAeYxeFp1e5UW3wyBq71CAmUU7chu7se-H-axmZnK6-Y5k6BE7vC6Vk_BTDPHKRJiIQ5lDOfPA.png",
+      "whatsGood": "シンプルな細線イラストと余白の使い方に注目。ヒーローイメージとロングスクロール構成のリズム感が参考になりそう。",
+      "extract": "thin-line illustration style, hero image layout, long-scroll section rhythm, soft pastel color palette, minimal serif typography, generous whitespace scale",
+      "tags": [
+        "minimal",
+        "editorial",
+        "soft",
+        "illustration",
+        "light",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-13",
+      "added": "2026-09-14",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "website-inspiration-april-leihuanani-920458",
       "title": "Website Inspiration: April Leihuanani Evangelista",
       "url": "https://onepagelove.com/april-leihuanani-evangelista",
