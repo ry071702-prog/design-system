@@ -19,7 +19,8 @@
       "date": "2026-09-13",
       "added": "2026-09-14",
       "source": "minimal.gallery",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "building-depth-designing-and-develop-781797",
@@ -40,7 +41,8 @@
       "date": "2026-09-13",
       "added": "2026-09-14",
       "source": "Codrops",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "website-inspiration-txt-text-editor-353bc9",
@@ -82,7 +84,8 @@
       "date": "2026-09-13",
       "added": "2026-09-14",
       "source": "One Page Love",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "website-inspiration-april-leihuanani-920458",
@@ -103,7 +106,8 @@
       "date": "2026-09-12",
       "added": "2026-09-13",
       "source": "One Page Love",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "website-inspiration-dialkit-6fae63",
@@ -124,7 +128,8 @@
       "date": "2026-09-07",
       "added": "2026-09-13",
       "source": "One Page Love",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "goodside-ace6e7",
@@ -143,7 +148,8 @@
       "date": "2026-09-12",
       "added": "2026-09-12",
       "source": "minimal.gallery",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "yestalgia-bringing-decathlons-90s-sp-82a0e0",
@@ -160,7 +166,8 @@
       "date": "2026-09-12",
       "added": "2026-09-12",
       "source": "Codrops",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "website-inspiration-nia-creative-0a0a14",
@@ -181,7 +188,8 @@
       "date": "2026-09-12",
       "added": "2026-09-12",
       "source": "One Page Love",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "eternal-blue-843ecc",
@@ -202,7 +210,8 @@
       "date": "2026-09-11",
       "added": "2026-09-12",
       "source": "minimal.gallery",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "website-inspiration-readymagic-studi-498a90",
@@ -223,7 +232,8 @@
       "date": "2026-09-11",
       "added": "2026-09-12",
       "source": "One Page Love",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "turning-names-into-digital-architect-60b462",
@@ -240,7 +250,8 @@
       "date": "2026-09-09",
       "added": "2026-09-12",
       "source": "Codrops",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "buena-57008b",
@@ -282,7 +293,8 @@
       "date": "2026-09-10",
       "added": "2026-09-11",
       "source": "Codrops",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "website-inspiration-hustla-9a5375",
@@ -303,7 +315,8 @@
       "date": "2026-09-10",
       "added": "2026-09-11",
       "source": "One Page Love",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "website-inspiration-fromt-6a94fc",
@@ -345,7 +358,8 @@
       "date": "2026-09-08",
       "added": "2026-09-11",
       "source": "One Page Love",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "drawing-with-light-an-exploration-of-54ac5c",
@@ -366,7 +380,8 @@
       "date": "2026-09-07",
       "added": "2026-09-11",
       "source": "Codrops",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "samuel-räikkönen-67bd3c",
@@ -385,7 +400,8 @@
       "date": "2026-09-09",
       "added": "2026-09-10",
       "source": "minimal.gallery",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "still-from-akira-to-ink-wash-buildin-acf42d",
@@ -406,7 +422,8 @@
       "date": "2026-09-09",
       "added": "2026-09-10",
       "source": "Codrops",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "website-inspiration-openscreenshot-19b7bb",
@@ -448,7 +465,8 @@
       "date": "2026-09-09",
       "added": "2026-09-10",
       "source": "One Page Love",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "building-an-infinite-liquid-glass-gr-53e87f",
@@ -469,7 +487,8 @@
       "date": "2026-09-08",
       "added": "2026-09-10",
       "source": "Codrops",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "website-inspiration-smallbits-c2fb9c",
@@ -490,7 +509,8 @@
       "date": "2026-09-08",
       "added": "2026-09-10",
       "source": "One Page Love",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "gabriel-beaugonin-bea922",
@@ -506,7 +526,8 @@
       "date": "2026-09-08",
       "added": "2026-09-09",
       "source": "minimal.gallery",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "bocstudio-cefadf",
@@ -522,7 +543,8 @@
       "date": "2026-09-07",
       "added": "2026-09-09",
       "source": "minimal.gallery",
-      "auto": true
+      "auto": true,
+      "proposed": true
     },
     {
       "id": "building-a-real-time-3d-face-mask-wi-ad0cb6",
