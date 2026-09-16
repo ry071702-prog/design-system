@@ -2,6 +2,110 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "onœra-8c2da5",
+      "title": "Onœra",
+      "url": "https://minimal.gallery/onoera/",
+      "shot": "https://iad.microlink.io/qg7JfXHmWyC22RE9PDO7kjb9I9SLuHX0fEFbyIpIvngCGJp5Wz9G-JJcRzkfo5iDOrcyqsfrnGNJXSekD9H6Ew.png",
+      "whatsGood": "minimal.galleryに掲載されるワークショップ・コーチング系サイトとして、余白の取り方と読みやすいタイポグラフィの組み合わせに注目すると参考になりそう。ブランド名の独自性からロゴまわりのレタースペーシングや見出しフォントの選定も確認する価値がある。",
+      "extract": "wide letter-spacing for headings, generous section padding, muted neutral palette, single-accent color token, clean sans-serif type scale, minimal border or divider treatment",
+      "tags": [
+        "minimal",
+        "typography",
+        "whitespace",
+        "neutral",
+        "editorial",
+        "workshop"
+      ],
+      "status": "inbox",
+      "date": "2026-09-15",
+      "added": "2026-09-16",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-shawn-golden-ac99fd",
+      "title": "Website Inspiration: Shawn Golden",
+      "url": "https://onepagelove.com/shawn-golden",
+      "shot": "https://iad.microlink.io/4p9JrtWH1KWRfh5-pUogO7grpK_6FvK371MaCNaloOsYdCUFTg71GfdE0EvL5VNROXCYLrZNEAqrKpX39iKvGQ.png",
+      "whatsGood": "手描き風イラストとクロック・カラーピッカーなどインタラクティブ要素の組み合わせ方が独特で、ユーモラスなコピーライティングとのトーン統一感を確認したい。アニメーションが手描きテイストをどう補強しているかも注目ポイント。",
+      "extract": "hand-drawn border radius, quirky font pairing, local-time driven color token, playful animation easing, illustration-integrated layout, accent color from picker UI",
+      "tags": [
+        "illustration",
+        "quirky",
+        "motion",
+        "colorful",
+        "editorial",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-15",
+      "added": "2026-09-16",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "sonderdays-68af37",
+      "title": "Sonderdays",
+      "url": "https://minimal.gallery/sonderdays/",
+      "shot": "https://iad.microlink.io/32hyPaiARzmzBqp0xFSlQINMVilqQ1tt5mlP0-2hVbZVzy_1rBAqhhabTD3YQpCk2PaUc-noF93ODkijTNQtBw.png",
+      "whatsGood": "ミニマルギャラリー掲載のトラベル×フード系サイトとして、余白の取り方と写真を活かしたレイアウトリズムに注目すると参考になりそう。配色はニュートラルまたはアースト―ン系の可能性が高く、ブランドカラーの使い方も確認する価値がある。",
+      "extract": "earth-tone color palette, generous whitespace scale, editorial photo layout, serif + sans-serif pairing, subtle section dividers, muted accent color",
+      "tags": [
+        "minimal",
+        "editorial",
+        "travel",
+        "neutral",
+        "typography"
+      ],
+      "status": "inbox",
+      "date": "2026-09-14",
+      "added": "2026-09-16",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-locker-land-374e52",
+      "title": "Website Inspiration: Locker Land",
+      "url": "https://onepagelove.com/locker-land",
+      "shot": "https://iad.microlink.io/mJs865XewKFVCGC7bV-EyiMLl1KN43GqpbO0L7VKBXWVOjs2_HCl9f4uoUQxfqkT4NYmXMBtXlWc6Mj73b3TDQ.png",
+      "whatsGood": "「Background Pattern」と「Logistics」の組み合わせから、機能的でありながら視覚的なリズムを持つパターン活用が見どころ。「Checkout Process」も含むため、フォームやステップUIのレイアウトとスペーシングの処理方法を確認したい。",
+      "extract": "background-pattern-tile, step-indicator-spacing, checkout-form-layout, section-rhythm-padding, campaign-hero-type-scale, logistics-icon-system",
+      "tags": [
+        "pattern",
+        "campaign",
+        "ecommerce",
+        "layout",
+        "functional",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-14",
+      "added": "2026-09-16",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-miso-f29782",
+      "title": "Website Inspiration: Miso",
+      "url": "https://onepagelove.com/miso",
+      "shot": "https://iad.microlink.io/KoiNMQJJA4p4SezlxAfchxMmnKSw8QGPMwXexYcdvZA7U5TA4rgTxesogL7TUtwph7sLTb4ENfEF7L_Y-D1-Wg.png",
+      "whatsGood": "Misoというアプリ系サービスのミニマルな一枚もの構成で、Apple的な余白感とタイポグラフィのスケール感が参考になりそう。AIチャット×旅行という文脈からモノクロベースに差し色を効かせた配色パターンも注目したい。",
+      "extract": "large-scale-hero-typography, generous-whitespace-section, monochrome-base-palette, accent-color-token, app-mockup-float-layout, subtle-card-shadow",
+      "tags": [
+        "minimal",
+        "typography",
+        "dark",
+        "editorial",
+        "app",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-14",
+      "added": "2026-09-16",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "watts-pet-3ecb5c",
       "title": "Watts Pet",
       "url": "https://minimal.gallery/watts-pet/",
