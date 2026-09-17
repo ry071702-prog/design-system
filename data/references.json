@@ -2,6 +2,66 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "kiara-di-gregorio-43e9c3",
+      "title": "Kiara Di Gregorio",
+      "url": "https://minimal.gallery/kiara-di-gregorio/",
+      "shot": "https://iad.microlink.io/RJnUrBJJXzEVkiC1b07oJdQ0a_ZHS7u_Y7SaXa6-IHB_uqkMgbDb1ffbiMh_ZXvD9_gNkyi9zOwC7dDkxiEFwg.png",
+      "whatsGood": "ミニマルギャラリー掲載のポートフォリオ系個人サイトとして、余白の取り方とタイポグラフィの階層設計が参考になる可能性が高い。配色はモノクロまたは限定パレットで洗練されたリズムを持つ構成が想定される。",
+      "extract": "ベースとなるホワイト/オフホワイト背景トークン, セリフ×サンセリフの混在フォントペア, 大きめのline-height設定, セクション間の広い余白(spacing-xl〜2xl), テキストサイズのスケール比率, ミニマルなリンクアンダーラインスタイル",
+      "tags": [
+        "minimal",
+        "typography",
+        "editorial",
+        "portfolio"
+      ],
+      "status": "inbox",
+      "date": "2026-09-16",
+      "added": "2026-09-17",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-weeksync-f9aefb",
+      "title": "Website Inspiration: WeekSync",
+      "url": "https://onepagelove.com/weeksync",
+      "shot": "https://iad.microlink.io/HxkgQC9lbGkaF8Buaolj3ALC3dsYo6v5f0cFCKrOEJ_fK3cvJ3-GDxX0XeRBSkbKLWGyGD1nikiAyp0UwQIRCw.png",
+      "whatsGood": "プロダクティビティ系ツールのランディングページとして、SVGアニメーションを使ったUI説明の見せ方と、長いスクロールでも飽きさせないセクションリズムに注目したい。配色はクリーンで機能的なトーンが予想されるため、ユーティリティ系プロダクトへの転用しやすさを確認するとよい。",
+      "extract": "section-rhythm-spacing, svg-animation-timing, feature-illustration-layout, cta-button-style, neutral-functional-palette, scroll-triggered-reveal",
+      "tags": [
+        "minimal",
+        "motion",
+        "productivity",
+        "longscroll",
+        "svg",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-16",
+      "added": "2026-09-17",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "article-7-practical-seo-tips-for-one-61d82a",
+      "title": "Article: 7 Practical SEO Tips for One Page Websites",
+      "url": "https://onepagelove.com/7-practical-seo-tips-for-one-page-websites",
+      "shot": "https://iad.microlink.io/-yY_JJMbCeMj08Q8x1O-u3TH-bMuR7bhYBSl7ApdofPutwsXurR9R-tbevGXgkbUiJoY97jCWSzyUAqT85flAQ.png",
+      "whatsGood": "SEO記事のレイアウト構成として、見出し階層・本文の行長・リスト要素の余白リズムに注目すると参考になる可能性がある。ワンページサイト特化の文脈から、セクション区切りの視覚的処理も確認する価値がある。",
+      "extract": "article-body line-height, heading scale ratio, list-item spacing, section divider style, readable column width, anchor link styling",
+      "tags": [
+        "editorial",
+        "typography",
+        "minimal",
+        "article",
+        "articles"
+      ],
+      "status": "inbox",
+      "date": "2026-09-16",
+      "added": "2026-09-17",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "onœra-8c2da5",
       "title": "Onœra",
       "url": "https://minimal.gallery/onoera/",
