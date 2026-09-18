@@ -2,6 +2,48 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "driftime-impact-report-17ca05",
+      "title": "Driftime Impact Report",
+      "url": "https://minimal.gallery/driftime-impact-report/",
+      "shot": "https://iad.microlink.io/NqEk8uoy1slfMGMle7cek29ols29-bNU67na-GwQlbbPm13inxwbNqqmklpchsmkGZWnt9ATOFxFKFqlRuapIA.png",
+      "whatsGood": "アニュアルレポートとしてのデータ可視化と余白のバランス、editorial的なタイポグラフィ階層が参考になりそう。minimal.galleryからの収集である点から、過剰装飾を排した誠実なレイアウト設計が見どころと推測される。",
+      "extract": "large-scale-heading-scale, data-callout-number-style, section-divider-spacing, neutral-base-palette, report-grid-column-layout, caption-text-style",
+      "tags": [
+        "minimal",
+        "editorial",
+        "typography",
+        "data",
+        "report",
+        "annual report"
+      ],
+      "status": "inbox",
+      "date": "2026-09-17",
+      "added": "2026-09-18",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-colosse-foundry-27daf4",
+      "title": "Website Inspiration: Colosse Foundry",
+      "url": "https://onepagelove.com/colosse",
+      "shot": "https://iad.microlink.io/3BN06l5qSqBo4B2EHr_Vgz76CbFj_e8Ru-Ao8FW8B6O4ZOSzO0BJ_yJTM49cZuwivZ4YA4aTbXuZoof9h1bo_Q.png",
+      "whatsGood": "フローティング要素とパララックスを組み合わせたタイポグラフィ主体のフォント販売サイトと推測。グリッドを意図的に見せるレイアウト構造と、スクロールに連動した奥行き演出の使い方を確認したい。",
+      "extract": "visible-grid overlay token, parallax depth layer variable, floating element z-index scale, long-scroll section spacing rhythm, editorial headline font-size scale, gumroad CTA button style",
+      "tags": [
+        "typography",
+        "editorial",
+        "grid",
+        "parallax",
+        "motion",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-17",
+      "added": "2026-09-18",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "kiara-di-gregorio-43e9c3",
       "title": "Kiara Di Gregorio",
       "url": "https://minimal.gallery/kiara-di-gregorio/",
