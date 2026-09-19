@@ -2,6 +2,56 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "linkletter-a8febe",
+      "title": "LinkLetter",
+      "url": "https://minimal.gallery/linkletter/",
+      "shot": "https://iad.microlink.io/dq7ZEOQ0LStJ93kcp240Ango2DPAmQPfBDoganSj3zX6Bi75SoRv06bL_q1B72JPq18jhSpliHCUQqUjBX6EMw.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "startup"
+      ],
+      "status": "inbox",
+      "date": "2026-09-18",
+      "added": "2026-09-19",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-rafael-derolez-faf26d",
+      "title": "Website Inspiration: Rafael Derolez",
+      "url": "https://onepagelove.com/rafael-derolez-2026",
+      "shot": "https://iad.microlink.io/5XKyt9wkcE5XwZkHayylrCpv9CHf1oVuyWVjA-kmYeRrj8E5ZnMkjdo_tHXyHTq9A_z5KCgyOfJLdAft7gd9gw.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "inspiration",
+        "big images"
+      ],
+      "status": "inbox",
+      "date": "2026-09-18",
+      "added": "2026-09-19",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-kontu-cee76d",
+      "title": "Website Inspiration: Kontu",
+      "url": "https://onepagelove.com/kontu",
+      "shot": "https://iad.microlink.io/yReccYFNGedvnlFcVJZu2fclh3vVaQMDm04PQvew8L2eVNil91Oo8hv15y-QgmJftUu8dS-DKYVR8ppD4Yjohg.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "inspiration",
+        "banking"
+      ],
+      "status": "inbox",
+      "date": "2026-09-18",
+      "added": "2026-09-19",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "driftime-impact-report-17ca05",
       "title": "Driftime Impact Report",
       "url": "https://minimal.gallery/driftime-impact-report/",
