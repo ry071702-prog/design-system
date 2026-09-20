@@ -2,6 +2,39 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "united-flags-of-fashion-91dab5",
+      "title": "United Flags of Fashion",
+      "url": "https://minimal.gallery/united-flags-of-fashion/",
+      "shot": "",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "art"
+      ],
+      "status": "inbox",
+      "date": "2026-09-19",
+      "added": "2026-09-20",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-poetry-camera-59fd54",
+      "title": "Website Inspiration: poetry camera",
+      "url": "https://onepagelove.com/poetry-camera",
+      "shot": "",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "inspiration",
+        "art"
+      ],
+      "status": "inbox",
+      "date": "2026-09-19",
+      "added": "2026-09-20",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "linkletter-a8febe",
       "title": "LinkLetter",
       "url": "https://minimal.gallery/linkletter/",
