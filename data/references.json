@@ -2,6 +2,23 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "website-inspiration-spatial-868072",
+      "title": "Website Inspiration: Spatial",
+      "url": "https://onepagelove.com/spatial",
+      "shot": "https://iad.microlink.io/anYLYKbCMHpMyEde_RFwj6eq7bBr4X3CfXIhQdXSI6JlJARbnGuJH567XXoO3IUlxRloV7nUd0-kg5fds8b0rQ.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "inspiration",
+        "animations"
+      ],
+      "status": "inbox",
+      "date": "2026-09-20",
+      "added": "2026-09-21",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "united-flags-of-fashion-91dab5",
       "title": "United Flags of Fashion",
       "url": "https://minimal.gallery/united-flags-of-fashion/",
