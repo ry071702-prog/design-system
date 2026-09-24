@@ -2,6 +2,48 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "website-inspiration-archiv-dcff07",
+      "title": "Website Inspiration: ARCHIV",
+      "url": "https://onepagelove.com/archiv",
+      "shot": "https://iad.microlink.io/X1MsfxQS-aIQcuP0QsnRysdN5oQiHHQaPYDqXGlbklQUpyjrciClxqan7hKd9hHck7kmwjPTV27wHVg8EyAloQ.png",
+      "whatsGood": "「Whitespace」「Text Logo」「Announcement Sign Up Box」のキーワードから、余白を大胆に使ったタイポグラフィ主体のレイアウトと、シンプルなメールサインアップUIの設計が参考になりそう。コレクション系サービスのローンチページとして、情報を絞り込んだミニマルな構成の見せ方に注目したい。",
+      "extract": "--spacing-xl (大余白トークン), --font-size-display (ヒーロー用大見出し), --color-surface (背景の白/オフホワイト), --input-border-radius (サインアップフォーム), --font-weight-logo (テキストロゴ用ウェイト), --max-width-content (中央寄せコンテナ幅)",
+      "tags": [
+        "minimal",
+        "whitespace",
+        "typography",
+        "editorial",
+        "launch",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-23",
+      "added": "2026-09-24",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-deeo-studio-9f5dd4",
+      "title": "Website Inspiration: Deeo Studio",
+      "url": "https://onepagelove.com/deeo-studio-2",
+      "shot": "https://iad.microlink.io/5J9D_lks-N7XgAL4VLl7I0sE-jAUfVMJOHASyNGkcjYkx_ZkFiGlXAVcmP3K4ke2DlvgZ_RBdk-zdXo6IZOjGA.png",
+      "whatsGood": "WebGLとメッシュグラデーションを組み合わせたインタラクティブな背景表現と、ロングスクロール時のアニメーション演出のリズム感を確認するとよい。クリエイティブスタジオらしい大胆なビジュアル階層の作り方も参考になりそう。",
+      "extract": "mesh-gradient-background, webgl-hero-transition, scroll-triggered-animation, large-image-reveal, fluid-section-spacing, interactive-cursor-effect",
+      "tags": [
+        "motion",
+        "dark",
+        "creative",
+        "gradient",
+        "interactive",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-21",
+      "added": "2026-09-24",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "the-reach-c302a8",
       "title": "The Reach",
       "url": "https://minimal.gallery/the-reach/",
