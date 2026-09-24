@@ -2,6 +2,128 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "the-reach-c302a8",
+      "title": "The Reach",
+      "url": "https://minimal.gallery/the-reach/",
+      "shot": "https://iad.microlink.io/hiO41mtSCOWMNXlRm1NOEPfj0wTdMhaCWHCeuLCsyJd8xHnofPAvt3XLGD3AP02iaaCZso1WhxMK-0AbSPkmtg.png",
+      "whatsGood": "トラベル系ミニマルギャラリー掲載作品として、広大な風景を活かした余白の取り方とタイポグラフィのスケール感に注目する価値がある。ヒーローエリアの画像とテキストの重なり方・コントラスト確保の手法も確認したい。",
+      "extract": "hero-fullbleed-image-overlay, large-display-typeface, generous-whitespace-section, muted-neutral-palette, text-on-image-contrast-layer, fluid-typography-scale",
+      "tags": [
+        "minimal",
+        "editorial",
+        "travel",
+        "typography"
+      ],
+      "status": "inbox",
+      "date": "2026-09-23",
+      "added": "2026-09-23",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-uni-d8f092",
+      "title": "Website Inspiration: Uni",
+      "url": "https://onepagelove.com/uni",
+      "shot": "https://iad.microlink.io/8lX7MwjHiznZTGtE5EQ_gZV_-XDVO2pLMza6Hk_cBV7bhj41ibYN6WQ_9Drszf2byTaafbxJIyfiWRJJj1QTqg.png",
+      "whatsGood": "AIプロダクティビティツールのランディングページとして、情報階層の整理やCTAの配置バランスに注目すると参考になりそう。プライバシー訴求を含むSaaSらしいトラスト要素の見せ方も確認したい。",
+      "extract": "hero-section-spacing, cta-button-radius, trust-badge-layout, feature-card-grid, neutral-background-palette, section-divider-rhythm",
+      "tags": [
+        "minimal",
+        "saas",
+        "productivity",
+        "light",
+        "editorial",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-23",
+      "added": "2026-09-23",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "joshua-baker-bc0a27",
+      "title": "Joshua Baker",
+      "url": "https://minimal.gallery/joshua-baker/",
+      "shot": "https://iad.microlink.io/NT0m9Pvo_DjxeKJUEdAxwnG60tNO74MT4mbeJjCrmzsIpQXaWPus5gW-er3viXkEO0w1WPt3fvCX-m6RT9pODA.png",
+      "whatsGood": "ミニマルギャラリー掲載のポートフォリオとして、余白の取り方とタイポグラフィの階層設計が洗練されている可能性が高い。個人サイトならではのパーソナルなカラーパレットやフォント選定も注目したい。",
+      "extract": "ベースとなるモノクロ or 抑制されたカラーパレット, 見出し用セリフ/サンセリフの対比, 広めのセクション余白トークン, シンプルなホバーアンダーライン, グリッドベースの作品サムネイルレイアウト",
+      "tags": [
+        "minimal",
+        "portfolio",
+        "typography",
+        "whitespace"
+      ],
+      "status": "inbox",
+      "date": "2026-09-22",
+      "added": "2026-09-23",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-humanoid-index-dd44fa",
+      "title": "Website Inspiration: Humanoid Index",
+      "url": "https://onepagelove.com/humanoid-index",
+      "shot": "https://iad.microlink.io/xax0iLMWUqbyBotR0wZejzGXvDy6Jp0gnHUPHF87B6-tbxOxXaAem9SrnclxhCx8qveppv8BqFtqdt18GM4lrg.png",
+      "whatsGood": "AIロボティクス系ディレクトリサイトとして、テクノロジーの無機質さと人間らしさを橋渡しする配色・タイポのバランスが参考になりそう。インタラクティブ要素を持つディレクトリUIとして、カード/リストの情報密度とホバー演出の処理方法に注目したい。",
+      "extract": "robot-card-grid-layout, monospace-or-technical-typeface, neutral-dark-base-palette, interactive-hover-depth-shadow, directory-filter-ui-pattern, accent-color-on-dark-bg",
+      "tags": [
+        "dark",
+        "interactive",
+        "editorial",
+        "technology",
+        "minimal",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-22",
+      "added": "2026-09-23",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "takecontrol-a82467",
+      "title": "TakeControl",
+      "url": "https://minimal.gallery/takecontrol/",
+      "shot": "https://iad.microlink.io/lkZQ1y47_3PSqLpTM8kait6VU0LG0-BUFQrpTOMTvoptXCed-6Sa0A6Yu4ETuJ8GFhpr258UsJmaptGg31DPIQ.png",
+      "whatsGood": "ミニマルギャラリー掲載のファイナンス×アプリ系ワンページサイトとして、限られたスペースで信頼感を演出する配色（ネイビー・グリーン系が多い傾向）とタイポグラフィの階層設計が参考になりそう。CTAボタンの余白設計やセクション間のリズムも確認したい。",
+      "extract": "primary-color token (finance向け信頼感カラー), cta-button-padding, heading-scale (display〜body), section-spacing-vertical, card-border-radius, one-page-scroll-anchor-offset",
+      "tags": [
+        "minimal",
+        "finance",
+        "onepage",
+        "app",
+        "typography",
+        "one page"
+      ],
+      "status": "inbox",
+      "date": "2026-09-21",
+      "added": "2026-09-23",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-rows-0b4e7a",
+      "title": "Website Inspiration: Rows",
+      "url": "https://onepagelove.com/rows",
+      "shot": "https://iad.microlink.io/PMwgwUfAIImZMELPnvme_ijLif_MGM5eZrzpnkMQsY2uzH8Ew90qw2nUyLNoZiuT726J0TJCZxjbwoqwOz9aGg.png",
+      "whatsGood": "「Draggable」「In-Page Demo」タグから、インタラクティブなデモUIとドラッグ操作のフィードバック表現（影・カーソル変化など）が見どころと推測。「Clever Copywriting」も併せて、機能説明をどう視覚リズムに乗せているかのレイアウト構成も参考になりそう。",
+      "extract": "draggable-card shadow token, interactive demo container spacing, section scroll rhythm (long-scroll), feature copy + visual split layout, workspace UI surface color, subtle elevation on drag state",
+      "tags": [
+        "interactive",
+        "productivity",
+        "long-scroll",
+        "webapp",
+        "minimal",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-21",
+      "added": "2026-09-23",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "website-inspiration-spatial-868072",
       "title": "Website Inspiration: Spatial",
       "url": "https://onepagelove.com/spatial",
