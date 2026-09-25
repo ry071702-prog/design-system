@@ -2,6 +2,26 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "bswt-ca23b1",
+      "title": "BSWT",
+      "url": "https://minimal.gallery/bswt/",
+      "shot": "https://iad.microlink.io/ayq6pLEPQ5MTdIjMwS3A0Fv_3ZMPwmHGgy3P150a1yJVAr2MwUJSQpDxJ9-_NUZ74tlHO4HdvFSA6mSSjiJ04A.png",
+      "whatsGood": "エージェンシー・プロダクションスタジオ系サイトとして、ブランドの強さを伝えるタイポグラフィの扱いと余白のリズムに注目すると参考になりそう。ミニマルギャラリー掲載作品らしく、引き算の美学による配色やレイアウト構成も確認する価値がある。",
+      "extract": "large-display-font-size, tight-letter-spacing, high-contrast-color-pair, generous-section-padding, monochrome-palette, grid-column-gap",
+      "tags": [
+        "minimal",
+        "agency",
+        "typography",
+        "editorial",
+        "dark"
+      ],
+      "status": "inbox",
+      "date": "2026-09-24",
+      "added": "2026-09-25",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
       "id": "website-inspiration-archiv-dcff07",
       "title": "Website Inspiration: ARCHIV",
       "url": "https://onepagelove.com/archiv",
