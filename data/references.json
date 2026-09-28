@@ -2,6 +2,175 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "xanvier-allison-9f8c54",
+      "title": "Xanvier Allison",
+      "url": "https://minimal.gallery/xanvier-allison/",
+      "shot": "https://iad.microlink.io/LC8htf4bK_3GbJPfewSafJJ8OfEkTnXD4gmp4-D-r1FjCKU5pXWiayxd_H8yVIXV2sXDz1Fy-wb0zu34r5WAcg.png",
+      "whatsGood": "ミニマルギャラリー掲載のプロダクションスタジオ系ポートフォリオとして、余白の取り方とタイポグラフィの階層設計が洗練されている可能性が高い。配色の抑制度合いとグリッドの崩し方を重点的に確認したい。",
+      "extract": "ネガティブスペース比率, 見出しフォントサイズスケール, モノクロームカラーパレット, グリッドブレイクポイント, セクション区切りのリズム, ホバーインタラクションの微細アニメーション",
+      "tags": [
+        "minimal",
+        "portfolio",
+        "typography",
+        "editorial",
+        "monochrome"
+      ],
+      "status": "inbox",
+      "date": "2026-09-27",
+      "added": "2026-09-28",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-artem-taradash-399f62",
+      "title": "Website Inspiration: Artem Taradash",
+      "url": "https://onepagelove.com/artem-taradash",
+      "shot": "https://iad.microlink.io/Q0ze0vXiQzzoA_6tVMvOp69PlDGsYeCCvCfDsRV9ORhsNA329CI49EbUywuGB0cnOW5Gn27Ak6Y7SNH1GIQoEw.png",
+      "whatsGood": "クリエイティブディレクター/プロダクトデザイナーのポートフォリオと思われるため、CSS Gridを活用した大判イメージの配置リズムと、ロングスクロール時のセクション間の余白設計が参考になりそう。AIや自動車・フィンテック案件を扱う幅広さから、ダークトーンと洗練されたタイポグラフィの組み合わせにも注目したい。",
+      "extract": "css-grid-asymmetric-layout, large-hero-image-ratio, section-spacing-scale, dark-brand-palette, editorial-type-scale, scroll-driven-section-transition",
+      "tags": [
+        "dark",
+        "editorial",
+        "grid",
+        "portfolio",
+        "minimal",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-27",
+      "added": "2026-09-28",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "provider-studio-c41d8c",
+      "title": "Provider Studio",
+      "url": "https://minimal.gallery/provider-studio/",
+      "shot": "https://iad.microlink.io/5i-xQRN7TwS6XZB3Yx-XL4HFme18FIvS4a9_Vw4nuAu3zaWbXbiAYHkfeUmjXvyVUfawZ_8Rm_8j6u7dZ1VV4w.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "agency"
+      ],
+      "status": "inbox",
+      "date": "2026-09-26",
+      "added": "2026-09-27",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "esr-bespoke-f0d4a2",
+      "title": "ESR Bespoke",
+      "url": "https://minimal.gallery/esr-bespoke/",
+      "shot": "https://iad.microlink.io/FQhXLIuVq9BvQO7lilMdu-_Vr1UC3g-3fBxtBgdqgqzs3wup1T1blYEq8Sa0yTapRxSNtECAe-xAM2D5KviKKw.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "automotive"
+      ],
+      "status": "inbox",
+      "date": "2026-09-26",
+      "added": "2026-09-27",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-statements-260c3a",
+      "title": "Website Inspiration: Statements",
+      "url": "https://onepagelove.com/statements",
+      "shot": "https://iad.microlink.io/uKruN31dsS9iwVMi6zs6A5WGYPxaR2UhsHotBLECbfGjFyZps6uL3hw7_3z8N8aCnkcqsdqQBVq0B3-lA3piBQ.png",
+      "whatsGood": "会計・バンキング系ツールのワンページ構成として、データの視認性を高める配色とタイポグラフィの使い方に注目。長いスクロールでも情報密度を保つセクション分割のリズムが参考になる可能性がある。",
+      "extract": "data-table typography scale, neutral+accent color tokens, section divider spacing, card elevation for financial data, CTA button hierarchy, upload interaction state",
+      "tags": [
+        "minimal",
+        "data",
+        "fintech",
+        "longscroll",
+        "productivity",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-26",
+      "added": "2026-09-27",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "nomad-labs-afd537",
+      "title": "Nomad Labs",
+      "url": "https://minimal.gallery/nomad-labs/",
+      "shot": "https://iad.microlink.io/rO9ZDKx0X2tMzF9Pc92KaqNNgglY4JSNy7Y3I3nn-xcQ7zfyxR45zAyoAzZ-iG8LjMKYvfQNeqA-Ok0fnlGWqA.png",
+      "whatsGood": "ミニマルギャラリー掲載のエージェンシー系スタジオサイトとして、抑制された配色と大胆なタイポグラフィの組み合わせを確認したい。余白のリズムとグリッドの取り方がブランドの洗練度を左右している可能性が高い。",
+      "extract": "モノクロームまたは限定色パレット, 大型サンセリフ見出しのfont-size scale, セクション間の広めなpadding-block, グリッドベースのプロジェクトカードレイアウト, ホバー時のテキスト切り替えアニメーション, ミニマルなボーダーラインセパレーター",
+      "tags": [
+        "minimal",
+        "agency",
+        "typography",
+        "monochrome",
+        "editorial"
+      ],
+      "status": "inbox",
+      "date": "2026-09-25",
+      "added": "2026-09-26",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-plastic-f9c3ac",
+      "title": "Website Inspiration: Plastic",
+      "url": "https://onepagelove.com/plastic",
+      "shot": "https://iad.microlink.io/ch9AE7nBlx1942z6vWRZDP0hdH1HMKaH3jLESxh0LZjEA4wGGRTMvSCJ2qeUzHsClmtD5kzjurBviNH5kCQosQ.png",
+      "whatsGood": "「Plastic」というプロダクト名とビニール・カメラ検出というキーワードから、アナログ質感（グレイン・フィルム風テクスチャ）とモダンUIの対比が見どころと推測される。ロングスクロール構成でのセクション間リズムと、音楽・ビニール盤を想起させる配色（暖色系ニュートラルまたはレトロパレット）に注目したい。",
+      "extract": "retro-grain-texture-overlay, warm-neutral-color-palette, long-scroll-section-spacing, film-inspired-typography-scale, vinyl-circle-motif-as-ui-element, muted-sepia-accent-token",
+      "tags": [
+        "retro",
+        "texture",
+        "longscroll",
+        "editorial",
+        "dark",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-25",
+      "added": "2026-09-26",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-typewave-1a59c2",
+      "title": "Website Inspiration: Typewave",
+      "url": "https://onepagelove.com/typewave",
+      "shot": "https://iad.microlink.io/orW-zlflbfVsay9OUDnnj0_4guj_Tx-okY_yFSI6QSU9ne6jP6vUoUa9aX_J8TzrosTFf1Z11SL7d7SKlBc4Sg.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "inspiration",
+        "artificial intelligence (ai)"
+      ],
+      "status": "inbox",
+      "date": "2026-09-25",
+      "added": "2026-09-26",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-tara-98b4fc",
+      "title": "Website Inspiration: Tara",
+      "url": "https://onepagelove.com/tara",
+      "shot": "https://iad.microlink.io/MWsnGC9uq-y_e-KbZp_0uFXtXamiB_4LFuN2r1ZjDZ8kYbx69WLXkShjpjWQIPZdc6pq9smc16FOOk8mziNSnw.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "inspiration",
+        "banking"
+      ],
+      "status": "inbox",
+      "date": "2026-09-25",
+      "added": "2026-09-26",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "bswt-ca23b1",
       "title": "BSWT",
       "url": "https://minimal.gallery/bswt/",
