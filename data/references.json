@@ -2,6 +2,84 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "union-bboulangerie-c307fa",
+      "title": "Union Bboulangerie",
+      "url": "https://minimal.gallery/union-bboulangerie/",
+      "shot": "https://iad.microlink.io/7mha2B27F9xmQJxBoT9zC5_WexgLbmtt9MW2Zf6B4052aA-XSnKhvW_-lCfi5_O3U6YKM7FQ5okmG3mJM2buAg.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "food & drink"
+      ],
+      "status": "inbox",
+      "date": "2026-09-29",
+      "added": "2026-09-30",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-viewport-ba6a91",
+      "title": "Website Inspiration: Viewport",
+      "url": "https://onepagelove.com/viewport-2",
+      "shot": "https://iad.microlink.io/U48AWQC1pQn8Aeftpj87Aw5qZHAOjUEJDPOjDMFTvfx9Nf1FCR6074miOM-j9lBJ_yPphNtHUNtz75fAgafjnw.png",
+      "whatsGood": "ダークモード×グロウエフェクトの組み合わせで、ソフトウェアUIをどう魅力的に見せているかに注目。長いスクロールの中でプロダクトデモをどのリズムで挟んでいるかも参考になる。",
+      "extract": "dark-background-token, glow-color-accent, section-scroll-rhythm, product-demo-frame-shadow, in-page-demo-container, cta-glow-button",
+      "tags": [
+        "dark",
+        "glow",
+        "motion",
+        "product",
+        "longscroll",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-29",
+      "added": "2026-09-30",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "origin-cd5999",
+      "title": "Origin",
+      "url": "https://minimal.gallery/origin/",
+      "shot": "https://iad.microlink.io/Qvt_Do_sIXRYGG9ZEPgTTURlkmRnl2VB5dMf_uf6CSSWTjPwaWWqlGLnIF_CpnwLiuKvbTAjBwQ9KU3Ts0Hi3w.png",
+      "whatsGood": "エージェンシー・ブランディング系として、余白の取り方とタイポグラフィの階層設計が洗練されている可能性が高い。ロゴやワードマークの扱いとグリッドの整合性を重点的に確認したい。",
+      "extract": "ベースとなるネガティブスペース比率, 見出しフォントサイズスケール, ブランドカラーのプライマリ／アクセント2色構成, セクション区切りの余白トークン, ボタン／CTAのシンプルなボーダースタイル, グリッドカラム幅の基準値",
+      "tags": [
+        "minimal",
+        "editorial",
+        "branding",
+        "typography",
+        "agency"
+      ],
+      "status": "inbox",
+      "date": "2026-09-28",
+      "added": "2026-09-30",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-flowjam-c2839a",
+      "title": "Website Inspiration: Flowjam",
+      "url": "https://onepagelove.com/flowjam-2",
+      "shot": "https://iad.microlink.io/69NQzS2QGlWIhj_jkWmXjlvi-3-KhKPuJxG-ofjussnXPHmOTkbMdkCpHZ1FY7C8AexlrzbPIT_Iq-eqS19o0g.png",
+      "whatsGood": "スクロール連動アニメーションとCSS Gridを組み合わせた長尺レイアウトの流れが参考になりそう。フローラルモチーフとAIテーマの融合による配色・テクスチャの使い方も注目したい。",
+      "extract": "scroll-driven animation timing, css-grid area template, video-modal overlay backdrop, floral accent color palette, long-scroll section rhythm spacing, founder/explainer hero layout",
+      "tags": [
+        "motion",
+        "editorial",
+        "grid",
+        "dark",
+        "ai",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-28",
+      "added": "2026-09-30",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "xanvier-allison-9f8c54",
       "title": "Xanvier Allison",
       "url": "https://minimal.gallery/xanvier-allison/",
