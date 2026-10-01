@@ -2,6 +2,27 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "website-inspiration-flashform-97df34",
+      "title": "Website Inspiration: Flashform",
+      "url": "https://onepagelove.com/flashform",
+      "shot": "https://iad.microlink.io/W-bFg6p-y5hElocSQT7PxhCAr7qJPe7O28LvjHxSqmIpaBfMNa_fwJF35ZIzcnWkLLJr3EhGbhYu9XHNRCJnyA.png",
+      "whatsGood": "ビューポート基準の大型タイポグラフィとWebGLを組み合わせた没入感のある画面構成が見どころ。スクロール連動アニメーションとWhatsApp連携のリード獲得フローがどう視覚的に誘導されているかを確認したい。",
+      "extract": "viewport-sized fluid typography scale, WebGL背景とテキストのレイヤー分離, スクロールトリガーアニメーションのイージング, SaaSヒーローセクションのCTAレイアウト, ロングスクロール用セクション余白リズム, グラスまたはオーバーレイ系カラートークン",
+      "tags": [
+        "motion",
+        "typography",
+        "webgl",
+        "saas",
+        "longscroll",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-09-30",
+      "added": "2026-10-01",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "union-bboulangerie-c307fa",
       "title": "Union Bboulangerie",
       "url": "https://minimal.gallery/union-bboulangerie/",
