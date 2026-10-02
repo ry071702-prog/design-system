@@ -2,6 +2,108 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "michael-gatt-e842ac",
+      "title": "Michael Gatt",
+      "url": "https://minimal.gallery/michael-gatt/",
+      "shot": "https://iad.microlink.io/OKJSsB1MB2oTxiHeYNA8783iFAieJMn4TN-nvRNY5lNRmurdY9Qw9vQxZqnNM5e2bsf7ZnNHWJzMHlvnVeS8pQ.png",
+      "whatsGood": "パーソナル兼プロダクションスタジオのサイトとして、余白のリズムと書体の選択がブランドの静けさや質感を伝えている可能性が高い。タイポグラフィのスケール設定と、ヒーローセクションの余白量を中心に観察したい。",
+      "extract": "font-size scale, letter-spacing utility, section padding rhythm, neutral color palette, minimal hero layout, subtle text hierarchy",
+      "tags": [
+        "minimal",
+        "typography",
+        "editorial",
+        "personal",
+        "studio"
+      ],
+      "status": "inbox",
+      "date": "2026-10-01",
+      "added": "2026-10-02",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-uncle-rudy-f00167",
+      "title": "Website Inspiration: Uncle Rudy",
+      "url": "https://onepagelove.com/uncle-rudy",
+      "shot": "https://iad.microlink.io/oXdH7Na_kSsWnLbCKi7wTj0IF7NXaTXkVCYF4QSVsvsgyPP2zdVv4Rmy60D4JK44EQG4nPiOEWSKeodZs3EtfQ.png",
+      "whatsGood": "マスコットキャラクターとユーモアを軸にしたAIアプリのランディングページとして、キャラクター配置とスクロール演出の組み合わせ方が参考になりそう。ロングスクロール構成でのセクション間リズムと余白の取り方にも注目したい。",
+      "extract": "mascot-illustration-placement, long-scroll-section-rhythm, playful-accent-color-token, app-screenshot-mockup-frame, humour-driven-headline-typography, cta-button-with-character-context",
+      "tags": [
+        "playful",
+        "mascot",
+        "longscroll",
+        "ios",
+        "minimal",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-10-01",
+      "added": "2026-10-02",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-midnight-201a15",
+      "title": "Website Inspiration: Midnight",
+      "url": "https://onepagelove.com/midnight-2",
+      "shot": "https://iad.microlink.io/e67enwDeOc6nipmdr1pLZXfmxnvTPD3gHCFHayFDym63kauOZmtR-nlSflTrK4SBHgIwQkuKWnBGcCZ2maQLoQ.png",
+      "whatsGood": "「Midnight」というタイトルとAI・会話型インターフェースの組み合わせから、ダークベースの配色と洗練されたタイポグラフィが際立っている可能性が高い。ロングスクロール×ピッチ構成のリズム感と、オーディオ統合に伴うモーション演出の使い方を重点的に確認したい。",
+      "extract": "dark background color token, muted accent for AI/conversational UI, long-scroll section spacing scale, pitch-flow typography hierarchy, audio-trigger animation timing, glass or frosted card surface",
+      "tags": [
+        "dark",
+        "conversational",
+        "ai",
+        "motion",
+        "editorial",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-10-01",
+      "added": "2026-10-02",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-shelf-6accff",
+      "title": "Website Inspiration: Shelf",
+      "url": "https://onepagelove.com/shelf",
+      "shot": "https://iad.microlink.io/NpDV-5yLWFflaGvgZ2CagsYFZAEjFDwXnq596dPuq__vgGlDRim28NYb3XcIMLXuFDSYlKs9sUvQZ9xR4UTeww.png",
+      "whatsGood": "ホワイトスペースを活かしたライブラリ・キュレーション系UIの余白リズムとタイポグラフィ階層が参考になりそう。検索機能やプロダクトデモのレイアウト構成も確認する価値あり。",
+      "extract": "large-whitespace-section-padding, search-input-token, card-shelf-layout, neutral-background-color, heading-scale-editorial, subtle-divider-line",
+      "tags": [
+        "minimal",
+        "whitespace",
+        "editorial",
+        "productivity",
+        "light",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-10-01",
+      "added": "2026-10-02",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "gionatan-nese-ef6f2a",
+      "title": "Gionatan Nese",
+      "url": "https://minimal.gallery/gionatan-nese/",
+      "shot": "https://iad.microlink.io/x2-LlANaWT2SjzuDcGNk61-NfDP9f3iV-QQVzc0FtCuSRw8BvcSRTA7Kjv3Wt07qh79v6dLvYI3ZRJroMJYa_A.png",
+      "whatsGood": "ミニマルギャラリー掲載のポートフォリオのため、余白のリズムと洗練されたタイポグラフィの扱い方を重点的に確認したい。個人ポートフォリオらしい一貫したトーン&マナーの作り方も参考になる可能性が高い。",
+      "extract": "ベースとなる広い余白トークン, 見出し用セリフ or サンセリフの font-size スケール, テキストカラーの階層(primary/secondary/muted), シンプルなグリッドカラム定義, ホバー時のアンダーラインアニメーション, 最小限のボーダー or セパレータースタイル",
+      "tags": [
+        "minimal",
+        "typography",
+        "portfolio",
+        "whitespace"
+      ],
+      "status": "inbox",
+      "date": "2026-09-30",
+      "added": "2026-10-02",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
       "id": "website-inspiration-flashform-97df34",
       "title": "Website Inspiration: Flashform",
       "url": "https://onepagelove.com/flashform",
