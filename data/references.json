@@ -2,6 +2,47 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "unify-6570c1",
+      "title": "Unify",
+      "url": "https://minimal.gallery/unify/",
+      "shot": "https://iad.microlink.io/NQUcy8ULfGf6B4ovdIpeqU2z1h8Lq9EZQggCeD5GiBhb10LHKFxkB9iP-MkI4wyIMqhHZUrpQw_gssT-o779fA.png",
+      "whatsGood": "AIスタートアップ系SaaSとしてミニマルギャラリー掲載作品なので、クリーンな余白設計とタイポグラフィ階層が洗練されている可能性が高い。グラデーションアクセントやグラスモーフィズムを使ったヒーローセクションの処理に注目したい。",
+      "extract": "gradient-accent-color, surface-glass-blur, spacing-section-vertical, font-size-hero-display, border-radius-card, shadow-elevation-soft",
+      "tags": [
+        "minimal",
+        "saas",
+        "ai",
+        "glass",
+        "dark"
+      ],
+      "status": "inbox",
+      "date": "2026-10-02",
+      "added": "2026-10-03",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-bob-moll-02855d",
+      "title": "Website Inspiration: Bob Moll",
+      "url": "https://onepagelove.com/bob-moll",
+      "shot": "https://iad.microlink.io/1vlxHsIUkzmwMCbDhvPjpOOYUV0jg14CWn7CgTdQEv92JcR08KLjXhhJtgrlE7EkuBHfHayhMfDFjovjKLVMlQ.png",
+      "whatsGood": "ビューポート基準の大型タイポグラフィとスクロールギャラリーの組み合わせが見どころ。文字サイズのスケーリング手法（vw単位の使い方）と、画像とテキストのリズムある交互配置を確認したい。",
+      "extract": "viewport-unit typography (clamp/vw), full-bleed image gallery layout, minimal color palette (likely monochrome), large leading / tight tracking display font, scroll-driven section transitions, Spotify embed styling",
+      "tags": [
+        "minimal",
+        "typography",
+        "editorial",
+        "dark",
+        "music",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-10-02",
+      "added": "2026-10-03",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "michael-gatt-e842ac",
       "title": "Michael Gatt",
       "url": "https://minimal.gallery/michael-gatt/",
