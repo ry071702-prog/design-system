@@ -2,6 +2,47 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "bou-81e6f7",
+      "title": "Bou",
+      "url": "https://minimal.gallery/bou/",
+      "shot": "https://iad.microlink.io/RZblnw7P66rNf1K-KvRHeBlVBuLfqDOCallfF68X7kysjyQs1dqOMx_b9dhoEWJGkCzdlpaAhJuoadcLbkbb-g.png",
+      "whatsGood": "ブランディングエージェンシーらしく、余白の使い方とタイポグラフィの階層設計に注目すると参考になりそう。ミニマルギャラリー掲載作品のため、配色はモノクロまたは限定パレットで洗練されている可能性が高い。",
+      "extract": "limitedColorPalette, largeDisplayTypeface, generousWhitespace, typographicHierarchy, neutralBaseColor, brandingGridLayout",
+      "tags": [
+        "minimal",
+        "branding",
+        "typography",
+        "editorial",
+        "agency"
+      ],
+      "status": "inbox",
+      "date": "2026-10-03",
+      "added": "2026-10-04",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-applied-imaginat-b31f31",
+      "title": "Website Inspiration: Applied Imagination",
+      "url": "https://onepagelove.com/applied-imagination",
+      "shot": "https://iad.microlink.io/5ZJiSb-e5U2z8FMbdkW6yM84A3sy3WVfmYEEXHtMrpk2P_Ppm20pWvE4WnWxeeFARyH_dCq7EsfpIiSN02tRDQ.png",
+      "whatsGood": "ビューポートサイズのタイポグラフィとストーリーテリング型スクロールの組み合わせが見どころ。テキストが画面全体を支配するリズムと、AIコンサル系らしいクリーンな余白設計を確認したい。",
+      "extract": "viewport-unit typography scale, scroll-driven section transitions, large editorial heading tokens, whitespace rhythm between story beats, minimal CTA button style, long-scroll section spacing",
+      "tags": [
+        "editorial",
+        "typography",
+        "storytelling",
+        "minimal",
+        "motion",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-10-03",
+      "added": "2026-10-04",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "unify-6570c1",
       "title": "Unify",
       "url": "https://minimal.gallery/unify/",
