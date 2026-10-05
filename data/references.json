@@ -2,6 +2,23 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "website-inspiration-select26-b9af99",
+      "title": "Website Inspiration: Select26",
+      "url": "https://onepagelove.com/select26",
+      "shot": "",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "inspiration",
+        "ascii"
+      ],
+      "status": "inbox",
+      "date": "2026-10-04",
+      "added": "2026-10-05",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "bou-81e6f7",
       "title": "Bou",
       "url": "https://minimal.gallery/bou/",
