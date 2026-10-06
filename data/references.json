@@ -2,6 +2,39 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "melius-c0fb56",
+      "title": "Melius",
+      "url": "https://minimal.gallery/melius/",
+      "shot": "https://iad.microlink.io/YDGleSjajw6Q9F-Vo5gosIbCeqdFZSUYyRnOv1LkWVBWak16NFfR8-jlFslEv6eXse6pAhAGHbs599_r8BMWMQ.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "ai"
+      ],
+      "status": "inbox",
+      "date": "2026-10-05",
+      "added": "2026-10-06",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-dabbit-34de55",
+      "title": "Website Inspiration: Dabbit",
+      "url": "https://onepagelove.com/dabbit",
+      "shot": "https://iad.microlink.io/KIPjSZ2sOZxZ2VM_INBQwPbXzRZ8SMhRB-L9HtJFRt2QKqbBZUKqbZB4EphXNxv_sEYMfkzYfQ7jm9htQwpRuA.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "inspiration",
+        "accessibility"
+      ],
+      "status": "inbox",
+      "date": "2026-10-05",
+      "added": "2026-10-06",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "website-inspiration-select26-b9af99",
       "title": "Website Inspiration: Select26",
       "url": "https://onepagelove.com/select26",
