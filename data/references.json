@@ -2,6 +2,89 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "ogon-31fa91",
+      "title": "Ogon",
+      "url": "https://minimal.gallery/ogon/",
+      "shot": "https://iad.microlink.io/-nfpPIH7zqj4aNewCxH32ljU0fOaqJIjbgW8qVmrQmmo_INdB3w-IX0lorAVyX1wwwR3BScLXpB3kIeyMQgv6Q.png",
+      "whatsGood": "ミニマルギャラリー掲載のエージェンシー／プロダクションスタジオサイトとして、余白の取り方とタイポグラフィの階層設計が洗練されている可能性が高い。ブランド名「Ogon（黄金）」から金系のアクセントカラーや抑制された配色にも注目したい。",
+      "extract": "gold accent color token, neutral background palette, large display typeface scale, generous section padding, subtle hover state, minimal grid layout",
+      "tags": [
+        "minimal",
+        "editorial",
+        "dark",
+        "typography",
+        "agency"
+      ],
+      "status": "inbox",
+      "date": "2026-10-06",
+      "added": "2026-10-07",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-grilled-pixels-e-0852de",
+      "title": "Website Inspiration: Grilled Pixels Ecommerce",
+      "url": "https://onepagelove.com/grilled-pixels-ecommerce",
+      "shot": "https://iad.microlink.io/ynW6KFkSvMKeCfaLDRISJnQngXU5XrIIRmLWV-6mcBzY_uDW0stZALvOh4CwJVs0HjEdqChPJeLrMBsvqv5Dsw.png",
+      "whatsGood": "フリーランスのデザインエンジニアによるECサイトのため、UX重視のレイアウト構成と情報整理の仕方が参考になりそう。レスポンシブ対応の余白リズムやグリッドの使い方を中心に観察したい。",
+      "extract": "responsive-grid-layout, spacing-scale, cta-button-style, card-component, typography-hierarchy, color-palette-neutral",
+      "tags": [
+        "minimal",
+        "ecommerce",
+        "responsive",
+        "ux",
+        "editorial",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-10-06",
+      "added": "2026-10-07",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-roy-jad-312750",
+      "title": "Website Inspiration: Roy Jad",
+      "url": "https://onepagelove.com/roy-jad",
+      "shot": "https://iad.microlink.io/Aj4rgqqqW6FDWSw4e-k0uaKFEoTOBdRRJQiGmgXcPmUPRgrwM2PVTSe4_se20kOvit4Hsc2_J1OagqZT0pkK7Q.png",
+      "whatsGood": "ミニマル×ホワイトスペース重視のポートフォリオとして、余白のリズムと文字サイズの階層設計が参考になりそう。スクローリングギャラリー形式のインタラクションにも注目したい。",
+      "extract": "大胆な余白トークン, タイポグラフィスケール(見出し〜本文), スクロール連動レイアウトパターン, モノクロ or 低彩度カラーパレット, グリッドベースのギャラリーレイアウト",
+      "tags": [
+        "minimal",
+        "whitespace",
+        "typography",
+        "portfolio",
+        "scrolling",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-10-06",
+      "added": "2026-10-07",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "union-boulangerie-62d9d5",
+      "title": "Union Boulangerie",
+      "url": "https://minimal.gallery/union-boulangerie/",
+      "shot": "https://iad.microlink.io/9GM8Et3FIDcUPwiJZ0jV7YfoAgSNRjYPLRkgsfXlEMZ-YMdr1WtAJNtGWmS-v6XtYBq3uIS5r5myOO_Bg_JqtA.png",
+      "whatsGood": "ベーカリーブランドらしい温かみのある配色とセリフ体タイポグラフィの組み合わせに注目。余白の取り方とテクスチャ感のある背景処理がブランドの手仕事感を演出している可能性が高い。",
+      "extract": "warm-neutral background token, serif display font pairing, generous section padding, earthy accent color, subtle paper texture overlay, understated hover state",
+      "tags": [
+        "warm",
+        "editorial",
+        "minimal",
+        "typography",
+        "food",
+        "food & drink"
+      ],
+      "status": "inbox",
+      "date": "2026-09-29",
+      "added": "2026-10-07",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
       "id": "melius-c0fb56",
       "title": "Melius",
       "url": "https://minimal.gallery/melius/",
