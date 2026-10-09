@@ -2,6 +2,39 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "offsuit-games-fbab80",
+      "title": "Offsuit Games",
+      "url": "https://minimal.gallery/offsuit-games/",
+      "shot": "https://iad.microlink.io/rvmYs8G87pjI4zuH8e8_uSkTASEvOwMgbDzmtRAqOM1K3cD-J3GEbu_EJR4NUV42UbUrQEC_mzdugxGlNI3UcA.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "games & gaming"
+      ],
+      "status": "inbox",
+      "date": "2026-10-08",
+      "added": "2026-10-09",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-screen-movie-7bbfd4",
+      "title": "Website Inspiration: Screen Movie",
+      "url": "https://onepagelove.com/screen-movie",
+      "shot": "https://iad.microlink.io/56Mm07WaaAkqgNCV-FJLeu5WyGd3Ajvr_lvbPiyblrmE8Xm2si30tYkRi2ZN8M-A-pHogGPs8JICHI8KOLPF5Q.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "inspiration",
+        "animations"
+      ],
+      "status": "inbox",
+      "date": "2026-10-08",
+      "added": "2026-10-09",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "jarcos-850d36",
       "title": "JARCOS",
       "url": "https://minimal.gallery/jarcos/",
