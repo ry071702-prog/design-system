@@ -2,6 +2,88 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "odyssee-3be870",
+      "title": "Odyssee",
+      "url": "https://minimal.gallery/odyssee/",
+      "shot": "https://iad.microlink.io/_izAoCCc74YtHBcN_wukfEeke7oVMA_ZfGAKmXguSTTsAUAUA1MlL5fSY3xX49qqkwIqr_4N5EOurlkzMKViog.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "healthcare"
+      ],
+      "status": "inbox",
+      "date": "2026-10-11",
+      "added": "2026-10-12",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "flowlife-12c200",
+      "title": "Flowlife",
+      "url": "https://minimal.gallery/flowlife/",
+      "shot": "",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "startup"
+      ],
+      "status": "inbox",
+      "date": "2026-10-10",
+      "added": "2026-10-11",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-sam-peitz-3eb663",
+      "title": "Website Inspiration: Sam Peitz",
+      "url": "https://onepagelove.com/sam-peitz",
+      "shot": "",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "inspiration",
+        "day and night"
+      ],
+      "status": "inbox",
+      "date": "2026-10-10",
+      "added": "2026-10-11",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "grndwrk-studio-42ad04",
+      "title": "GRNDWRK STUDIO",
+      "url": "https://minimal.gallery/grndwrk-studio/",
+      "shot": "https://iad.microlink.io/0vrQVb4-Jw_1xgqg1bYnSWvnC5cvYjfXtoQeEx7K2cDex9arkzQ2tUkh9Wql2eI6ERwaTxpCVpf6y7etzAWnjQ.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "agency"
+      ],
+      "status": "inbox",
+      "date": "2026-10-09",
+      "added": "2026-10-10",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-office-commun-99b48e",
+      "title": "Website Inspiration: Office Commun",
+      "url": "https://onepagelove.com/office-commun",
+      "shot": "https://iad.microlink.io/iEtXxD-KYf1W6dHyimNBnBhdcJKfF1NzNA1V1XtXhJ1jLEIl2xzLNZwP3pGupXJJ8-WsLoNHLtbZWikQxlEVVA.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "inspiration",
+        "big images"
+      ],
+      "status": "inbox",
+      "date": "2026-10-09",
+      "added": "2026-10-10",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "offsuit-games-fbab80",
       "title": "Offsuit Games",
       "url": "https://minimal.gallery/offsuit-games/",
