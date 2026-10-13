@@ -2,6 +2,73 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "spek-9fe9d8",
+      "title": "Spek",
+      "url": "https://minimal.gallery/spek/",
+      "shot": "https://iad.microlink.io/fZO1hspoykloGyzxerXVv55GY9qv2VUEa2F6xmujGl9F8UrTyriquIor18B7oLyulb2uUvHRTOH4yZ9pqjD4Wg.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "ai"
+      ],
+      "status": "inbox",
+      "date": "2026-10-12",
+      "added": "2026-10-13",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-tim-van-damme-ma-e73dad",
+      "title": "Website Inspiration: Tim Van Damme (Max Voltar)",
+      "url": "https://onepagelove.com/tim-van-damme-max-voltar",
+      "shot": "https://iad.microlink.io/cwvzsTjoaEyibN036pntD9TSvBZknPha6-IN_GBMb4ZUJDkgdmDDgU0ojBt9DXjn6vdo3-NX-ldXuKzz53VdRA.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "inspiration",
+        "curriculum vitae (cv)"
+      ],
+      "status": "inbox",
+      "date": "2026-10-12",
+      "added": "2026-10-13",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-bymayo-adfea9",
+      "title": "Website Inspiration: ByMayo",
+      "url": "https://onepagelove.com/bymayo-2",
+      "shot": "https://iad.microlink.io/y-nHhyWAqXB8p8YO37nEBPSfVHwHqRb-0rTEED0nK2cKoKwdQyGNUw1-lMxwLzcSmIY4Svti3MWRQ2SE7Yeagg.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "inspiration",
+        "app developer"
+      ],
+      "status": "inbox",
+      "date": "2026-10-12",
+      "added": "2026-10-13",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-new-material-08f9a8",
+      "title": "Website Inspiration: New Material",
+      "url": "https://onepagelove.com/new-material",
+      "shot": "https://iad.microlink.io/Xduk77g00Kvnn2JVgyfwp62BVv9sh_aXA2YT4cTVoBK5YO61gQzAY71eEt23-yx_EKpTj6tP3cbK-wX_yK-89w.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "inspiration",
+        "agentic ai"
+      ],
+      "status": "inbox",
+      "date": "2026-10-11",
+      "added": "2026-10-13",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "odyssee-3be870",
       "title": "Odyssee",
       "url": "https://minimal.gallery/odyssee/",
