@@ -2,6 +2,48 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "website-inspiration-melike-turgut-483f6f",
+      "title": "Website Inspiration: Melike Turgut",
+      "url": "https://onepagelove.com/melike-turgut",
+      "shot": "https://iad.microlink.io/9WlvbaI4dATExgtRYysPP1_4rR-2e6aHTeQ6VMSDydCpRqDDiX9sPwSx7Px21YZWO0TNzA4bqEU7uQ_q2Dx5nw.png",
+      "whatsGood": "プロダクトデザイナーのCVサイトとして、Blobシェイプを使ったオーガニックな背景装飾とカスタムアイコンの組み合わせが参考になりそう。ストーリーテリング構造のスクロール体験とインタラクティブ要素のリズム感に注目したい。",
+      "extract": "blob-shape-background, custom-icon-set, scroll-driven-storytelling-layout, cv-section-spacing-rhythm, interactive-hover-state, organic-border-radius-token",
+      "tags": [
+        "interactive",
+        "editorial",
+        "minimal",
+        "motion",
+        "typography",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-10-13",
+      "added": "2026-10-14",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-kern-society-e4b505",
+      "title": "Website Inspiration: Kern Society",
+      "url": "https://onepagelove.com/kern-society",
+      "shot": "https://iad.microlink.io/oaHPP_Nj-4T7mJaotpFShBYYiO0TIN_ZOQpMD7WBM0uFqWjYCRpOW9QQC5XNt0N3XutkDF73qmB3qmCsJ4YXGg.png",
+      "whatsGood": "タイポグラフィ販売サイトとして、ビューポート全体を使った大型見出しや横スクロールテキストの見せ方が参考になりそう。インタラクティブなフォントデモのUIパターン（スライダーでウェイト・サイズを操作する仕組みなど）は自分のコンポーネントに転用できる可能性が高い。",
+      "extract": "--font-size-display (vw単位の流体タイポ), --letter-spacing-tight, --scrolling-marquee-speed, --slider-track-color, --demo-preview-bg, --section-min-height: 100vh",
+      "tags": [
+        "typography",
+        "editorial",
+        "interactive",
+        "minimal",
+        "motion",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-10-13",
+      "added": "2026-10-14",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "spek-9fe9d8",
       "title": "Spek",
       "url": "https://minimal.gallery/spek/",
