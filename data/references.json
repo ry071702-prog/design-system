@@ -2,6 +2,55 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "david-fiz-b25098",
+      "title": "David Fiz",
+      "url": "https://minimal.gallery/david-fiz/",
+      "shot": "",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "portfolio"
+      ],
+      "status": "inbox",
+      "date": "2026-10-14",
+      "added": "2026-10-15",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-f13-44c644",
+      "title": "Website Inspiration: F13",
+      "url": "https://onepagelove.com/f13",
+      "shot": "",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "inspiration",
+        "artificial intelligence (ai)"
+      ],
+      "status": "inbox",
+      "date": "2026-10-14",
+      "added": "2026-10-15",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "drąsa-studio-6f23d9",
+      "title": "DRĄSA Studio",
+      "url": "https://minimal.gallery/drasa-studio/",
+      "shot": "",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "agency"
+      ],
+      "status": "inbox",
+      "date": "2026-10-13",
+      "added": "2026-10-15",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
       "id": "website-inspiration-melike-turgut-483f6f",
       "title": "Website Inspiration: Melike Turgut",
       "url": "https://onepagelove.com/melike-turgut",
