@@ -2,6 +2,47 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "howhow-1031b0",
+      "title": "How&How",
+      "url": "https://minimal.gallery/howhow/",
+      "shot": "https://iad.microlink.io/Q2AOoSpAGjc3B6RiUohPtxpem4J9_xHr1SeCg9nHrCXc6ReStn5eZHvoqrGOC54J4PYQ1-r4B6iy3yRTt53Iaw.png",
+      "whatsGood": "エージェンシー・ブランディング系として、ロゴ周りのタイポグラフィ処理と余白の取り方が洗練されている可能性が高い。ミニマルギャラリー掲載という点から、過剰装飾を排したグリッドとフォントウェイトのコントラストに注目したい。",
+      "extract": "wordmark-level letter-spacing, font-weight contrast (light vs bold), generous section padding, neutral base palette with single accent, clean grid column rhythm, restrained hover state",
+      "tags": [
+        "minimal",
+        "typography",
+        "branding",
+        "editorial",
+        "agency"
+      ],
+      "status": "inbox",
+      "date": "2026-10-15",
+      "added": "2026-10-16",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-hedroom-a2f1df",
+      "title": "Website Inspiration: HEDROOM™",
+      "url": "https://onepagelove.com/hedroom",
+      "shot": "https://iad.microlink.io/BT1QsqIjxqQOMQlgFaj7mfjRx785OMMb_Y50HmPE63CMcPGnDF2lfh8Q2wRiEC9Iudxl6AK3lJF2upTBgToaDA.png",
+      "whatsGood": "WebGLとオーディオビジュアライゼーションの組み合わせによるインタラクティブな音響表現が見どころ。波形・周波数グラフィックのアニメーション処理とミュージックプレイヤーUIの統合方法に注目したい。",
+      "extract": "audio-visualizer-color-palette, waveform-animation-timing, player-ui-overlay-layout, webgl-canvas-z-index-layering, community-card-rhythm, dark-bg-with-accent-glow",
+      "tags": [
+        "dark",
+        "motion",
+        "interactive",
+        "webgl",
+        "immersive",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-10-15",
+      "added": "2026-10-16",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "david-fiz-b25098",
       "title": "David Fiz",
       "url": "https://minimal.gallery/david-fiz/",
