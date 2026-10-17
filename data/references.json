@@ -2,6 +2,22 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "holographik-space-0d88b5",
+      "title": "Holographik Space",
+      "url": "https://minimal.gallery/holographik-space/",
+      "shot": "",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "workshop"
+      ],
+      "status": "inbox",
+      "date": "2026-10-16",
+      "added": "2026-10-17",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
       "id": "howhow-1031b0",
       "title": "How&How",
       "url": "https://minimal.gallery/howhow/",
