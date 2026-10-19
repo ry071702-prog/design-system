@@ -2,6 +2,77 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "website-inspiration-kizupi-dccd15",
+      "title": "Website Inspiration: Kizupi",
+      "url": "https://onepagelove.com/kizupi",
+      "shot": "https://iad.microlink.io/l3Q1TebuhAGlAQzGOhkSbEBHb6rfrx8d11EXYCEfW5WXAV9RMY6EHyQBFlUkZOaiuQ0QTYPViuf-yDOu9ApaEA.png",
+      "whatsGood": "8ビットスタイルとマスコットキャラクターを組み合わせた子ども向けUIの配色・タイポグラフィに注目。ロングスクロールのリズムとキャラクター演出がどう学習体験を引き上げているかを確認したい。",
+      "extract": "ピクセルアート風ボーダー, キャラクターアニメーショントークン, 子ども向け高彩度カラーパレット, ゲーミングフォントスタック, セクション区切りのウェーブ/ジャンプ余白, スクロール連動マスコット表示",
+      "tags": [
+        "8bit",
+        "children",
+        "mascot",
+        "colorful",
+        "educational",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-10-18",
+      "added": "2026-10-19",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "grafik-3ef8cf",
+      "title": "Grafik",
+      "url": "https://minimal.gallery/grafik/",
+      "shot": "",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "portfolio"
+      ],
+      "status": "inbox",
+      "date": "2026-10-17",
+      "added": "2026-10-18",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-pairio-c90dbd",
+      "title": "Website Inspiration: Pairio",
+      "url": "https://onepagelove.com/pairio",
+      "shot": "https://iad.microlink.io/QXD0ORhFdt0B3_jQVwv6sH1RO9hE9JX7MOqr7uY6iS9VphBSRWeTPBpFZJD-cBH2iKWLJoPo2Vl8TfKpBBL3VA.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "inspiration",
+        "collaboration"
+      ],
+      "status": "inbox",
+      "date": "2026-10-17",
+      "added": "2026-10-18",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-scout-graphics-c8d2fb",
+      "title": "Website Inspiration: Scout Graphics",
+      "url": "https://onepagelove.com/scout-graphics",
+      "shot": "",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "inspiration",
+        "brand identity"
+      ],
+      "status": "inbox",
+      "date": "2026-10-16",
+      "added": "2026-10-18",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "holographik-space-0d88b5",
       "title": "Holographik Space",
       "url": "https://minimal.gallery/holographik-space/",
