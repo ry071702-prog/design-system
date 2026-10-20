@@ -2,6 +2,47 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "isaac-fayemi-274f2b",
+      "title": "Isaac Fayemi",
+      "url": "https://minimal.gallery/isaac-fayemi/",
+      "shot": "https://iad.microlink.io/sCXLK091CWgzT3uSLdS_9cQXnrc0bI6kI5hr2leR9tf_NYfLFtfgrDyV5Ld_OLfvuDl1KuMPzKmXoIGy_5bIbw.png",
+      "whatsGood": "ミニマルギャラリー掲載のポートフォリオ系サイトとして、余白の取り方とタイポグラフィの階層設計が洗練されている可能性が高い。個人ポートフォリオならではの一貫したパーソナルカラーやフォント選定に注目したい。",
+      "extract": "ベースとなるモノクロ or アクセント1色の配色トークン, 見出し用セリフ/サンセリフの組み合わせ, 大きめのレタースペーシング値, セクション間の余白スケール, シンプルなホバーアンダーライン, グリッドのカラム比率",
+      "tags": [
+        "minimal",
+        "portfolio",
+        "typography",
+        "personal",
+        "whitespace"
+      ],
+      "status": "inbox",
+      "date": "2026-10-19",
+      "added": "2026-10-20",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-eventually-2083f5",
+      "title": "Website Inspiration: Eventually",
+      "url": "https://onepagelove.com/eventually",
+      "shot": "https://iad.microlink.io/slWGBNAQvcGijxNNBWhauPrGYoiyr7qtXtYhm45BVYqQ3egyc7A2Wt_d_FIMEiDztIb_0escYyp8LEbhiPpc-A.png",
+      "whatsGood": "「Eventually」というプロダクト名とOne Page Loveへの掲載から、シングルページ構成でスクロールに沿った情報開示のリズムが洗練されている可能性が高い。生産性ツール系らしいクリーンなタイポグラフィと余白の取り方を重点的に確認したい。",
+      "extract": "section-spacing-scale, hero-headline-size, muted-background-color, cta-button-radius, feature-card-padding, scroll-reveal-timing",
+      "tags": [
+        "minimal",
+        "productivity",
+        "single-page",
+        "typography",
+        "light",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-10-19",
+      "added": "2026-10-20",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "website-inspiration-kizupi-dccd15",
       "title": "Website Inspiration: Kizupi",
       "url": "https://onepagelove.com/kizupi",
