@@ -2,6 +2,88 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "eli-horn-799e2b",
+      "title": "Eli Horn",
+      "url": "https://minimal.gallery/eli-horn/",
+      "shot": "https://iad.microlink.io/gT2qnrsk4nQP-WB6eIR7JRCQ0vY5hYcOk-Fn7J6DBOHEKDoUCiCWY0oGwJEUDVkLpVZpBcUwFk7gSaucpaIEjQ.png",
+      "whatsGood": "ミニマルギャラリー出典のアート系個人サイトとして、余白の取り方とタイポグラフィの選択に注目すると参考になりそう。配色はモノクロまたは限定パレットで作品を引き立てる構成である可能性が高い。",
+      "extract": "large-scale whitespace, serif or variable font pairing, muted neutral palette, single-column editorial layout, minimal border or rule usage, restrained hover state",
+      "tags": [
+        "minimal",
+        "editorial",
+        "typography",
+        "personal",
+        "art"
+      ],
+      "status": "inbox",
+      "date": "2026-10-20",
+      "added": "2026-10-21",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-aniket-f61991",
+      "title": "Website Inspiration: Aniket",
+      "url": "https://onepagelove.com/aniket",
+      "shot": "https://iad.microlink.io/8ApT7CRY32T1Rfs4gXiYDTXSZl5qw2VSVFAPgqevjIgQXyIlZd9SskfL2l4ztEs2xTwVzH8l7Wz5hdRBwGxW8g.png",
+      "whatsGood": "エンジニアのCVサイトとして、グリッドを可視化しつつミニマルに構成するレイアウト手法が参考になりそう。インタラクティブ×長スクロールの組み合わせで、余白のリズムとスクロール連動の動きに注目したい。",
+      "extract": "visible-grid-line-color, cv-section-spacing, monospace-or-editorial-font-stack, scroll-triggered-reveal-timing, collage-z-index-layering, minimal-border-token",
+      "tags": [
+        "minimal",
+        "grid",
+        "interactive",
+        "editorial",
+        "dark",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-10-20",
+      "added": "2026-10-21",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "isaac-fayemi-274f2b",
+      "title": "Isaac Fayemi",
+      "url": "https://minimal.gallery/isaac-fayemi/",
+      "shot": "https://iad.microlink.io/6PdVp1HxV1QpinothXBvhakPsO6tzIpiwORsu8_NTEZB0bD2zu9MfGbOmJ4XVBvyqRot1zv0qRDoDajXpTEE6w.png",
+      "whatsGood": "ミニマルギャラリー掲載のポートフォリオのため、余白のリズムと타이포グラフィの扱い方に注目すると参考になりそう。個人ポートフォリオらしい一貫したトーン&マナーの配色選択も確認したい。",
+      "extract": "ベースとなるニュートラルカラーパレット, 見出しフォントサイズスケール, セクション間の余白トークン, シングルカラムレイアウトの最大幅設定, テキストリンクのホバースタイル, ボディテキストの行間(line-height)値",
+      "tags": [
+        "minimal",
+        "portfolio",
+        "typography",
+        "personal",
+        "whitespace"
+      ],
+      "status": "inbox",
+      "date": "2026-10-19",
+      "added": "2026-10-21",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-eventually-2083f5",
+      "title": "Website Inspiration: Eventually",
+      "url": "https://onepagelove.com/eventually",
+      "shot": "https://iad.microlink.io/tx5VMVzB6luyxMrif-kE0nPQXTsLxlBcVaOJZVT0ebe8Besb920jnZQKatS25EHf27fyQB6tDRZH2A2gfAaTNQ.png",
+      "whatsGood": "「Eventually」というプロダクト名とOne Page Loveへの掲載から、シンプルで洗練されたランディングページ構成が予想される。長スクロール構成における余白のリズムと、ツール系サービスらしいクリーンなタイポグラフィの扱い方を重点的に確認したい。",
+      "extract": "section-spacing-scale, hero-headline-size, muted-background-color, cta-button-radius, feature-icon-grid-gap, subtle-divider-style",
+      "tags": [
+        "minimal",
+        "landing",
+        "productivity",
+        "longscroll",
+        "clean",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-10-19",
+      "added": "2026-10-21",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "website-inspiration-kizupi-dccd15",
       "title": "Website Inspiration: Kizupi",
       "url": "https://onepagelove.com/kizupi",
