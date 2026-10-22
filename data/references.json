@@ -2,6 +2,47 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "ev-astapov-2db8b5",
+      "title": "Ev Astapov",
+      "url": "https://minimal.gallery/ev-astapov/",
+      "shot": "https://iad.microlink.io/0f2AA65_-oPt4_wD2SupmK0oaxUlASX7Crhvd9aNSARrytpwqJhlsU81K8AIxpTYbeIpGC0D32PVLuSmXwmSBA.png",
+      "whatsGood": "ミニマルギャラリー掲載のポートフォリオとして、余白の取り方とタイポグラフィの階層設計が洗練されている可能性が高い。個人ポートフォリオならではの一貫したトーン&マナー（配色の絞り込みやフォント選択）を観察したい。",
+      "extract": "ベースとなるニュートラル配色トークン, 見出し用フォントサイズスケール, セクション間の余白リズム(spacing scale), テキストカラーの階層(primary/secondary/muted), コンテナ最大幅とマージン設定, ホバー時のシンプルなトランジション",
+      "tags": [
+        "minimal",
+        "portfolio",
+        "typography",
+        "whitespace",
+        "personal"
+      ],
+      "status": "inbox",
+      "date": "2026-10-21",
+      "added": "2026-10-22",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-resurf-9a2dc7",
+      "title": "Website Inspiration: Resurf",
+      "url": "https://onepagelove.com/resurf",
+      "shot": "https://iad.microlink.io/m2CWZCLaR6i74LS8-G0Xr0mnLtiNjB8KbpLKQ59PNh1iMRavJfW8wQYIQ9-gkghay3QEnV3PkRpy6Q4Ir4hdRA.png",
+      "whatsGood": "AIプロダクティビティ系ツールのランディングページとして、機能訴求のための情報階層とロングスクロール構成が参考になりそう。検索UIやブックマーク管理のインタラクションパターンにも注目したい。",
+      "extract": "search-input styling, feature-section rhythm, long-scroll section spacing, productivity-app color palette, CTA button hierarchy, icon+label list layout",
+      "tags": [
+        "productivity",
+        "minimal",
+        "longscroll",
+        "saas",
+        "light",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-10-21",
+      "added": "2026-10-22",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "eli-horn-799e2b",
       "title": "Eli Horn",
       "url": "https://minimal.gallery/eli-horn/",
