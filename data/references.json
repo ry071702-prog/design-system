@@ -2,6 +2,48 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "driessen-architectuur-5d1f65",
+      "title": "Driessen Architectuur",
+      "url": "https://minimal.gallery/driessen-architectuur/",
+      "shot": "https://iad.microlink.io/BDveXFB0OzJJcrUce55iG425cacvu5LGQtMyfHbA-Y7fI6v8Oae1cW1yhWG7RUXOJXOS8kpo-e0PJme1e6zVWw.png",
+      "whatsGood": "建築事務所サイトとして余白の取り方とタイポグラフィの比率に注目すると参考になりそう。モノトーン寄りの配色と写真の扱い方（トリミング・グリッド配置）も確認する価値がある。",
+      "extract": "wide-margin-layout, editorial-type-scale, monochrome-palette, image-grid-ratio, section-spacing-token, serif-display-font",
+      "tags": [
+        "minimal",
+        "editorial",
+        "typography",
+        "architecture",
+        "monochrome",
+        "architecture & interior design"
+      ],
+      "status": "inbox",
+      "date": "2026-10-22",
+      "added": "2026-10-23",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-stolaze-624b8d",
+      "title": "Website Inspiration: Stolaze",
+      "url": "https://onepagelove.com/stolaze",
+      "shot": "https://iad.microlink.io/v73BKbwUFDx0VIGSfkYOLt2h54aZi8QyhiFcEi77Yu3WsocRIFd5zvreXfu9ly6BMfapqGKozMxkAnK6UjD-fQ.png",
+      "whatsGood": "ビューポート全幅を使った大型タイポグラフィと、スクロールに連動したリズム感のある見せ方が注目ポイント。クリエイティブスタジオらしいブランドアイデンティティの表現方法を観察すると参考になる。",
+      "extract": "viewport-sized fluid typography, large-scale display font tokens, scroll-driven section rhythm, full-bleed layout grid, brand identity color palette, generous whitespace scale",
+      "tags": [
+        "typography",
+        "editorial",
+        "minimal",
+        "longscroll",
+        "branding",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-10-22",
+      "added": "2026-10-23",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "ev-astapov-2db8b5",
       "title": "Ev Astapov",
       "url": "https://minimal.gallery/ev-astapov/",
