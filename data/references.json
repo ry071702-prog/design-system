@@ -2,6 +2,105 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "bleibtgleich-736ecb",
+      "title": "Bleibtgleich",
+      "url": "https://minimal.gallery/bleibtgleich-2026/",
+      "shot": "https://iad.microlink.io/mEWfRnyjnsDIxGFt5Hwk-dI039f9Tq90WwIUDJorjBuxbMK_IjHkYp_AHJJxjBvkvd8E6NvbBok-MhnCoGGthA.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "portfolio"
+      ],
+      "status": "inbox",
+      "date": "2026-10-25",
+      "added": "2026-10-26",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-monocle-775eeb",
+      "title": "Website Inspiration: Monocle",
+      "url": "https://onepagelove.com/monocle",
+      "shot": "https://iad.microlink.io/KbEW8oOhrxzZDNZb9i0kkgT5rg0d7QW5qMZxcBEgKD7jcPwD75f-Nvc92be8wx9FIFV_3jXHoJIIM3-5u6IzyQ.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "inspiration",
+        "blur"
+      ],
+      "status": "inbox",
+      "date": "2026-10-25",
+      "added": "2026-10-26",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "tequs-e8034c",
+      "title": "Tequs",
+      "url": "https://minimal.gallery/tequs/",
+      "shot": "https://iad.microlink.io/tenPfS7efF6Hv1VBneV0TZe0jFZu76l8dIIO9ZM5iiOSk4lDhm0-Ru9fmXTfGDMTH8_0DIlvV05GTcoGfWqMYA.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "product"
+      ],
+      "status": "inbox",
+      "date": "2026-10-24",
+      "added": "2026-10-26",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "causal-248d13",
+      "title": "Causal",
+      "url": "https://minimal.gallery/causal/",
+      "shot": "https://iad.microlink.io/PXfe0rllrNbpzrAAwEaSdSv7mBvaegYTN86Vx2bT0tqeYpDdSaMxJhXIpU1TWsEyOAnUbWyUUWUfmyvUZZ3cYA.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "ai"
+      ],
+      "status": "inbox",
+      "date": "2026-10-23",
+      "added": "2026-10-26",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-duo-case-279ad2",
+      "title": "Website Inspiration: Duo Case",
+      "url": "https://onepagelove.com/duo-case",
+      "shot": "https://iad.microlink.io/EEZ-fcFJjem0xoCQLNOMR6j8DgKruQDxWl_qu7Cwy-1K7zBNqOvDsUm400C-1AvxYAoHbD0UgfSBAWLOftTIVA.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "inspiration",
+        "apple"
+      ],
+      "status": "inbox",
+      "date": "2026-10-24",
+      "added": "2026-10-25",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-swash-c0f663",
+      "title": "Website Inspiration: Swash",
+      "url": "https://onepagelove.com/swash",
+      "shot": "https://iad.microlink.io/FSgELnthSr16rgYxf5KNYPUYP_B9_b-buhyPzxAFslkezKKtOzdUw7TpxEs2WJ-l1X1-FBmLUYZZLlkwTRHoGA.png",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "inspiration",
+        "animations"
+      ],
+      "status": "inbox",
+      "date": "2026-10-23",
+      "added": "2026-10-25",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "driessen-architectuur-5d1f65",
       "title": "Driessen Architectuur",
       "url": "https://minimal.gallery/driessen-architectuur/",
