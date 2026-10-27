@@ -15,3 +15,6 @@ data/promotions/
 
 # tokens.css の適用前バックアップ (git 履歴が正本なので commit しない)
 tokens.css.bak-*
+
+# Python のバイトコード (取り込み時に自動生成される)
+__pycache__/

@@ -60,7 +60,7 @@ cp config.example.json config.local.json
 | `difyPromoteAppKey` | `promote_design.py` (デザイン還元キュレーター) |
 | `pptxTemplate` | `build_pptx.py` のベースにする公式テンプレ pptx のパス |
 | `html2pptxApiKey` | `export_pptx.py` (html2pptx.app の API キー) |
-| `scoutSources` | 任意　scout の収集元 RSS 配列 (未指定なら minimal.gallery / Codrops / One Page Love) |
+| `scoutSources` | 任意　scout の収集元 RSS 配列 (未指定なら minimal.gallery / Land-book / One Page Love) |
 | `slidesRoots` | 任意　`index_slides.py` の走査ルート配列 (未指定なら `~/Downloads`) |
 
 ### 外部依存
