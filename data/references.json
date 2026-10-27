@@ -2,6 +2,39 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "atomicdust-d4eb61",
+      "title": "Atomicdust",
+      "url": "https://minimal.gallery/atomicdust/",
+      "shot": "",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "agency"
+      ],
+      "status": "inbox",
+      "date": "2026-10-26",
+      "added": "2026-10-27",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-felix-haas-c57a7e",
+      "title": "Website Inspiration: Felix Haas",
+      "url": "https://onepagelove.com/felix-haas",
+      "shot": "",
+      "whatsGood": "",
+      "extract": "",
+      "tags": [
+        "inspiration",
+        "designer"
+      ],
+      "status": "inbox",
+      "date": "2026-10-26",
+      "added": "2026-10-27",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "bleibtgleich-736ecb",
       "title": "Bleibtgleich",
       "url": "https://minimal.gallery/bleibtgleich-2026/",
