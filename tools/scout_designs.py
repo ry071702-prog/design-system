@@ -14,7 +14,7 @@ data/references.json の inbox に追記 (URL で重複排除)。
   python3 tools/scout_designs.py --limit 4 --dry-run
 設定: config.local.json の difyBaseUrl / difyScoutAppKey、任意で scoutSources。
 """
-import argparse, json, os, re, sys, hashlib, datetime, urllib.request, urllib.parse
+import argparse, json, os, re, sys, hashlib, datetime, subprocess, time, urllib.request, urllib.parse
 import xml.etree.ElementTree as ET
 
 sys.path.insert(0, os.path.expanduser("~/.claude/lib"))
@@ -81,12 +81,47 @@ def call_dify_scout(cfg, title, source, categories):
         headers={"Authorization": "Bearer " + cfg["difyScoutAppKey"], "Content-Type": "application/json"})
     with urllib.request.urlopen(req, timeout=120) as r:
         data = json.loads(r.read().decode("utf-8"))
-    txt = (data.get("data") or {}).get("outputs", {}).get("result", "")
+    run = data.get("data") or {}
+    # LLM ノードが落ちても HTTP 200 で status=failed が返る  空のメタで黙って通すと
+    # 失敗 0件 のまま観点・タグの無い候補が入る (2026-10-27: [models] Connection Error で全件空)
+    if run.get("status") != "succeeded":
+        raise RuntimeError(f"workflow {run.get('status')}: {(run.get('error') or '')[:150]}")
+    txt = (run.get("outputs") or {}).get("result", "") or ""
     txt = re.sub(r"^```(?:json)?|```$", "", txt.strip(), flags=re.M).strip()
     try:
         return json.loads(txt)
     except Exception:
-        return {"whatsGood": "", "extract": "", "tags": []}
+        raise RuntimeError(f"結果が JSON でない: {txt[:80]!r}")
+
+
+def dify_ready(cfg, timeout=5):
+    req = urllib.request.Request(cfg["difyBaseUrl"].rstrip("/") + "/parameters",
+                                 headers={"Authorization": "Bearer " + cfg["difyScoutAppKey"]})
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            return r.status == 200
+    except Exception:
+        return False
+
+
+def ensure_dify(cfg, wait=300, interval=15):
+    """Dify (OrbStack 上の docker) が答えなければ OrbStack を起こして最大5分待つ
+
+    OrbStack が落ちている朝は全件 Connection refused で、観点・タグが空のまま inbox に入っていた
+    (2026-10-26 は4件全部)  コンテナは restart: always なので OrbStack さえ上がれば戻る
+    """
+    if dify_ready(cfg):
+        return True
+    print("[ds-scout] Dify が応答しない  OrbStack を起こして待つ", file=sys.stderr)
+    subprocess.run(["open", "-g", "-a", "OrbStack"], check=False)
+    deadline = time.time() + wait
+    while time.time() < deadline:
+        time.sleep(interval)
+        if dify_ready(cfg):
+            print(f"[ds-scout] Dify ok (待機 {wait - int(deadline - time.time())}秒)", file=sys.stderr)
+            return True
+    print(f"[ds-scout] Dify が {wait // 60}分待っても応答せず", file=sys.stderr)
+    return False
 
 
 def scout_meta(cfg, c):
@@ -95,11 +130,17 @@ def scout_meta(cfg, c):
     以前は socket.timeout がそのまま main を貫通し、その回に集めた候補を丸ごと捨てて
     references.json を書かずに終了していた (2026-09-01 の実例: 19件中4件処理した時点で全滅)。
     """
-    try:
-        return call_dify_scout(cfg, c["title"], c["source"], c["categories"]), ""
-    except Exception as e:
-        print(f"[warn] Dify 付与に失敗 ({c['title']}): {e}", file=sys.stderr)
-        return {"whatsGood": "", "extract": "", "tags": []}, str(e)
+    # スリープ復帰直後は Dify から外の LLM へ出る経路が数十秒遅れて戻るので1回だけ待って引き直す
+    err = None
+    for attempt in range(2):
+        try:
+            return call_dify_scout(cfg, c["title"], c["source"], c["categories"]), ""
+        except Exception as e:
+            err = e
+            if attempt == 0:
+                time.sleep(30)
+    print(f"[warn] Dify 付与に失敗 ({c['title']}): {err}", file=sys.stderr)
+    return {"whatsGood": "", "extract": "", "tags": []}, str(err)
 
 
 def screenshot(url, attempts=2):
@@ -212,6 +253,8 @@ def main():
             break
 
     print(f"新着候補 {len(candidates)} 件 → 追加 {len(picked)} 件", file=sys.stderr)
+    if picked:
+        ensure_dify(cfg)   # 起きなくても続ける  失敗は1件ずつ meta_errors に数えて degraded に出す
     added = []
     meta_errors = []
     for c in picked:
