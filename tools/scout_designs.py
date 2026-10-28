@@ -33,7 +33,7 @@ UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
 
 DEFAULT_SOURCES = [
     {"name": "minimal.gallery", "feed": "https://minimal.gallery/feed/"},
-    {"name": "Land-book", "feed": "https://land-book.com/feed"},   # Codrops は既定の UA を 403 で弾くので 2026-10-27 に差し替え
+    {"name": "Lapa Ninja", "feed": "https://www.lapa.ninja/index.xml"},   # Codrops と Land-book は定時実行の /usr/bin/python3 に 403 を返す (2026-10-28)
     {"name": "One Page Love", "feed": "https://onepagelove.com/feed"},
 ]
 

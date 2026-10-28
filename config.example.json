@@ -8,6 +8,6 @@
   "html2pptxApiKey": "sk_live_xxxx (tools/export_pptx.py 用。https://html2pptx.app で無料登録して取得)",
   "scoutSources": [
     { "name": "minimal.gallery", "feed": "https://minimal.gallery/feed/" },
-    { "name": "Land-book", "feed": "https://land-book.com/feed" }
+    { "name": "Lapa Ninja", "feed": "https://www.lapa.ninja/index.xml" }
   ]
 }
