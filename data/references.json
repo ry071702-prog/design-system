@@ -2,6 +2,68 @@
   "$schema-note": "ライブラリ画面の描画ソース。1エントリ = 世の中の良いデザイン1件。status は inbox(収集) / promoted(tokens.css へ還元済み)。library.html の追加フォームで雛形を生成できる。",
   "references": [
     {
+      "id": "puente-82b100",
+      "title": "pu—ente",
+      "url": "https://minimal.gallery/pu-ente/",
+      "shot": "https://iad.microlink.io/kJPWLv4_dpubHHiIWQY3hD323AcKvqiMODG-Cp9tC4dl6mpczsHNv9CHNcvOlJDYFlzSThsLzQx7LS24mEk9nw.png",
+      "whatsGood": "ポートフォリオ・アート系のミニマルギャラリー掲載作品として、タイポグラフィの扱いと余白のリズムに独自性がある可能性が高い。ダッシュ記号を名前に組み込むブランディング手法など、細部のエディトリアルな表現に注目すると参考になる観点が得られそう。",
+      "extract": "エディトリアル系フォントスタック, 広めのレタースペーシング変数, セクション間の大きな余白トークン, モノクロームまたは限定カラーパレット, 細ウェイトの見出しサイズスケール, シンプルなアンダーラインリンクスタイル",
+      "tags": [
+        "minimal",
+        "editorial",
+        "typography",
+        "portfolio",
+        "personal"
+      ],
+      "status": "inbox",
+      "date": "2026-10-27",
+      "added": "2026-10-28",
+      "source": "minimal.gallery",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-josh-puckett-a0a6bb",
+      "title": "Website Inspiration: Josh Puckett",
+      "url": "https://onepagelove.com/josh-puckett",
+      "shot": "https://iad.microlink.io/OybTJGm6f5yHcAvayro3-kLMEu-XPVMkXbKSrkZZr9Q4HP1szwyj5rlkBb_bUleLWNdrBHbtQ1MjlWkk9PGFFQ.png",
+      "whatsGood": "ポートフォリオ系のロングスクロールレイアウトとして、セクション間の余白リズムやタイポグラフィの階層設計が参考になる可能性が高い。スクロールに連動したコンテンツの見せ方（モーションやフェード）にも注目したい。",
+      "extract": "section-gap-scale, heading-size-ratio, scroll-fade-in-timing, single-column-max-width, type-weight-contrast, anchor-nav-style",
+      "tags": [
+        "minimal",
+        "typography",
+        "editorial",
+        "portfolio",
+        "inspiration",
+        "long scrolling"
+      ],
+      "status": "inbox",
+      "date": "2026-10-27",
+      "added": "2026-10-28",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
+      "id": "website-inspiration-abdullah-8a35fc",
+      "title": "Website Inspiration: Abdullah",
+      "url": "https://onepagelove.com/abdullah",
+      "shot": "https://iad.microlink.io/bJvxMnhVndF4KGh4j9bstKimxhrLhL3Ph2WuLBI1cidgfM71QxO_-Knoh_Q4vFFgDJx08Y8MB9nxY6CabBrKNg.png",
+      "whatsGood": "クリエイティブディレクター/グラフィックデザイナーのCVポートフォリオとして、タイポグラフィの階層設計とポートフォリオフィルターのインタラクションが参考になりそう。ロングスクロール構成でのセクション間リズムの取り方にも注目したい。",
+      "extract": "portfolio-filter-transition, cv-section-type-scale, blog-card-layout, scroll-section-spacing, hero-name-display-font, filter-active-state-color",
+      "tags": [
+        "portfolio",
+        "editorial",
+        "typography",
+        "minimal",
+        "motion",
+        "inspiration"
+      ],
+      "status": "inbox",
+      "date": "2026-10-27",
+      "added": "2026-10-28",
+      "source": "One Page Love",
+      "auto": true
+    },
+    {
       "id": "atomicdust-d4eb61",
       "title": "Atomicdust",
       "url": "https://minimal.gallery/atomicdust/",
